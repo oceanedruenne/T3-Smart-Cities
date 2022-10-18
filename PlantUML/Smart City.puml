@@ -1,0 +1,103 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide empty members
+
+enum BuildType{
+Housing,
+Park,
+Store,
+Office,
+Empty;
+}
+note left
+    Possibilité de changer les noms,
+    attention aux fichiers en dépendant
+end note
+
+class Game{
++StartGame()
+}
+
+class Event{
+}
+note right of Event
+    Feature à implémenter plus tard,
+    dépendant du temps restant Strategy
+    (cf.TD1 de A31 aka Feu tricolore)
+end note
+
+class Map{
+-Size : unsigned Integer
++Build(Building building, int posx, int posy)
++Destroy(int posx, int posy)
++GenMap()
++GenAleaMap()
+}
+note right of Map
+    Build mettra à jour la valeur apporté par
+    le bâtiment construit et ceux aux alentour,
+    de même pour Destroy
+end note
+
+class Building{
+-Type : BuildType
+-BaseCost : unsigned Integer
+-BuyMalus : float
+-Level : unsigned Integer
+-Income : unsigned Integer
++GetIncome() : unsigned Integer
++UpdateIncome(Map map, int posx, int posy)
++CreateBuilding(BuildType type) : Building
+}
+note right of Building
+    Cout d'achat = BaseCost + (BaseCost * Level * Multiplicateur) + (BaseCost * BuyMalus)
+    BuyMalus est compris entre 1 et 2
+    UpdateIncome -> modifie le revenu du bâtiment en tenant compte des synergies
+end note
+
+abstract class Player{
+-Money : Integer
+-Score : Integer
++Buy(Map map, int posx, int posy)
++CanBuy(Map map, int posx, int posy)
++Upgrade(Map map, int posx, int posy)
++CanUpgrade(Map map, int posx, int posy)
++TurnUpdate()
+}
+
+class City{
++Decree(Map map, int posx, int posy)
+}
+
+class Company{
++Promote(Map map, int posx, int posy)
+}
+
+class CityUI{
++UpdateBuildings(Map map)
++UpdateBuilding(Map map, int posx, int posy)
+}
+
+class InfoUI{
++UpdateScores(Player[] players)
++UpdateMoney(Player[] players)
+}
+
+class Interaction{
++BuildingClick()
++OptionSelect()
+}
+
+Game "1" o-- "1" CityUI : CityUI
+Game "1" o-- "1" InfoUI : InfoUI
+Game "1" o-- "1" Interaction : Interaction
+Player <|-- Company
+Player <|-- City
+Map "1" *-- "Size*size" Building : Buildings
+Game "1" o-- "2" Player : Players
+Game "1" o-- "1" Map : GameMap
+Game "1" o-- "*" Event : Events
+Building .. BuildType : <<use>>
+
+@enduml
