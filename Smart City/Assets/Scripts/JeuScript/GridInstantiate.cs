@@ -42,6 +42,7 @@ public class GridInstantiate : MonoBehaviour
 
     public GameObject getTileAtPosition(Vector2 pos)
     {
+        //TODO 2 * pos * tileSize ?
         Vector2 dictionaryKey = new Vector2(2 * pos.y + pos.x, 2 * pos.y - pos.x);
         return tilesd[dictionaryKey];
     }
