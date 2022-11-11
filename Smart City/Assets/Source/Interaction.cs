@@ -15,22 +15,24 @@ public class Interaction : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     private Sprite sprite;
+    private GameObject spriteObject;
 
-    private double posX = 0;
-    private double posY = 0;
-    private double posZ = 0.07318394;
+    private int posX = 0;
+    private int posY = 0;
+    //private double posZ = 0.07318394;
 
     //Generating tiles
-    public int nb = 1;
+    public int nb;
 
     // Start is called before the first frame update
     void Start()
     {
         //Grid for tiles
-        GameObject GO = GameObject.Find("Grid");
-        Grid grid = GO.GetComponent<Grid>();
+        GameObject gridObject = GameObject.Find("Grid");
+        Grid grid = gridObject.GetComponent<Grid>();
         //Number of differents tiles types
         spriteArray = new Sprite[4];
+        nb = spriteArray.Length;
 
         //Load all textures for sprites tiles
         textureArray = Resources.LoadAll<Texture2D>("Textures");
@@ -52,15 +54,25 @@ public class Interaction : MonoBehaviour
         sprite.name = "Sprite4";
         spriteArray[3] = sprite;
 
-        //Generating new tiles (GameObject)
-        GameObject spriteObject = new GameObject("Test");
+        //Generating random sprite image
+        System.Random rnd = new System.Random();
 
-        //Position (x,y,z)
-        spriteObject.transform.position = grid.CellToWorld(new Vector3Int());
-            //new Vector3((float)posX, (float)posY, (float)posZ);
-        //Visual aspect
-        spriteRenderer = spriteObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
-        spriteRenderer.sprite = spriteArray[0];
+        for(posX = 0; posX < 6; posX++)
+        {
+            for(posY = 0; posY < 6; posY++)
+            {
+                //Generating new tiles (GameObject)
+                spriteObject = new GameObject("Tile" + posX + ':' + posY);
+
+                //Position (x,y,z)
+                spriteObject.transform.parent = gridObject.transform;
+                spriteObject.transform.position = grid.CellToWorld(new Vector3Int(posX, posY, 0));
+                //Visual aspect
+                spriteRenderer = spriteObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
+                spriteRenderer.sprite = spriteArray[rnd.Next(0, nb)];
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -68,17 +80,21 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (nb >= 4)
-            {
-                nb = 0;
-            }
-            ChangeSprite(spriteArray[nb]);
-            nb += 1;
+            //Generating random sprite image
+            System.Random rnd = new System.Random();
+
+            ChangeAllSprite(spriteArray[rnd.Next(0, nb)]);
         }
     }
 
-    void ChangeSprite(Sprite newSprite)
+    void ChangeAllSprite(Sprite newSprite)
     {
-        spriteRenderer.sprite = newSprite;
+        //Grid for tiles
+        GameObject gridObject = GameObject.Find("Grid");
+        Grid grid = gridObject.GetComponent<Grid>();
+
+        foreach (SpriteRenderer sr in gridObject.GetComponentsInChildren<SpriteRenderer>()) {
+            sr.sprite = newSprite;
+        }
     }
 }
