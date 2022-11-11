@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Ctrl = Source.Controller;
 
 public class Game : MonoBehaviour
 {
@@ -11,10 +10,9 @@ public class Game : MonoBehaviour
         
     }
 
-    /*
-        *schéma : fonction/proc : typeretour
-        *Paramètre : 
-        *Keskecé :
-        *Varibales locales :
-    */
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
