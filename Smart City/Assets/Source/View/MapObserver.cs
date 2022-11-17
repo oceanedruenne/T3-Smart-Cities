@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Source.View;
+using Source.Model;
 
-namespace Source.Observer
+public class MapObserver : Observer
 {
-    public class MapObserver : Observer
-    {
-        public void reactTo(){
-            
-        }
+    public void reactTo(Map map){
+
     }
 }

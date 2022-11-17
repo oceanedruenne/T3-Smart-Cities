@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Source;
+using Source.View;
 
 namespace Source.Model
 {
     public abstract class Player : MonoBehaviour
     {
-        private static int BASE_MONEY = 1000;
-        private int money;
-        private uint score;
-        private List<Observer> observers;
+        protected static uint BASE_MONEY = 1000;
+        protected uint money;
+        protected uint score;
+        protected List<PlayerObserver> observers;
 
         public Player(){
             this.money = BASE_MONEY;
             this.score = 0;
-            this.observers = new List<Observer>();
+            this.observers = new List<PlayerObserver>();
         }
 
         public bool canBuy(Map map, uint posx, uint posy){
@@ -26,19 +26,28 @@ namespace Source.Model
             return map.getUpgradeCostAt(posx,posy) <= money;
         }
 
-        public void Buy(Map map, uint posx, uint posy);
+        public abstract void Buy(Map map, uint posx, uint posy);
 
         public void Upgrade(Map map, uint posx, uint posy){
-            money -= map.getAt(posx,posy).getUpgradeCost;
-            map.UpgradeAt(posx,posy);
+            if(canUpgrade(map,posx,posy)){
+                money -= map.getUpgradeCostAt(posx,posy);
+                map.UpgradeAt(posx,posy);
+                notifyObservers();
+            }
         }
 
-        public void specialsUse(Map map, uint posx, uint posy);
+        public abstract void specialsUse(Map map, uint posx, uint posy);
 
-        public void addIncome(Map map);
+        public abstract void addIncome(Map map);
 
-        public void addObserver(Observer observer){
+        public void addObserver(PlayerObserver observer){
             this.observers.Add(observer);
+        }
+
+        public void notifyObservers(){
+            foreach(PlayerObserver observer in observers){
+                observer.reactTo(this);
+            }
         }
         /*
             *schéma : fonction/proc : typeretour

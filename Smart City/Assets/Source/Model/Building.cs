@@ -6,13 +6,9 @@ namespace Source.Model
 {
     public class Building : MonoBehaviour
     {
-        private static uint BASE_COST = 1000;
-        private static uint BASE_INCOME = 200;
-        private static float MALUS_INCREASE = 0.2;
-        private BuildType type
-        {
-            get => type;
-        }
+        private static int BASE_COST = 1000;
+        private static int BASE_INCOME = 200;
+        private static float MALUS_INCREASE = 0.2f;
         /*
         Ce qui suit s'appelle un getter 
         (il existe aussi des setter, si jamais :
@@ -21,29 +17,27 @@ namespace Source.Model
         sauf que il sera possible de faire directement un Building.buyMalus 
         au lieu de Building.getBuyMalus
         */
-        private float buyMalus
-        {
-            get => buyMalus;
-        }
-        private uint level
-        {
-            get => level;
-        }
+        private BuildType _type;
+        public BuildType type => _type;
+        private float _buyMalus;
+        public float buyMalus => _buyMalus;
+        private int _level;
+        public int level => _level;
 
         /*
             *Building : Constructeur : Building
             *Paramètre :
             type : BuildType : type du bâtiment crée (voir l'enumération BuildType)
-            malus : float : buyMalus du bâtiment, égal au buyMalus du bâtiments précedent + MALUS_INCREASE sinon 1.0
+            malus : double : buyMalus du bâtiment, égal au buyMalus du bâtiments précedent + MALUS_INCREASE sinon 1.0
             level : uint : Niveau du bâtiment, égal au bâtiment précédent sinon 0
             *Keskecé : 
             Constructeur de la classe
             *Varibales locales :
         */
-        public Building(BuildType type, float malus = 0.8, uint level = 0){
-            this.type = type;
-            this.buyMalus = malus + MALUS_INCREASE;
-            this.level = level;
+        public Building(BuildType type, float malus = 0.8f, int level = 0){
+            this._type = type;
+            this._buyMalus = malus + MALUS_INCREASE;
+            this._level = level;
         }
 
         /*
@@ -59,7 +53,7 @@ namespace Source.Model
             *Varibales locales :
         */
         public uint getIncome(){
-            return BASE_INCOME * ((level * 0,5) + 1);
+            return (uint)(BASE_INCOME * ((level / 2) + 1));
         }
 
         /*
@@ -74,15 +68,11 @@ namespace Source.Model
 
         */
         public uint getBuyCost(){
-            return BASE_COST * ((0,5 * level) + 1) * buyMalus;
+            return (uint)(BASE_COST * ((level / 2) + 1) * buyMalus);
         }
 
         public uint getUpgradeCost(){
-            return BASE_COST * ((0,5 * level) + 1);
-        }
-
-        public void upgrade(){
-            this.level++;
+            return (uint)(BASE_COST * ((level / 2) + 1));
         }
 
         /*

@@ -6,17 +6,21 @@ namespace Source.Model
 {
     public class City : Player
     {
-        public void Buy(Map map, uint posx, uint posy){
-            money -= map.getBuyCostAt(posx,posy);
-            map.buildAt(BuildType.Housing, posx, posy);
+        public override void Buy(Map map, uint posx, uint posy){
+            if(canBuy(map,posx,posy)){
+                money -= map.getBuyCostAt(posx,posy);
+                map.buildAt(BuildType.Housing, posx, posy);
+                notifyObservers();
+            }
         }
 
-        public void specialsUse(Map map, uint posx, uint posy){
+        public override void specialsUse(Map map, uint posx, uint posy){
             map.setDecree(posx, posy);
         }
 
-        public void addIncome(Map map){
+        public override void addIncome(Map map){
             money += map.getIncomeFromType(BuildType.Housing);
+            notifyObservers();
         }
         /*
             *schéma : fonction/proc : typeretour

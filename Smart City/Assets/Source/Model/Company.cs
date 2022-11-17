@@ -6,17 +6,21 @@ namespace Source.Model
 {
     public class Company : Player
     {
-        public void Buy(Map map, uint posx, uint posy){
-            money -= map.getBuyCostAt(posx,posy);
-            map.buildAt(BuildType.Office, posx, posy);
+        public override void Buy(Map map, uint posx, uint posy){
+            if(canBuy(map, posx, posy)){
+                money -= map.getBuyCostAt(posx,posy);
+                map.buildAt(BuildType.Office, posx, posy);
+                notifyObservers();
+            }
         }
 
-        public void specialsUse(Map map, uint posx, uint posy){
+        public override void specialsUse(Map map, uint posx, uint posy){
             map.setBoost(posx,posy);
         }
 
-        public void addIncome(Map map){
+        public override void addIncome(Map map){
             money += map.getIncomeFromType(BuildType.Office);
+            notifyObservers();
         }
         /*
             *schéma : fonction/proc : typeretour

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using Source.View;
 
 namespace Source.Model
 {
@@ -10,7 +11,7 @@ namespace Source.Model
         private Building[,] buildings;
         private uint[] decree = new uint[2];
         private uint[] boost = new uint[2];
-        private List<Observer> observers;
+        private List<MapObserver> observers;
         /*
             *Map : Constructeur : Map
             *Paramètre :
@@ -20,11 +21,11 @@ namespace Source.Model
         public Map(uint size = 6){
             this.buildings = new Building[size, size];
             fillMapAleaNoSeedEqualChance();
-            observers = new List<Observer>();
+            observers = new List<MapObserver>();
         }
 
-        fillMapEmpty(){
-            uint size =  buildings.GetLength(0);
+        public void fillMapEmpty(){
+            int size =  buildings.GetLength(0);
             for(int i = 0;i < size;i++){
                 for(int j = 0;j < size;j++){
                     buildings[i,j] = new Building(BuildType.Empty);
@@ -33,22 +34,22 @@ namespace Source.Model
         }
 
         public void fillMapAleaNoSeedEqualChance(){
-            uint size =  buildings.GetLength(0);
-            Random rand = new Random();
+            int size =  buildings.GetLength(0);
+            System.Random rand = new System.Random();
             for(int i = 0;i < size;i++){
                 for(int j = 0;j < size;j++){
-                    uint rnd = rand.Next(Enum.GetNames(BuildType).Length);
+                    int rnd = rand.Next(Enum.GetNames(typeof(BuildType)).Length);
                     buildings[i,j] = new Building((BuildType)rnd);
                 }
             }
         }
 
         public uint getUpgradeCostAt(uint posx, uint posy){
-            return buildings[posx, posy].getUpgradeCost;
+            return buildings[posx, posy].getUpgradeCost();
         }
 
         public uint getBuyCostAt(uint posx, uint posy){
-            return buildings[posx,posy].getBuyCost;
+            return buildings[posx,posy].getBuyCost();
         }
 
         public void buildAt(BuildType type, uint posx, uint posy){
@@ -65,7 +66,8 @@ namespace Source.Model
         }
 
         public void UpgradeAt(uint posx, uint posy){
-            buildings[posx,posy].upgrade();
+            Building ancien = buildings[posx,posy];
+            buildings[posx,posy] = new Building(ancien.type, ancien.buyMalus, ancien.level + 1);
         }
 
         public void setDecree(uint posx, uint posy){
@@ -74,7 +76,7 @@ namespace Source.Model
         }
 
         public bool getDecree(uint posx, uint posy){
-            return decree[0] = posx && decree[1] = posy;
+            return (decree[0] == posx) && (decree[1] == posy);
         }
 
         public void setBoost(uint posx, uint posy){
@@ -96,8 +98,14 @@ namespace Source.Model
             return total;
         }
 
-        public void addObserver(Observer observer){
+        public void addObserver(MapObserver observer){
             this.observers.Add(observer);
+        }
+
+        public void notifyObservers(){
+            foreach(MapObserver observer in observers){
+                observer.reactTo(this);
+            }
         }
 
         /*

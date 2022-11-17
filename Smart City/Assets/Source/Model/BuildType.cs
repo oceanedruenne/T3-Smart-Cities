@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Source.Model
 {
-    public enum BuildType : MonoBehaviour
+    public enum BuildType : int
     {
-        Empty = 0,
-        Housing = 1,
-        Office = 2
+        Empty,
+        Housing,
+        Office
     }
 }
