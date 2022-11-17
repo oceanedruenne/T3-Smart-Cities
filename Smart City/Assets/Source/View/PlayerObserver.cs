@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Source.View;
 using Source.Model;
 
-namespace Source.View
+public class PlayerObserver : Observer
 {
-    public interface Observer
-    {
-        public void reactTo(){
-
-        }
+    public void reactTo(Player player){
 
     }
 }
