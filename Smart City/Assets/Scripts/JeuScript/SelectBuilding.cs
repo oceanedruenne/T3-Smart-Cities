@@ -11,6 +11,8 @@ public class SelectBuilding : MonoBehaviour
     }
     public void changeBuilding(Sprite building)
     {
+        Debug.Log(building);
+        Debug.Log("hey");
         gm.building = building;
     }
 }

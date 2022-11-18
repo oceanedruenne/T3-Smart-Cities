@@ -31,7 +31,7 @@ public class Tile : MonoBehaviour
     private void OnMouseUp()
     {
         Vector3Int vect = grid.WorldToCell(this.transform.position);
-        Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
+        //Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
         GameHandler gh = FindObjectOfType<GameHandler>();
         gh.selectTile(vect.x,vect.y);
     }
