@@ -7,11 +7,11 @@ public class GridInstantiate : MonoBehaviour
 {
     //GameObject = Tile ?
     [SerializeField] GameObject[] tiles;
-    [SerializeField] int gridHeight = 10;
-    [SerializeField] int gridWidth = 10;
+    [SerializeField] int gridHeight = 6;
+    [SerializeField] int gridWidth = 6;
     [SerializeField] float tileSize = 1;
 
-    private Dictionary<Vector2, GameObject> tilesd;
+    private Dictionary<Vector3Int, GameObject> tilesd;
 
     void Start()
     {
@@ -20,30 +20,37 @@ public class GridInstantiate : MonoBehaviour
 
     private void GenerateGrid()
     {
-        tilesd = new Dictionary<Vector2, GameObject>();
-        for(int x = 0; x < gridWidth; x++)
+        tilesd = new Dictionary<Vector3Int, GameObject>();
+        GameObject gridObject = GameObject.Find("Grid");
+        Grid grid = gridObject.GetComponent<Grid>();
+
+        int posX = 0;
+        int posY = 0;
+        int posZ = 0;
+
+        for (posX = 0; posX < 6; posX++)
         {
-            for( int y = 0; y < gridHeight; y++)
+            for(posY = 0; posY < 6; posY++)
             {
                 var randomTile = tiles[Random.Range(0, tiles.Length)];
                 GameObject tile = Instantiate(randomTile, transform);
 
-                float posX = (x * tileSize - y * tileSize) / 2f;
-                float posY = (x * tileSize + y * tileSize) / 4f;
                 //System.Math.Abs(posY);
 
-                tile.transform.position = new Vector2(posX, posY);
-                tile.name = x + " , " + y;
+                tile.transform.parent = gridObject.transform;
+                tile.transform.position = grid.CellToWorld(new Vector3Int(posX, posY, posZ));
+                //tile.transform.position = new Vector2(posX, posY);
+                tile.name = posX + " , " + posY;
 
-                tilesd[new Vector2(x, y)] = tile;
+                tilesd[new Vector3Int(posX, posY, posZ)] = tile;
             }
         }
     }
 
-    public GameObject getTileAtPosition(Vector2 pos)
+    public GameObject getTileAtPosition(Vector3Int pos)
     {
         //TODO 2 * pos * tileSize ?
-        Vector2 dictionaryKey = new Vector2(2 * pos.y + pos.x, 2 * pos.y - pos.x);
+        Vector3Int dictionaryKey = pos;
         return tilesd[dictionaryKey];
     }
 
