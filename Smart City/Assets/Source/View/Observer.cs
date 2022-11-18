@@ -10,6 +10,5 @@ namespace Source.View
         public void reactTo(){
 
         }
-
     }
 }
