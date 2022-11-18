@@ -6,7 +6,7 @@ using Source.View;
 
 namespace Source.Model
 {
-    public class Map : MonoBehaviour
+    public class Map
     {
         private Building[,] buildings;
         private uint[] decree = new uint[2];
@@ -22,6 +22,7 @@ namespace Source.Model
             this.buildings = new Building[size, size];
             fillMapAleaNoSeedEqualChance();
             observers = new List<MapObserver>();
+            notifyObservers();
         }
 
         public void fillMapEmpty(){
@@ -59,10 +60,12 @@ namespace Source.Model
             }
             Building ancien = buildings[posx,posy];
             buildings[posx,posy] = new Building(type, ancien.buyMalus, ancien.level);
+            notifyObservers();
         }
 
         public void destroyAt(uint posx, uint posy){
             buildings[posx,posy] = new Building(BuildType.Empty);
+            notifyObservers();
         }
 
         public void UpgradeAt(uint posx, uint posy){
