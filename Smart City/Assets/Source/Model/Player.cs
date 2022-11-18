@@ -26,14 +26,16 @@ namespace Source.Model
             return map.getUpgradeCostAt(posx,posy) <= money;
         }
 
-        public abstract void Buy(Map map, uint posx, uint posy);
+        public abstract bool Buy(Map map, uint posx, uint posy);
 
-        public void Upgrade(Map map, uint posx, uint posy){
+        public bool Upgrade(Map map, uint posx, uint posy){
             if(canUpgrade(map,posx,posy)){
                 money -= map.getUpgradeCostAt(posx,posy);
                 map.UpgradeAt(posx,posy);
                 notifyObservers();
+                return true;
             }
+            return false;
         }
 
         public abstract void specialsUse(Map map, uint posx, uint posy);
@@ -49,6 +51,8 @@ namespace Source.Model
                 observer.reactTo(this);
             }
         }
+
+        public abstract bool isCity();
         /*
             *schéma : fonction/proc : typeretour
             *Paramètre : 

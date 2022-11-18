@@ -6,12 +6,14 @@ namespace Source.Model
 {
     public class Company : Player
     {
-        public override void Buy(Map map, uint posx, uint posy){
+        public override bool Buy(Map map, uint posx, uint posy){
             if(canBuy(map, posx, posy)){
                 money -= map.getBuyCostAt(posx,posy);
                 map.buildAt(BuildType.Office, posx, posy);
                 notifyObservers();
+                return true;
             }
+            return false;
         }
 
         public override void specialsUse(Map map, uint posx, uint posy){
@@ -21,6 +23,10 @@ namespace Source.Model
         public override void addIncome(Map map){
             money += map.getIncomeFromType(BuildType.Office);
             notifyObservers();
+        }
+
+        public override bool isCity(){
+            return false;
         }
         /*
             *schéma : fonction/proc : typeretour
