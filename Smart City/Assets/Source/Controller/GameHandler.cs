@@ -15,8 +15,8 @@ namespace Source.Controller
         private Map map;
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
-        private int posx;
-        private int posy;
+        [SerializeField] private int posx;
+        [SerializeField] private int posy;
 
         void Start(){
             startNewGame();

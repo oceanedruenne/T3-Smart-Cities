@@ -6,7 +6,7 @@ using Source.View;
 
 namespace Source.Model
 {
-    public class Map : MonoBehaviour
+    public class Map
     {
         private Building[,] buildings;
         private uint[] decree = new uint[2];

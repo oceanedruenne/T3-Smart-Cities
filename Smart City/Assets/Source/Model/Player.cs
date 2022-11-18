@@ -5,7 +5,7 @@ using Source.View;
 
 namespace Source.Model
 {
-    public abstract class Player : MonoBehaviour
+    public abstract class Player
     {
         protected static uint BASE_MONEY = 1000;
         protected uint money;

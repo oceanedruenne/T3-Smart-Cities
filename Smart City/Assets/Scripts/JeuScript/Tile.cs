@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Source.Controller;
 
 public class Tile : MonoBehaviour
 {
@@ -29,7 +30,9 @@ public class Tile : MonoBehaviour
 
     private void OnMouseUp()
     {
-        FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position));
+        Vector3Int vect = grid.WorldToCell(this.transform.position);
         Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
+        GameHandler gh = FindObjectOfType<GameHandler>();
+        gh.selectTile(vect.x,vect.y);
     }
 }

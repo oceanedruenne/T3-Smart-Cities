@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Source.Model
 {
-    public class Building : MonoBehaviour
+    public class Building
     {
         private static int BASE_COST = 1000;
         private static int BASE_INCOME = 200;
