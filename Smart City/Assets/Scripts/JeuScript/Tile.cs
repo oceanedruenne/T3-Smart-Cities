@@ -7,10 +7,14 @@ public class Tile : MonoBehaviour
 {
     [SerializeField] GameObject highlight;
     GameManager gm;
+    Grid grid;
+
+
 
     private void Start()
     {
         gm = GameObject.Find("Grid").GetComponent<GameManager>();
+        grid = GameObject.Find("Grid").GetComponent<Grid>();
     }
 
     private void OnMouseEnter()
@@ -23,17 +27,9 @@ public class Tile : MonoBehaviour
         highlight.SetActive(false);
     }
 
-    private void OnMouseDown()
-    {
-        FindObjectOfType<GridInstantiate>().getTileAtPosition(this.transform.position);
-        Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(this.transform.position));
-    }
-
     private void OnMouseUp()
     {
-        GameObject tmp = FindObjectOfType<GridInstantiate>().getTileAtPosition(this.transform.position);
-        tmp.GetComponent<SpriteRenderer>().sprite = gm.building;
-        //TODO corriger le bug higlight qui garde l'ancienne structure.
-        tmp.GetComponentInChildren<SpriteRenderer>().sprite = gm.building;
+        FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position));
+        Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
     }
 }
