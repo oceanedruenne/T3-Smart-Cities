@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Source.Model;
 
-public class Observer : MonoBehaviour
+namespace Source.View
 {
-    // Start is called before the first frame update
-    void Start()
+    public interface Observer
     {
-        
-    }
+        public void reactTo(){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }

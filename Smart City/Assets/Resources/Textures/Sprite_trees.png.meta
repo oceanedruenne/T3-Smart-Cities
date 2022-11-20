@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07bd4ccad1d7b4b44b819b080dbe6599
+guid: 19e1da9cd2676754eb67344e67c64a2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.25}
+  alignment: 0
+  spritePivot: {x: 0, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -113,25 +113,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: 10.354891, y: -4.273632}
-      - {x: 9.9834175, y: 9.053068}
-      - {x: 7.9751244, y: 9.832504}
-      - {x: 5.3548927, y: 11.407959}
-      - {x: 5.089554, y: 13.893864}
-      - {x: 2.0812607, y: 16}
-      - {x: -0.12603664, y: 16}
-      - {x: -10.195688, y: 11.150913}
-      - {x: -10.354892, y: -4.645108}
-      - {x: -16, y: -7.0165834}
-      - {x: -16, y: -9.089552}
-      - {x: -2.1260357, y: -16}
-      - {x: 2.1791039, y: -16}
-      - {x: 16, y: -9.354892}
-      - {x: 15.94693, y: -6.6451073}
+    - - {x: 6, y: -2}
+      - {x: 7, y: 0}
+      - {x: 10, y: 4}
+      - {x: 10, y: 8}
+      - {x: 9, y: 10}
+      - {x: 7, y: 12}
+      - {x: 5, y: 13}
+      - {x: 1, y: 13}
+      - {x: -2, y: 11}
+      - {x: -4, y: 8}
+      - {x: -5, y: 6}
+      - {x: -7, y: 4}
+      - {x: -7, y: 0}
+      - {x: -6, y: -2}
+      - {x: -16, y: -7}
+      - {x: -16, y: -9}
+      - {x: -2, y: -16}
+      - {x: 2, y: -16}
+      - {x: 16, y: -9}
+      - {x: 16, y: -7}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
