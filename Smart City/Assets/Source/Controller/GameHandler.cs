@@ -65,12 +65,12 @@ namespace Source.Controller
             this.posy = posy;
         }
 
-        public bool buySelected(){
-            return activePlayer.Buy(map, (uint)posx, (uint)posy);
+        public void buySelected(){
+            activePlayer.Buy(map, (uint)posx, (uint)posy);
         }
 
-        public bool upgradeSelected(){
-            return activePlayer.Upgrade(map, (uint)posx, (uint)posy);
+        public void upgradeSelected(){
+            activePlayer.Upgrade(map, (uint)posx, (uint)posy);
         }
     }
 }
