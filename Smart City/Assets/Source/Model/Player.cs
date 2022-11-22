@@ -7,7 +7,7 @@ namespace Source.Model
 {
     public abstract class Player
     {
-        protected static uint BASE_MONEY = 1000;
+        protected static uint BASE_MONEY = 10000000;
         protected uint money;
         protected uint score;
         protected List<PlayerObserver> observers;
