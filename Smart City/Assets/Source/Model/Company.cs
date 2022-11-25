@@ -16,6 +16,33 @@ namespace Source.Model
             return false;
         }
 
+        public override bool canBuy(Map map, uint posx, uint posy){
+            bool temp = map.getBuyCostAt(posx,posy) <= money;
+            switch (map.getTypeAt(posx,posy)){
+                case BuildType.Housing:
+                case BuildType.Empty:
+                    temp &= true;
+                    break;
+                default:
+                    temp &= false;
+                    break;
+            }
+            return temp;
+        }
+
+        public override bool canUpgrade(Map map, uint posx, uint posy){
+            bool temp = map.getBuyCostAt(posx,posy) <= money;
+            switch (map.getTypeAt(posx,posy)){
+                case BuildType.Office:
+                    temp &= true;
+                    break;
+                default:
+                    temp &= false;
+                    break;
+            }
+            return temp;
+        }
+
         public override void specialsUse(Map map, uint posx, uint posy){
             map.setBoost(posx,posy);
         }

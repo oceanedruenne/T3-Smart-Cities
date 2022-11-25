@@ -42,7 +42,7 @@ namespace Source.Controller
             playerCity.addObserver(playerObserver);
             playerCompany.addObserver(playerObserver);
 
-            mapObserver = new MapObserver();
+            mapObserver = ScriptableObject.CreateInstance<MapObserver>();
 
             map.addObserver(mapObserver);
         }
