@@ -20,7 +20,8 @@ namespace Source.Model
         */
         public Map(uint size = 6){
             this.buildings = new Building[size, size];
-            fillMapAleaNoSeedEqualChance();
+            fillMapEmpty();
+            buildings[3, 5] = Building.createTransport();
             observers = new List<MapObserver>();
             notifyObservers();
         }
@@ -34,7 +35,7 @@ namespace Source.Model
             }
         }
 
-        public void fillMapAleaNoSeedEqualChance(){
+        public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();
             for(int i = 0;i < size;i++){
