@@ -8,6 +8,7 @@ namespace Source.Model
     {
         Empty,
         Housing,
-        Office
+        Office,
+        Transport
     }
 }
