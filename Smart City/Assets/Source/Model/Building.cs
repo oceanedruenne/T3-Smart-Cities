@@ -6,9 +6,9 @@ namespace Source.Model
 {
     public class Building
     {
-        private static int BASE_COST = 1000;
+        private static int BASE_COST = 1000; //Prix de base d'un bâtiment
         private static int BASE_INCOME = 200;
-        private static float MALUS_INCREASE = 0.2f;
+        public static float MALUS_INCREASE = 0.2f;
         /*
         Ce qui suit s'appelle un getter 
         (il existe aussi des setter, si jamais :
@@ -34,9 +34,9 @@ namespace Source.Model
             Constructeur de la classe
             *Varibales locales :
         */
-        public Building(BuildType type, float malus = 0.8f, int level = 0){
+        public Building(BuildType type, float malus = 1f, int level = 0){
             this._type = type;
-            this._buyMalus = malus + MALUS_INCREASE;
+            this._buyMalus = malus;
             this._level = level;
         }
 
@@ -59,7 +59,7 @@ namespace Source.Model
             *Keskecé : 
             Retourne le revenu rapporté par le bâtiment, qui correspond à la formule suivante :
             BASE_INCOME * ((level * 0,5) + 1) cad 
-            niveau 0 : BASE_INCOME * 1
+            niveau 0 : BASE_INCOME * 1 (= (0 / 2) + 1 )
             Niveau 1 : BASE_INCOME * 1,5
             Niveau 2 : BASE_INCOME * 2
             etc...

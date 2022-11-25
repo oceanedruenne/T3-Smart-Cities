@@ -18,13 +18,9 @@ namespace Source.Model
             this.observers = new List<PlayerObserver>();
         }
 
-        public bool canBuy(Map map, uint posx, uint posy){
-            return map.getBuyCostAt(posx,posy) <= money;
-        }
+        public abstract bool canBuy(Map map, uint posx, uint posy);
 
-        public bool canUpgrade(Map map, uint posx, uint posy){
-            return map.getUpgradeCostAt(posx,posy) <= money;
-        }
+        public abstract bool canUpgrade(Map map, uint posx, uint posy);
 
         public abstract bool Buy(Map map, uint posx, uint posy);
 

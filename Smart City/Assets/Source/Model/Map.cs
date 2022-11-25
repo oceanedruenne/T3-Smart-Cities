@@ -23,7 +23,6 @@ namespace Source.Model
             fillMapEmpty();
             buildings[3, 5] = Building.createTransport();
             observers = new List<MapObserver>();
-            notifyObservers();
         }
 
         public void fillMapEmpty(){
@@ -54,13 +53,17 @@ namespace Source.Model
             return buildings[posx,posy].getBuyCost();
         }
 
+        public BuildType getTypeAt(uint posx, uint posy){
+            return buildings[posx,posy].type;
+        }
+
         public void buildAt(BuildType type, uint posx, uint posy){
             if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
             {
                 throw new System.Exception("Map : Build : posx ou posy en dehors du tableau");
             }
-            Building ancien = buildings[posx,posy];
-            buildings[posx,posy] = new Building(type, ancien.buyMalus, ancien.level);
+            Building old = buildings[posx,posy];
+            buildings[posx,posy] = new Building(type, old.buyMalus+Building.MALUS_INCREASE, old.level);
             notifyObservers();
         }
 
@@ -70,8 +73,9 @@ namespace Source.Model
         }
 
         public void UpgradeAt(uint posx, uint posy){
-            Building ancien = buildings[posx,posy];
-            buildings[posx,posy] = new Building(ancien.type, ancien.buyMalus, ancien.level + 1);
+            Building old = buildings[posx,posy];
+            buildings[posx,posy] = new Building(old.type, old.buyMalus, old.level + 1);
+            notifyObservers();
         }
 
         public void setDecree(uint posx, uint posy){
@@ -86,6 +90,10 @@ namespace Source.Model
         public void setBoost(uint posx, uint posy){
             boost[0] = posx;
             boost[1] = posy;
+        }
+
+        public bool getBoost(uint posx, uint posy){
+            return (boost[0] == posx) && (boost[1] == posy);
         }
 
         public uint getIncomeFromType(BuildType type){
