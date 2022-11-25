@@ -41,6 +41,19 @@ namespace Source.Model
         }
 
         /*
+           *Transport : Fonction : Building
+           *Paramètre : 
+           *Keskecé : Construit le bâtiment transport qui ne sera pas achetable et qui va donner des bonus aux bâtiments autour
+           *Varibales locales : 
+           *transport : Building : le bâtiment
+       */
+
+        public static Building createTransport() {
+            Building transport = new Building(BuildType.Transport, 0, 0);
+            return transport;
+        }
+
+        /*
             *getIncome : fonction : uint
             *Paramètre : Aucun
             *Keskecé : 
@@ -71,15 +84,15 @@ namespace Source.Model
             return (uint)(BASE_COST * ((level / 2) + 1) * buyMalus);
         }
 
-        public uint getUpgradeCost(){
-            return (uint)(BASE_COST * ((level / 2) + 1));
-        }
-
         /*
             *schéma : fonction/proc : typeretour
             *Paramètre : 
             *Keskecé :
             *Varibales locales :
         */
+
+        public uint getUpgradeCost(){
+            return (uint)(BASE_COST * ((level / 2) + 1));
+        }
     }
 }
