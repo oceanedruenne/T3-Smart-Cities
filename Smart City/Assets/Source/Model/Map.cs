@@ -8,7 +8,7 @@ namespace Source.Model
 {
     public class Map
     {
-        private Building[,] buildings;
+        public Building[,] buildings;
         private uint[] decree = new uint[2];
         private uint[] boost = new uint[2];
         private List<MapObserver> observers;
