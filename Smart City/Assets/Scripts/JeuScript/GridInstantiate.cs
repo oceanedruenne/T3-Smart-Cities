@@ -9,7 +9,6 @@ public class GridInstantiate : MonoBehaviour
     [SerializeField] GameObject[] tiles;
     [SerializeField] int gridHeight = 6;
     [SerializeField] int gridWidth = 6;
-    [SerializeField] float tileSize = 1;
 
     private Dictionary<Vector3Int, GameObject> tilesd;
 
