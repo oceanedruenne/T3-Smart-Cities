@@ -4,7 +4,7 @@ using UnityEngine;
 using Source.View;
 using Source.Model;
 
-public class PlayerObserver : Observer
+public class PlayerObserver : ScriptableObject, Observer
 {
     public void reactTo(Player player){
         
