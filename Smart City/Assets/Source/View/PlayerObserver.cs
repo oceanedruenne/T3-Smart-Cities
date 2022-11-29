@@ -7,6 +7,6 @@ using Source.Model;
 public class PlayerObserver : Observer
 {
     public void reactTo(Player player){
-
+        
     }
 }

@@ -67,12 +67,30 @@ namespace Source.Model
             notifyObservers();
         }
 
+        public void buildAtNoMalus(BuildType type, uint posx, uint posy){
+            if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
+            {
+                throw new System.Exception("Map : Build : posx ou posy en dehors du tableau");
+            }
+            Building old = buildings[posx,posy];
+            buildings[posx,posy] = new Building(type, old.buyMalus, old.level);
+            notifyObservers();
+        }
+
         public void destroyAt(uint posx, uint posy){
+            if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
+            {
+                throw new System.Exception("Map : Build : posx ou posy en dehors du tableau");
+            }
             buildings[posx,posy] = new Building(BuildType.Empty);
             notifyObservers();
         }
 
         public void UpgradeAt(uint posx, uint posy){
+            if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
+            {
+                throw new System.Exception("Map : Build : posx ou posy en dehors du tableau");
+            }
             Building old = buildings[posx,posy];
             buildings[posx,posy] = new Building(old.type, old.buyMalus, old.level + 1);
             notifyObservers();

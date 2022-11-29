@@ -27,6 +27,7 @@ namespace Source.Model
                     temp &= false;
                     break;
             }
+            temp &= !map.getDecree(posx,posy);
             return temp;
         }
 
@@ -40,6 +41,7 @@ namespace Source.Model
                     temp &= false;
                     break;
             }
+            temp &= !map.getDecree(posx,posy);
             return temp;
         }
 

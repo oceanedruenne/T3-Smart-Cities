@@ -10,7 +10,6 @@ namespace JeuScript
     public class Tile : MonoBehaviour
     {
     [SerializeField] GameObject highlight;
-    GameManager gm;
     Grid grid;
 
     private Sprite sprite;
@@ -18,7 +17,6 @@ namespace JeuScript
 
     private void Start()
     {
-        gm = GameObject.Find("Grid").GetComponent<GameManager>();
         grid = GameObject.Find("Grid").GetComponent<Grid>();
         spriteArray = Resources.LoadAll<Sprite>("Textures");
     }
@@ -42,8 +40,7 @@ namespace JeuScript
     }
 
     public void changeSprite(BuildType type){
-        GameObject me = FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position));
-        SpriteRenderer sr = me.GetComponent<SpriteRenderer>();
+        SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
         if(type == BuildType.Empty){
             System.Random rnd = new System.Random();
             sr.sprite = spriteArray[rnd.Next(1)*2+1];
@@ -54,6 +51,10 @@ namespace JeuScript
         else if(type == BuildType.Housing){
             sr.sprite = spriteArray[0];
         }
+    }
+
+    public static void changeSprite(Tile tile, BuildType type){
+        
     }
 }
 }
