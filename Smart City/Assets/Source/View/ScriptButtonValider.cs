@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ScriptButtonValider : MonoBehaviour
 {
-    public void BtnNextScene()
-    {
-        SceneManager.LoadScene("SignUp");
-    }
+   public void BtnNextScene()
+   {
+       SceneManager.LoadScene("SampleScene");
+   }
 }
