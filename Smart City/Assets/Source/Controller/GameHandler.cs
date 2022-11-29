@@ -8,6 +8,7 @@ namespace Source.Controller
 {
     public class GameHandler : MonoBehaviour
     {
+        [SerializeField] private GameObject gameHandler;
         private uint turn;
         private Player activePlayer;
         private City playerCity;
@@ -42,7 +43,7 @@ namespace Source.Controller
             playerCity.addObserver(playerObserver);
             playerCompany.addObserver(playerObserver);
 
-            mapObserver = ScriptableObject.CreateInstance<MapObserver>();
+            mapObserver = new MapObserver(map);
 
             map.addObserver(mapObserver);
         }
