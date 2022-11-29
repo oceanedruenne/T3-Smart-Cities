@@ -64,7 +64,7 @@ public class MapObserver : ScriptableObject, Observer
         for(int x = 0; x<size; x++){
             for(int y = 0; y<size; y++){
                 building = map.buildings[x,y];
-                getTileAtPosition(new Vector3Int(x,y,0)).GetComponent<Tile>().changeSprite(building.type);
+                getTileAtPosition(new Vector3Int(x,y,0)).GetComponent<Tile>().changeSprite(building.type, building.level);
             }
         }
     }

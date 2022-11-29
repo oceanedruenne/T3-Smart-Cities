@@ -15,6 +15,9 @@ namespace JeuScript
         //D�claration
         private Sprite sprite;
 
+        SpriteRenderer sr;
+        bool isSelected = false;
+
         private Sprite[] emptySpriteArray;
         private Sprite[] houseSpriteArray;
         private Sprite[] officeSpriteArray;
@@ -25,36 +28,37 @@ namespace JeuScript
             //R�cup�ration de la grille
             grid = GameObject.Find("Grid").GetComponent<Grid>();
 
+            //Récupération du SpriteRenderer
+            sr = this.GetComponent<SpriteRenderer>();
+
             //Chargement des diff�rentes apparences de nos tiles en fonction du niveau et du type de b�timent
             emptySpriteArray = Resources.LoadAll<Sprite>("Textures/Empty");
             houseSpriteArray = Resources.LoadAll<Sprite>("Textures/House");
             officeSpriteArray = Resources.LoadAll<Sprite>("Textures/Office");
-            transportSprite = Resources.Load<Sprite>("Textures/Transport/Sprite_transport.png");
+            transportSprite = Resources.Load<Sprite>("Textures/Transport/Sprite_transport");
 
         }
 
         private void OnMouseEnter()
         {
-            highlight.SetActive(true);
+            sr.color = Color.red;
         }
 
         private void OnMouseExit()
         {
-            highlight.SetActive(false);
+            sr.color = Color.white;
         }
 
         private void OnMouseUp()
         {
             Vector3Int vect = grid.WorldToCell(this.transform.position);
-            //Debug.Log(FindObjectOfType<GridInstantiate>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
+            Debug.Log(FindObjectOfType<MapObserver>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
             GameHandler gh = FindObjectOfType<GameHandler>();
             gh.selectTile(vect.x,vect.y);
         }
 
         public void changeSprite(BuildType type, int level)
         {
-            SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
-
             if(level == 0 || level == 1)
             {
                 if (type == BuildType.Empty)
