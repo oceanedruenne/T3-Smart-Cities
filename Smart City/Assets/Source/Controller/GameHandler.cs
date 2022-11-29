@@ -46,6 +46,9 @@ namespace Source.Controller
             mapObserver = new MapObserver(map);
 
             map.addObserver(mapObserver);
+
+            map.notifyObservers();
+            activePlayer.notifyObservers();
         }
 
         public void nextTurn(){
@@ -59,6 +62,7 @@ namespace Source.Controller
             posx = -1;
             posy = -1;
             turn++;
+            activePlayer.notifyObservers();
         }
 
         public void selectTile(int posx, int posy){
