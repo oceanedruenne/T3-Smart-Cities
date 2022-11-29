@@ -12,7 +12,7 @@ namespace JeuScript
         [SerializeField] GameObject highlight;
         Grid grid;
 
-        //Déclaration
+        //Dï¿½claration
         private Sprite sprite;
 
         private Sprite[] emptySpriteArray;
@@ -22,10 +22,10 @@ namespace JeuScript
 
         private void Start()
         {
-            //Récupération de la grille
+            //Rï¿½cupï¿½ration de la grille
             grid = GameObject.Find("Grid").GetComponent<Grid>();
 
-            //Chargement des différentes apparences de nos tiles en fonction du niveau et du type de bâtiment
+            //Chargement des diffï¿½rentes apparences de nos tiles en fonction du niveau et du type de bï¿½timent
             emptySpriteArray = Resources.LoadAll<Sprite>("Textures/Empty");
             houseSpriteArray = Resources.LoadAll<Sprite>("Textures/House");
             officeSpriteArray = Resources.LoadAll<Sprite>("Textures/Office");
@@ -124,5 +124,9 @@ namespace JeuScript
                 sr.sprite = houseSpriteArray[0];
             }
         }
+    }
+
+    public static void changeSprite(Tile tile, BuildType type){
+        
     }
 }

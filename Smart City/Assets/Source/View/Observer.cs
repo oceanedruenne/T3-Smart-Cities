@@ -8,7 +8,7 @@ namespace Source.View
     public interface Observer
     {
         public void reactTo(){
-
+            
         }
     }
 }
