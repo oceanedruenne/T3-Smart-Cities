@@ -125,8 +125,4 @@ namespace JeuScript
             }
         }
     }
-
-    public static void changeSprite(Tile tile, BuildType type){
-        
-    }
 }
