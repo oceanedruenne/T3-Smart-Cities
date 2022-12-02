@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using Source.Model;
 using Source.View;
+using JeuScript;
 
 namespace Source.Controller
 {
     public class GameHandler : MonoBehaviour
     {
         [SerializeField] private GameObject gameHandler;
+
         private uint turn;
+
         private Player activePlayer;
         private City playerCity;
         private Company playerCompany;
         private Map map;
+
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
+
         [SerializeField] private int posx;
         [SerializeField] private int posy;
+        public Tile currTile = null;
 
         void Start(){
             startNewGame();
@@ -65,9 +71,10 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
-        public void selectTile(int posx, int posy){
+        public void selectTile(int posx, int posy, Tile tile){
             this.posx = posx;
             this.posy = posy;
+            this.currTile = tile;
         }
 
         public void buySelected(){
