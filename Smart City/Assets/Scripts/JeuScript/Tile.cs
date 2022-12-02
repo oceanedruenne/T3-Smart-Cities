@@ -64,7 +64,7 @@ namespace JeuScript
                 if (type == BuildType.Empty)
                 {
                     System.Random rnd = new System.Random();
-                    sr.sprite = emptySpriteArray[rnd.Next(2)];
+                    this.sr.sprite = emptySpriteArray[rnd.Next(2)];
                 }
                 else if (type == BuildType.Transport)
                 {
@@ -108,8 +108,6 @@ namespace JeuScript
 
         public void changeSprite(BuildType type)
         {
-            SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
-
             if (type == BuildType.Empty)
             {
                 System.Random rnd = new System.Random();

@@ -6,6 +6,8 @@ namespace Source.Model
 {
     public class City : Player
     {
+        private static uint COEF_SCORE = 200;
+        
         /*
             *schéma : Buy : bool
             *Paramètre : 
@@ -83,6 +85,11 @@ namespace Source.Model
         public override void addIncome(Map map){
             money += map.getIncomeFromType(BuildType.Housing);
             notifyObservers();
+        }
+
+        public override void setScore(Map map)
+        {
+            score = map.getNbBuildingFromType(BuildType.Housing) * COEF_SCORE;
         }
 
         /*

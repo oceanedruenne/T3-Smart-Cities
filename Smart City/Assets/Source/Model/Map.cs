@@ -64,7 +64,7 @@ namespace Source.Model
             }
             Building old = buildings[posx,posy];
             buildings[posx,posy] = new Building(type, old.buyMalus+Building.MALUS_INCREASE, old.level);
-            notifyObservers();
+            notifyObserversPos(posx, posy);
         }
 
         public void buildAtNoMalus(BuildType type, uint posx, uint posy){
@@ -74,7 +74,7 @@ namespace Source.Model
             }
             Building old = buildings[posx,posy];
             buildings[posx,posy] = new Building(type, old.buyMalus, old.level);
-            notifyObservers();
+            notifyObserversPos(posx, posy);
         }
 
         public void destroyAt(uint posx, uint posy){
@@ -83,7 +83,7 @@ namespace Source.Model
                 throw new System.Exception("Map : Build : posx ou posy en dehors du tableau");
             }
             buildings[posx,posy] = new Building(BuildType.Empty);
-            notifyObservers();
+            notifyObserversPos(posx, posy);
         }
 
         public void UpgradeAt(uint posx, uint posy){
@@ -93,7 +93,7 @@ namespace Source.Model
             }
             Building old = buildings[posx,posy];
             buildings[posx,posy] = new Building(old.type, old.buyMalus, old.level + 1);
-            notifyObservers();
+            notifyObserversPos(posx, posy);
         }
 
         public void setDecree(uint posx, uint posy){
@@ -128,6 +128,16 @@ namespace Source.Model
             return total;
         }
 
+        public uint getNbBuildingFromType(BuildType type){
+            uint total= 0;
+            foreach(Building building in buildings){
+                if(building.type == type){
+                    total++;
+                }
+            }
+            return total;
+        }
+
         public void addObserver(MapObserver observer){
             this.observers.Add(observer);
         }
@@ -135,6 +145,12 @@ namespace Source.Model
         public void notifyObservers(){
             foreach(MapObserver observer in observers){
                 observer.reactTo(this);
+            }
+        }
+
+        public void notifyObserversPos(uint x, uint y){
+            foreach(MapObserver observer in observers){
+                observer.reactToPos(this, x, y);
             }
         }
 
