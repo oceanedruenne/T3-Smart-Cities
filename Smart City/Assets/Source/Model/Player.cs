@@ -38,6 +38,8 @@ namespace Source.Model
 
         public abstract void addIncome(Map map);
 
+        public abstract void setScore(Map map);
+
         public void addObserver(PlayerObserver observer){
             this.observers.Add(observer);
         }

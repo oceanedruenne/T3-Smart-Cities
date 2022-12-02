@@ -27,6 +27,14 @@ namespace Source.Controller
 
         void Start(){
             startNewGame();
+            StartCoroutine(LateStart(0.5f));
+        }
+
+        IEnumerator LateStart(float waitTime)
+        {
+            yield return new WaitForSeconds(waitTime);
+            map.notifyObservers();
+            activePlayer.notifyObservers();
         }
 
         public void startNewGame(bool city = true){
@@ -52,13 +60,11 @@ namespace Source.Controller
             mapObserver = new MapObserver(map);
 
             map.addObserver(mapObserver);
-
-            map.notifyObservers();
-            activePlayer.notifyObservers();
         }
 
         public void nextTurn(){
             activePlayer.addIncome(map);
+            activePlayer.setScore(map);
             if(activePlayer.isCity()){
                 activePlayer = playerCompany;
             }
