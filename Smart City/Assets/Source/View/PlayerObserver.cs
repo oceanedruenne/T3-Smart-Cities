@@ -9,14 +9,18 @@ public class PlayerObserver : ScriptableObject, Observer
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI nameText;
 
     public PlayerObserver()
     {
-        scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-        moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+        moneyText = GameObject.Find("Argent").GetComponent<TextMeshProUGUI>();
+        nameText = GameObject.Find("Name").GetComponent<TextMeshProUGUI>();
     }
     public void reactTo(Player player){
         scoreText.text = "Score : " + player.score.ToString();
-        moneyText.text = "Money : " + player.money.ToString();
+        moneyText.text = "Argent : " + player.money.ToString();
+        nameText.text = player.name.ToString();
+
     }
 }

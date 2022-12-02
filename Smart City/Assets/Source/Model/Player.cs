@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Source.View;
+using TMPro;
+using Unity.VisualScripting;
 
 namespace Source.Model
 {
@@ -10,12 +12,15 @@ namespace Source.Model
         protected static uint BASE_MONEY = 10000000;
         public uint money;
         public uint score;
+        public TMP_Text name;
         protected List<PlayerObserver> observers;
 
         public Player(){
             this.money = BASE_MONEY;
-            this.score = 0;
+            this.score = 100;
             this.observers = new List<PlayerObserver>();
+            name = new TextMeshProUGUI();
+            this.name.text = "test";
         }
 
         public abstract bool canBuy(Map map, uint posx, uint posy);
