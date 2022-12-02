@@ -69,8 +69,8 @@ public class MapObserver : ScriptableObject, Observer
         }
     }
 
-    public void reactToPos(Map map, int posx, int posy){
+    public void reactToPos(Map map, uint posx, uint posy){
         Building building = map.buildings[posx,posy];
-        getTileAtPosition(new Vector3Int(posx,posy,0)).GetComponent<Tile>().changeSprite(building.type);
+        getTileAtPosition(new Vector3Int((int)posx,(int)posy,0)).GetComponent<Tile>().changeSprite(building.type, building.level);
     }
 }

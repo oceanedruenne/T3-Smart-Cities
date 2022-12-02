@@ -54,6 +54,17 @@ namespace Source.Model
             notifyObservers();
         }
 
+        private uint getIncome(Map map){
+            uint tempMoney = 0;
+            tempMoney += map.getIncomeFromType(BuildType.Housing);
+            return tempMoney;
+        }
+
+        public override void setScore(Map map)
+        {
+            score = getIncome(map);
+        }
+
         public override bool isCity(){
             return false;
         }

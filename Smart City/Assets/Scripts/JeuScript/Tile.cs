@@ -41,12 +41,27 @@ namespace JeuScript
 
         private void OnMouseEnter()
         {
-            sr.color = Color.red;
+            if (isSelected)
+            {
+                sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+            }
+            //else if()
+            else
+            {
+                sr.color = Color.gray;
+            }
         }
 
         private void OnMouseExit()
         {
-            sr.color = Color.white;
+            if (isSelected)
+            {
+                sr.color = Color.green;
+            }
+            else
+            {
+                sr.color = Color.white; // Pas de couleur
+            }
         }
 
         private void OnMouseUp()
@@ -54,7 +69,17 @@ namespace JeuScript
             Vector3Int vect = grid.WorldToCell(this.transform.position);
             Debug.Log(FindObjectOfType<MapObserver>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
             GameHandler gh = FindObjectOfType<GameHandler>();
-            gh.selectTile(vect.x,vect.y);
+            //----
+            /*gh.currTile Pour récupérer l'ancienne tile, avant d'utiliser selectTile*/
+            if (gh.currTile != null)
+            {
+                gh.currTile.isSelected = false;
+                gh.currTile.sr.color = Color.white;
+            }
+            //----
+            gh.selectTile(vect.x,vect.y, this); //On met la tile actuelle (celle qui contient ce code) dans currTile
+            isSelected = true;
+            sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
         }
 
         public void changeSprite(BuildType type, int level)
@@ -64,7 +89,7 @@ namespace JeuScript
                 if (type == BuildType.Empty)
                 {
                     System.Random rnd = new System.Random();
-                    sr.sprite = emptySpriteArray[rnd.Next(2)];
+                    this.sr.sprite = emptySpriteArray[rnd.Next(2)];
                 }
                 else if (type == BuildType.Transport)
                 {
@@ -108,8 +133,6 @@ namespace JeuScript
 
         public void changeSprite(BuildType type)
         {
-            SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
-
             if (type == BuildType.Empty)
             {
                 System.Random rnd = new System.Random();
