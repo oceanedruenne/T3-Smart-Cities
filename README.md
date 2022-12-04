@@ -42,7 +42,7 @@ _Service public :_ Activité dont l'objectif est de satisfaire un besoin d'inté
 
 _GAFAM :_ Acronyme des géants du Web — Google, Apple, Facebook, Amazon et Microsoft — qui sont les cinq grandes firmes américaines qui dominent le marché du numérique, parfois également nommées les Big Five, ou encore « The Five ».
 
-_Design urbain : _ Approche de la conception des bâtiments et des espaces entre eux qui se concentre sur des processus et des résultats de conception spécifiques.
+_Design urbain :_ Approche de la conception des bâtiments et des espaces entre eux qui se concentre sur des processus et des résultats de conception spécifiques.
 
 
 ## Type de jeu et mécanismes d'apprentissage
