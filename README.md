@@ -65,7 +65,7 @@ Créer une issue par fonctionnalités.
 ## Lien de téléchargement
 
 ## Captures d'écran
-![Main Menu](https://ibb.co/rQYfwTz "Menu Principal")
+![Main Menu](https://i.postimg.cc/rFbPFcyJ/main-menu.png "Menu Principal")
 
 ## Procédures d'installation et d'exécution
 
