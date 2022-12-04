@@ -14,34 +14,58 @@ Participants :
 
 ## Méta-Todo
 
-- [ ] Mettre en place son GIT et préparer les milestones
-- [ ] Acquérir le sujet et définir un objectif pédagogique
-- [ ] Concevoir un poster qui décrit cet objectif pédagogique 
-- [ ] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
-- [ ] Définir la liste des principales fonctionnalités 
+- [X] Mettre en place son GIT et préparer les milestones
+- [X] Acquérir le sujet et définir un objectif pédagogique
+- [X] Concevoir un poster qui décrit cet objectif pédagogique 
+- [X] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
+- [X] Définir la liste des principales fonctionnalités 
 - [ ] Développer ces fonctionnalités 
-- [ ] Evaluation à mi-parcours (Octobre)
+- [X] Evaluation à mi-parcours (Octobre)
 - [ ] Tester et équilibrer 
 - [ ] Choisir la Licence (Novembre)
-- [ ] Finaliser le git et produire la documentation
+- [X] Finaliser le git et produire la documentation
 - [ ] Présenter son jeu et le faire évaluer (Décembre)
 
 ## Objectif pédagogique
 
+L’objectif de Smart Cities est d’expliquer aux joueurs (qui peuvent être de tous âges) ce qu’est une Smart City, qui en sont les principaux acteurs, quels sont leurs buts, leurs intérêts, et comment peuvent-ils travailler ensemble afin d’améliorer la qualité de vie des habitants.
+
+Smart Cities permet également de comprendre que gérer une ville, aussi bien par ses services publics que par son design urbain, est très compliqué et qu’il est difficile de trouver le juste équilibre entre l’implémentation des GAFAM, la satisfaction des habitants, le budget de la municipalité..
+
+Principaux mots de vocabulaire à connaître avant de commencer le jeu : 
+
+_Smart City :_ Une smart city, ou ville intelligente,est une ville qui utilise les nouvelles technologies (objets connectés, robotique, collectes et traitements de données, Internet) afin d’améliorer le quotidien de ses habitants.
+
+_Municipalité :_ Ensemble des personnes (en France, le maire, ses adjoints, les conseillers municipaux) qui administrent une commune.
+
+_Service public :_ Activité dont l'objectif est de satisfaire un besoin d'intérêt général.
+
+_GAFAM :_ Acronyme des géants du Web — Google, Apple, Facebook, Amazon et Microsoft — qui sont les cinq grandes firmes américaines qui dominent le marché du numérique, parfois également nommées les Big Five, ou encore « The Five ».
+
+_Design urbain : _ Approche de la conception des bâtiments et des espaces entre eux qui se concentre sur des processus et des résultats de conception spécifiques.
+
+
 ## Type de jeu et mécanismes d'apprentissage
+
+Smart Cities est un jeu de gestion inspiré d’un autre jeu : SimCity. 
+En effet, le (ou les joueurs) vont incarner la municipalité et/ou les GAFAM. À tour de rôle, chaque joueur pourra prendre des décisions sur les bâtiments, les terrains de la ville, dans le but d’acquérir le plus de terrains possibles pour la municipalité, et d’avoir le plus d’argent possible pour les GAFAM. Par conséquent, grâce aux choix effectués par les joueurs, ceux-ci vont apprendre en autodidacte les choses énoncées dans l’objectif pédagogique.
+
 
 ## Liste des principales fonctionnalités
 
 Créer une issue par fonctionnalités.
 
-- [ ] fun 1
-- [ ] fun 2
+- [X] Pouvoir jouer les deux parties 
+- [X] Pouvoir gérer l’argent, le placement des  bâtiments de la ville.
+- [ ] Pouvoir comprendre les conséquences de nos décisions sur la ville
+
 
 ## Justification du choix de la Licence
 
 ## Lien de téléchargement
 
 ## Captures d'écran
+![Main Menu](https://ibb.co/rQYfwTz "Menu Principal")
 
 ## Procédures d'installation et d'exécution
 
