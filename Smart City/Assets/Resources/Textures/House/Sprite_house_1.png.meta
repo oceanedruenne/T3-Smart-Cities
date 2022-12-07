@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07bd4ccad1d7b4b44b819b080dbe6599
+guid: 3116abf3ff942694392cdb3b778085f4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,13 +46,13 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0, y: 0.5}
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 1
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -113,41 +113,14 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: 10.354891, y: -4.273632}
-      - {x: 9.9834175, y: 9.053068}
-      - {x: 7.9751244, y: 9.832504}
-      - {x: 5.3548927, y: 11.407959}
-      - {x: 5.089554, y: 13.893864}
-      - {x: 2.0812607, y: 16}
-      - {x: -0.12603664, y: 16}
-      - {x: -10.195688, y: 11.150913}
-      - {x: -10.354892, y: -4.645108}
-      - {x: -16, y: -7.0165834}
-      - {x: -16, y: -9.089552}
-      - {x: -2.1260357, y: -16}
-      - {x: 2.1791039, y: -16}
-      - {x: 16, y: -9.354892}
-      - {x: 15.94693, y: -6.6451073}
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []

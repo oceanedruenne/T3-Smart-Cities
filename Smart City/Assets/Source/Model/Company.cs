@@ -16,6 +16,35 @@ namespace Source.Model
             return false;
         }
 
+        public override bool canBuy(Map map, uint posx, uint posy){
+            bool temp = map.getBuyCostAt(posx,posy) <= money;
+            switch (map.getTypeAt(posx,posy)){
+                case BuildType.Housing:
+                case BuildType.Empty:
+                    temp &= true;
+                    break;
+                default:
+                    temp &= false;
+                    break;
+            }
+            temp &= !map.getDecree(posx,posy);
+            return temp;
+        }
+
+        public override bool canUpgrade(Map map, uint posx, uint posy){
+            bool temp = map.getBuyCostAt(posx,posy) <= money;
+            switch (map.getTypeAt(posx,posy)){
+                case BuildType.Office:
+                    temp &= true;
+                    break;
+                default:
+                    temp &= false;
+                    break;
+            }
+            temp &= !map.getDecree(posx,posy);
+            return temp;
+        }
+
         public override void specialsUse(Map map, uint posx, uint posy){
             map.setBoost(posx,posy);
         }
@@ -23,6 +52,17 @@ namespace Source.Model
         public override void addIncome(Map map){
             money += map.getIncomeFromType(BuildType.Office);
             notifyObservers();
+        }
+
+        private uint getIncome(Map map){
+            uint tempMoney = 0;
+            tempMoney += map.getIncomeFromType(BuildType.Housing);
+            return tempMoney;
+        }
+
+        public override void setScore(Map map)
+        {
+            score = getIncome(map);
         }
 
         public override bool isCity(){

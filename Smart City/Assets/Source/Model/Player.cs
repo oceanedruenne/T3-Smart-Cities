@@ -7,9 +7,9 @@ namespace Source.Model
 {
     public abstract class Player
     {
-        protected static uint BASE_MONEY = 1000;
-        protected uint money;
-        protected uint score;
+        protected static uint BASE_MONEY = 10000000;
+        public uint money;
+        public uint score;
         protected List<PlayerObserver> observers;
 
         public Player(){
@@ -18,13 +18,9 @@ namespace Source.Model
             this.observers = new List<PlayerObserver>();
         }
 
-        public bool canBuy(Map map, uint posx, uint posy){
-            return map.getBuyCostAt(posx,posy) <= money;
-        }
+        public abstract bool canBuy(Map map, uint posx, uint posy);
 
-        public bool canUpgrade(Map map, uint posx, uint posy){
-            return map.getUpgradeCostAt(posx,posy) <= money;
-        }
+        public abstract bool canUpgrade(Map map, uint posx, uint posy);
 
         public abstract bool Buy(Map map, uint posx, uint posy);
 
@@ -41,6 +37,8 @@ namespace Source.Model
         public abstract void specialsUse(Map map, uint posx, uint posy);
 
         public abstract void addIncome(Map map);
+
+        public abstract void setScore(Map map);
 
         public void addObserver(PlayerObserver observer){
             this.observers.Add(observer);
