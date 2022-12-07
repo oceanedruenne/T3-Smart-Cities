@@ -82,6 +82,11 @@ namespace JeuScript
             sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
         }
 
+        public void deselect(){
+            isSelected = false;
+            sr.color = Color.white;
+        }
+
         public void changeSprite(BuildType type, int level)
         {
             if(level == 0 || level == 1)

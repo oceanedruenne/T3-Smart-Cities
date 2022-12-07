@@ -6,6 +6,7 @@ namespace Source.Model
 {
     public class Company : Player
     {
+        int TURN_BONUS = 0;
         public override bool Buy(Map map, uint posx, uint posy){
             if(canBuy(map, posx, posy)){
                 money -= map.getBuyCostAt(posx,posy);
@@ -33,6 +34,7 @@ namespace Source.Model
 
         public override bool canUpgrade(Map map, uint posx, uint posy){
             bool temp = map.getBuyCostAt(posx,posy) <= money;
+            temp &= map.getUnderMaxLevel(posx,posy);
             switch (map.getTypeAt(posx,posy)){
                 case BuildType.Office:
                     temp &= true;
@@ -50,13 +52,13 @@ namespace Source.Model
         }
 
         public override void addIncome(Map map){
-            money += map.getIncomeFromType(BuildType.Office);
+            money += (uint)TURN_BONUS + map.getIncomeFromType(BuildType.Office);
             notifyObservers();
         }
 
         private uint getIncome(Map map){
             uint tempMoney = 0;
-            tempMoney += map.getIncomeFromType(BuildType.Housing);
+            tempMoney += map.getIncomeFromType(BuildType.Office);
             return tempMoney;
         }
 
