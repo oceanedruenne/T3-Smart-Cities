@@ -49,10 +49,6 @@ namespace Source.Controller
             }
             turn = 1;
 
-
-            posx = -1;
-            posy = -1;
-
             playerObserver = new PlayerObserver();
 
             playerCity.addObserver(playerObserver);
@@ -61,6 +57,8 @@ namespace Source.Controller
             mapObserver = new MapObserver(map, this);
 
             map.addObserver(mapObserver);
+
+            resetSelectedTile();
         }
 
         public void nextTurn(){
@@ -91,6 +89,7 @@ namespace Source.Controller
                 currTile.deselect();
                 currTile = null;
             }
+            mapObserver.hideInfo();
         }
 
         public void buySelected(){
@@ -100,6 +99,11 @@ namespace Source.Controller
 
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
+        }
+
+        public void setPowerSelected(){
+            activePlayer.specialsUse(map, (uint)posx, (uint)posy);
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
     }
