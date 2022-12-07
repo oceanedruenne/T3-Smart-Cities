@@ -9,7 +9,7 @@ public class DisplayCityName : MonoBehaviour
     public TextMeshPro CityName;
     void Start()
     {
-        CityName = GameObject.Find("CityName").GetComponent<TextMeshProUGUI>();
+        //CityName = GameObject.Find("CityName").GetComponent<TextMeshProUGUI>();
     }
 
     void OnEnable()
