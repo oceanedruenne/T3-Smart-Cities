@@ -89,7 +89,7 @@ namespace Source.Controller
                 currTile.deselect();
                 currTile = null;
             }
-            mapObserver.hideInfo();
+            mapObserver.hideInfo(this.activePlayer.isCity());
         }
 
         public void buySelected(){

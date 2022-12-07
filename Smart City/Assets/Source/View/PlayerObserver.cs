@@ -16,7 +16,7 @@ public class PlayerObserver : ScriptableObject, Observer
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
     }
     public void reactTo(Player player){
-        scoreText.text = "Score : " + player.score.ToString();
-        moneyText.text = "Money : " + player.money.ToString();
+        scoreText.text = player.score.ToString();
+        moneyText.text = player.money.ToString();
     }
 }

@@ -27,6 +27,15 @@ public class MapObserver : ScriptableObject, Observer
     private TextMeshProUGUI textPrice = GameObject.Find("Price").GetComponent<TextMeshProUGUI>();
     private TextMeshProUGUI textIncome = GameObject.Find("Income").GetComponent<TextMeshProUGUI>();
 
+    //Panel portrait du joueur
+    private GameObject panelAvatar = GameObject.Find("Panel Avatar");
+    //Infos dans le panel
+    private Image avatarObject = GameObject.Find("Image").GetComponent<Image>();
+    //Différents avatars
+    Sprite spriteCompany = Resources.Load<Sprite>("Textures/UI/Sprite_companyIcon");
+    Sprite spriteMayor = Resources.Load<Sprite>("Textures/UI/Sprite_mayorIcon");
+
+
     GameHandler gameHandler;
 
     public MapObserver(Map map, GameHandler gh){
@@ -97,8 +106,19 @@ public class MapObserver : ScriptableObject, Observer
         changeInfos(building.level, map.getBuyCostAt(posx,posy), map.getIncomeAt(posx,posy), tile.getSprite());
     }
 
-    public void hideInfo(){
+    public void hideInfo(bool isCity){
+
+        if (isCity)
+        {
+            avatarObject.sprite = spriteMayor;
+        }
+        else
+        {
+            avatarObject.sprite = spriteCompany;
+        }
+
         panelInfos.SetActive(false);
+        panelAvatar.SetActive(true);
     }
 
     private void changeInfos(int level, uint price, uint income, Sprite image)
@@ -113,6 +133,7 @@ public class MapObserver : ScriptableObject, Observer
         textPrice.text = "Prix : " + price.ToString();
         textIncome.text = "Gain : " + income.ToString();
 
+        panelAvatar.SetActive(false);
         panelInfos.SetActive(true);
     }
 }
