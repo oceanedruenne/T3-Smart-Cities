@@ -21,13 +21,13 @@ namespace Source.Controller
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
 
-        [SerializeField] private int posx;
-        [SerializeField] private int posy;
+        private int posx;
+        private int posy;
         public Tile currTile = null;
 
         void Start(){
             startNewGame();
-            StartCoroutine(LateStart(0.5f));
+            StartCoroutine(LateStart(0.2f));
         }
 
         IEnumerator LateStart(float waitTime)
@@ -58,7 +58,7 @@ namespace Source.Controller
             playerCity.addObserver(playerObserver);
             playerCompany.addObserver(playerObserver);
 
-            mapObserver = new MapObserver(map);
+            mapObserver = new MapObserver(map, this);
 
             map.addObserver(mapObserver);
         }
@@ -81,6 +81,7 @@ namespace Source.Controller
             this.posx = posx;
             this.posy = posy;
             this.currTile = tile;
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
         public void resetSelectedTile(){
@@ -94,10 +95,12 @@ namespace Source.Controller
 
         public void buySelected(){
             activePlayer.Buy(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
     }
 }

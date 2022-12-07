@@ -99,6 +99,10 @@ namespace JeuScript
             sr.color = Color.white;
         }
 
+        public Sprite getSprite(){
+            return this.sr.sprite;
+        }
+
         public void changeSprite(BuildType type, int level)
         {
             if(level == 0 || level == 1)
