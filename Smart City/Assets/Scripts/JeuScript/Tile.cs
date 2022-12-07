@@ -17,6 +17,7 @@ namespace JeuScript
 
         SpriteRenderer sr;
         bool isSelected = false;
+        bool isTransport = false;
 
         private Sprite[] emptySpriteArray;
         private Sprite[] houseSpriteArray;
@@ -45,7 +46,10 @@ namespace JeuScript
             {
                 sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
             }
-            //else if()
+            else if (isTransport)
+            {
+                sr.color = Color.red;
+            }
             else
             {
                 sr.color = Color.gray;
@@ -54,7 +58,12 @@ namespace JeuScript
 
         private void OnMouseExit()
         {
-            if (isSelected)
+            if(isTransport)
+            {
+                isSelected = false;
+                sr.color = Color.white; // Pas de couleur
+            }
+            else if (isSelected)
             {
                 sr.color = Color.green;
             }
@@ -70,16 +79,19 @@ namespace JeuScript
             Debug.Log(FindObjectOfType<MapObserver>().getTileAtPosition(grid.WorldToCell(this.transform.position)));
             GameHandler gh = FindObjectOfType<GameHandler>();
             //----
-            /*gh.currTile Pour récupérer l'ancienne tile, avant d'utiliser selectTile*/
-            if (gh.currTile != null)
+            if (!isTransport) //Si ce n'est PAS un transport
             {
-                gh.currTile.isSelected = false;
-                gh.currTile.sr.color = Color.white;
-            }
-            //----
-            gh.selectTile(vect.x,vect.y, this); //On met la tile actuelle (celle qui contient ce code) dans currTile
-            isSelected = true;
-            sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+                /*gh.currTile Pour récupérer l'ancienne tile, avant d'utiliser selectTile*/
+                if (gh.currTile != null)
+                {
+                    gh.currTile.isSelected = false;
+                    gh.currTile.sr.color = Color.white;
+                }
+                
+                gh.selectTile(vect.x, vect.y, this); //On met la tile actuelle (celle qui contient ce code) dans currTile
+                isSelected = true;
+                sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+            }         
         }
 
         public void deselect(){
@@ -99,6 +111,7 @@ namespace JeuScript
                 else if (type == BuildType.Transport)
                 {
                     sr.sprite = transportSprite;
+                    isTransport = true;
                 }
                 else if (type == BuildType.Office)
                 {
@@ -146,6 +159,7 @@ namespace JeuScript
             else if (type == BuildType.Transport)
             {
                 sr.sprite = transportSprite;
+                isTransport = true;
             }
             else if (type == BuildType.Office)
             {
