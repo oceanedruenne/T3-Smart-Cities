@@ -6,8 +6,7 @@ namespace Source.Model
 {
     public class City : Player
     {
-        private static uint COEF_SCORE = 200;
-        
+        int TURN_BONUS = 0;   
         /*
             *schéma : Buy : bool
             *Paramètre : 
@@ -55,6 +54,7 @@ namespace Source.Model
         */
         public override bool canUpgrade(Map map, uint posx, uint posy){
             bool temp = map.getBuyCostAt(posx,posy) <= money;
+            temp &= map.getUnderMaxLevel(posx,posy);
             switch (map.getTypeAt(posx,posy)){
                 case BuildType.Housing:
                     temp &= true;
@@ -83,13 +83,13 @@ namespace Source.Model
             *Varibales locales :
         */
         public override void addIncome(Map map){
-            money += map.getIncomeFromType(BuildType.Housing);
+            money += (uint)TURN_BONUS + map.getIncomeFromType(BuildType.Housing);
             notifyObservers();
         }
 
         public override void setScore(Map map)
         {
-            score = map.getNbBuildingFromType(BuildType.Housing) * COEF_SCORE;
+            score = map.getScoreFromType(BuildType.Housing);
         }
 
         /*

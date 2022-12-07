@@ -49,6 +49,7 @@ namespace Source.Controller
             }
             turn = 1;
 
+
             posx = -1;
             posy = -1;
 
@@ -71,8 +72,7 @@ namespace Source.Controller
             else {
                 activePlayer = playerCity;
             }
-            posx = -1;
-            posy = -1;
+            resetSelectedTile();
             turn++;
             activePlayer.notifyObservers();
         }
@@ -81,6 +81,15 @@ namespace Source.Controller
             this.posx = posx;
             this.posy = posy;
             this.currTile = tile;
+        }
+
+        public void resetSelectedTile(){
+            posx = -1;
+            posy = -1;
+            if(currTile!=null){
+                currTile.deselect();
+                currTile = null;
+            }
         }
 
         public void buySelected(){
