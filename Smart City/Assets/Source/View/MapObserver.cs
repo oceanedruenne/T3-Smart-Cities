@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Source.Controller;
 using Source.Model;
 using Source.View;
 using JeuScript;
@@ -18,7 +19,7 @@ public class MapObserver : ScriptableObject, Observer
     GameObject tilePrefab;
     private Dictionary<Vector3Int, GameObject> tilesd;
 
-    //Panel contenant les infos de notre case sélectionnée
+    //Panel contenant les infos de notre case sï¿½lectionnï¿½e
     private GameObject panelInfos = GameObject.Find("Panel Infos");
     //Infos dans le panel
     private TextMeshProUGUI textLevel = GameObject.Find("Level").GetComponent<TextMeshProUGUI>();
@@ -26,8 +27,11 @@ public class MapObserver : ScriptableObject, Observer
     private TextMeshProUGUI textPrice = GameObject.Find("Price").GetComponent<TextMeshProUGUI>();
     private TextMeshProUGUI textIncome = GameObject.Find("Income").GetComponent<TextMeshProUGUI>();
 
-    public MapObserver(Map map){
+    GameHandler gameHandler;
+
+    public MapObserver(Map map, GameHandler gh){
         genMap(map);
+        this.gameHandler = gh;
     }
 
     public void genMap(Map map){
@@ -87,9 +91,19 @@ public class MapObserver : ScriptableObject, Observer
         getTileAtPosition(new Vector3Int((int)posx,(int)posy,0)).GetComponent<Tile>().changeSprite(building.type, building.level);
     }
 
-    public void changeInfos(int level, int price, int income, Sprite image)
+    public void UpdateInfoFrom(Map map, uint posx, uint posy){
+        Building building = map.buildings[posx,posy];
+        Tile tile = getTileAtPosition(new Vector3Int((int)posx,(int)posy,0)).GetComponent<Tile>();
+        changeInfos(building.level, map.getBuyCostAt(posx,posy), map.getIncomeAt(posx,posy), tile.getSprite());
+    }
+
+    public void hideInfo(){
+        panelInfos.SetActive(false);
+    }
+
+    private void changeInfos(int level, uint price, uint income, Sprite image)
     {
-        //Niveau du bâtiment sélectionner
+        //Niveau du bï¿½timent sï¿½lectionner
         textLevel.text = "Niveau " + level.ToString();
 
         //Apparence

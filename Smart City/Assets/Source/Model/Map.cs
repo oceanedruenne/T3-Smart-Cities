@@ -123,12 +123,15 @@ namespace Source.Model
         //GESTION SCORE ET REVENU
         public uint getIncomeAt(uint posx, uint posy){
             uint income = 0;
-            income += buildings[posx,posy].getIncome();
-            if(isAdjacentToTransport(posx,posy)){
-                income += income/2;
-            }
-            if(getBoost(posx,posy)){
-                income += income/2;
+            BuildType type = getTypeAt(posx,posy);
+            if(type == BuildType.Housing || type == BuildType.Office){
+                income += buildings[posx,posy].getIncome();
+                if(isAdjacentToTransport(posx,posy)){
+                    income += income/2;
+                }
+                if(getBoost(posx,posy)){
+                    income += income/2;
+                }
             }
             return income;
         }
@@ -139,13 +142,13 @@ namespace Source.Model
             if(y+1 < size && buildings[x,y+1].type == BuildType.Transport){
                 res = true;
             }
-            if(!res && y-1 >= 0 && buildings[x,y-1].type == BuildType.Transport){
+            if(!res && y > 0 && buildings[x,y-1].type == BuildType.Transport){
                 res = true;
             }
             if(!res && x+1 < size && buildings[x+1,y].type == BuildType.Transport){
                 res = true;
             }
-            if(!res && x-1 >= 0 && buildings[x-1,y].type == BuildType.Transport){
+            if(!res && x > 0 && buildings[x-1,y].type == BuildType.Transport){
                 res = true;
             }
             Debug.Log("Bool : "+res);
@@ -198,6 +201,12 @@ namespace Source.Model
         public void notifyObserversPos(uint x, uint y){
             foreach(MapObserver observer in observers){
                 observer.reactToPos(this, x, y);
+            }
+        }
+
+        public void notifyObserverChange(uint x, uint y){
+            foreach(MapObserver observer in observers){
+                observer.UpdateInfoFrom(this, x, y);
             }
         }
 
