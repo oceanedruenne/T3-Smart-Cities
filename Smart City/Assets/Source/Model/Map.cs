@@ -151,7 +151,6 @@ namespace Source.Model
             if(!res && x > 0 && buildings[x-1,y].type == BuildType.Transport){
                 res = true;
             }
-            Debug.Log("Bool : "+res);
             return res;
         }
 
