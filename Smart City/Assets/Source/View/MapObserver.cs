@@ -30,7 +30,7 @@ public class MapObserver : ScriptableObject, Observer
     //Panel portrait du joueur
     private GameObject panelAvatar = GameObject.Find("Panel Avatar");
     //Infos dans le panel
-    private Image avatarObject = GameObject.Find("Image").GetComponent<Image>();
+    private Image avatarObject = GameObject.Find("Avatar").GetComponent<Image>();
     //Différents avatars
     Sprite spriteCompany = Resources.Load<Sprite>("Textures/UI/Sprite_companyIcon");
     Sprite spriteMayor = Resources.Load<Sprite>("Textures/UI/Sprite_mayorIcon");
@@ -103,7 +103,9 @@ public class MapObserver : ScriptableObject, Observer
     public void UpdateInfoFrom(Map map, uint posx, uint posy){
         Building building = map.buildings[posx,posy];
         Tile tile = getTileAtPosition(new Vector3Int((int)posx,(int)posy,0)).GetComponent<Tile>();
-        changeInfos(building.level, map.getBuyCostAt(posx,posy), map.getIncomeAt(posx,posy), tile.getSprite());
+        if(building != null){
+            changeInfos(building.level, map.getBuyCostAt(posx,posy), map.getIncomeAt(posx,posy), tile.getSprite());
+        }
     }
 
     public void hideInfo(bool isCity){
