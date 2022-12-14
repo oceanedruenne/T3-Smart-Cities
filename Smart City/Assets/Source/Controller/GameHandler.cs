@@ -24,6 +24,8 @@ namespace Source.Controller
         private int posx;
         private int posy;
         public Tile currTile = null;
+        public Tile BoostTile = null;
+        public Tile DecreeTile = null;
 
         void Start(){
             startNewGame();
@@ -104,6 +106,20 @@ namespace Source.Controller
 
         public void setPowerSelected(){
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
+            if(activePlayer.isCity()){
+                if(DecreeTile != null){
+                    DecreeTile.unDecree();
+                }
+                DecreeTile = currTile;
+                currTile.Decree();
+            }
+            else{
+                if(BoostTile != null){
+                    BoostTile.unBoost();
+                }
+                BoostTile = currTile;
+                currTile.Boost();
+            }
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
     }
