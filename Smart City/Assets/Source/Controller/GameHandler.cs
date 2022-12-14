@@ -28,6 +28,8 @@ namespace Source.Controller
         public Tile BoostTile = null;
         public Tile DecreeTile = null;
 
+        private AudioController audioController;
+
         /// <summary>
         /// Nouvelle partie
         /// </summary>
@@ -71,6 +73,8 @@ namespace Source.Controller
             playerCompany.addObserver(playerObserver);
 
             mapObserver = new MapObserver(map, this);
+
+            audioController = FindObjectOfType<AudioController>();
 
             map.addObserver(mapObserver);
 
@@ -159,7 +163,10 @@ namespace Source.Controller
         /// Permet d'acheter la case selectionnee
         /// </summary>
         public void buySelected(){
-            activePlayer.Buy(map, (uint)posx, (uint)posy);
+            if(activePlayer.Buy(map, (uint)posx, (uint)posy))
+            {
+                audioController.playMoney();
+            }
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
