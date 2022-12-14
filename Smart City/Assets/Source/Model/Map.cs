@@ -26,7 +26,7 @@ namespace Source.Model
         /// <param name="size"></param>
         public Map(uint size = 6){
             this.buildings = new Building[size, size];
-            fillMapEmpty();
+            fillMapRandom1();
             observers = new List<MapObserver>();
         }
 
@@ -48,15 +48,31 @@ namespace Source.Model
             buildings[3, 5] = Building.createTransport();
         }
 
-           /*
-          *fillMapRandNoSeedEqualChance : fonction
-          *Paramètre : 
-          Permet de générer une Map
-           */
+        public void fillMapRandom1(){
+            int size = buildings.GetLength(0);
+            System.Random rand = new System.Random();
+            for(int i = 0;i < size;i++){
+                for(int j = 0;j < size;j++){
+                    int r = rand.Next(100);
+                    if(r<0){
+                        buildings[i,j] = new Building(BuildType.Housing);
+                    }
+                    else if(r<0){
+                        buildings[i,j] = new Building(BuildType.Office);
+                    }
+                    else{
+                        buildings[i,j] = new Building(BuildType.Empty);
+                    }
+                }
+            }
 
-        /// <summary>
-        /// Permet de générer une Map
-        /// </summary>
+            for(int i=0;i<size/2;i++){
+                int x = rand.Next(size/(size/2))+i*2;
+                int y = rand.Next(size/(size/2))+i*2;
+                buildings[x,y] = Building.createTransport();
+            }
+        }
+
         public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();

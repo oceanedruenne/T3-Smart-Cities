@@ -9,7 +9,7 @@ namespace Source.Model
 {
     public abstract class Player
     {
-        protected static uint BASE_MONEY = 10000000;
+        protected static uint BASE_MONEY = 10000;
         public uint money;
         public uint score;
         public TMP_Text name;
@@ -26,7 +26,7 @@ namespace Source.Model
         /// </summary>
         public Player(){
             this.money = BASE_MONEY;
-            this.score = 100;
+            this.score = 0;
             this.observers = new List<PlayerObserver>();
             name = new TextMeshProUGUI();
             this.name.text = "test";
