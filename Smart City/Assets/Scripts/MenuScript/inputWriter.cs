@@ -8,7 +8,7 @@ public class inputWriter : MonoBehaviour
 {
     public static string cityName;
 
-    // Start is called before the first frame update
+    // On récupère le nom de la ville entré par l'utilisateur dans la prédécente scène et on l'affiche dans celle-ci
     void Start()
     {   
         TextMeshProUGUI VilleText = GameObject.Find("NomText").GetComponent<TextMeshProUGUI>();
