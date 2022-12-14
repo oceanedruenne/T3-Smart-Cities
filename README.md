@@ -64,6 +64,14 @@ Créer une issue par fonctionnalités.
 
 
 ## Justification du choix de la Licence
+Notre jeu Smart Cities est sous licence libre GNU. Pour rappel, cette licence permet l’usage du jeu, l’étude du jeu pour en comprendre le fonctionnement ou l'adapter à ses besoins, la modification (amélioration, extension et transformation) ou incorporation du jeu en un jeu dérivé et la distribution du jeu et des jeux dérivés, c'est-à-dire sa diffusion à d'autres usagers, y compris commercialement. 
+
+Les illustrations des bâtiments ont été réalisées par Danaé sur le logiciel Aseprite, qui est un logiciel libre de droit. 
+Concernant la police utilisée, Press Start 2P, Google Fonts indique sur leur site que les polices disponibles sur leur site peuvent être utilisées à des fins commerciales.
+
+Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfices supérieurs à 100 000 dollars dans les 12 mois, nous pouvons faire un jeu commercial.
+
+
 
 ## Lien de téléchargement
 
