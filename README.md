@@ -77,9 +77,7 @@ Créer une issue par fonctionnalités.
 - [X] Pouvoir jouer les deux parties 
 - [X] Pouvoir gérer l’argent, le placement des  bâtiments de la ville.
 - [X] Pouvoir comprendre les conséquences de nos décisions sur la ville
-- [ ] Fenêtre de fin de jeu pour comprendre notre score 
-- [ ] Possibilité de jouer à deux en ligne 
-- [ ] Pouvoir choisir sa difficulté (plus la difficulté est élevée, plus la map est grande)
+
 
 
 ## Justification du choix de la Licence
@@ -103,3 +101,10 @@ Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfic
 
 ## Procédures d'installation et d'exécution
 
+
+
+## Fonctionnalités additionnelles 
+
+- [ ] Fenêtre de fin de jeu pour comprendre notre score 
+- [ ] Possibilité de jouer à deux en ligne 
+- [ ] Pouvoir choisir sa difficulté (plus la difficulté est élevée, plus la map est grande)
