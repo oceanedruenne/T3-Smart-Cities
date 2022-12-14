@@ -38,6 +38,13 @@ public class MapObserver : ScriptableObject, Observer
 
     GameHandler gameHandler;
 
+    /*
+     *MapObserver : Constructeur : MapObserver
+     *Paramètres : 
+     * map : Map
+     * gh : GameHandler
+     Constructeur de la classe 
+    */
     /// <summary>
     /// Constructeur de MapObserver
     /// </summary>
@@ -48,6 +55,13 @@ public class MapObserver : ScriptableObject, Observer
         this.gameHandler = gh;
     }
 
+
+    /*
+    *genMap : fonction
+    *Paramètre : 
+    * map : Map
+    Permet de générer une map
+   */
     /// <summary>
     /// Permet de générer la map
     /// </summary>
@@ -63,6 +77,11 @@ public class MapObserver : ScriptableObject, Observer
 
     }
 
+
+    /*
+    *generateGrid : fonction
+    Permet de générer la grille
+   */
     /// <summary>
     /// Permet de générer la grille
     /// </summary>
@@ -89,17 +108,31 @@ public class MapObserver : ScriptableObject, Observer
         }
     }
 
+
+    /*
+    *getTileAtPosition : fonction : GameObject
+    *Paramètre : 
+    * pos : Vector3Int
+    Permet de récupérer la case dont ses coordonnées sont passées en paramètres
+   */
     /// <summary>
     /// Permet de récupérer la case dont ses coordonnées sont passées en paramètres
     /// </summary>
     /// <param name="pos"></param>
-    /// <returns>GameObject</returns>
+    /// <returns>La case à la position pos</returns>
     public GameObject getTileAtPosition(Vector3Int pos)
     {
         Vector3Int dictionaryKey = pos;
         return tilesd[dictionaryKey];
     }
-    
+
+
+    /*
+    *reactTo : fonction
+    *Paramètres : 
+    * map : Map
+    Permet aux observers de réagir aux changements de la map
+   */
     /// <summary>
     /// Permet de réagir aux changements
     /// </summary>
@@ -116,6 +149,15 @@ public class MapObserver : ScriptableObject, Observer
         }
     }
 
+
+    /*
+      *reactToPos : fonction
+      *Paramètres : 
+      * map : Map
+      * posx : uint
+      * posy : uint
+      Permet aux observers de réagir aux changements de la map dont les coordonnées sont passées en paramètres.
+    */
     /// <summary>
     /// Permet de réagir aux changements
     /// </summary>
@@ -127,6 +169,14 @@ public class MapObserver : ScriptableObject, Observer
         getTileAtPosition(new Vector3Int((int)posx,(int)posy,0)).GetComponent<Tile>().changeSprite(building.type, building.level);
     }
 
+    /*
+    *UpDateInfoFrom : fonction
+    *Paramètres : 
+    * map : Map
+    * posx : uint
+    * posy : uint
+    Permet de modifier les informations de la case dont les coordonnées sont passées en paramètres.
+    */
     /// <summary>
     /// Permet de modifier les informations de la case dont les coordonnées sont passées en paramètres
     /// </summary>
@@ -141,6 +191,13 @@ public class MapObserver : ScriptableObject, Observer
         }
     }
 
+
+    /*
+    *reactTo : fonction
+    *Paramètres : 
+    * isCity : bool
+    Permet de cacher les informations
+    */
     /// <summary>
     /// Permet de cacher les informations
     /// </summary>
@@ -160,6 +217,16 @@ public class MapObserver : ScriptableObject, Observer
         panelAvatar.SetActive(true);
     }
 
+
+    /*
+    *changeInfos : fonction
+    *Paramètres : 
+    * level : int
+    * price : uint
+    * income : uint 
+    * image : Sprite
+    Permet de changer les informations
+    */
     /// <summary>
     /// Permet de changer les informations
     /// </summary>
@@ -169,7 +236,7 @@ public class MapObserver : ScriptableObject, Observer
     /// <param name="image"></param>
     private void changeInfos(int level, uint price, uint income, Sprite image)
     {
-        //Niveau du b�timent s�lectionner
+        //Niveau du bâtiment sélectionné
         textLevel.text = "Niveau " + level.ToString();
 
         //Apparence

@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Source.Model
 {
+
+    // CLASSE BUILDING
     public class Building
     {
         private static int BASE_COST = 1000; //Prix de base d'un bâtiment
@@ -26,12 +28,11 @@ namespace Source.Model
 
         /*
             *Building : Constructeur : Building
-            *Paramètre :
-            type : BuildType : type du bâtiment crée (voir l'enumération BuildType)
+            *Paramètres : 
+            *Type : BuildType : type du bâtiment crée (voir l'enumération BuildType)
             malus : double : buyMalus du bâtiment, égal au buyMalus du bâtiments précedent + MALUS_INCREASE sinon 1.0
             level : uint : Niveau du bâtiment, égal au bâtiment précédent sinon 0
-            Constructeur de la classe
-            *Varibales locales :
+            Constructeur de la classe 
         */
         /// <summary>
         /// Constructeur de Building
@@ -47,16 +48,15 @@ namespace Source.Model
 
         /*
            *Transport : Fonction : Building
-           *Paramètre : 
            *Construit le bâtiment transport qui ne sera pas achetable et qui va donner des bonus aux bâtiments autour
-           *Varibales locales : 
+           *Variables locales : 
            *transport : Building : le bâtiment
        */
 
         /// <summary>
         /// Permet de créer des transports
         /// </summary>
-        /// <returns>Building</returns>
+        /// <returns>Un building de type transport</returns>
         public static Building createTransport() {
             Building transport = new Building(BuildType.Transport, 0, 0);
             return transport;
@@ -64,7 +64,7 @@ namespace Source.Model
 
         /*
             *getIncome : fonction : uint
-            *Paramètre : Aucun
+            *Paramètres : Aucun
             Retourne le revenu rapporté par le bâtiment, qui correspond à la formule suivante :
             BASE_INCOME * ((level * 0,5) + 1) cad 
             niveau 0 : BASE_INCOME * 1 (= (0 / 2) + 1 )
@@ -75,27 +75,27 @@ namespace Source.Model
         /// <summary>
         /// Permet de récupérer les revenus du bâtiment
         /// </summary>
-        /// <returns>uint</returns>
+        /// <returns>Les revenus du bâtiment</returns>
         public uint getIncome(){
             return (uint)(BASE_INCOME * ((level / 2f) + 1));
         }
 
         /*
             *getIncomeAfterUpgrade : fonction : uint
-            *Paramètre : Aucun
+            *Paramètres : Aucun
             Retourne le revenu rapporté par le bâtiment au niveau + 1
         */
         /// <summary>
         /// Permet de récupérer les bénéfices du bâtiment après son amélioration
         /// </summary>
-        /// <returns>uint</returns>
+        /// <returns>Les bénéfices du bâtiment après son amélioration</returns>
         public uint getIncomeAfterUpgrade(){
             return (uint)(BASE_INCOME * (((level+1) / 2f) + 1));
         }
 
         /*
             *getCost : fonction : uint
-            *Paramètre : Aucun
+            *Paramètres : Aucun
             Retourne le coût du bâtiment à l'achat, selon la formule suivante :
             BASE_COST * ((0,5 * level) + 1) * buyMalus cad
             Niveau 0 + buyMalus 1.0 : BASE_COST * 1 * 1
@@ -105,21 +105,21 @@ namespace Source.Model
         /// <summary>
         /// Permet de récupérer le coût d'achat d'un bâtiment
         /// </summary>
-        /// <returns>uint</returns>
+        /// <returns>Le coût d'achat d'un bâtiment</returns>
         public uint getBuyCost(){
             return (uint)(BASE_COST * ((level / 2) + 1) * buyMalus);
         }
 
         /*
-            *schéma : fonction/proc : typeretour
-            *Paramètre : Aucun 
-            * Permet de récupérer le coût d'amélioration d'un bâtiment
+            *getUpgradeCost : fonction : uint
+            *Paramètres : Aucun 
+            *Permet de récupérer le coût d'amélioration d'un bâtiment
         */
 
         /// <summary>
         /// Permet de récupérer le coût d'amélioration d'un bâtiment
         /// </summary>
-        /// <returns>uint</returns>
+        /// <returns>le coût d'amélioration d'un bâtiment</returns>
         public uint getUpgradeCost(){
             return (uint)(BASE_COST * ((level / 2) + 1));
         }

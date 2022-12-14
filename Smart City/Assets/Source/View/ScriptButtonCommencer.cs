@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ScriptButtonCommencer : MonoBehaviour
 {
-  /// <summary>
-  /// Permet de passer à la scène d'inscription
-  /// </summary>
-   public void BtnNextScene()
+
+    /*
+    *BtnNextScene : fonction 
+    Permet de passer à la scène suivante 
+   */
+    /// <summary>
+    /// Permet de passer à la scène d'inscription
+    /// </summary>
+    public void BtnNextScene()
    {
        SceneManager.LoadScene("SignUp");
    }

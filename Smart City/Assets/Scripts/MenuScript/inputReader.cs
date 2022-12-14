@@ -14,7 +14,9 @@ public class inputReader : MonoBehaviour
       
     }
     
-    // On lit le nom de la ville entré par l'utilisateur
+    /// <summary>
+    /// Permet de lire le nom de la ville entré par l'utilisateur dans l'input de la scène "Sign Up"
+    /// </summary>
     void Update()
     {
         TextMeshProUGUI textInter = GameObject.Find("Text").GetComponent<TextMeshProUGUI>();
