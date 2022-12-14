@@ -11,7 +11,7 @@ public class camController : MonoBehaviour
     {
         cam = Camera.main;
     }
-    // Update is called once per frame
+    // Permet de gérer l'affichage des scènes
     void Update()
     {
         float xInput = Input.GetAxis("Horizontal");

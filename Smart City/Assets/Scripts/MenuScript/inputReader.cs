@@ -8,14 +8,13 @@ public class inputReader : MonoBehaviour
 {
     public static string cityName;
 
-    // Start is called before the first frame update
     void Start()
     {
        
       
     }
-
     
+    // On lit le nom de la ville entré par l'utilisateur
     void Update()
     {
         TextMeshProUGUI textInter = GameObject.Find("Text").GetComponent<TextMeshProUGUI>();

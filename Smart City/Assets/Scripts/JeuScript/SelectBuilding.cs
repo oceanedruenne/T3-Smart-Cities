@@ -9,6 +9,10 @@ public class SelectBuilding : MonoBehaviour
     {
         gm = GameObject.Find("Grid").GetComponent<GameManager>();
     }
+
+    /* changeBuilding() : 
+       Paramètres : Sprite building
+       Permet de changer de building*/
     public void changeBuilding(Sprite building)
     {
         Debug.Log(building);

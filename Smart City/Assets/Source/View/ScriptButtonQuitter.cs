@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class ScriptButtonQuitter : MonoBehaviour
 {
    
-
+    /* ExitGame() :
+       Cette fonction permet de quitter le jeu lorsque le joueur appuie sur le bouton Quitter*/
     public void ExitGame() 
     {
         Application.Quit();
