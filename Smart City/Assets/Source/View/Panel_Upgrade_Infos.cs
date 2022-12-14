@@ -59,7 +59,7 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         {
 
             upgradeCost = gh.map.getUpgradeCostAt((uint)gh.posx, (uint)gh.posy);
-            //newIncome = gh.
+            newIncome = gh.map.getIncomeAfterUpgradeAt((uint)gh.posx, (uint)gh.posy);
 
         }
         else

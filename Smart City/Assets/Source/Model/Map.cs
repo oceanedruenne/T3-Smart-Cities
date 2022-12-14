@@ -148,6 +148,7 @@ namespace Source.Model
                     income += income/2;
                 }
             }
+            income -= this.getIncomeAt(posx, posy);
             return income;
         }
 
