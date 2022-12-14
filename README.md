@@ -1,11 +1,11 @@
 ## T3
 
-#Nom du groupe : Les chatons mignons
+Nom du groupe : Les chatons mignons
 
-#Code du groupe : DEN22-T3-A
+Code du groupe : DEN22-T3-A
 
 
-#Participants :
+Participants :
 
 - Geoffrey OSSARD
 - Danaé ALBRECHT-MARTIN
