@@ -40,16 +40,17 @@ namespace Source.Controller
         {
             yield return new WaitForSeconds(waitTime);
             map.notifyObservers();
-            activePlayer.setScore(map);
+            playerCity.setScore(map);
+            playerCompany.setScore(map);
             activePlayer.notifyObservers();
         }
 
         /* startNewGame : fonction 
-         Paramètre : city : booo : true 
-         Cette fonction permet de démarrer une nouvelle partie 
+         Parametre : city : booo : true 
+         Cette fonction permet de demarrer une nouvelle partie 
         */
         /// <summary>
-        /// Démarrer une nouvelle partie
+        /// Demarrer une nouvelle partie
         /// </summary>
         /// <param name="city"></param>
         public void startNewGame(bool city = true){
@@ -90,7 +91,6 @@ namespace Source.Controller
             if(turn > 1){
                 activePlayer.addIncome(map);
             }
-            activePlayer.setScore(map);
             if(activePlayer.isCity()){
                 activePlayer = playerCompany;
             }
@@ -101,6 +101,7 @@ namespace Source.Controller
             turn++;
 
             activePlayer.notifyObservers();
+            activePlayer.setScore(map);
         }
 
         /*endTurn  : fonction 
@@ -119,11 +120,11 @@ namespace Source.Controller
 
 
         /* selectTile : fonction 
-         * Paramètres : posx : int, posy : int, tile : Tile
-         Permet de connaître la case selectionnée.
+         * Parametres : posx : int, posy : int, tile : Tile
+         Permet de connaitre la case selectionnee.
         */
         /// <summary>
-        /// Permet de connaître la case selectionnée
+        /// Permet de connaitre la case selectionnee
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
@@ -136,10 +137,10 @@ namespace Source.Controller
         }
 
         /* resetSelectedTile : fonction 
-        Permet de décliquer la case selectionnée.
+        Permet de decliquer la case selectionnee.
        */
         /// <summary>
-        /// Permet de décliquer la case selectionnée
+        /// Permet de decliquer la case selectionnee
         /// </summary>
         public void resetSelectedTile(){
             posx = -1;
@@ -152,10 +153,10 @@ namespace Source.Controller
         }
 
         /* buySelected : fonction 
-        Permet d'acheter la case selectionnée
+        Permet d'acheter la case selectionnee
         */
         /// <summary>
-        /// Permet d'acheter la case selectionnée
+        /// Permet d'acheter la case selectionnee
         /// </summary>
         public void buySelected(){
             activePlayer.Buy(map, (uint)posx, (uint)posy);
@@ -163,10 +164,10 @@ namespace Source.Controller
         }
 
         /* upgradeSelected : fonction 
-        Permet d'améliorer la case selectionnée
+        Permet d'ameliorer la case selectionnee
         */
         /// <summary>
-        /// Permet d'améliorer la case selectionnée
+        /// Permet d'ameliorer la case selectionnee
         /// </summary>
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);

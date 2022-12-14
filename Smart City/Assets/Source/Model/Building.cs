@@ -9,7 +9,7 @@ namespace Source.Model
     public class Building
     {
         private static int BASE_COST = 1000; //Prix de base d'un bâtiment
-        private static int BASE_INCOME = 200;
+        private static int BASE_INCOME = 300;
         public static float MALUS_INCREASE = 0.2f;
         /*
         Ce qui suit s'appelle un getter 
