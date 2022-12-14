@@ -12,6 +12,7 @@ namespace Source.Controller
         [SerializeField] private GameObject gameHandler;
 
         private uint turn;
+        private uint turnLimit = 15;
 
         private Player activePlayer;
         private City playerCity;
@@ -24,6 +25,8 @@ namespace Source.Controller
         public int posx;
         public int posy;
         public Tile currTile = null;
+        public Tile BoostTile = null;
+        public Tile DecreeTile = null;
 
         void Start(){
             startNewGame();
@@ -62,6 +65,10 @@ namespace Source.Controller
         }
 
         public void nextTurn(){
+            if(turn++ > turnLimit){
+                endTurn();
+                return;
+            }
             activePlayer.addIncome(map);
             activePlayer.setScore(map);
             if(activePlayer.isCity()){
@@ -73,6 +80,13 @@ namespace Source.Controller
             resetSelectedTile();
             turn++;
             activePlayer.notifyObservers();
+        }
+
+        public void endTurn(){
+            activePlayer.addIncome(map);
+            activePlayer.setScore(map);
+
+            //Ajouter les actions de fin de jeu
         }
 
         public void selectTile(int posx, int posy, Tile tile){
@@ -104,6 +118,20 @@ namespace Source.Controller
 
         public void setPowerSelected(){
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
+            if(activePlayer.isCity()){
+                if(DecreeTile != null){
+                    DecreeTile.unDecree();
+                }
+                DecreeTile = currTile;
+                currTile.Decree();
+            }
+            else{
+                if(BoostTile != null){
+                    BoostTile.unBoost();
+                }
+                BoostTile = currTile;
+                currTile.Boost();
+            }
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
     }
