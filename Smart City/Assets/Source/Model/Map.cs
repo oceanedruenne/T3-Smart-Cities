@@ -12,18 +12,20 @@ namespace Source.Model
         private uint[] decree = new uint[2];
         private uint[] boost = new uint[2];
         private List<MapObserver> observers;
-        /*
-            *Map : Constructeur : Map
-            *Paramètre :
-            *Keskecé : 
-            *Varibales locales :
-        */
+
+        /// <summary>
+        /// Constructeur de Map
+        /// </summary>
+        /// <param name="size"></param>
         public Map(uint size = 6){
             this.buildings = new Building[size, size];
             fillMapRandom1();
             observers = new List<MapObserver>();
         }
 
+        /// <summary>
+        /// Permet de remplir la Map
+        /// </summary>
         public void fillMapEmpty(){
             int size =  buildings.GetLength(0);
             for(int i = 0;i < size;i++){
@@ -70,22 +72,53 @@ namespace Source.Model
             }
         }
 
+        /// <summary>
+        /// Permet de récupérer le coût d'amélioration à la case ayant comme coordonnées les entiers passés en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>uint</returns>
         public uint getUpgradeCostAt(uint posx, uint posy){
             return buildings[posx, posy].getUpgradeCost();
         }
 
+        /// <summary>
+        /// Permet de récupérer le coût d'achat de la case ayant comme coordonnées les paramètres de la fonction
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns></returns>
         public uint getBuyCostAt(uint posx, uint posy){
             return buildings[posx,posy].getBuyCost();
         }
 
+        /// <summary>
+        /// Permet de récupérer le type de bâtiment de la case ayant comme coordonées les paramètres de la fonction
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>BuildType</returns>
         public BuildType getTypeAt(uint posx, uint posy){
             return buildings[posx,posy].type;
         }
 
+        /// <summary>
+        /// Permet de vérifier si le niveau d'amélioration est inférieur à 6
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>bool</returns>
         public bool getUnderMaxLevel(uint posx, uint posy){
             return buildings[posx,posy].level < 6;
         }
 
+        /// <summary>
+        /// Permet de construire sur la case ayant comme coordonnées les paramètres de la fonction
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <exception cref="System.Exception"></exception>
         public void buildAt(BuildType type, uint posx, uint posy){
             if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
             {
@@ -96,6 +129,13 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+        /// <summary>
+        /// Permet de construire sans malus dans la case ayant comme coordonnées les paramètres de la fonction
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <exception cref="System.Exception"></exception>
         public void buildAtNoMalus(BuildType type, uint posx, uint posy){
             if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
             {
@@ -106,6 +146,12 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+        /// <summary>
+        /// Permet de détruire un bâtiment à la case dont les coordonnées sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <exception cref="System.Exception"></exception>
         public void destroyAt(uint posx, uint posy){
             if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
             {
@@ -115,6 +161,12 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+        /// <summary>
+        /// Permet d'améliorer à la case dont les coordonnées sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <exception cref="System.Exception"></exception>
         public void UpgradeAt(uint posx, uint posy){
             if(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))
             {
@@ -126,26 +178,52 @@ namespace Source.Model
         }
 
 
-        //GESTION CAPACITE SPECIALE
+        /// <summary>
+        /// Permet de gérer le decree de la case dont les coordonnées sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
         public void setDecree(uint posx, uint posy){
             decree[0] = posx;
             decree[1] = posy;
         }
 
+        /// <summary>
+        /// Permet de vérifier s'il y a un decree
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>bool</returns>
         public bool getDecree(uint posx, uint posy){
             return (decree[0] == posx) && (decree[1] == posy);
         }
 
+        /// <summary>
+        /// Permet de mettre en place le boost
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
         public void setBoost(uint posx, uint posy){
             boost[0] = posx;
             boost[1] = posy;
         }
 
+        /// <summary>
+        /// Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>bool</returns>
         public bool getBoost(uint posx, uint posy){
             return (boost[0] == posx) && (boost[1] == posy);
         }
 
-        //GESTION SCORE ET REVENU
+        /// <summary>
+        /// Permet de récupérer les bénéfices du bâtiment dont les coordonnées de sa case sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>uint</returns>
         public uint getIncomeAt(uint posx, uint posy){
             uint income = 0;
             BuildType type = getTypeAt(posx,posy);
@@ -161,6 +239,12 @@ namespace Source.Model
             return income;
         }
 
+        /// <summary>
+        /// Permet de récupérer les bénéfices du bâtiment après son amélioration dont les coordonnées de sa case sont passées en paramètres
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <returns>uint</returns>
         public uint getIncomeAfterUpgradeAt(uint posx, uint posy){
             uint income = 0;
             BuildType type = getTypeAt(posx,posy);
@@ -176,6 +260,12 @@ namespace Source.Model
             return income;
         }
 
+        /// <summary>
+        /// Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns>bool</returns>
         public bool isAdjacentToTransport(uint x, uint y){
             bool res = false;
             int size = buildings.GetLength(0);
@@ -194,6 +284,11 @@ namespace Source.Model
             return res;
         }
 
+        /// <summary>
+        /// Permet de récupérer les revenus de tous les bâtiments d'un type donné
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns>uint</returns>
         public uint getIncomeFromType(BuildType type){
             uint total = 0;
             int size = buildings.GetLength(0);
@@ -208,6 +303,11 @@ namespace Source.Model
             return total;
         }
 
+        /// <summary>
+        /// Permet de récupérer le score de tous les bâtiments d'un type donné
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns>uint</returns>
         public uint getScoreFromType(BuildType type){
             uint total= 0;
             int size = buildings.GetLength(0);
@@ -227,33 +327,43 @@ namespace Source.Model
             return total;
         }
 
+        /// <summary>
+        /// Permet d'ajouter des observers
+        /// </summary>
+        /// <param name="observer"></param>
         public void addObserver(MapObserver observer){
             this.observers.Add(observer);
         }
 
+        /// <summary>
+        /// Permet de notifier les observers
+        /// </summary>
         public void notifyObservers(){
             foreach(MapObserver observer in observers){
                 observer.reactTo(this);
             }
         }
 
+        /// <summary>
+        /// Permet de notifier les observers des changements de position
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void notifyObserversPos(uint x, uint y){
             foreach(MapObserver observer in observers){
                 observer.reactToPos(this, x, y);
             }
         }
 
+        /// <summary>
+        /// Permet de notifier les observers
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public void notifyObserverChange(uint x, uint y){
             foreach(MapObserver observer in observers){
                 observer.UpdateInfoFrom(this, x, y);
             }
         }
-
-        /*
-            *schéma : fonction/proc : typeretour
-            *Paramètre : 
-            *Keskecé :
-            *Varibales locales :
-        */
     }
 }

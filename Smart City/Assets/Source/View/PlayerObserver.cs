@@ -11,14 +11,19 @@ public class PlayerObserver : ScriptableObject, Observer
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI nameText;
 
-    // Permet de trouver les informations du joueur : son score et son argent
+    /// <summary>
+    /// Permet de trouver les informations du joueur : son score et son argent
+    /// </summary>
     public PlayerObserver()
     {
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
     }
-    // Permet de donner au score et à l'argent du joueur les valeurs correspondantes en passant en paramètre le joueur
+    /// <summary>
+    /// Permet de donner au joueur passé en paramètre de l'argent et un score
+    /// </summary>
+    /// <param name="player"></param>
     public void reactTo(Player player){
         scoreText.text = player.score.ToString();
         moneyText.text = player.money.ToString();

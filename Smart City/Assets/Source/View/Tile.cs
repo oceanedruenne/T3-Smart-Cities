@@ -26,6 +26,9 @@ namespace JeuScript
         private Sprite[] officeSpriteArray;
         private Sprite transportSprite;
 
+        /// <summary>
+        /// Démarrage
+        /// </summary>
         private void Start()
         {
             //R�cup�ration de la grille
@@ -42,6 +45,9 @@ namespace JeuScript
 
         }
 
+        /// <summary>
+        /// Lorsque la case est selectionnée
+        /// </summary>
         private void OnMouseEnter()
         {
             if (isSelected)
@@ -74,6 +80,9 @@ namespace JeuScript
             }
         }
 
+        /// <summary>
+        /// Lorsque la souris arrête de survoler la case
+        /// </summary>
         private void OnMouseExit()
         {
             if(isTransport)
@@ -107,6 +116,9 @@ namespace JeuScript
             }
         }
 
+        /// <summary>
+        /// Lorsque la souris passe sur une case
+        /// </summary>
         private void OnMouseUp()
         {
             Vector3Int vect = grid.WorldToCell(this.transform.position);
@@ -135,11 +147,17 @@ namespace JeuScript
             }         
         }
 
+        /// <summary>
+        /// Permet d'afficher la case boostée en une autre couleur
+        /// </summary>
         public void Boost(){
             isBoosted = true;
             sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
         }
 
+        /// <summary>
+        /// Permet d'afficher la case d'une couleur différente quand le boost est retiré
+        /// </summary>
         public void unBoost(){
             isBoosted = false;
             if(isSelected){
@@ -151,11 +169,17 @@ namespace JeuScript
             }
         }
 
+        /// <summary>
+        /// Permet de changer la couleur de la case quand un decree est mis
+        /// </summary>
         public void Decree(){
             isProtected = true;
             sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plus clair
         }
 
+        /// <summary>
+        /// Permet de changer la couleur de la case quand un decree est enlevé
+        /// </summary>
         public void unDecree(){
             isProtected = false;
             if(isSelected){
@@ -167,6 +191,9 @@ namespace JeuScript
             }
         }
 
+        /// <summary>
+        /// Permet de changer la couleur de la case quand la case est déselectionnée
+        /// </summary>
         public void deselect(){
             isSelected = false;
             if(isBoosted){
@@ -180,10 +207,19 @@ namespace JeuScript
             }
         }
 
+        /// <summary>
+        /// Permet de récupérer le sprite
+        /// </summary>
+        /// <returns>Sprite</returns>
         public Sprite getSprite(){
             return this.sr.sprite;
         }
 
+        /// <summary>
+        /// Permet de changer le Sprite
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="level"></param>
         public void changeSprite(BuildType type, int level)
         {
             if(level == 0 || level == 1)
@@ -234,6 +270,10 @@ namespace JeuScript
 
         }
 
+        /// <summary>
+        /// Permet de changer le Sprite
+        /// </summary>
+        /// <param name="type"></param>
         public void changeSprite(BuildType type)
         {
             if (type == BuildType.Empty)
