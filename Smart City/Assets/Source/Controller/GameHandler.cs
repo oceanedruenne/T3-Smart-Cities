@@ -28,6 +28,9 @@ namespace Source.Controller
         public Tile BoostTile = null;
         public Tile DecreeTile = null;
 
+        /// <summary>
+        /// Nouvelle partie
+        /// </summary>
         void Start(){
             startNewGame();
             StartCoroutine(LateStart(0.2f));
@@ -39,7 +42,10 @@ namespace Source.Controller
             map.notifyObservers();
             activePlayer.notifyObservers();
         }
-
+        /// <summary>
+        /// Démarrer une nouvelle partie
+        /// </summary>
+        /// <param name="city"></param>
         public void startNewGame(bool city = true){
             playerCity = new City();
             playerCompany = new Company();
@@ -64,6 +70,9 @@ namespace Source.Controller
             resetSelectedTile();
         }
 
+        /// <summary>
+        /// Tour suivant
+        /// </summary>
         public void nextTurn(){
             if(turn++ > turnLimit){
                 endTurn();
@@ -82,6 +91,9 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
+        /// <summary>
+        /// Fin du tout
+        /// </summary>
         public void endTurn(){
             activePlayer.addIncome(map);
             activePlayer.setScore(map);
@@ -89,6 +101,12 @@ namespace Source.Controller
             //Ajouter les actions de fin de jeu
         }
 
+        /// <summary>
+        /// Permet de connaître la case selectionnée
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <param name="tile"></param>
         public void selectTile(int posx, int posy, Tile tile){
             this.posx = posx;
             this.posy = posy;
@@ -96,6 +114,9 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /// <summary>
+        /// Permet de décliquer sur la case selectionnée
+        /// </summary>
         public void resetSelectedTile(){
             posx = -1;
             posy = -1;
@@ -106,16 +127,25 @@ namespace Source.Controller
             mapObserver.hideInfo(this.activePlayer.isCity());
         }
 
+        /// <summary>
+        /// Permet d'acheter la case selectionnée
+        /// </summary>
         public void buySelected(){
             activePlayer.Buy(map, (uint)posx, (uint)posy);
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /// <summary>
+        /// Permet d'améliorer la case selectionnée
+        /// </summary>
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /// <summary>
+        /// Permet de mettre en place le pouvoir choisi
+        /// </summary>
         public void setPowerSelected(){
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
             if(activePlayer.isCity()){
