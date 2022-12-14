@@ -17,6 +17,8 @@ namespace JeuScript
 
         SpriteRenderer sr;
         bool isSelected = false;
+        bool isBoosted = false;
+        bool isProtected = false;
         bool isTransport = false;
 
         private Sprite[] emptySpriteArray;
@@ -44,7 +46,15 @@ namespace JeuScript
         {
             if (isSelected)
             {
-                sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+                if(isBoosted){
+                    sr.color = new Color(1f, 0.2f, 0.2f, 1f); // rouge?
+                }
+                else if(isProtected){
+                    sr.color = Color.magenta;
+                }
+                else{
+                    sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+                }
             }
             else if (isTransport)
             {
@@ -52,7 +62,15 @@ namespace JeuScript
             }
             else
             {
-                sr.color = Color.gray;
+                if(isBoosted){
+                    sr.color = new Color(1f, 0.2f, 0.2f, 1f); // rouge?
+                }
+                else if(isProtected){
+                    sr.color = Color.magenta;
+                }
+                else{
+                    sr.color = Color.gray;
+                }
             }
         }
 
@@ -65,7 +83,23 @@ namespace JeuScript
             }
             else if (isSelected)
             {
-                sr.color = Color.green;
+                if(isBoosted){
+                    sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
+                }
+                else if(isProtected){
+                    sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plus clair
+                }
+                else{
+                    sr.color = Color.green;
+                }
+            }
+            else if (isBoosted)
+            {
+                sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
+            }
+            else if (isProtected)
+            {
+                sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plus clair
             }
             else
             {
@@ -84,19 +118,66 @@ namespace JeuScript
                 /*gh.currTile Pour récupérer l'ancienne tile, avant d'utiliser selectTile*/
                 if (gh.currTile != null)
                 {
-                    gh.currTile.isSelected = false;
-                    gh.currTile.sr.color = Color.white;
+                    gh.currTile.deselect();
                 }
                 
                 gh.selectTile(vect.x, vect.y, this); //On met la tile actuelle (celle qui contient ce code) dans currTile
                 isSelected = true;
-                sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+                if(isBoosted){
+                    sr.color = new Color(1f, 0.2f, 0.2f, 1f); // rouge?
+                }
+                else if(isProtected){
+                    sr.color = Color.magenta;
+                }
+                else{
+                    sr.color = sr.color = new Color(0f, 0.5f, 0f, 1f); //Vert foncé
+                }
             }         
+        }
+
+        public void Boost(){
+            isBoosted = true;
+            sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
+        }
+
+        public void unBoost(){
+            isBoosted = false;
+            if(isSelected){
+                sr.color = Color.green;
+            }
+            else
+            {
+                sr.color = Color.white;
+            }
+        }
+
+        public void Decree(){
+            isProtected = true;
+            sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plus clair
+        }
+
+        public void unDecree(){
+            isProtected = false;
+            if(isSelected){
+                sr.color = Color.green;
+            }
+            else
+            {
+                sr.color = Color.white;
+            }
         }
 
         public void deselect(){
             isSelected = false;
-            sr.color = Color.white;
+            if(isBoosted){
+                sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
+            }
+            else if(isProtected){
+                sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plsu clair
+            }
+            else{
+                sr.color = Color.white;
+            }
         }
 
         public Sprite getSprite(){
