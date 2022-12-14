@@ -66,7 +66,7 @@ namespace Source.Model
             *Varibales locales :
         */
         public uint getIncome(){
-            return (uint)(BASE_INCOME * ((level / 2) + 1));
+            return (uint)(BASE_INCOME * ((level / 2f) + 1));
         }
 
         /*

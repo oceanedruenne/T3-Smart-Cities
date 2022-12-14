@@ -21,13 +21,13 @@ namespace Source.Controller
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
 
-        [SerializeField] private int posx;
-        [SerializeField] private int posy;
+        private int posx;
+        private int posy;
         public Tile currTile = null;
 
         void Start(){
             startNewGame();
-            StartCoroutine(LateStart(0.5f));
+            StartCoroutine(LateStart(0.2f));
         }
 
         IEnumerator LateStart(float waitTime)
@@ -49,17 +49,16 @@ namespace Source.Controller
             }
             turn = 1;
 
-            posx = -1;
-            posy = -1;
-
             playerObserver = new PlayerObserver();
 
             playerCity.addObserver(playerObserver);
             playerCompany.addObserver(playerObserver);
 
-            mapObserver = new MapObserver(map);
+            mapObserver = new MapObserver(map, this);
 
             map.addObserver(mapObserver);
+
+            resetSelectedTile();
         }
 
         public void nextTurn(){
@@ -71,8 +70,7 @@ namespace Source.Controller
             else {
                 activePlayer = playerCity;
             }
-            posx = -1;
-            posy = -1;
+            resetSelectedTile();
             turn++;
             activePlayer.notifyObservers();
         }
@@ -81,14 +79,32 @@ namespace Source.Controller
             this.posx = posx;
             this.posy = posy;
             this.currTile = tile;
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
+        }
+
+        public void resetSelectedTile(){
+            posx = -1;
+            posy = -1;
+            if(currTile!=null){
+                currTile.deselect();
+                currTile = null;
+            }
+            mapObserver.hideInfo(this.activePlayer.isCity());
         }
 
         public void buySelected(){
             activePlayer.Buy(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
+        }
+
+        public void setPowerSelected(){
+            activePlayer.specialsUse(map, (uint)posx, (uint)posy);
+            mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
     }
 }
