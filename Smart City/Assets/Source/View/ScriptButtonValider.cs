@@ -7,6 +7,6 @@ public class ScriptButtonValider : MonoBehaviour
 {
    public void BtnNextScene()
    {
-       SceneManager.LoadScene("SampleScene");
+       SceneManager.LoadScene("GameScene");
    }
 }
