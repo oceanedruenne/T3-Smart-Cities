@@ -11,9 +11,9 @@ namespace Source.Model
         public static float MALUS_INCREASE = 0.2f;
         /*
         Ce qui suit s'appelle un getter 
-        (il existe aussi des setter, si jamais :
+        (il existe aussi des setters, si jamais :
         https://learn.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/using-properties)
-        Ceci reviens au même que faire une fonction getBuyMalus renvoyant buyMalus, 
+        Ceci revient au même que faire une fonction getBuyMalus renvoyant buyMalus, 
         sauf que il sera possible de faire directement un Building.buyMalus 
         au lieu de Building.getBuyMalus
         */
@@ -30,10 +30,15 @@ namespace Source.Model
             type : BuildType : type du bâtiment crée (voir l'enumération BuildType)
             malus : double : buyMalus du bâtiment, égal au buyMalus du bâtiments précedent + MALUS_INCREASE sinon 1.0
             level : uint : Niveau du bâtiment, égal au bâtiment précédent sinon 0
-            *Keskecé : 
             Constructeur de la classe
             *Varibales locales :
         */
+        /// <summary>
+        /// Constructeur de Building
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="malus"></param>
+        /// <param name="level"></param>
         public Building(BuildType type, float malus = 1f, int level = 0){
             this._type = type;
             this._buyMalus = malus;
@@ -43,11 +48,15 @@ namespace Source.Model
         /*
            *Transport : Fonction : Building
            *Paramètre : 
-           *Keskecé : Construit le bâtiment transport qui ne sera pas achetable et qui va donner des bonus aux bâtiments autour
+           *Construit le bâtiment transport qui ne sera pas achetable et qui va donner des bonus aux bâtiments autour
            *Varibales locales : 
            *transport : Building : le bâtiment
        */
 
+        /// <summary>
+        /// Permet de créer des transports
+        /// </summary>
+        /// <returns>Building</returns>
         public static Building createTransport() {
             Building transport = new Building(BuildType.Transport, 0, 0);
             return transport;
@@ -56,15 +65,17 @@ namespace Source.Model
         /*
             *getIncome : fonction : uint
             *Paramètre : Aucun
-            *Keskecé : 
             Retourne le revenu rapporté par le bâtiment, qui correspond à la formule suivante :
             BASE_INCOME * ((level * 0,5) + 1) cad 
             niveau 0 : BASE_INCOME * 1 (= (0 / 2) + 1 )
             Niveau 1 : BASE_INCOME * 1,5
             Niveau 2 : BASE_INCOME * 2
             etc...
-            *Varibales locales :
         */
+        /// <summary>
+        /// Permet de récupérer les revenus du bâtiment
+        /// </summary>
+        /// <returns>uint</returns>
         public uint getIncome(){
             return (uint)(BASE_INCOME * ((level / 2f) + 1));
         }
@@ -72,36 +83,43 @@ namespace Source.Model
         /*
             *getIncomeAfterUpgrade : fonction : uint
             *Paramètre : Aucun
-            *Keskecé : 
             Retourne le revenu rapporté par le bâtiment au niveau + 1
-            *Varibales locales :
         */
+        /// <summary>
+        /// Permet de récupérer les bénéfices du bâtiment après son amélioration
+        /// </summary>
+        /// <returns>uint</returns>
         public uint getIncomeAfterUpgrade(){
             return (uint)(BASE_INCOME * (((level+1) / 2f) + 1));
         }
 
         /*
             *getCost : fonction : uint
-            *Paramètre : 
-            *Keskecé :
+            *Paramètre : Aucun
             Retourne le coût du bâtiment à l'achat, selon la formule suivante :
             BASE_COST * ((0,5 * level) + 1) * buyMalus cad
             Niveau 0 + buyMalus 1.0 : BASE_COST * 1 * 1
             Niveau 1 + buyMalus 1.0 : BASE_COST
-            *Varibales locales :
-
         */
+
+        /// <summary>
+        /// Permet de récupérer le coût d'achat d'un bâtiment
+        /// </summary>
+        /// <returns>uint</returns>
         public uint getBuyCost(){
             return (uint)(BASE_COST * ((level / 2) + 1) * buyMalus);
         }
 
         /*
             *schéma : fonction/proc : typeretour
-            *Paramètre : 
-            *Keskecé :
-            *Varibales locales :
+            *Paramètre : Aucun 
+            * Permet de récupérer le coût d'amélioration d'un bâtiment
         */
 
+        /// <summary>
+        /// Permet de récupérer le coût d'amélioration d'un bâtiment
+        /// </summary>
+        /// <returns>uint</returns>
         public uint getUpgradeCost(){
             return (uint)(BASE_COST * ((level / 2) + 1));
         }
