@@ -136,6 +136,21 @@ namespace Source.Model
             return income;
         }
 
+        public uint getIncomeAfterUpgradeAt(uint posx, uint posy){
+            uint income = 0;
+            BuildType type = getTypeAt(posx,posy);
+            if(type == BuildType.Housing || type == BuildType.Office){
+                income += buildings[posx,posy].getIncomeAfterUpgrade();
+                if(isAdjacentToTransport(posx,posy)){
+                    income += income/2;
+                }
+                if(getBoost(posx,posy)){
+                    income += income/2;
+                }
+            }
+            return income;
+        }
+
         public bool isAdjacentToTransport(uint x, uint y){
             bool res = false;
             int size = buildings.GetLength(0);
