@@ -8,7 +8,6 @@ public class inputWriter : MonoBehaviour
 {
     public static string cityName;
 
-
     // Start is called before the first frame update
     void Start()
     {   
