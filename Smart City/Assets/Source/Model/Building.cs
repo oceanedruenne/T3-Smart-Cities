@@ -90,7 +90,7 @@ namespace Source.Model
         /// </summary>
         /// <returns>uint</returns>
         public uint getIncomeAfterUpgrade(){
-            return (uint)(BASE_INCOME * ((level+1 / 2f) + 1));
+            return (uint)(BASE_INCOME * (((level+1) / 2f) + 1));
         }
 
         /*
