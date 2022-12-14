@@ -47,10 +47,11 @@ _Design urbain :_ Approche de la conception des bâtiments et des espaces entre 
 
 ## Type de jeu et mécanismes d'apprentissage
 
-#Smart Cities est un jeu de gestion inspiré d’un autre jeu : SimCity. 
+Smart Cities est un jeu de gestion inspiré d’un autre jeu : SimCity. 
+
 En effet, le (ou les joueurs) vont incarner la municipalité et/ou les GAFAM. À tour de rôle, chaque joueur pourra prendre des décisions sur les bâtiments, les terrains de la ville, dans le but d’acquérir le plus de terrains possibles pour la municipalité, et d’avoir le plus d’argent possible pour les GAFAM. 
 Par conséquent, grâce aux choix effectués par les joueurs, ceux-ci vont apprendre en autodidacte les choses énoncées dans l’objectif pédagogique.
-#Rôle du/des joueur(s) : Municipalité/GAFAM.
+Rôle du/des joueur(s) : Municipalité/GAFAM.
 
 
 ## Déroulement d'une partie 
