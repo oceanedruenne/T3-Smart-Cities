@@ -1,11 +1,11 @@
-# T3
+## T3
 
-Nom du groupe : Les chatons mignons
+#Nom du groupe : Les chatons mignons
 
-Code du groupe : DEN22-T3-A
+#Code du groupe : DEN22-T3-A
 
 
-Participants :
+#Participants :
 
 - Geoffrey OSSARD
 - Danaé ALBRECHT-MARTIN
@@ -47,8 +47,27 @@ _Design urbain :_ Approche de la conception des bâtiments et des espaces entre 
 
 ## Type de jeu et mécanismes d'apprentissage
 
-Smart Cities est un jeu de gestion inspiré d’un autre jeu : SimCity. 
-En effet, le (ou les joueurs) vont incarner la municipalité et/ou les GAFAM. À tour de rôle, chaque joueur pourra prendre des décisions sur les bâtiments, les terrains de la ville, dans le but d’acquérir le plus de terrains possibles pour la municipalité, et d’avoir le plus d’argent possible pour les GAFAM. Par conséquent, grâce aux choix effectués par les joueurs, ceux-ci vont apprendre en autodidacte les choses énoncées dans l’objectif pédagogique.
+#Smart Cities est un jeu de gestion inspiré d’un autre jeu : SimCity. 
+En effet, le (ou les joueurs) vont incarner la municipalité et/ou les GAFAM. À tour de rôle, chaque joueur pourra prendre des décisions sur les bâtiments, les terrains de la ville, dans le but d’acquérir le plus de terrains possibles pour la municipalité, et d’avoir le plus d’argent possible pour les GAFAM. 
+Par conséquent, grâce aux choix effectués par les joueurs, ceux-ci vont apprendre en autodidacte les choses énoncées dans l’objectif pédagogique.
+#Rôle du/des joueur(s) : Municipalité/GAFAM.
+
+
+## Déroulement d'une partie 
+La partie commence par le joueur incarnant la municipalité. Le joueur doit dans un premier temps acheter un terrain afin d'y faire construire des habitations. Puis, il a le choix : 
+- D'améliorer son bâtiment 
+- D'utiliser un pouvoir dessus (augmenter son score)
+- D'acheter d'autres terrains 
+
+Lorsque le joueur est satisfait de ses actions, il appuie sur le bouton fin. C'est alors que vient le tour du joueur incarnant les GAFAM. Il réalise les mêmes actions que la municipalité, à la différence qu'il y construira des immeubles constitués de bureaux.
+
+## Paramétrage d'une partie 
+Le nom de la ville est demandé avant de commencer une partie. Il peut être nul.
+
+## Actions du joueur 
+    - Acheter des terrains 
+    - Améliorer ses bâtiments 
+    - Utiliser son pouvoir 
 
 
 ## Liste des principales fonctionnalités
