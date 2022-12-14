@@ -437,7 +437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 205110853}
+  posx: 0
+  posy: 0
   currTile: {fileID: 0}
+  BoostTile: {fileID: 0}
+  DecreeTile: {fileID: 0}
 --- !u!4 &205110855
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,7 +1677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4549841730701897278, guid: 8709a9d9c23a3204e98eb406602f89d8, type: 3}
       propertyPath: m_Name
-      value: NomText
+      value: NameText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8709a9d9c23a3204e98eb406602f89d8, type: 3}

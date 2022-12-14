@@ -33,7 +33,7 @@ namespace Source.Model
             }
             buildings[3, 5] = Building.createTransport();
         }
-
+/*
         public void fillMapRandom1(){
             int size = buildings.GetLength(0);
             System.Random rand = new System.Random();
@@ -43,7 +43,7 @@ namespace Source.Model
                 }
             }
 
-            int[] coordinates = new int[size/2];
+            int[][] coordinates = new int[][size/2];
             for(int i=0;i<size/2;i++){
                 int x = rand.Next(size);
                 int y = rand.Next(size);
@@ -53,7 +53,7 @@ namespace Source.Model
             }
         }
 
-        private bool getDist(int minDist, int[] coordinate, int[] coordinates){
+        private bool getDist(int minDist, int[] coordinate, int[][] coordinates){
             bool temp = true;
             float vectStart = Math.Sqrt(Math.Pow(coordinate[0],2)+Math.Pow(coordinate[1],2));
             foreach(int[] coord in coordinates){
@@ -65,7 +65,7 @@ namespace Source.Model
             }
             return temp;
         }
-
+*/
         public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();
