@@ -31,6 +31,7 @@ public class MapObserver : ScriptableObject, Observer
     private GameObject panelAvatar = GameObject.Find("Panel Avatar");
     //Infos dans le panel
     private Image avatarObject = GameObject.Find("Avatar").GetComponent<Image>();
+    private Image avatarObjectConstant = GameObject.Find("AvatarConstant").GetComponent<Image>();
     //Différents avatars
     Sprite spriteCompany = Resources.Load<Sprite>("Textures/UI/Sprite_companyIcon");
     Sprite spriteMayor = Resources.Load<Sprite>("Textures/UI/Sprite_mayorIcon");
@@ -207,10 +208,12 @@ public class MapObserver : ScriptableObject, Observer
         if (isCity)
         {
             avatarObject.sprite = spriteMayor;
+            avatarObjectConstant.sprite = spriteMayor;
         }
         else
         {
             avatarObject.sprite = spriteCompany;
+            avatarObjectConstant.sprite = spriteCompany;
         }
 
         panelInfos.SetActive(false);
