@@ -16,13 +16,13 @@ namespace Source.Controller
         private Player activePlayer;
         private City playerCity;
         private Company playerCompany;
-        private Map map;
+        public Map map;
 
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
 
-        private int posx;
-        private int posy;
+        public int posx;
+        public int posy;
         public Tile currTile = null;
 
         void Start(){
