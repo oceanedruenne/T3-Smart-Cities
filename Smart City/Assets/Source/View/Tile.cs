@@ -31,7 +31,7 @@ namespace JeuScript
         /// </summary>
         private void Start()
         {
-            //R�cup�ration de la grille
+            //Récupération de la grille
             grid = GameObject.Find("Grid").GetComponent<Grid>();
 
             //Récupération du SpriteRenderer
@@ -44,7 +44,10 @@ namespace JeuScript
             transportSprite = Resources.Load<Sprite>("Textures/Transport/Sprite_transport");
 
         }
-
+        /*
+        *OnMouseEnter : fonction 
+        Permet de modifier les couleurs de la case lorsqu'elle est selectionnée
+        */
         /// <summary>
         /// Lorsque la case est selectionnée
         /// </summary>
@@ -80,6 +83,10 @@ namespace JeuScript
             }
         }
 
+        /*
+        *OnMouseExit : fonction 
+        Permet de modifier les couleurs de la case lorsque la souris arrête de survoler la case
+        */
         /// <summary>
         /// Lorsque la souris arrête de survoler la case
         /// </summary>
@@ -116,6 +123,11 @@ namespace JeuScript
             }
         }
 
+
+        /*
+        *OnMouseUp : fonction 
+        Permet de modifier les couleurs de la case lorsque la souris passe sur une case
+        */
         /// <summary>
         /// Lorsque la souris passe sur une case
         /// </summary>
@@ -147,6 +159,10 @@ namespace JeuScript
             }         
         }
 
+        /*
+        *Boost : fonction 
+        Permet de modifier les couleurs de la case lorsque elle est boostée
+        */
         /// <summary>
         /// Permet d'afficher la case boostée en une autre couleur
         /// </summary>
@@ -155,6 +171,10 @@ namespace JeuScript
             sr.color = new Color(1f, 0.5f, 0.4f, 1f); // rouge plus clair?
         }
 
+        /*
+        *unBoost : fonction 
+        Permet d'afficher la case d'une couleur différente quand le boost est retiré
+        */
         /// <summary>
         /// Permet d'afficher la case d'une couleur différente quand le boost est retiré
         /// </summary>
@@ -169,14 +189,23 @@ namespace JeuScript
             }
         }
 
+
+        /*
+        *Decree : fonction 
+        Permet de changer la couleur de la case quand un décret est mis
+        */
         /// <summary>
-        /// Permet de changer la couleur de la case quand un decree est mis
+        /// Permet de changer la couleur de la case quand un décret est mis
         /// </summary>
         public void Decree(){
             isProtected = true;
             sr.color = new Color(1f, 0.5f, 1f, 1f); // Magenta? plus clair
         }
 
+        /*
+        *unDecree : fonction 
+        Permet de changer la couleur de la case quand un décret est retiré
+       */
         /// <summary>
         /// Permet de changer la couleur de la case quand un decree est enlevé
         /// </summary>
@@ -191,6 +220,10 @@ namespace JeuScript
             }
         }
 
+        /*
+        *deSelect : fonction 
+        Permet de changer la couleur de la case quand la case n'est plus selectionnée
+        */
         /// <summary>
         /// Permet de changer la couleur de la case quand la case est déselectionnée
         /// </summary>
@@ -207,14 +240,26 @@ namespace JeuScript
             }
         }
 
+        /*
+        *getSprite : fonction : Sprite 
+        Permet de récupérer le sprite
+        */
         /// <summary>
         /// Permet de récupérer le sprite
         /// </summary>
-        /// <returns>Sprite</returns>
+        /// <returns>un Sprite</returns>
         public Sprite getSprite(){
             return this.sr.sprite;
         }
 
+
+        /*
+        *changeSprite : fonction 
+        *Paramètres : 
+        * level : int : niveau
+        * type : BuildType : type de bâtiment
+        Permet de changer le sprite
+        */
         /// <summary>
         /// Permet de changer le Sprite
         /// </summary>
@@ -270,6 +315,12 @@ namespace JeuScript
 
         }
 
+        /*
+        *changeSprite : fonction 
+        *Paramètres : 
+        *type : BuildType : type de bâtiment
+        Permet de changer le sprite
+       */
         /// <summary>
         /// Permet de changer le Sprite
         /// </summary>

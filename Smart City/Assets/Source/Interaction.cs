@@ -90,6 +90,12 @@ public class Interaction : MonoBehaviour
             ChangeAllSprite(spriteArray[rnd.Next(0, nb)]);
         }
     }
+
+    /* 
+     * ChangeAllSprite : fonction
+     * Paramètre : newSprite : Sprite
+     * Permet d'ajouter des sprites
+     */
     /// <summary>
     /// Permet d'ajouter des sprites
     /// </summary>

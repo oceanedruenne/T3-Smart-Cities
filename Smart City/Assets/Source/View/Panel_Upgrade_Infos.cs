@@ -21,6 +21,11 @@ public class Panel_Upgrade_Infos : MonoBehaviour
     uint newIncome = 0;
     private TextMeshProUGUI newIncomeText;
 
+
+    // CONSTRUCTEUR
+    /// <summary>
+    /// Constructeur
+    /// </summary>
     private void Awake()
     {
         Debug.Log("Awake");
@@ -28,6 +33,12 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         initInfos();
         updatePanelInfos();
     }
+
+
+    // Activation
+    /// <summary>
+    /// Activation
+    /// </summary>
 
     private void OnEnable()
     {
@@ -37,6 +48,13 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         updatePanelInfos();
     }
 
+    /* initGameHandler : fonction 
+     Permet d'initialiser le GameHandler 
+    */
+    /// <summary>
+    /// Permet d'initialiser le GameHandler
+    /// </summary>
+    
     private void initGameHandler()
     {
         if(gh == null)
@@ -45,6 +63,12 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         }
     }
 
+    /* initInfos : fonction 
+    Permet d'initialiser les informations
+    */
+    /// <summary>
+    /// Permet d'initialiser les informations
+    /// </summary>
     private void initInfos()
     {
         if(infos == null)
@@ -69,6 +93,12 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         }
     }
 
+    /* updatePanelInfos : fonction 
+    Permet de mettre à jour les informations du panel
+    */
+    /// <summary>
+    /// Permet de mettre à jour les informations du panel
+    /// </summary>
     private void updatePanelInfos()
     {
         if(upgradeCost == 0 && newIncome == 0)
@@ -83,6 +113,13 @@ public class Panel_Upgrade_Infos : MonoBehaviour
         }    
     }
 
+
+    /* clickUpdate : fonction 
+    Permet de modifier les informations quand il y a un clic
+    */
+    /// <summary>
+    /// Permet de modifier les informations quand il y a un clic
+    /// </summary>
     public void clickUpdate()
     {
         initInfos();

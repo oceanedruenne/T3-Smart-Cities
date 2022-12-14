@@ -45,6 +45,11 @@ namespace Source.Controller
             activePlayer.setScore(map);
             activePlayer.notifyObservers();
         }
+
+        /* startNewGame : fonction 
+         Paramètre : city : booo : true 
+         Cette fonction permet de démarrer une nouvelle partie 
+        */
         /// <summary>
         /// Démarrer une nouvelle partie
         /// </summary>
@@ -75,6 +80,9 @@ namespace Source.Controller
             resetSelectedTile();
         }
 
+        /* nextTurn : fonction 
+        Cette fonction permet de passer au tour suivant
+       */
         /// <summary>
         /// Tour suivant
         /// </summary>
@@ -99,8 +107,11 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
+        /*endTurn  : fonction 
+        Cette fonction permet de terminer le tour
+        */
         /// <summary>
-        /// Fin du tout
+        /// Fin du tour
         /// </summary>
         public void endTurn(){
             activePlayer.addIncome(map);
@@ -110,6 +121,11 @@ namespace Source.Controller
             Debug.Log("Fin du jeu");
         }
 
+
+        /* selectTile : fonction 
+         * Paramètres : posx : int, posy : int, tile : Tile
+         Permet de connaître la case selectionnée.
+        */
         /// <summary>
         /// Permet de connaître la case selectionnée
         /// </summary>
@@ -123,8 +139,11 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /* resetSelectedTile : fonction 
+        Permet de décliquer la case selectionnée.
+       */
         /// <summary>
-        /// Permet de décliquer sur la case selectionnée
+        /// Permet de décliquer la case selectionnée
         /// </summary>
         public void resetSelectedTile(){
             posx = -1;
@@ -136,6 +155,9 @@ namespace Source.Controller
             mapObserver.hideInfo(this.activePlayer.isCity());
         }
 
+        /* buySelected : fonction 
+        Permet d'acheter la case selectionnée
+        */
         /// <summary>
         /// Permet d'acheter la case selectionnée
         /// </summary>
@@ -147,6 +169,9 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /* upgradeSelected : fonction 
+        Permet d'améliorer la case selectionnée
+        */
         /// <summary>
         /// Permet d'améliorer la case selectionnée
         /// </summary>
@@ -155,6 +180,10 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+
+        /* setPowerSelected : fonction 
+        Permet de mettre en place le pouvoir choisi
+        */
         /// <summary>
         /// Permet de mettre en place le pouvoir choisi
         /// </summary>
