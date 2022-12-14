@@ -48,6 +48,13 @@ namespace Source.Model
             buildings[3, 5] = Building.createTransport();
         }
 
+
+        /* fillMapRandom1 : fonction 
+       Permet de générer la carte d'une manière aléatoire
+       */
+        /// <summary>
+        /// Permet de générer une carte de manière aléatoire
+        /// </summary>
         public void fillMapRandom1(){
             int size = buildings.GetLength(0);
             System.Random rand = new System.Random();
@@ -73,6 +80,13 @@ namespace Source.Model
             }
         }
 
+
+        /* fillMapRandNoSeedEqualChance : fonction 
+        Permet de générer une carte de manière aléatoire 
+        */
+        /// <summary>
+        /// Permet de générer une carte de manière aléatoire
+        /// </summary>
         public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();
