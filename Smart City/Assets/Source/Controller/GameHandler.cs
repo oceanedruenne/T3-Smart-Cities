@@ -79,6 +79,7 @@ namespace Source.Controller
             }
             resetSelectedTile();
             turn++;
+
             activePlayer.notifyObservers();
         }
 
