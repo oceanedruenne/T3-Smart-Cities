@@ -60,16 +60,7 @@ namespace Source.Model
             System.Random rand = new System.Random();
             for(int i = 0;i < size;i++){
                 for(int j = 0;j < size;j++){
-                    int r = rand.Next(100);
-                    if(r<0){
-                        buildings[i,j] = new Building(BuildType.Housing);
-                    }
-                    else if(r<0){
-                        buildings[i,j] = new Building(BuildType.Office);
-                    }
-                    else{
-                        buildings[i,j] = new Building(BuildType.Empty);
-                    }
+                    buildings[i,j] = new Building(BuildType.Empty);
                 }
             }
 
@@ -403,6 +394,7 @@ namespace Source.Model
                     income += income/2;
                 }
             }
+            income -= this.getIncomeAt(posx, posy);
             return income;
         }
 
