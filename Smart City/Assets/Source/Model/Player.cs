@@ -15,6 +15,12 @@ namespace Source.Model
         public TMP_Text name;
         protected List<PlayerObserver> observers;
 
+
+        /*
+        *Player : Constructeur : Player
+        *Paramètre : 
+        Constructeur de la classe 
+        */
         /// <summary>
         /// Constructeur de joueur
         /// </summary>
@@ -26,41 +32,79 @@ namespace Source.Model
             this.name.text = "test";
         }
 
+
+        /*
+            *canBuy : fonction : bool
+            *Paramètres :
+            *map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+            *posx : uint : Position en X sur la carte du bâtiment à acheter
+            *posy : uint : Position en Y sur la carte du bâtiment à acheter
+            Permet de vérifier si cette case peut être achetée
+        */
         /// <summary>
         /// Permet de vérifier si le joueur peut acheter
         /// </summary>
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>vrai si le joueur peut acheter, sinon faux</returns>
         public abstract bool canBuy(Map map, uint posx, uint posy);
 
+
+        /*
+           *canUpgrade : fonction : bool
+           *Paramètres : 
+           *map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+           *posx : uint : Position en X sur la carte du bâtiment à acheter
+           *posy : uint : Position en Y sur la carte du bâtiment à acheter
+           Permet de vérifier si on peut améliorer
+           *Variables locales : bool temp
+       */
         /// <summary>
         /// Permet de vérifier si le joueur peut améliorer
         /// </summary>
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>vrai si le joueur peut améliorer, sinon faux</returns>
         public abstract bool canUpgrade(Map map, uint posx, uint posy);
 
+
+
+
+        /*
+           *Buy : fonction : bool
+           *Paramètres : 
+           map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+           posx : uint : Position en X sur la carte du bâtiment à acheter
+           posy : uint : Position en Y sur la carte du bâtiment à acheter
+           Permet d'acheter, renvoie true si l'opération s'est bien passée, sinon faux
+       */
         /// <summary>
         /// Permet de vérifier si l'achat s'est bien déroulé
         /// </summary>
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>retourne vrai si l'opération s'est bien faite, sinon faux</returns>
         public abstract bool Buy(Map map, uint posx, uint posy);
 
 
+        /*
+           *Upgrade : fonction : bool
+           *Paramètres : 
+           map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+           posx : uint : Position en X sur la carte du bâtiment à acheter
+           posy : uint : Position en Y sur la carte du bâtiment à acheter
+           Permet de vérifier si l'amélioration d'un bâtiment s'est bien déroulée
+       */
         /// <summary>
         /// Permet de vérifier si l'amélioration d'un bâtiment s'est bien déroulée
         /// </summary>
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>renvoie vrai si l'amélioration s'est faite, sinon faux</returns>
         public bool Upgrade(Map map, uint posx, uint posy){
             if(canUpgrade(map,posx,posy)){
                 money -= map.getUpgradeCostAt(posx,posy);
@@ -71,6 +115,15 @@ namespace Source.Model
             return false;
         }
 
+
+        /*
+            *specialsUse : fonction : 
+            *Paramètres :
+            * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+            *posx : uint : Position en X sur la carte du bâtiment à acheter
+            *posy : uint : Position en Y sur la carte du bâtiment à acheter
+            Permet d'utiliser son pouvoir spécial
+        */
         /// <summary>
         /// Permet d'utiliser son pouvoir spécial
         /// </summary>
@@ -79,18 +132,39 @@ namespace Source.Model
         /// <param name="posy"></param>
         public abstract void specialsUse(Map map, uint posx, uint posy);
 
+
+        /*
+           *addIncome : fonction 
+           *Paramètres : 
+           * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu) 
+           *Permet d'ajouter les bénéfices
+           *Variables locales : money
+       */
         /// <summary>
         /// Permet d'ajouter les bénéfices
         /// </summary>
         /// <param name="map"></param>
         public abstract void addIncome(Map map);
 
+
+        /* 
+        * setScore : fonction 
+        * Paramètres :
+        * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+        */
         /// <summary>
         /// Permet de fixer le score
         /// </summary>
         /// <param name="map"></param>
         public abstract void setScore(Map map);
 
+
+        /*
+        *addObserver : fonction
+        *Paramètres : 
+        * observer : MapObserver : Observeur de map
+        Permet d'ajouter des observers
+        */
         /// <summary>
         /// Permet d'ajouter un observeur
         /// </summary>
@@ -99,6 +173,12 @@ namespace Source.Model
             this.observers.Add(observer);
         }
 
+
+        /*
+        *notifyObservers : fonction
+        *Paramètres : 
+        Permet de notifier les observers
+        */
         /// <summary>
         /// Permet de notifier les observers
         /// </summary>
@@ -108,6 +188,16 @@ namespace Source.Model
             }
         }
 
+
+        /* 
+        * isCity : fonction : bool
+        * Permet de vérifier si c'est une ville (renvoie toujours true)
+        */
+
+        /// <summary>
+        /// Permet de vérifier si c'est une ville (renvoie toujours true)
+        /// </summary>
+        /// <returns>retourne vrai</returns>
         public abstract bool isCity();
     }
 }

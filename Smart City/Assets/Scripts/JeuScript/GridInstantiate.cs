@@ -17,9 +17,13 @@ public class GridInstantiate : MonoBehaviour
         GenerateGrid();
     }
 
-    /* GenerateGrid() :
-       Variables locales : tilesD, gridObject, grid, posX, posY, posZ, randomTile, tile
-       Cette fonction permet de générer la grille représentant la ville */
+        /*
+        *GenerateGrid : fonction 
+        Permet de générer une grille
+        */
+        /// <summary>
+        /// Permet de générer une grille
+        /// </summary>
     private void GenerateGrid()
     {
         tilesd = new Dictionary<Vector3Int, GameObject>();
@@ -46,9 +50,17 @@ public class GridInstantiate : MonoBehaviour
         }
     }
 
-    /* getTileAtPosition() : GameObject
-       Paramètres : Vector3Int pos
-       Cette fonction permet d'obtenir la case à la position donnée en paramètre*/
+      /*
+       *getTileAtPosition : fonction : GameObject
+       * Paramètre : pos : Vector3Int
+       * Variable locale : Vector3Int dictionaryKey
+       Permet de récupérer la case à la position passée en paramètre
+       */
+      /// <summary>
+      /// Permet de récupérer la case à la position passée en paramètre
+      /// </summary>
+      /// <param name="pos"></param>
+      /// <returns>La case à la position pos</returns>
     public GameObject getTileAtPosition(Vector3Int pos)
     {
         Vector3Int dictionaryKey = pos;

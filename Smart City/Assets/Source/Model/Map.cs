@@ -13,6 +13,13 @@ namespace Source.Model
         private uint[] boost = new uint[2];
         private List<MapObserver> observers;
 
+
+        /*
+          *Map : Constructeur : Map
+          *Paramètre : 
+          *taille : uint (par défaut elle est de 6)
+          Constructeur de la classe 
+        */
         /// <summary>
         /// Constructeur de Map
         /// </summary>
@@ -23,6 +30,11 @@ namespace Source.Model
             observers = new List<MapObserver>();
         }
 
+        /*
+      *fillMapEmpty : fonction
+      *Paramètre : 
+      Permet de remplir la Map qui est vide
+       */
         /// <summary>
         /// Permet de remplir la Map
         /// </summary>
@@ -36,6 +48,13 @@ namespace Source.Model
             buildings[3, 5] = Building.createTransport();
         }
 
+
+        /* fillMapRandom1 : fonction 
+       Permet de générer la carte d'une manière aléatoire
+       */
+        /// <summary>
+        /// Permet de générer une carte de manière aléatoire
+        /// </summary>
         public void fillMapRandom1(){
             int size = buildings.GetLength(0);
             System.Random rand = new System.Random();
@@ -61,6 +80,13 @@ namespace Source.Model
             }
         }
 
+
+        /* fillMapRandNoSeedEqualChance : fonction 
+        Permet de générer une carte de manière aléatoire 
+        */
+        /// <summary>
+        /// Permet de générer une carte de manière aléatoire
+        /// </summary>
         public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();
@@ -72,46 +98,86 @@ namespace Source.Model
             }
         }
 
+
+        /*
+        *getUpgradeCostAt : fonction : uint
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet d'accéder au coût d'amélioration d'une case ayant comme coordonnées celles passées en paramètres. 
+        */
         /// <summary>
         /// Permet de récupérer le coût d'amélioration à la case ayant comme coordonnées les entiers passés en paramètres
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>uint</returns>
+        /// <returns>Le coût d'amélioration d'une case</returns>
         public uint getUpgradeCostAt(uint posx, uint posy){
             return buildings[posx, posy].getUpgradeCost();
         }
 
+
+        /*
+        *getBuyCostAt : fonction : uint
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet d'accéder au coût d'achat d'une case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet de récupérer le coût d'achat de la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns></returns>
+        /// <returns>Le coût d'achat d'une case</returns>
         public uint getBuyCostAt(uint posx, uint posy){
             return buildings[posx,posy].getBuyCost();
         }
 
+        /*
+        *getTypeAt : fonction : BuildType
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet d'accéder au type de bâtiment d'une case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet de récupérer le type de bâtiment de la case ayant comme coordonées les paramètres de la fonction
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>BuildType</returns>
+        /// <returns>le type de bâtiment</returns>
         public BuildType getTypeAt(uint posx, uint posy){
             return buildings[posx,posy].type;
         }
 
+
+        /*
+        *getUnderMaxLevel : fonction : bool
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de vérifier si le niveau d'amélioration est inférieur à 6
+       */
         /// <summary>
         /// Permet de vérifier si le niveau d'amélioration est inférieur à 6
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>retourne vrai si le niveau est inférieur à 6, sinon faux</returns>
         public bool getUnderMaxLevel(uint posx, uint posy){
             return buildings[posx,posy].level < 6;
         }
 
+
+        /*
+        *buildAt : fonction
+        *Paramètres : 
+        * type : BuildType, type de bâtiment
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. 
+       */   
         /// <summary>
         /// Permet de construire sur la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
@@ -129,6 +195,16 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+
+
+        /*
+        *buildAtNoMalus : fonction
+        *Paramètres : 
+        * type : BuildType, type de bâtiment
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres sans malus.
+       */
         /// <summary>
         /// Permet de construire sans malus dans la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
@@ -146,6 +222,14 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+
+        /*
+        *destroyAt : fonction
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de détruire un bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet de détruire un bâtiment à la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -161,6 +245,14 @@ namespace Source.Model
             notifyObserversPos(posx, posy);
         }
 
+
+        /*
+        * UpgradeAt  : fonction
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet d'améliorer le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet d'améliorer à la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -178,8 +270,17 @@ namespace Source.Model
         }
 
 
+
+
+        /*
+        *setDecree : fonction
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres
+       */
         /// <summary>
-        /// Permet de gérer le decree de la case dont les coordonnées sont passées en paramètres
+        /// Permet de mettre un décret de la case dont les coordonnées sont passées en paramètres
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
@@ -188,18 +289,36 @@ namespace Source.Model
             decree[1] = posy;
         }
 
+
+
+        /*
+        *getDecree : fonction : bool
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de vérifier si un décret existe sur la case dont les coordonnées sont passées en paramètres
+       */
         /// <summary>
-        /// Permet de vérifier s'il y a un decree
+        /// Permet de vérifier s'il y a un décret
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>retourne vrai s'il en existe un, sinon faux</returns>
         public bool getDecree(uint posx, uint posy){
             return (decree[0] == posx) && (decree[1] == posy);
         }
 
+
+
+        /*
+        *setDecree : fonction
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres. 
+       */
         /// <summary>
-        /// Permet de mettre en place le boost
+        /// Permet de mettre en place le décret
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
@@ -208,22 +327,40 @@ namespace Source.Model
             boost[1] = posy;
         }
 
+
+
+        /*
+        *getBoost : fonction : bool
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres.
+       */
         /// <summary>
         /// Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>retourne vrai si un boost existe, sinon faux</returns>
         public bool getBoost(uint posx, uint posy){
             return (boost[0] == posx) && (boost[1] == posy);
         }
 
+
+
+        /*
+        *getIncomeAt : fonction : uint
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de récupérer les revenus générés par le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet de récupérer les bénéfices du bâtiment dont les coordonnées de sa case sont passées en paramètres
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>uint</returns>
+        /// <returns>retourne les revenus générés par le bâtiment sur la case dont les coordonnées sont passées en paramètres.</returns>
         public uint getIncomeAt(uint posx, uint posy){
             uint income = 0;
             BuildType type = getTypeAt(posx,posy);
@@ -239,12 +376,21 @@ namespace Source.Model
             return income;
         }
 
+
+
+        /*
+        *getIncomeAfterUpgradeAt : fonction : uint
+        *Paramètres : 
+        * posx : uint, coordonnée 
+        * posy : uint : coordonnée
+        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. 
+       */
         /// <summary>
         /// Permet de récupérer les bénéfices du bâtiment après son amélioration dont les coordonnées de sa case sont passées en paramètres
         /// </summary>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>uint</returns>
+        /// <returns>retourne les revenus générés par le bâtiment dans la case dont les cooordonnées sont passées en paramètres après son amélioration.</returns>
         public uint getIncomeAfterUpgradeAt(uint posx, uint posy){
             uint income = 0;
             BuildType type = getTypeAt(posx,posy);
@@ -260,12 +406,21 @@ namespace Source.Model
             return income;
         }
 
+
+
+        /*
+        *isAdjacentToTransport : fonction : bool
+        *Paramètres : 
+        * x : uint, coordonnée 
+        * y : uint : coordonnée
+        Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport 
+       */
         /// <summary>
         /// Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
-        /// <returns>bool</returns>
+        /// <returns>retourne vrai si c'est le cas, sinon faux</returns>
         public bool isAdjacentToTransport(uint x, uint y){
             bool res = false;
             int size = buildings.GetLength(0);
@@ -284,11 +439,18 @@ namespace Source.Model
             return res;
         }
 
+
+        /*
+        *getIncomeFromType : fonction : uint
+        *Paramètres : 
+        * type : BuildType : type de bâtiment
+        Permet de récupérer les revenus de tous les bâtiments d'un type donné
+        */
         /// <summary>
         /// Permet de récupérer les revenus de tous les bâtiments d'un type donné
         /// </summary>
         /// <param name="type"></param>
-        /// <returns>uint</returns>
+        /// <returns>les revenus des bâtiments ayant le même type que celui passé en paramètre</returns>
         public uint getIncomeFromType(BuildType type){
             uint total = 0;
             int size = buildings.GetLength(0);
@@ -303,11 +465,18 @@ namespace Source.Model
             return total;
         }
 
+
+        /*
+        *getScoreFromType : fonction : uint
+        *Paramètres : 
+        * type : BuildType : type de bâtiment
+        Permet de récupérer le score généré par les bâtiments ayant le même type que celui passé en paramètre
+       */
         /// <summary>
         /// Permet de récupérer le score de tous les bâtiments d'un type donné
         /// </summary>
         /// <param name="type"></param>
-        /// <returns>uint</returns>
+        /// <returns>Le score généré par les bâtiments ayant le même type que celui passé en paramètre</returns>
         public uint getScoreFromType(BuildType type){
             uint total= 0;
             int size = buildings.GetLength(0);
@@ -327,6 +496,13 @@ namespace Source.Model
             return total;
         }
 
+
+        /*
+        *addObserver : fonction
+        *Paramètres : 
+        * observer : MapObserver : Observeur de map
+        Permet d'ajouter des observers
+      */
         /// <summary>
         /// Permet d'ajouter des observers
         /// </summary>
@@ -335,6 +511,11 @@ namespace Source.Model
             this.observers.Add(observer);
         }
 
+        /*
+        *notifyObservers : fonction
+        *Paramètres : 
+        Permet de notifier les observers
+        */
         /// <summary>
         /// Permet de notifier les observers
         /// </summary>
@@ -344,6 +525,13 @@ namespace Source.Model
             }
         }
 
+        /*
+        *notifyObserversPos : fonction
+        *Paramètres : 
+        * x : uint, coordonnée 
+        * y : uint : coordonnée
+        Permet de notifier les observers qui ont comme coordonnées celles passées en paramètres
+        */
         /// <summary>
         /// Permet de notifier les observers des changements de position
         /// </summary>
@@ -355,6 +543,14 @@ namespace Source.Model
             }
         }
 
+
+        /*
+        *notifyObserversChange : fonction
+        *Paramètres : 
+        * x : uint, coordonnée 
+        * y : uint : coordonnée
+        Permet de notifier les observers qui ont comme coordonnées celles passées en paramètres.
+       */
         /// <summary>
         /// Permet de notifier les observers
         /// </summary>

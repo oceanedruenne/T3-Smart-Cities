@@ -4,16 +4,17 @@ using UnityEngine;
 
 namespace Source.Model
 {
+    // CLASSE VILLE
     public class City : Player
     {
         int TURN_BONUS = 0;   
         /*
-            *schéma : Buy : bool
+            *Buy : fonction : bool
             *Paramètres : 
             map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
             posx : uint : Position en X sur la carte du bâtiment à acheter
             posy : uint : Position en Y sur la carte du bâtiment à acheter
-            *Keskecé : Permet d'acheter
+            Permet d'acheter, renvoie true si l'opération s'est bien passée, sinon faux
         */
 
         /// <summary>
@@ -22,7 +23,7 @@ namespace Source.Model
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>Renvoie vrai si le bâtiment a été acheté, sinon faux</returns>
         public override bool Buy(Map map, uint posx, uint posy){
             if(canBuy(map,posx,posy)){
                 money -= map.getBuyCostAt(posx,posy);
@@ -34,12 +35,12 @@ namespace Source.Model
         }
 
         /*
-            *schéma : canBuy : bool
+            *canBuy : fonction : bool
             *Paramètres :
-            * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+            *map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
             *posx : uint : Position en X sur la carte du bâtiment à acheter
             *posy : uint : Position en Y sur la carte du bâtiment à acheter
-            *Keskecé : Permet de vérifier si cette case peut être achetée
+            Permet de vérifier si cette case peut être achetée
         */
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace Source.Model
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>Renvoie vrai si on peut acheter, sinon faux</returns>
         public override bool canBuy(Map map, uint posx, uint posy){
             bool temp = (map.getBuyCostAt(posx,posy) <= money);
             switch (map.getTypeAt(posx,posy)){
@@ -64,12 +65,12 @@ namespace Source.Model
         }
 
         /*
-            *schéma : canUpgrade : bool
+            *canUpgrade : fonction : bool
             *Paramètres : 
-            * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+            *map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
             *posx : uint : Position en X sur la carte du bâtiment à acheter
             *posy : uint : Position en Y sur la carte du bâtiment à acheter
-            *Keskecé : Permet de vérifier si on peut améliorer
+            Permet de vérifier si on peut améliorer
             *Variables locales : bool temp
         */
 
@@ -79,7 +80,7 @@ namespace Source.Model
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        /// <returns>bool</returns>
+        /// <returns>renvoie vrai si on peut améliorer, sinon faux</returns>
         public override bool canUpgrade(Map map, uint posx, uint posy){
             bool temp = map.getBuyCostAt(posx,posy) <= money;
             temp &= map.getUnderMaxLevel(posx,posy);
@@ -94,13 +95,15 @@ namespace Source.Model
             return temp;
         }
 
+
+
         /*
-            *schéma : specialsUse
+            *specialsUse : fonction : 
             *Paramètres :
             * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
             *posx : uint : Position en X sur la carte du bâtiment à acheter
-            $posy : uint : Position en Y sur la carte du bâtiment à acheter
-            *Keskecé : permet d'utiliser son pouvoir spécial
+            *posy : uint : Position en Y sur la carte du bâtiment à acheter
+            Permet d'utiliser son pouvoir spécial
         */
 
         /// <summary>
@@ -114,10 +117,11 @@ namespace Source.Model
         }
 
         /*
-            *schéma : addIncome 
-            *Paramètres : map : Map : La carte sur laquelle la case va être achetée (La carte de jeu) 
-            *Keskecé : permet d'ajouter les bénéfices
-            *Varibales locales : money
+            *addIncome : fonction 
+            *Paramètres : 
+            * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu) 
+            *Permet d'ajouter les bénéfices
+            *Variables locales : money
         */
         /// <summary>
         /// Permet d'ajouter les bénéfices
@@ -128,6 +132,11 @@ namespace Source.Model
             notifyObservers();
         }
 
+        /* 
+         * setScore : fonction 
+         * Paramètres :
+         * map : Map : La carte sur laquelle la case va être achetée (La carte de jeu)
+         */
         /// <summary>
         /// Permet d'attribuer une valeur au score
         /// </summary>
@@ -137,7 +146,15 @@ namespace Source.Model
             score = map.getScoreFromType(BuildType.Housing);
         }
 
+        /* 
+         * isCity : fonction : bool
+         * Permet de vérifier si c'est une ville (renvoie toujours true)
+         */
         
+        /// <summary>
+        /// Permet de vérifier si c'est une ville (renvoie toujours true)
+        /// </summary>
+        /// <returns>retourne vrai</returns>
         public override bool isCity(){
             return true;
         }
