@@ -14,6 +14,7 @@ namespace Source.Model
         public uint score;
         public TMP_Text name;
         protected List<PlayerObserver> observers;
+        public uint earn;
 
 
         /*
@@ -30,6 +31,7 @@ namespace Source.Model
             this.observers = new List<PlayerObserver>();
             name = new TextMeshProUGUI();
             this.name.text = "test";
+            this.earn= 0;
         }
 
 
@@ -199,5 +201,8 @@ namespace Source.Model
         /// </summary>
         /// <returns>retourne vrai</returns>
         public abstract bool isCity();
+
+        //
+        public abstract void earnAfterRound(Map map);
     }
 }

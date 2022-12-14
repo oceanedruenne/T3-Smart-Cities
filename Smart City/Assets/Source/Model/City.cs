@@ -158,5 +158,15 @@ namespace Source.Model
         public override bool isCity(){
             return true;
         }
+
+        //
+        public override void earnAfterRound(Map map)
+        {
+            earn = map.getIncomeFromType(BuildType.Housing);
+            Debug.Log("ville : " + earn);
+        }
     }
+
+    
+
 }

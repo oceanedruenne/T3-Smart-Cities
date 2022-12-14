@@ -13,11 +13,11 @@ public class Panel_Upgrade_Infos : MonoBehaviour
     //Tableau des infos
     TextMeshProUGUI[] infos = null;
 
-    //Prix amélioration bâtiment
+    //Prix amelioration batiment
     uint upgradeCost;
     private TextMeshProUGUI upgradeText;
 
-    //Revenus en + pour le bâtiment après amélioration (Gain + NvRevenus)
+    //Revenus en + pour le batiment apres amelioration (Gain + NvRevenus)
     uint newIncome = 0;
     private TextMeshProUGUI newIncomeText;
 

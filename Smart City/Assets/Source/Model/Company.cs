@@ -179,5 +179,10 @@ namespace Source.Model
         public override bool isCity(){
             return false;
         }
+
+        public override void earnAfterRound(Map map)
+        {
+            earn = map.getIncomeFromType(BuildType.Housing);
+        }
     }
 }

@@ -10,6 +10,7 @@ public class PlayerObserver : ScriptableObject, Observer
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI nameText;
+    public TextMeshProUGUI earnText;
 
 
     /*
@@ -24,6 +25,8 @@ public class PlayerObserver : ScriptableObject, Observer
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
+
+        earnText = GameObject.Find("EarnText").GetComponent<TextMeshProUGUI>();
     }
 
     /*
@@ -39,6 +42,7 @@ public class PlayerObserver : ScriptableObject, Observer
         scoreText.text = player.score.ToString();
         moneyText.text = player.money.ToString();
         nameText.text = player.name.ToString();
+        earnText.text = player.earn.ToString();
 
         scoreText.text = player.score.ToString();
         moneyText.text = player.money.ToString();

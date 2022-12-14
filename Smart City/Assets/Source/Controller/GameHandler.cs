@@ -44,6 +44,15 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
+        public void endRound()
+        {
+            Debug.Log("hey : " + activePlayer.earn);
+            activePlayer.earnAfterRound(map);
+            activePlayer.notifyObservers();
+            //TODO attendre 2s
+            activePlayer.earn = 0;
+        }
+
         /* startNewGame : fonction 
          Paramètre : city : booo : true 
          Cette fonction permet de démarrer une nouvelle partie 
@@ -92,9 +101,11 @@ namespace Source.Controller
             }
             activePlayer.setScore(map);
             if(activePlayer.isCity()){
+                endRound();
                 activePlayer = playerCompany;
             }
             else {
+                endRound();
                 activePlayer = playerCity;
             }
             resetSelectedTile();
