@@ -21,7 +21,6 @@ namespace Source.Model
         public Map(uint size = 6){
             this.buildings = new Building[size, size];
             fillMapEmpty();
-            buildings[3, 5] = Building.createTransport();
             observers = new List<MapObserver>();
         }
 
@@ -32,8 +31,41 @@ namespace Source.Model
                     buildings[i,j] = new Building(BuildType.Empty);
                 }
             }
+            buildings[3, 5] = Building.createTransport();
+        }
+/*
+        public void fillMapRandom1(){
+            int size = buildings.GetLength(0);
+            System.Random rand = new System.Random();
+            for(int i = 0;i < size;i++){
+                for(int j = 0;j < size;j++){
+                    buildings[i,j] = new Building(BuildType.Empty);
+                }
+            }
+
+            int[][] coordinates = new int[][size/2];
+            for(int i=0;i<size/2;i++){
+                int x = rand.Next(size);
+                int y = rand.Next(size);
+                if(getDist(1,new int[]{x,y},coordinates)){
+                    buildings[x,y] = Building.createTransport();
+                }
+            }
         }
 
+        private bool getDist(int minDist, int[] coordinate, int[][] coordinates){
+            bool temp = true;
+            float vectStart = Math.Sqrt(Math.Pow(coordinate[0],2)+Math.Pow(coordinate[1],2));
+            foreach(int[] coord in coordinates){
+                float vectEnd = Math.Sqrt(Math.Pow(coord[0],2)+Math.Pow(coord[1],2));
+                if(vectEnd - vectStart < minDist){
+                    temp = false;
+                    break;
+                }
+            }
+            return temp;
+        }
+*/
         public void fillMapRandNoSeedEqualChance(){
             int size =  buildings.GetLength(0);
             System.Random rand = new System.Random();
