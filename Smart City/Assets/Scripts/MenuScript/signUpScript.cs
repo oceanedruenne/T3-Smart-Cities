@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class signUpScript : MonoBehaviour
+using UnityEngine.UI;
+public class SignUpScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+       InputField txt_Input = GameObject.Find("inputCityName").GetComponent<InputField>();
+       PlayerPrefs.SetString("cityName",txt_Input.text);
     }
 }
