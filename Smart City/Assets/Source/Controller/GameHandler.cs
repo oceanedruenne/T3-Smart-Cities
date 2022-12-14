@@ -12,6 +12,7 @@ namespace Source.Controller
         [SerializeField] private GameObject gameHandler;
 
         private uint turn;
+        private uint turnLimit = 15;
 
         private Player activePlayer;
         private City playerCity;
@@ -64,6 +65,10 @@ namespace Source.Controller
         }
 
         public void nextTurn(){
+            if(turn++ > turnLimit){
+                endTurn();
+                return;
+            }
             activePlayer.addIncome(map);
             activePlayer.setScore(map);
             if(activePlayer.isCity()){
@@ -75,6 +80,13 @@ namespace Source.Controller
             resetSelectedTile();
             turn++;
             activePlayer.notifyObservers();
+        }
+
+        public void endTurn(){
+            activePlayer.addIncome(map);
+            activePlayer.setScore(map);
+
+            //Ajouter les actions de fin de jeu
         }
 
         public void selectTile(int posx, int posy, Tile tile){
