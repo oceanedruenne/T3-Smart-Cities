@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ScriptButtonValider : MonoBehaviour
 {
-    /* BtnNextScene() : 
-    Cette fonction permet de passer à la scène suivante lorsqu'on appuie sur le bouton "Valider"*/
-   public void BtnNextScene()
+
+    /*
+    *BtnNextScene : fonction : 
+    Permet de passer à la scène principale du jeu
+   */
+    /// <summary>
+    /// Permet de passer à la scène principale du jeu
+    /// </summary>
+    public void BtnNextScene()
    {  
     SceneManager.LoadScene("GameScene");
    }

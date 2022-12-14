@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ScriptButtonCommencer : MonoBehaviour
 {
-    /* BtnNextScene() : 
-       Cette fonction permet de passer à la scène suivante lorsqu'on appuie sur le bouton Commencer*/
-   public void BtnNextScene()
+
+    /*
+    *BtnNextScene : fonction 
+    Permet de passer à la scène suivante 
+   */
+    /// <summary>
+    /// Permet de passer à la scène d'inscription
+    /// </summary>
+    public void BtnNextScene()
    {
        SceneManager.LoadScene("SignUp");
    }

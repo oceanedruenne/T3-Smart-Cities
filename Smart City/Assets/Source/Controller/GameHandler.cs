@@ -12,7 +12,7 @@ namespace Source.Controller
         [SerializeField] private GameObject gameHandler;
 
         private uint turn;
-        private uint turnLimit = 15;
+        private uint turnLimit = 20;
 
         private Player activePlayer;
         private City playerCity;
@@ -28,6 +28,9 @@ namespace Source.Controller
         public Tile BoostTile = null;
         public Tile DecreeTile = null;
 
+        /// <summary>
+        /// Nouvelle partie
+        /// </summary>
         void Start(){
             startNewGame();
             StartCoroutine(LateStart(0.2f));
@@ -37,9 +40,18 @@ namespace Source.Controller
         {
             yield return new WaitForSeconds(waitTime);
             map.notifyObservers();
+            activePlayer.setScore(map);
             activePlayer.notifyObservers();
         }
 
+        /* startNewGame : fonction 
+         Paramètre : city : booo : true 
+         Cette fonction permet de démarrer une nouvelle partie 
+        */
+        /// <summary>
+        /// Démarrer une nouvelle partie
+        /// </summary>
+        /// <param name="city"></param>
         public void startNewGame(bool city = true){
             playerCity = new City();
             playerCompany = new Company();
@@ -64,12 +76,20 @@ namespace Source.Controller
             resetSelectedTile();
         }
 
+        /* nextTurn : fonction 
+        Cette fonction permet de passer au tour suivant
+       */
+        /// <summary>
+        /// Tour suivant
+        /// </summary>
         public void nextTurn(){
             if(turn++ > turnLimit){
                 endTurn();
                 return;
             }
-            activePlayer.addIncome(map);
+            if(turn > 1){
+                activePlayer.addIncome(map);
+            }
             activePlayer.setScore(map);
             if(activePlayer.isCity()){
                 activePlayer = playerCompany;
@@ -83,13 +103,31 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
+        /*endTurn  : fonction 
+        Cette fonction permet de terminer le tour
+        */
+        /// <summary>
+        /// Fin du tour
+        /// </summary>
         public void endTurn(){
             activePlayer.addIncome(map);
             activePlayer.setScore(map);
 
             //Ajouter les actions de fin de jeu
+            Debug.Log("Fin du jeu");
         }
 
+
+        /* selectTile : fonction 
+         * Paramètres : posx : int, posy : int, tile : Tile
+         Permet de connaître la case selectionnée.
+        */
+        /// <summary>
+        /// Permet de connaître la case selectionnée
+        /// </summary>
+        /// <param name="posx"></param>
+        /// <param name="posy"></param>
+        /// <param name="tile"></param>
         public void selectTile(int posx, int posy, Tile tile){
             this.posx = posx;
             this.posy = posy;
@@ -97,6 +135,12 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /* resetSelectedTile : fonction 
+        Permet de décliquer la case selectionnée.
+       */
+        /// <summary>
+        /// Permet de décliquer la case selectionnée
+        /// </summary>
         public void resetSelectedTile(){
             posx = -1;
             posy = -1;
@@ -107,16 +151,35 @@ namespace Source.Controller
             mapObserver.hideInfo(this.activePlayer.isCity());
         }
 
+        /* buySelected : fonction 
+        Permet d'acheter la case selectionnée
+        */
+        /// <summary>
+        /// Permet d'acheter la case selectionnée
+        /// </summary>
         public void buySelected(){
             activePlayer.Buy(map, (uint)posx, (uint)posy);
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+        /* upgradeSelected : fonction 
+        Permet d'améliorer la case selectionnée
+        */
+        /// <summary>
+        /// Permet d'améliorer la case selectionnée
+        /// </summary>
         public void upgradeSelected(){
             activePlayer.Upgrade(map, (uint)posx, (uint)posy);
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
+
+        /* setPowerSelected : fonction 
+        Permet de mettre en place le pouvoir choisi
+        */
+        /// <summary>
+        /// Permet de mettre en place le pouvoir choisi
+        /// </summary>
         public void setPowerSelected(){
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
             if(activePlayer.isCity()){

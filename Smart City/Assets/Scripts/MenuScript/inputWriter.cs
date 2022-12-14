@@ -8,7 +8,9 @@ public class inputWriter : MonoBehaviour
 {
     public static string cityName;
 
-    // On récupère le nom de la ville entré par l'utilisateur dans la prédécente scène et on l'affiche dans celle-ci
+   /// <summary>
+   /// On récupère le nom de ville écrit par le joueur dans la scène "Sign Up" et on l'affiche dans la scène "GameScene"
+   /// </summary>
     void Start()
     {   
         TextMeshProUGUI VilleText = GameObject.Find("NomText").GetComponent<TextMeshProUGUI>();

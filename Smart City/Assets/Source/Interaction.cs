@@ -24,7 +24,9 @@ public class Interaction : MonoBehaviour
     //Generating tiles
     public int nb;
 
-    // Start is called before the first frame update
+   /// <summary>
+   /// Démarrage de la scène
+   /// </summary>
     void Start()
     {
         //Grid for tiles
@@ -75,7 +77,9 @@ public class Interaction : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Modification de la scène
+    /// </summary>
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -87,6 +91,15 @@ public class Interaction : MonoBehaviour
         }
     }
 
+    /* 
+     * ChangeAllSprite : fonction
+     * Paramètre : newSprite : Sprite
+     * Permet d'ajouter des sprites
+     */
+    /// <summary>
+    /// Permet d'ajouter des sprites
+    /// </summary>
+    /// <param name="newSprite"></param>
     void ChangeAllSprite(Sprite newSprite)
     {
         //Grid for tiles
