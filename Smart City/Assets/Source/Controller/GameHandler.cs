@@ -12,7 +12,7 @@ namespace Source.Controller
         [SerializeField] private GameObject gameHandler;
 
         private uint turn;
-        private uint turnLimit = 15;
+        private uint turnLimit = 20;
 
         private Player activePlayer;
         private City playerCity;
@@ -40,6 +40,7 @@ namespace Source.Controller
         {
             yield return new WaitForSeconds(waitTime);
             map.notifyObservers();
+            activePlayer.setScore(map);
             activePlayer.notifyObservers();
         }
         /// <summary>
@@ -78,7 +79,9 @@ namespace Source.Controller
                 endTurn();
                 return;
             }
-            activePlayer.addIncome(map);
+            if(turn > 1){
+                activePlayer.addIncome(map);
+            }
             activePlayer.setScore(map);
             if(activePlayer.isCity()){
                 activePlayer = playerCompany;
@@ -100,6 +103,7 @@ namespace Source.Controller
             activePlayer.setScore(map);
 
             //Ajouter les actions de fin de jeu
+            Debug.Log("Fin du jeu");
         }
 
         /// <summary>
