@@ -79,6 +79,9 @@ namespace Source.Controller
             }
             resetSelectedTile();
             turn++;
+
+            yield return new WaitForSeconds(0.5f);
+            
             activePlayer.notifyObservers();
         }
 
