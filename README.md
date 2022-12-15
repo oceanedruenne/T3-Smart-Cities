@@ -98,10 +98,10 @@ Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfic
 ## Captures d'écran
 ![Main Menu](https://i.postimg.cc/rFbPFcyJ/main-menu.png "Menu Principal")
 ![Sign Up]( https://i.ibb.co/tYfz7VS/menu.png "Menu d'inscription")
-![Écran de jeu](https://i.ibb.co/HC9QHW2/game.png "Écran de jeu")
-![Écran de jeu des GAFAM](https://i.ibb.co/pyFyVMs/game-gafam.png "Écran de jeu des GAFAM")
-![Écran de jeu du maire](https://i.ibb.co/m9WrDPC/game-mayor.png "Écran de jeu du maire")
-![Écran de fin de jeu](https://i.ibb.co/fV3x453/findejeu.png "Fin de jeu")
+![Écran de jeu](https://i.ibb.co/VxfHHcK/gameG.png "Écran de jeu")
+![Écran de jeu des GAFAM](https://i.ibb.co/Z8WKZv4/GameJ.png "Écran de jeu des GAFAM")
+![Écran de jeu du maire](https://i.ibb.co/fFNzWKm/GameA.png "Écran de jeu du maire")
+![Écran de fin de jeu](https://i.ibb.co/RHLsxF3/GameE.png "Fin de jeu")
 
 ![Poster](https://i.ibb.co/VwmFJDX/Poster.png "Poster")
 
