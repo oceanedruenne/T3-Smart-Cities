@@ -101,6 +101,7 @@ Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfic
 ![Écran de jeu](https://i.ibb.co/HC9QHW2/game.png "Écran de jeu")
 ![Écran de jeu des GAFAM](https://i.ibb.co/pyFyVMs/game-gafam.png "Écran de jeu des GAFAM")
 ![Écran de jeu du maire](https://i.ibb.co/m9WrDPC/game-mayor.png "Écran de jeu du maire")
+![Écran de fin de jeu](https://i.ibb.co/fV3x453/findejeu.png "Fin de jeu")
 
 ![Poster](https://i.ibb.co/VwmFJDX/Poster.png "Poster")
 
@@ -110,6 +111,6 @@ Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfic
 
 ## Fonctionnalités additionnelles 
 
-- [ ] Fenêtre de fin de jeu pour comprendre notre score 
+- [X] Fenêtre de fin de jeu pour comprendre notre score 
 - [ ] Possibilité de jouer à deux en ligne 
 - [ ] Pouvoir choisir sa difficulté (plus la difficulté est élevée, plus la map est grande)
