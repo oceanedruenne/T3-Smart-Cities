@@ -10,8 +10,10 @@ public class inputReader : MonoBehaviour
 
     void Start()
     {
-       
-      
+       InputField inputInter = GameObject.Find("inputCityName").GetComponent<InputField>();
+       TextMeshProUGUI textInter = GameObject.Find("Text").GetComponent<TextMeshProUGUI>(); 
+       cityName = textInter.text;
+    PlayerPrefs.SetString("cityName",cityName);     
     }
     
     /// <summary>
