@@ -299,6 +299,18 @@ namespace Source.Model
             return (decree[0] == posx) && (decree[1] == posy);
         }
 
+        /*
+        *getDecreePos : fonction : int[]
+        Obtient les coordonnees du decret
+        */
+        /// <summary>
+        /// Obtient la position du decret sur la carte
+        /// </summary>
+        /// <returns>retourne un tableau d'entier contenant les coordonnées x et y</returns>
+        public uint[] getDecreePos(){
+            return decree;
+        }
+
 
 
         /*
@@ -337,6 +349,17 @@ namespace Source.Model
             return (boost[0] == posx) && (boost[1] == posy);
         }
 
+        /*
+        *getBoostPos : fonction : int[]
+        Permet d'obtenir la position du boost
+       */
+        /// <summary>
+        /// Permet d'obtenir la position du boost
+        /// </summary>
+        /// <returns>retourne un tableau d'entier contenant les coordonnées x et y</returns>
+        public uint[] getBoostPos(){
+            return boost;
+        }
 
 
         /*

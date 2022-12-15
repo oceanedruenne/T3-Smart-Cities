@@ -23,9 +23,11 @@ namespace Source.Model
         /// <param name="posx"></param>
         /// <param name="posy"></param>
         /// <returns>Vrai si cela a été fait, sinon faux</returns>
-        public override bool Buy(Map map, uint posx, uint posy){
-            if(canBuy(map, posx, posy)){
-                money -= map.getBuyCostAt(posx,posy);
+        public override bool Buy(Map map, uint posx, uint posy)
+        {
+            if (canBuy(map, posx, posy))
+            {
+                money -= map.getBuyCostAt(posx, posy);
                 map.buildAt(BuildType.Office, posx, posy);
                 notifyObservers();
                 return true;
@@ -50,9 +52,11 @@ namespace Source.Model
         /// <param name="posx"></param>
         /// <param name="posy"></param>
         /// <returns>renvoie vrai si le bâtiment peut être acheté, sinon faux</returns>
-        public override bool canBuy(Map map, uint posx, uint posy){
-            bool temp = map.getBuyCostAt(posx,posy) <= money;
-            switch (map.getTypeAt(posx,posy)){
+        public override bool canBuy(Map map, uint posx, uint posy)
+        {
+            bool temp = map.getBuyCostAt(posx, posy) <= money;
+            switch (map.getTypeAt(posx, posy))
+            {
                 case BuildType.Housing:
                 case BuildType.Empty:
                     temp &= true;
@@ -61,7 +65,7 @@ namespace Source.Model
                     temp &= false;
                     break;
             }
-            temp &= !map.getDecree(posx,posy);
+            temp &= !map.getDecree(posx, posy);
             return temp;
         }
 
@@ -81,10 +85,12 @@ namespace Source.Model
         /// <param name="posx"></param>
         /// <param name="posy"></param>
         /// <returns>renvoie vrai si le bâtiment peut être amélioré, sinon faux</returns>
-        public override bool canUpgrade(Map map, uint posx, uint posy){
-            bool temp = map.getBuyCostAt(posx,posy) <= money;
-            temp &= map.getUnderMaxLevel(posx,posy);
-            switch (map.getTypeAt(posx,posy)){
+        public override bool canUpgrade(Map map, uint posx, uint posy)
+        {
+            bool temp = map.getBuyCostAt(posx, posy) <= money;
+            temp &= map.getUnderMaxLevel(posx, posy);
+            switch (map.getTypeAt(posx, posy))
+            {
                 case BuildType.Office:
                     temp &= true;
                     break;
@@ -92,7 +98,7 @@ namespace Source.Model
                     temp &= false;
                     break;
             }
-            temp &= !map.getDecree(posx,posy);
+            temp &= !map.getDecree(posx, posy);
             return temp;
         }
 
@@ -112,8 +118,9 @@ namespace Source.Model
         /// <param name="map"></param>
         /// <param name="posx"></param>
         /// <param name="posy"></param>
-        public override void specialsUse(Map map, uint posx, uint posy){
-            map.setBoost(posx,posy);
+        public override void specialsUse(Map map, uint posx, uint posy)
+        {
+            map.setBoost(posx, posy);
         }
 
         /*
@@ -127,7 +134,8 @@ namespace Source.Model
         /// Permet d'ajouter les bénéfices
         /// </summary>
         /// <param name="map"></param>
-        public override void addIncome(Map map){
+        public override void addIncome(Map map)
+        {
             money += (uint)TURN_BONUS + map.getIncomeFromType(BuildType.Office);
             notifyObservers();
         }
@@ -144,7 +152,8 @@ namespace Source.Model
         /// </summary>
         /// <param name="map"></param>
         /// <returns>Les bénéfices du bâtiment</returns>
-        private uint getIncome(Map map){
+        private uint getIncome(Map map)
+        {
             uint tempMoney = 0;
             tempMoney += map.getIncomeFromType(BuildType.Office);
             return tempMoney;
@@ -176,13 +185,15 @@ namespace Source.Model
         /// Permet de vérifier si c'est une ville (renvoie toujours true)
         /// </summary>
         /// <returns>retourne vrai</returns>
-        public override bool isCity(){
+        public override bool isCity()
+        {
             return false;
         }
 
         public override void earnAfterRound(Map map)
         {
             earn = map.getIncomeFromType(BuildType.Housing);
-        } 
+            //Debug.Log("gafam : " + earn);
+        }
     }
 }

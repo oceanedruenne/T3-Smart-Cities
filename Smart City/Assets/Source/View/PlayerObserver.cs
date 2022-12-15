@@ -11,6 +11,7 @@ public class PlayerObserver : ScriptableObject, Observer
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI earnText;
+    public GameObject panellFinTour;
 
 
     /*
@@ -27,6 +28,7 @@ public class PlayerObserver : ScriptableObject, Observer
         nameText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
 
         earnText = GameObject.Find("EarnText").GetComponent<TextMeshProUGUI>();
+        panellFinTour = GameObject.Find("PanelFinTour");
     }
 
     /*
@@ -38,13 +40,18 @@ public class PlayerObserver : ScriptableObject, Observer
     /// Permet de donner au joueur passé en paramètre de l'argent et un score
     /// </summary>
     /// <param name="player"></param>
-    public void reactTo(Player player){
+    public void reactTo(Player player)
+    {
+        panellFinTour.SetActive(false);
         scoreText.text = player.score.ToString();
         moneyText.text = player.money.ToString();
         nameText.text = player.name.ToString();
-        earnText.text = player.earn.ToString();
+        Debug.Log("player observer " + player.earn.ToString());
+    }
 
-        scoreText.text = player.score.ToString();
-        moneyText.text = player.money.ToString();
+    public void reactToEndRound(Player player)
+    {
+        panellFinTour.SetActive(true);
+        earnText.text = player.name + " + " + player.earn.ToString();
     }
 }
