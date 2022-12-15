@@ -9,7 +9,7 @@ public class ScriptButtonValider : MonoBehaviour
     /*
     *BtnNextScene : fonction : 
     Permet de passer à la scène principale du jeu
-   */
+    */
     /// <summary>
     /// Permet de passer à la scène principale du jeu
     /// </summary>

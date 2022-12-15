@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Source.Model
 {
+    // GAFAM
     public class Company : Player
     {
         protected static uint BASE_MONEY = 10000;
@@ -190,7 +191,7 @@ namespace Source.Model
         /// <summary>
         /// Permet de vérifier si c'est une ville (renvoie toujours true)
         /// </summary>
-        /// <returns>retourne vrai</returns>
+        /// <returns>retourne faux</returns>
         public override bool isCity()
         {
             return false;

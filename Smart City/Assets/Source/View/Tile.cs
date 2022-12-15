@@ -12,7 +12,7 @@ namespace JeuScript
         [SerializeField] GameObject highlight;
         Grid grid;
 
-        //D�claration
+        //Déclaration
         private Sprite sprite;
 
         SpriteRenderer sr;

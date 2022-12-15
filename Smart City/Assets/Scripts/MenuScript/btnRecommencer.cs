@@ -8,7 +8,7 @@ public class btnRecommencer : MonoBehaviour
     /*
     *startAgain : fonction
     Permet de revenir à la scène principale
-   */
+    */
     /// <summary>
     /// Permet de revenir à la scène principale
     /// </summary>

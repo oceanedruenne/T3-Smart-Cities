@@ -165,7 +165,6 @@ namespace Source.Model
          * isCity : fonction : bool
          * Permet de vérifier si c'est une ville (renvoie toujours true)
          */
-
         /// <summary>
         /// Permet de vérifier si c'est une ville (renvoie toujours true)
         /// </summary>

@@ -281,8 +281,8 @@ namespace Source.Controller
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
-        public void exitGame(){
+        /*public void exitGame(){
             Debug.Log("Pas codé");
-        }
+        } */
     }
 }

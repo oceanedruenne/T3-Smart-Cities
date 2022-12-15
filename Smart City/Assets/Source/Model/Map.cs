@@ -31,9 +31,9 @@ namespace Source.Model
         }
 
         /*
-      *fillMapEmpty : fonction
-      *Paramètre : 
-      Permet de remplir la Map qui est vide
+        *fillMapEmpty : fonction
+        *Paramètre : 
+        Permet de remplir la Map qui est vide
        */
         /// <summary>
         /// Permet de remplir la Map
@@ -50,8 +50,8 @@ namespace Source.Model
 
 
         /* fillMapRandom1 : fonction 
-       Permet de générer la carte d'une manière aléatoire
-       */
+        Permet de générer la carte d'une manière aléatoire
+        */
         /// <summary>
         /// Permet de générer une carte de manière aléatoire
         /// </summary>
@@ -114,7 +114,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet d'accéder au coût d'achat d'une case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de récupérer le coût d'achat de la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
@@ -131,7 +131,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet d'accéder au type de bâtiment d'une case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de récupérer le type de bâtiment de la case ayant comme coordonées les paramètres de la fonction
         /// </summary>
@@ -149,7 +149,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de vérifier si le niveau d'amélioration est inférieur à 6
-       */
+        */
         /// <summary>
         /// Permet de vérifier si le niveau d'amélioration est inférieur à 6
         /// </summary>
@@ -168,7 +168,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. 
-       */   
+        */   
         /// <summary>
         /// Permet de construire sur la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
@@ -195,7 +195,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres sans malus.
-       */
+        */
         /// <summary>
         /// Permet de construire sans malus dans la case ayant comme coordonnées les paramètres de la fonction
         /// </summary>
@@ -220,7 +220,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de détruire un bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de détruire un bâtiment à la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -243,7 +243,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet d'améliorer le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet d'améliorer à la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -269,7 +269,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres
-       */
+        */
         /// <summary>
         /// Permet de mettre un décret de la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -288,7 +288,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de vérifier si un décret existe sur la case dont les coordonnées sont passées en paramètres
-       */
+        */
         /// <summary>
         /// Permet de vérifier s'il y a un décret
         /// </summary>
@@ -319,7 +319,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de mettre en place le décret
         /// </summary>
@@ -338,7 +338,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres.
-       */
+        */
         /// <summary>
         /// Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres
         /// </summary>
@@ -352,7 +352,7 @@ namespace Source.Model
         /*
         *getBoostPos : fonction : int[]
         Permet d'obtenir la position du boost
-       */
+        */
         /// <summary>
         /// Permet d'obtenir la position du boost
         /// </summary>
@@ -368,7 +368,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de récupérer les revenus générés par le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de récupérer les bénéfices du bâtiment dont les coordonnées de sa case sont passées en paramètres
         /// </summary>
@@ -398,7 +398,7 @@ namespace Source.Model
         * posx : uint, coordonnée 
         * posy : uint : coordonnée
         Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. 
-       */
+        */
         /// <summary>
         /// Permet de récupérer les bénéfices du bâtiment après son amélioration dont les coordonnées de sa case sont passées en paramètres
         /// </summary>
@@ -429,7 +429,7 @@ namespace Source.Model
         * x : uint, coordonnée 
         * y : uint : coordonnée
         Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport 
-       */
+        */
         /// <summary>
         /// Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport
         /// </summary>
@@ -486,7 +486,7 @@ namespace Source.Model
         *Paramètres : 
         * type : BuildType : type de bâtiment
         Permet de récupérer le score généré par les bâtiments ayant le même type que celui passé en paramètre
-       */
+        */
         /// <summary>
         /// Permet de récupérer le score de tous les bâtiments d'un type donné
         /// </summary>
@@ -517,7 +517,7 @@ namespace Source.Model
         *Paramètres : 
         * observer : MapObserver : Observeur de map
         Permet d'ajouter des observers
-      */
+        */
         /// <summary>
         /// Permet d'ajouter des observers
         /// </summary>
@@ -565,7 +565,7 @@ namespace Source.Model
         * x : uint, coordonnée 
         * y : uint : coordonnée
         Permet de notifier les observers qui ont comme coordonnées celles passées en paramètres.
-       */
+        */
         /// <summary>
         /// Permet de notifier les observers
         /// </summary>

@@ -34,6 +34,9 @@ namespace Source.Controller
 
         /* playMoney : fonction 
         Cette fonction permet de jouer un son spécifique pour l'argent*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son spécifique pour l'argent
+        /// </summary>
         public void playMoney()
         {
             source.clip = sounds[0];
@@ -42,6 +45,9 @@ namespace Source.Controller
 
         /* playUpgrade : fonction 
         Cette fonction permet de jouer un son spécifique pour les améliorations*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son spécifique pour les améliorations
+        /// </summary>
         public void playUpgrade()
         {
             source.clip = sounds[1];
@@ -50,6 +56,9 @@ namespace Source.Controller
 
         /* playPowerMoney : fonction 
         Cette fonction permet de jouer un son spécifique pour le pouvoir de la GAFAM*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son pour le pouvoir de la GAFAM
+        /// </summary>
         public void playPowerMoney()
         {
             source.clip = sounds[2];
@@ -58,6 +67,9 @@ namespace Source.Controller
 
         /* playPowerBlock : fonction 
         Cette fonction permet de jouer un son spécifique pour le pouvoir de la municipalité*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son pour le pouvoir de la municipalité
+        /// </summary>
         public void playPowerBlock()
         {
             source.clip = sounds[3];
@@ -66,6 +78,9 @@ namespace Source.Controller
 
         /* playNextTurn : fonction 
         Cette fonction permet de jouer un son spécifique de passage au tour suivant*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son pour le passage au tour suivant
+        /// </summary>
         public void playNextTurn()
         {
             source.clip = sounds[4];
@@ -74,6 +89,9 @@ namespace Source.Controller
 
         /* playSelected : fonction 
         Cette fonction permet de jouer un son spécifique à la sélection d'un bâtiment*/
+        /// <summary>
+        /// Cette fonction permet de jouer un son à la sélection d'un bâtiment
+        /// </summary>
         public void playSelected()
         {
             source.clip = sounds[5];
