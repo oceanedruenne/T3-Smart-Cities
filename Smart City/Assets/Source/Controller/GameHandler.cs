@@ -213,6 +213,9 @@ namespace Source.Controller
         /// Permet de mettre en place le pouvoir choisi
         /// </summary>
         public void setPowerSelected(){
+            if(activePlayer.isCity() && map.getBoostPos()[0] == posx && map.getBoostPos()[1] == posy || !activePlayer.isCity() && map.getDecreePos()[0] == posx && map.getDecreePos()[1] == posy){
+                return;
+            }
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
             if(activePlayer.isCity()){
                 if(DecreeTile != null){
