@@ -100,6 +100,8 @@ Concernant notre moteur de jeu Unity, tant que nous ne recevons pas de bénéfic
 ![Écran de jeu des GAFAM](https://i.ibb.co/pyFyVMs/game-gafam.png "Écran de jeu des GAFAM")
 ![Écran de jeu du maire](https://i.ibb.co/m9WrDPC/game-mayor.png "Écran de jeu du maire")
 
+![Poster](https://i.ibb.co/VwmFJDX/Poster.png "Poster")
+
 ## Procédures d'installation et d'exécution
 
 
