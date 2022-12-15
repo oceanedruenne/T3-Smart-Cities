@@ -7,6 +7,11 @@ namespace Source.Model
     // CLASSE VILLE
     public class City : Player
     {
+        protected static uint BASE_MONEY = 7000;
+
+        public City(){
+            this.money = BASE_MONEY;
+        }
         int TURN_BONUS = 0;
         /*
             *Buy : fonction : bool

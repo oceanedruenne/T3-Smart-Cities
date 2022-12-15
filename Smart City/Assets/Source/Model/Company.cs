@@ -6,8 +6,12 @@ namespace Source.Model
 {
     public class Company : Player
     {
+        protected static uint BASE_MONEY = 10000;
         int TURN_BONUS = 0;
 
+        public Company(){
+            this.money = BASE_MONEY;
+        }
         /*
            *Buy : fonction : bool
            *Paramètres : 
