@@ -169,10 +169,11 @@ namespace Source.Model
         }
 
 
-        public override void earnAfterRound(Map map)
+        public override uint earnAfterTurn(Map map)
         {
             earn = map.getIncomeFromType(BuildType.Housing);
             Debug.Log("ville : " + earn);
+            return earn;
         }
     }
 
