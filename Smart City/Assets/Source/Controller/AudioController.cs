@@ -8,11 +8,11 @@ namespace Source.Controller
     public class AudioController : MonoBehaviour
     {
 
-        public AudioClip sound; //Gestion du son ‡ jouer
+        public AudioClip sound; //Gestion du son √† jouer
         public float volume; //Gestion du volume
         public float pitch; //Gestion de la vitesse du morceau
 
-        private AudioSource source; //Componement qui reÁoit les paramËtres au-dessus
+        private AudioSource source; //Composant qui re√ßoit les param√®tres ci-dessus
 
         private void Awake()
         {
@@ -37,6 +37,8 @@ namespace Source.Controller
 
         }
 
+        /* playMoney : fonction 
+        Cette fonction permet de jouer une musique sp√©cifique pour l'argent*/
         public void playMoney()
         {
             source.Play();

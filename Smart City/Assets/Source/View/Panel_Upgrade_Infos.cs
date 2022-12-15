@@ -94,10 +94,10 @@ public class Panel_Upgrade_Infos : MonoBehaviour
     }
 
     /* updatePanelInfos : fonction 
-    Permet de mettre à jour les informations du panel
+    Permet de mettre Ã  jour les informations du panel
     */
     /// <summary>
-    /// Permet de mettre à jour les informations du panel
+    /// Permet de mettre Ã  jour les informations du panel
     /// </summary>
     private void updatePanelInfos()
     {

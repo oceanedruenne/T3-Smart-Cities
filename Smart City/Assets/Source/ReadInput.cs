@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ReadInput : MonoBehaviour
 {
-    private string input;
+  private string input;
   public void ReadStringInput(string s)
   {
-      input = s;
-      Debug.Log(input);
+    input = s;
+    Debug.Log(input);
   }
 }

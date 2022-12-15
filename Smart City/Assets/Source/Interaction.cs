@@ -25,7 +25,7 @@ public class Interaction : MonoBehaviour
     public int nb;
 
    /// <summary>
-   /// Démarrage de la scène
+   /// DÃ©marrage de la scï¿½ne
    /// </summary>
     void Start()
     {
@@ -78,7 +78,7 @@ public class Interaction : MonoBehaviour
     }
 
     /// <summary>
-    /// Modification de la scène
+    /// Modification de la scÃ¨ne
     /// </summary>
     void Update()
     {
@@ -93,7 +93,7 @@ public class Interaction : MonoBehaviour
 
     /* 
      * ChangeAllSprite : fonction
-     * Paramètre : newSprite : Sprite
+     * ParamÃ¨tre : newSprite : Sprite
      * Permet d'ajouter des sprites
      */
     /// <summary>

@@ -19,7 +19,7 @@ public class MapObserver : ScriptableObject, Observer
     GameObject tilePrefab;
     private Dictionary<Vector3Int, GameObject> tilesd;
 
-    //Panel contenant les infos de notre case s�lectionn�e
+    //Panel contenant les infos de notre case sélectionnée
     private GameObject panelInfos = GameObject.Find("Panel Infos");
     //Infos dans le panel
     private TextMeshProUGUI textLevel = GameObject.Find("Level").GetComponent<TextMeshProUGUI>();
