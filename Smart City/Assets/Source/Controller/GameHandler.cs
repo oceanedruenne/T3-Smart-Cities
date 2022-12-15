@@ -4,6 +4,7 @@ using UnityEngine;
 using Source.Model;
 using Source.View;
 using JeuScript;
+using UnityEngine.SceneManagement;
 
 namespace Source.Controller
 {
@@ -136,6 +137,7 @@ namespace Source.Controller
             activePlayer.setScore(map);
 
             //Ajouter les actions de fin de jeu
+            SceneManager.LoadScene("EndScene");
             playerCityMoney = playerCity.getMoney();
             playerCityScore = playerCity.getScore();
             playerCompanyMoney = playerCompany.getMoney();
