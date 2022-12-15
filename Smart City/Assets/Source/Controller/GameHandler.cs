@@ -38,7 +38,8 @@ namespace Source.Controller
         /// <summary>
         /// Nouvelle partie
         /// </summary>
-        void Start(){
+        void Start()
+        {
             startNewGame();
             StartCoroutine(LateStart(0.2f));
         }
@@ -52,14 +53,15 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
-        public void endRound()
+        IEnumerator IendRound()
         {
-            Debug.Log("hey : " + activePlayer.earn);
+            yield return new WaitForSeconds(0);
             activePlayer.earnAfterRound(map);
-            activePlayer.notifyObservers();
-            //TODO attendre 2s
+            activePlayer.notifyObserversEndRound();
+            yield return new WaitForSeconds(3);
             activePlayer.earn = 0;
         }
+
 
         /* startNewGame : fonction 
          Parametre : city : booo : true 
@@ -69,14 +71,17 @@ namespace Source.Controller
         /// Demarrer une nouvelle partie
         /// </summary>
         /// <param name="city"></param>
-        public void startNewGame(bool city = true){
+        public void startNewGame(bool city = true)
+        {
             playerCity = new City();
             playerCompany = new Company();
             map = new Map();
-            if(city){
+            if (city)
+            {
                 activePlayer = playerCity;
             }
-            else {
+            else
+            {
                 activePlayer = playerCompany;
             }
             turn = 1;
@@ -101,25 +106,35 @@ namespace Source.Controller
         /// <summary>
         /// Tour suivant
         /// </summary>
-        public void nextTurn(){
-            if(turn++ > turnLimit){
+        public void nextTurn()
+        {
+            if (turn++ > turnLimit)
+            {
                 endTurn();
                 return;
             }
-            if(turn > 1){
+            if (turn > 1)
+            {
                 activePlayer.addIncome(map);
             }
-            if(activePlayer.isCity()){
-                endRound();
+            if (activePlayer.isCity())
+            {
+                StartCoroutine(IendRound());
                 activePlayer = playerCompany;
             }
-            else {
-                endRound();
+            else
+            {
+                StartCoroutine(IendRound());
                 activePlayer = playerCity;
             }
             resetSelectedTile();
             turn++;
+            StartCoroutine(InewRound());
+        }
 
+        IEnumerator InewRound()
+        {
+            yield return new WaitForSeconds(1.5f);
             audioController.playNextTurn();
             activePlayer.notifyObservers();
             activePlayer.setScore(map);
@@ -131,7 +146,8 @@ namespace Source.Controller
         /// <summary>
         /// Fin du tour
         /// </summary>
-        public void endTurn(){
+        public void endTurn()
+        {
             activePlayer.addIncome(map);
             activePlayer.setScore(map);
 
@@ -141,10 +157,10 @@ namespace Source.Controller
             playerCompanyMoney = playerCompany.getMoney();
             playerCompanyScore = playerCompany.getScore();
 
-            PlayerPrefs.SetInt("playerCityMoney",(int)playerCityMoney);
-            PlayerPrefs.SetInt("playerCityScore",(int)playerCityScore);
-            PlayerPrefs.SetInt("playerCompanyMoney",(int) playerCompanyMoney);
-            PlayerPrefs.SetInt("playerCompanyScore",(int) playerCompanyScore);
+            PlayerPrefs.SetInt("playerCityMoney", (int)playerCityMoney);
+            PlayerPrefs.SetInt("playerCityScore", (int)playerCityScore);
+            PlayerPrefs.SetInt("playerCompanyMoney", (int)playerCompanyMoney);
+            PlayerPrefs.SetInt("playerCompanyScore", (int)playerCompanyScore);
         }
 
 
@@ -158,7 +174,8 @@ namespace Source.Controller
         /// <param name="posx"></param>
         /// <param name="posy"></param>
         /// <param name="tile"></param>
-        public void selectTile(int posx, int posy, Tile tile){
+        public void selectTile(int posx, int posy, Tile tile)
+        {
             this.posx = posx;
             this.posy = posy;
             this.currTile = tile;
@@ -172,10 +189,12 @@ namespace Source.Controller
         /// <summary>
         /// Permet de decliquer la case selectionnee
         /// </summary>
-        public void resetSelectedTile(){
+        public void resetSelectedTile()
+        {
             posx = -1;
             posy = -1;
-            if(currTile!=null){
+            if (currTile != null)
+            {
                 currTile.deselect();
                 currTile = null;
             }
@@ -188,8 +207,9 @@ namespace Source.Controller
         /// <summary>
         /// Permet d'acheter la case selectionnee
         /// </summary>
-        public void buySelected(){
-            if(activePlayer.Buy(map, (uint)posx, (uint)posy))
+        public void buySelected()
+        {
+            if (activePlayer.Buy(map, (uint)posx, (uint)posy))
             {
                 audioController.playMoney();
             }
@@ -202,8 +222,9 @@ namespace Source.Controller
         /// <summary>
         /// Permet d'ameliorer la case selectionnee
         /// </summary>
-        public void upgradeSelected(){
-            if(activePlayer.Upgrade(map, (uint)posx, (uint)posy))
+        public void upgradeSelected()
+        {
+            if (activePlayer.Upgrade(map, (uint)posx, (uint)posy))
             {
                 audioController.playUpgrade();
             }
@@ -217,23 +238,28 @@ namespace Source.Controller
         /// <summary>
         /// Permet de mettre en place le pouvoir choisi
         /// </summary>
-        public void setPowerSelected(){
+        public void setPowerSelected()
+        {
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
-            if(activePlayer.isCity()){
+            if (activePlayer.isCity())
+            {
 
                 audioController.playPowerBlock();
 
-                if(DecreeTile != null){
+                if (DecreeTile != null)
+                {
                     DecreeTile.unDecree();
                 }
                 DecreeTile = currTile;
                 currTile.Decree();
             }
-            else{
+            else
+            {
 
                 audioController.playPowerMoney();
 
-                if (BoostTile != null){
+                if (BoostTile != null)
+                {
                     BoostTile.unBoost();
                 }
                 BoostTile = currTile;
