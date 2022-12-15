@@ -5,6 +5,7 @@ using Source.Model;
 using Source.View;
 using JeuScript;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace Source.Controller
 {
@@ -28,11 +29,19 @@ namespace Source.Controller
         public uint playerCompanyScore;
         public uint playerCompanyMoney;
 
+        public static uint getTourActuel;
+        public static uint getNbTours;
+        
+
         public int posx;
         public int posy;
         public Tile currTile = null;
         public Tile BoostTile = null;
         public Tile DecreeTile = null;
+
+        public GameObject panel;
+        public GameObject avatar;
+        public TextMeshProUGUI TurnText;
 
         private AudioController audioController;
 
@@ -43,6 +52,11 @@ namespace Source.Controller
         {
             startNewGame();
             StartCoroutine(LateStart(0.2f));
+            PlayerPrefs.SetInt("tourTotal",(int)this.turnLimit);
+            panel = GameObject.Find("PanelHaut");
+            avatar = GameObject.Find("AvatarConstant");
+            TurnText = GameObject.Find("TurnText").GetComponent<TextMeshProUGUI>();
+            TurnText.text = turn + " / " + turnLimit;
         }
 
         IEnumerator LateStart(float waitTime)
@@ -54,11 +68,19 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
-        IEnumerator IendRound()
+        IEnumerator IbeginTurn()
         {
             yield return new WaitForSeconds(0);
-            activePlayer.earnAfterRound(map);
-            activePlayer.notifyObserversEndRound();
+            Player player;
+            if(activePlayer.isCity())
+            {
+                playerCompany.earnAfterTurn(map);
+            }
+            else
+            {
+                playerCity.earnAfterTurn(map);
+            }    
+            activePlayer.notifyObserversBeginRound(activePlayer, map);
             yield return new WaitForSeconds(3);
             activePlayer.earn = 0;
         }
@@ -108,8 +130,9 @@ namespace Source.Controller
         /// Tour suivant
         /// </summary>
         public void nextTurn()
-        {
-            if (turn++ > turnLimit)
+        {   
+            activePlayer.earn = 0;
+            if (turn+1 > turnLimit)
             {
                 endTurn();
                 return;
@@ -120,16 +143,16 @@ namespace Source.Controller
             }
             if (activePlayer.isCity())
             {
-                StartCoroutine(IendRound());
                 activePlayer = playerCompany;
             }
             else
             {
-                StartCoroutine(IendRound());
                 activePlayer = playerCity;
             }
             resetSelectedTile();
             turn++;
+            TurnText.text = turn + " / " + turnLimit;
+            StartCoroutine(IbeginTurn());
             StartCoroutine(InewRound());
         }
 
@@ -142,7 +165,7 @@ namespace Source.Controller
         }
 
         /*endTurn  : fonction 
-        Cette fonction permet de terminer le tour
+        Cette fonction permet de terminer le jeu
         */
         /// <summary>
         /// Fin du tour
