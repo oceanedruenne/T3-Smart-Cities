@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="class_source_1_1_model_1_1_building" kind="class"><name>Source::Model::Building</name>
+    <member refid="class_source_1_1_model_1_1_building_1a8b25c678f686fa80890529bad5e10bd1" kind="variable"><name>BASE_COST</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1aff1952a4e4bcc7f568408cb6ee080e43" kind="variable"><name>BASE_INCOME</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a5104bcddbf3afa80ff22e45d874a89fa" kind="variable"><name>MALUS_INCREASE</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1acfff3c4aea6a6372c733552ae50b7a76" kind="variable"><name>_type</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a1aabcb4c515dece668a9aa68ddd025eb" kind="variable"><name>_buyMalus</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a6dc3899aca0ffddd73f3bc5cb9dce6b2" kind="variable"><name>_level</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a7863eade4219718406c008ad47dd6953" kind="property"><name>type</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1ac1e7816a544d2198878b1fd6d7e228b1" kind="property"><name>buyMalus</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1aaf242f31886bf07548cbaa0fbc8fff7b" kind="property"><name>level</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a04bcbf0722c9b0f95e2c6d7026419232" kind="function"><name>Building</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1af5d9de35e32bc1cd94281739c8b2a527" kind="function"><name>getIncome</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a0d66e12530fb1e361cc34beb524b3b74" kind="function"><name>getIncomeAfterUpgrade</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a6381592c3c3718de21d55995e5f6f96b" kind="function"><name>getBuyCost</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a646adf8f30ad39b58f33107300979ad5" kind="function"><name>getUpgradeCost</name></member>
+    <member refid="class_source_1_1_model_1_1_building_1a6f69a14bb624ec0683212d7fbabcd496" kind="function"><name>createTransport</name></member>
+  </compound>
+  <compound refid="class_source_1_1_model_1_1_city" kind="class"><name>Source::Model::City</name>
+    <member refid="class_source_1_1_model_1_1_city_1adcd7ecad43e8386c4e8d35e9f152c318" kind="variable"><name>BASE_MONEY</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1ad4266575024e1ff25424d6dababc4d02" kind="function"><name>City</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a0bdb298db7818fe333973b7710e3eae4" kind="function"><name>Buy</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1ac4cb26351b4efe26f17397cc8538850a" kind="function"><name>canBuy</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a1a16f7c71aa6be318686a0a40314a29c" kind="function"><name>canUpgrade</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a5c3fa077c9603f1233671ed0dda9e76d" kind="function"><name>specialsUse</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a92bf890092cf8264ee035793f4e545e3" kind="function"><name>addIncome</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a38aee772fa98adf6e881559c41872685" kind="function"><name>setScore</name></member>
+    <member refid="class_source_1_1_model_1_1_city_1a133c9d40def18fc1af586013be9a5da6" kind="function"><name>isCity</name></member>
+  </compound>
+  <compound refid="class_source_1_1_model_1_1_company" kind="class"><name>Source::Model::Company</name>
+    <member refid="class_source_1_1_model_1_1_company_1a8810404a6212cb39e05cf19a7ede3faa" kind="variable"><name>BASE_MONEY</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1ad05d8e941e08f229015ca8a43549fd24" kind="function"><name>Company</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1a76c83384c9f5d79860a79b4031ec79f9" kind="function"><name>Buy</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1a236636a9441a02338133bdff8ae5b5f9" kind="function"><name>canBuy</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1abfddab907b79a0ef97ead231810fedf1" kind="function"><name>canUpgrade</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1ac5d1909f4a7d4e80156856fe841d311a" kind="function"><name>specialsUse</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1a03e4fab56605c2192d81777c60dc1ea0" kind="function"><name>addIncome</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1a1de6c33c4407e5b4bc8848b7ec9f8ce7" kind="function"><name>setScore</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1afffe1534a1139471364b5d393cddf909" kind="function"><name>isCity</name></member>
+    <member refid="class_source_1_1_model_1_1_company_1ac206750259bf2b59743db6bc62517e8c" kind="function"><name>getIncome</name></member>
+  </compound>
+  <compound refid="class_source_1_1_model_1_1_map" kind="class"><name>Source::Model::Map</name>
+    <member refid="class_source_1_1_model_1_1_map_1a7312ec4c03902471613e485d0617c735" kind="variable"><name>buildings</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1abfa1319f036bd83432c84d09badc4f9f" kind="variable"><name>decree</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a8b945e7e1d7223709e9d8f1be4c53a99" kind="variable"><name>boost</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1ae1a0590ec784e05d5b6b8416bcce7bf9" kind="variable"><name>observers</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1af90acd5313e8d776a72f4c59c60ef3f8" kind="function"><name>Map</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a0f21f6e90095e6de534f9220f78933de" kind="function"><name>fillMapEmpty</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a1df46eac0d0d5f17f094e1eb976fce90" kind="function"><name>fillMapRandom1</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a2e2f839feac8ddec1fdfcec6253f2147" kind="function"><name>fillMapRandNoSeedEqualChance</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1af936fa7f23672ab07008760b14f4de55" kind="function"><name>getUpgradeCostAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a40d5fff65ed864cf868f5c7bec75dd5d" kind="function"><name>getBuyCostAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1aa30898e3c649f62a0399e2d16bea45a4" kind="function"><name>getTypeAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a24d6c6eb1f75233b59012833ee81cea4" kind="function"><name>getUnderMaxLevel</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a3ea3ba7d576d1f89e2b909eccff0283c" kind="function"><name>buildAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1ae6bc7db2ba5563c70c8686628da497b6" kind="function"><name>buildAtNoMalus</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a18489c76a4a2c926d44e428f9b9a9315" kind="function"><name>destroyAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a853f1c172bd289e8674aa00d7cf76791" kind="function"><name>UpgradeAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1abe63cbf6d8c5e4c26836ca1c5299bc28" kind="function"><name>setDecree</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a1bc6439dcb180d4153d9737f68197c35" kind="function"><name>getDecree</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1ae94b1d11c884e9f8e01823eb23f13653" kind="function"><name>getDecreePos</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1acf3f27966262c248947edfd958e41fa2" kind="function"><name>setBoost</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a51ac137fb09ad5262c9be3d702d9e535" kind="function"><name>getBoost</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a0ad5e450429efaf5ef513662d73caf97" kind="function"><name>getBoostPos</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1aec6f3c220a206b3d79f5b28e153bc017" kind="function"><name>getIncomeAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1aa8e961e8cea026a48d6ef35742b7a34f" kind="function"><name>getIncomeAfterUpgradeAt</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1ab261f5fc29020bc102d9693e6bb73e15" kind="function"><name>isAdjacentToTransport</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1aed084ee7e24bffeaa86929f6d1b5d084" kind="function"><name>getIncomeFromType</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a5331a6da7899205feb22329575507bf7" kind="function"><name>getScoreFromType</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1ab53b3b9fec19ea931166e93706d2aae7" kind="function"><name>addObserver</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a697af9801c48c2435f440796b9a027a8" kind="function"><name>notifyObservers</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1a7edad6097d6a1435de6e9d34ea1420ae" kind="function"><name>notifyObserversPos</name></member>
+    <member refid="class_source_1_1_model_1_1_map_1af9507d04241388568bd252e6d041827c" kind="function"><name>notifyObserverChange</name></member>
+  </compound>
+  <compound refid="class_source_1_1_model_1_1_player" kind="class"><name>Source::Model::Player</name>
+    <member refid="class_source_1_1_model_1_1_player_1a2ac566c0c9a4becb7cd66d9d2a0c7f30" kind="variable"><name>money</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1ad5e3c51cd34799d4cde2431a76e82bf3" kind="variable"><name>score</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1ae8c1a0c7e4cbb11ad147fc0f3f287a33" kind="variable"><name>name</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1acaf6f3976ace65d3c1be63b3e934ff78" kind="variable"><name>earn</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a7f70c3f5735a4b178e4e6223fa4c2d45" kind="variable"><name>observers</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a7cd4b5362a0cda2fe309fc3436da7ca2" kind="function"><name>Player</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a10a9029c6cacdad58aa0bc0975c1cce4" kind="function"><name>canBuy</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1aedaa4a0472228b21ee3bbc07b7a8613e" kind="function"><name>canUpgrade</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a3cb1b92be5914555a6f4d3e636fa444a" kind="function"><name>Buy</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a125e46c2c1d986b4bb848e8c8c858c72" kind="function"><name>Upgrade</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a0ece3a6758d5a10c85105d27ef7f9716" kind="function"><name>specialsUse</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a8a3b92e2029911c926ad2d35c186b4db" kind="function"><name>addIncome</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a4d69bbe23c9459b82505bf5d7ec61f8c" kind="function"><name>setScore</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1ad1da831e33fdefd41f613466a13ff563" kind="function"><name>addObserver</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a7eeb23b6a853a8e3a250dda806d7b782" kind="function"><name>notifyObservers</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a837018ac9c32db3e7f0bef53567a9278" kind="function"><name>notifyObserversBeginRound</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1acd117a4ffb956265366684cd7e629360" kind="function"><name>isCity</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1aea76fdfe36f051fda2c41999e85ddeb2" kind="function"><name>getScore</name></member>
+    <member refid="class_source_1_1_model_1_1_player_1a478eaa9024228342766fc37681659415" kind="function"><name>getMoney</name></member>
+  </compound>
+  <compound refid="namespace_source" kind="namespace"><name>Source</name>
+  </compound>
+  <compound refid="namespace_source_1_1_model" kind="namespace"><name>Source::Model</name>
+    <member refid="namespace_source_1_1_model_1a8a1183ae4e812c10ca04eaea00f7683e" kind="enum"><name>BuildType</name></member>
+  </compound>
+  <compound refid="namespace_source_1_1_view" kind="namespace"><name>Source::View</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_visual_scripting" kind="namespace"><name>Unity::VisualScripting</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="_building_8cs" kind="file"><name>Building.cs</name>
+  </compound>
+  <compound refid="_build_type_8cs" kind="file"><name>BuildType.cs</name>
+  </compound>
+  <compound refid="_city_8cs" kind="file"><name>City.cs</name>
+  </compound>
+  <compound refid="_company_8cs" kind="file"><name>Company.cs</name>
+  </compound>
+  <compound refid="_map_8cs" kind="file"><name>Map.cs</name>
+  </compound>
+  <compound refid="_player_8cs" kind="file"><name>Player.cs</name>
+  </compound>
+  <compound refid="dir_4d2cd150aff3df625ebb7431566b7a26" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model</name>
+  </compound>
+  <compound refid="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source</name>
+  </compound>
+</doxygenindex>

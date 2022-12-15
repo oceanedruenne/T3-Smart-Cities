@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_model_1_1_building" kind="class" language="C#" prot="public">
+    <compoundname>Source::Model::Building</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1a8b25c678f686fa80890529bad5e10bd1" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Source.Model.Building.BASE_COST</definition>
+        <argsstring></argsstring>
+        <name>BASE_COST</name>
+        <qualifiedname>Source.Model.Building.BASE_COST</qualifiedname>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="11" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1aff1952a4e4bcc7f568408cb6ee080e43" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Source.Model.Building.BASE_INCOME</definition>
+        <argsstring></argsstring>
+        <name>BASE_INCOME</name>
+        <qualifiedname>Source.Model.Building.BASE_INCOME</qualifiedname>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="12" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1a5104bcddbf3afa80ff22e45d874a89fa" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float Source.Model.Building.MALUS_INCREASE</definition>
+        <argsstring></argsstring>
+        <name>MALUS_INCREASE</name>
+        <qualifiedname>Source.Model.Building.MALUS_INCREASE</qualifiedname>
+        <initializer>= 0.2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="13" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1acfff3c4aea6a6372c733552ae50b7a76" prot="private" static="no" mutable="no">
+        <type>BuildType</type>
+        <definition>BuildType Source.Model.Building._type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <qualifiedname>Source.Model.Building._type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="22" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1a1aabcb4c515dece668a9aa68ddd025eb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Source.Model.Building._buyMalus</definition>
+        <argsstring></argsstring>
+        <name>_buyMalus</name>
+        <qualifiedname>Source.Model.Building._buyMalus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="24" column="23" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_building_1a6dc3899aca0ffddd73f3bc5cb9dce6b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Source.Model.Building._level</definition>
+        <argsstring></argsstring>
+        <name>_level</name>
+        <qualifiedname>Source.Model.Building._level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="26" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_source_1_1_model_1_1_building_1a7863eade4219718406c008ad47dd6953" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>BuildType</type>
+        <definition>BuildType Source.Model.Building.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Source.Model.Building.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="23" column="26" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_source_1_1_model_1_1_building_1ac1e7816a544d2198878b1fd6d7e228b1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Source.Model.Building.buyMalus</definition>
+        <argsstring></argsstring>
+        <name>buyMalus</name>
+        <qualifiedname>Source.Model.Building.buyMalus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="25" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_source_1_1_model_1_1_building_1aaf242f31886bf07548cbaa0fbc8fff7b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Source.Model.Building.level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <qualifiedname>Source.Model.Building.level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="27" column="20" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1a04bcbf0722c9b0f95e2c6d7026419232" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Source.Model.Building.Building</definition>
+        <argsstring>(BuildType type, float malus=1f, int level=0)</argsstring>
+        <name>Building</name>
+        <qualifiedname>Source.Model.Building.Building</qualifiedname>
+        <param>
+          <type>BuildType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>malus</declname>
+          <defval>1f</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur de <ref refid="class_source_1_1_model_1_1_building" kindref="compound">Building</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>malus</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="43" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1af5d9de35e32bc1cd94281739c8b2a527" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Building.getIncome</definition>
+        <argsstring>()</argsstring>
+        <name>getIncome</name>
+        <qualifiedname>Source.Model.Building.getIncome</qualifiedname>
+        <briefdescription>
+<para>Permet de récupérer les revenus du bâtiment  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Les revenus du bâtiment</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="79" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1a0d66e12530fb1e361cc34beb524b3b74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Building.getIncomeAfterUpgrade</definition>
+        <argsstring>()</argsstring>
+        <name>getIncomeAfterUpgrade</name>
+        <qualifiedname>Source.Model.Building.getIncomeAfterUpgrade</qualifiedname>
+        <briefdescription>
+<para>Permet de récupérer les bénéfices du bâtiment après son amélioration  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Les bénéfices du bâtiment après son amélioration</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="92" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1a6381592c3c3718de21d55995e5f6f96b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Building.getBuyCost</definition>
+        <argsstring>()</argsstring>
+        <name>getBuyCost</name>
+        <qualifiedname>Source.Model.Building.getBuyCost</qualifiedname>
+        <briefdescription>
+<para>Permet de récupérer le coût d&apos;achat d&apos;un bâtiment  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Le coût d&apos;achat d&apos;un bâtiment</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="109" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1a646adf8f30ad39b58f33107300979ad5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Building.getUpgradeCost</definition>
+        <argsstring>()</argsstring>
+        <name>getUpgradeCost</name>
+        <qualifiedname>Source.Model.Building.getUpgradeCost</qualifiedname>
+        <briefdescription>
+<para>Permet de récupérer le coût d&apos;amélioration d&apos;un bâtiment  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>le coût d&apos;amélioration d&apos;un bâtiment</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="123" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="123" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_building_1a6f69a14bb624ec0683212d7fbabcd496" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_source_1_1_model_1_1_building" kindref="compound">Building</ref></type>
+        <definition>static Building Source.Model.Building.createTransport</definition>
+        <argsstring>()</argsstring>
+        <name>createTransport</name>
+        <qualifiedname>Source.Model.Building.createTransport</qualifiedname>
+        <briefdescription>
+<para>Permet de créer des transports  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un building de type transport</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="60" column="32" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="9" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" bodystart="10" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_model_1_1_building_1a1aabcb4c515dece668a9aa68ddd025eb" prot="private" virt="non-virtual"><scope>Source::Model::Building</scope><name>_buyMalus</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a6dc3899aca0ffddd73f3bc5cb9dce6b2" prot="private" virt="non-virtual"><scope>Source::Model::Building</scope><name>_level</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1acfff3c4aea6a6372c733552ae50b7a76" prot="private" virt="non-virtual"><scope>Source::Model::Building</scope><name>_type</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a8b25c678f686fa80890529bad5e10bd1" prot="private" virt="non-virtual"><scope>Source::Model::Building</scope><name>BASE_COST</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1aff1952a4e4bcc7f568408cb6ee080e43" prot="private" virt="non-virtual"><scope>Source::Model::Building</scope><name>BASE_INCOME</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a04bcbf0722c9b0f95e2c6d7026419232" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>Building</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1ac1e7816a544d2198878b1fd6d7e228b1" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>buyMalus</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a6f69a14bb624ec0683212d7fbabcd496" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>createTransport</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a6381592c3c3718de21d55995e5f6f96b" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>getBuyCost</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1af5d9de35e32bc1cd94281739c8b2a527" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>getIncome</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a0d66e12530fb1e361cc34beb524b3b74" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>getIncomeAfterUpgrade</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a646adf8f30ad39b58f33107300979ad5" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>getUpgradeCost</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1aaf242f31886bf07548cbaa0fbc8fff7b" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>level</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a5104bcddbf3afa80ff22e45d874a89fa" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>MALUS_INCREASE</name></member>
+      <member refid="class_source_1_1_model_1_1_building_1a7863eade4219718406c008ad47dd6953" prot="public" virt="non-virtual"><scope>Source::Model::Building</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

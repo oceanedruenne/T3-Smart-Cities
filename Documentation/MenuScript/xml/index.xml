@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="classbtn_recommencer" kind="class"><name>btnRecommencer</name>
+    <member refid="classbtn_recommencer_1a44b165a8ee356cbd90d066f712834da2" kind="function"><name>startAgain</name></member>
+  </compound>
+  <compound refid="class_end_scene" kind="class"><name>EndScene</name>
+    <member refid="class_end_scene_1a6bf7804b0c860a8ffb0ee8f1c35190fe" kind="variable"><name>playerCityScore</name></member>
+    <member refid="class_end_scene_1a294f7d92c2e023043431a5ed3df4e9de" kind="variable"><name>playerCityMoney</name></member>
+    <member refid="class_end_scene_1ade80ec5791da09a698afe5e6a616bac9" kind="variable"><name>playerCompanyScore</name></member>
+    <member refid="class_end_scene_1acc81a132ff46192e6220e221506fb060" kind="variable"><name>playerCompanyMoney</name></member>
+    <member refid="class_end_scene_1aca07b8708207578e7d011dce31537830" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="classinput_reader" kind="class"><name>inputReader</name>
+    <member refid="classinput_reader_1a946208dd02c4519d26290132c3d6e7a5" kind="variable"><name>cityName</name></member>
+    <member refid="classinput_reader_1a1ca3debd9f53a2e6ef883ffc9f3cc3ea" kind="function"><name>Start</name></member>
+    <member refid="classinput_reader_1a4865e4b796599240fe54e1288cb95496" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="classinput_writer" kind="class"><name>inputWriter</name>
+    <member refid="classinput_writer_1ae63cbd45f1d7e2c83b6dd98a58806732" kind="variable"><name>cityName</name></member>
+    <member refid="classinput_writer_1a9e6120fa884e34d4c296be29ff9cd0ac" kind="function"><name>Start</name></member>
+    <member refid="classinput_writer_1a93c3ba1b74072cf1c1af44d42f9271d1" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_menu" kind="class"><name>Menu</name>
+    <member refid="class_menu_1a0f9d4ced5292864156261dc6b0137455" kind="function"><name>loadScene1</name></member>
+    <member refid="class_menu_1ac4dd9f67ca516222c8de9741367caed4" kind="function"><name>exitGame</name></member>
+    <member refid="class_menu_1acfdbe97e29abbbdc94592da819a134be" kind="function"><name>loadCredit</name></member>
+  </compound>
+  <compound refid="classshow_turns" kind="class"><name>showTurns</name>
+    <member refid="classshow_turns_1a7c8475f93eb01f4a44057e99e5e0c33a" kind="function"><name>Start</name></member>
+    <member refid="classshow_turns_1a547d14ac753687adee9cb759e293e1ef" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="btn_recommencer_8cs" kind="file"><name>btnRecommencer.cs</name>
+  </compound>
+  <compound refid="_end_scene_8cs" kind="file"><name>EndScene.cs</name>
+  </compound>
+  <compound refid="input_reader_8cs" kind="file"><name>inputReader.cs</name>
+  </compound>
+  <compound refid="input_writer_8cs" kind="file"><name>inputWriter.cs</name>
+  </compound>
+  <compound refid="_menu_8cs" kind="file"><name>Menu.cs</name>
+  </compound>
+  <compound refid="show_turns_8cs" kind="file"><name>showTurns.cs</name>
+  </compound>
+  <compound refid="dir_6a3c0807d23404d84dfa81aaf3ab6e51" kind="dir"><name>MenuScript</name>
+  </compound>
+</doxygenindex>

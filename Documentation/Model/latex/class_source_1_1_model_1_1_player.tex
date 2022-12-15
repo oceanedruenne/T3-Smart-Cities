@@ -1,0 +1,399 @@
+\hypertarget{class_source_1_1_model_1_1_player}{}\doxysection{Source.\+Model.\+Player Class Reference}
+\label{class_source_1_1_model_1_1_player}\index{Source.Model.Player@{Source.Model.Player}}
+Inheritance diagram for Source.\+Model.\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_source_1_1_model_1_1_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_source_1_1_model_1_1_player_a7cd4b5362a0cda2fe309fc3436da7ca2}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de joueur  \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_source_1_1_model_1_1_player_a10a9029c6cacdad58aa0bc0975c1cce4}{can\+Buy}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si le joueur peut acheter  \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_source_1_1_model_1_1_player_aedaa4a0472228b21ee3bbc07b7a8613e}{can\+Upgrade}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si le joueur peut améliorer  \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{class_source_1_1_model_1_1_player_a3cb1b92be5914555a6f4d3e636fa444a}{Buy}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si l\textquotesingle{}achat s\textquotesingle{}est bien déroulé  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_source_1_1_model_1_1_player_a125e46c2c1d986b4bb848e8c8c858c72}{Upgrade}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si l\textquotesingle{}amélioration d\textquotesingle{}un bâtiment s\textquotesingle{}est bien déroulée  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_source_1_1_model_1_1_player_a0ece3a6758d5a10c85105d27ef7f9716}{specials\+Use}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}utiliser son pouvoir spécial  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_source_1_1_model_1_1_player_a8a3b92e2029911c926ad2d35c186b4db}{add\+Income}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter les bénéfices  \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_source_1_1_model_1_1_player_a4d69bbe23c9459b82505bf5d7ec61f8c}{set\+Score}} (\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map)
+\begin{DoxyCompactList}\small\item\em Permet de fixer le score  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_source_1_1_model_1_1_player_ad1da831e33fdefd41f613466a13ff563}{add\+Observer}} (Player\+Observer observer)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ajouter un observeur  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_source_1_1_model_1_1_player_a7eeb23b6a853a8e3a250dda806d7b782}{notify\+Observers}} ()
+\begin{DoxyCompactList}\small\item\em Permet de notifier les observers  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_source_1_1_model_1_1_player_a837018ac9c32db3e7f0bef53567a9278}{notify\+Observers\+Begin\+Round}} (\mbox{\hyperlink{class_source_1_1_model_1_1_player}{Player}} player, \mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}} map)
+\item 
+abstract bool \mbox{\hyperlink{class_source_1_1_model_1_1_player_acd117a4ffb956265366684cd7e629360}{is\+City}} ()
+\begin{DoxyCompactList}\small\item\em Permet de vérifier si c\textquotesingle{}est une ville (renvoie toujours true)  \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_source_1_1_model_1_1_player_aea76fdfe36f051fda2c41999e85ddeb2}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder au score du joueur  \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_source_1_1_model_1_1_player_a478eaa9024228342766fc37681659415}{get\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder à l\textquotesingle{}argent du joueur  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_source_1_1_model_1_1_player_a2ac566c0c9a4becb7cd66d9d2a0c7f30}{money}}
+\item 
+uint \mbox{\hyperlink{class_source_1_1_model_1_1_player_ad5e3c51cd34799d4cde2431a76e82bf3}{score}}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_source_1_1_model_1_1_player_ae8c1a0c7e4cbb11ad147fc0f3f287a33}{name}}
+\item 
+uint \mbox{\hyperlink{class_source_1_1_model_1_1_player_acaf6f3976ace65d3c1be63b3e934ff78}{earn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Player\+Observer $>$ \mbox{\hyperlink{class_source_1_1_model_1_1_player_a7f70c3f5735a4b178e4e6223fa4c2d45}{observers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a7cd4b5362a0cda2fe309fc3436da7ca2}\label{class_source_1_1_model_1_1_player_a7cd4b5362a0cda2fe309fc3436da7ca2}} 
+\index{Source.Model.Player@{Source.Model.Player}!Player@{Player}}
+\index{Player@{Player}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Source.\+Model.\+Player.\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de joueur  
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a8a3b92e2029911c926ad2d35c186b4db}\label{class_source_1_1_model_1_1_player_a8a3b92e2029911c926ad2d35c186b4db}} 
+\index{Source.Model.Player@{Source.Model.Player}!addIncome@{addIncome}}
+\index{addIncome@{addIncome}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{addIncome()}{addIncome()}}
+{\footnotesize\ttfamily abstract void Source.\+Model.\+Player.\+add\+Income (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet d\textquotesingle{}ajouter les bénéfices  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a92bf890092cf8264ee035793f4e545e3}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_a03e4fab56605c2192d81777c60dc1ea0}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_ad1da831e33fdefd41f613466a13ff563}\label{class_source_1_1_model_1_1_player_ad1da831e33fdefd41f613466a13ff563}} 
+\index{Source.Model.Player@{Source.Model.Player}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void Source.\+Model.\+Player.\+add\+Observer (\begin{DoxyParamCaption}\item[{Player\+Observer}]{observer }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}ajouter un observeur  
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a3cb1b92be5914555a6f4d3e636fa444a}\label{class_source_1_1_model_1_1_player_a3cb1b92be5914555a6f4d3e636fa444a}} 
+\index{Source.Model.Player@{Source.Model.Player}!Buy@{Buy}}
+\index{Buy@{Buy}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{Buy()}{Buy()}}
+{\footnotesize\ttfamily abstract bool Source.\+Model.\+Player.\+Buy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet de vérifier si l\textquotesingle{}achat s\textquotesingle{}est bien déroulé  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retourne vrai si l\textquotesingle{}opération s\textquotesingle{}est bien faite, sinon faux
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a0bdb298db7818fe333973b7710e3eae4}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_a76c83384c9f5d79860a79b4031ec79f9}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a10a9029c6cacdad58aa0bc0975c1cce4}\label{class_source_1_1_model_1_1_player_a10a9029c6cacdad58aa0bc0975c1cce4}} 
+\index{Source.Model.Player@{Source.Model.Player}!canBuy@{canBuy}}
+\index{canBuy@{canBuy}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{canBuy()}{canBuy()}}
+{\footnotesize\ttfamily abstract bool Source.\+Model.\+Player.\+can\+Buy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet de vérifier si le joueur peut acheter  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si le joueur peut acheter, sinon faux
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_ac4cb26351b4efe26f17397cc8538850a}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_a236636a9441a02338133bdff8ae5b5f9}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_aedaa4a0472228b21ee3bbc07b7a8613e}\label{class_source_1_1_model_1_1_player_aedaa4a0472228b21ee3bbc07b7a8613e}} 
+\index{Source.Model.Player@{Source.Model.Player}!canUpgrade@{canUpgrade}}
+\index{canUpgrade@{canUpgrade}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{canUpgrade()}{canUpgrade()}}
+{\footnotesize\ttfamily abstract bool Source.\+Model.\+Player.\+can\+Upgrade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet de vérifier si le joueur peut améliorer  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si le joueur peut améliorer, sinon faux
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a1a16f7c71aa6be318686a0a40314a29c}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_abfddab907b79a0ef97ead231810fedf1}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a478eaa9024228342766fc37681659415}\label{class_source_1_1_model_1_1_player_a478eaa9024228342766fc37681659415}} 
+\index{Source.Model.Player@{Source.Model.Player}!getMoney@{getMoney}}
+\index{getMoney@{getMoney}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{getMoney()}{getMoney()}}
+{\footnotesize\ttfamily uint Source.\+Model.\+Player.\+get\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder à l\textquotesingle{}argent du joueur  
+
+\begin{DoxyReturn}{Returns}
+retourne l\textquotesingle{}argent du joueur
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00238}{238}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_aea76fdfe36f051fda2c41999e85ddeb2}\label{class_source_1_1_model_1_1_player_aea76fdfe36f051fda2c41999e85ddeb2}} 
+\index{Source.Model.Player@{Source.Model.Player}!getScore@{getScore}}
+\index{getScore@{getScore}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily uint Source.\+Model.\+Player.\+get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder au score du joueur  
+
+\begin{DoxyReturn}{Returns}
+retourne le score du joueur
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00225}{225}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_acd117a4ffb956265366684cd7e629360}\label{class_source_1_1_model_1_1_player_acd117a4ffb956265366684cd7e629360}} 
+\index{Source.Model.Player@{Source.Model.Player}!isCity@{isCity}}
+\index{isCity@{isCity}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{isCity()}{isCity()}}
+{\footnotesize\ttfamily abstract bool Source.\+Model.\+Player.\+is\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet de vérifier si c\textquotesingle{}est une ville (renvoie toujours true)  
+
+\begin{DoxyReturn}{Returns}
+retourne vrai
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a133c9d40def18fc1af586013be9a5da6}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_afffe1534a1139471364b5d393cddf909}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a7eeb23b6a853a8e3a250dda806d7b782}\label{class_source_1_1_model_1_1_player_a7eeb23b6a853a8e3a250dda806d7b782}} 
+\index{Source.Model.Player@{Source.Model.Player}!notifyObservers@{notifyObservers}}
+\index{notifyObservers@{notifyObservers}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{notifyObservers()}{notifyObservers()}}
+{\footnotesize\ttfamily void Source.\+Model.\+Player.\+notify\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de notifier les observers  
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00189}{189}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a837018ac9c32db3e7f0bef53567a9278}\label{class_source_1_1_model_1_1_player_a837018ac9c32db3e7f0bef53567a9278}} 
+\index{Source.Model.Player@{Source.Model.Player}!notifyObserversBeginRound@{notifyObserversBeginRound}}
+\index{notifyObserversBeginRound@{notifyObserversBeginRound}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{notifyObserversBeginRound()}{notifyObserversBeginRound()}}
+{\footnotesize\ttfamily void Source.\+Model.\+Player.\+notify\+Observers\+Begin\+Round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_player}{Player}}}]{player,  }\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00197}{197}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a4d69bbe23c9459b82505bf5d7ec61f8c}\label{class_source_1_1_model_1_1_player_a4d69bbe23c9459b82505bf5d7ec61f8c}} 
+\index{Source.Model.Player@{Source.Model.Player}!setScore@{setScore}}
+\index{setScore@{setScore}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily abstract void Source.\+Model.\+Player.\+set\+Score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet de fixer le score  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a38aee772fa98adf6e881559c41872685}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_a1de6c33c4407e5b4bc8848b7ec9f8ce7}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a0ece3a6758d5a10c85105d27ef7f9716}\label{class_source_1_1_model_1_1_player_a0ece3a6758d5a10c85105d27ef7f9716}} 
+\index{Source.Model.Player@{Source.Model.Player}!specialsUse@{specialsUse}}
+\index{specialsUse@{specialsUse}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{specialsUse()}{specialsUse()}}
+{\footnotesize\ttfamily abstract void Source.\+Model.\+Player.\+specials\+Use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Permet d\textquotesingle{}utiliser son pouvoir spécial  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_source_1_1_model_1_1_city_a5c3fa077c9603f1233671ed0dda9e76d}{Source.\+Model.\+City}}, and \mbox{\hyperlink{class_source_1_1_model_1_1_company_ac5d1909f4a7d4e80156856fe841d311a}{Source.\+Model.\+Company}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a125e46c2c1d986b4bb848e8c8c858c72}\label{class_source_1_1_model_1_1_player_a125e46c2c1d986b4bb848e8c8c858c72}} 
+\index{Source.Model.Player@{Source.Model.Player}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{Upgrade()}{Upgrade()}}
+{\footnotesize\ttfamily bool Source.\+Model.\+Player.\+Upgrade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})}
+
+
+
+Permet de vérifier si l\textquotesingle{}amélioration d\textquotesingle{}un bâtiment s\textquotesingle{}est bien déroulée  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+renvoie vrai si l\textquotesingle{}amélioration s\textquotesingle{}est faite, sinon faux
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_acaf6f3976ace65d3c1be63b3e934ff78}\label{class_source_1_1_model_1_1_player_acaf6f3976ace65d3c1be63b3e934ff78}} 
+\index{Source.Model.Player@{Source.Model.Player}!earn@{earn}}
+\index{earn@{earn}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{earn}{earn}}
+{\footnotesize\ttfamily uint Source.\+Model.\+Player.\+earn}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a2ac566c0c9a4becb7cd66d9d2a0c7f30}\label{class_source_1_1_model_1_1_player_a2ac566c0c9a4becb7cd66d9d2a0c7f30}} 
+\index{Source.Model.Player@{Source.Model.Player}!money@{money}}
+\index{money@{money}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{money}{money}}
+{\footnotesize\ttfamily uint Source.\+Model.\+Player.\+money}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_ae8c1a0c7e4cbb11ad147fc0f3f287a33}\label{class_source_1_1_model_1_1_player_ae8c1a0c7e4cbb11ad147fc0f3f287a33}} 
+\index{Source.Model.Player@{Source.Model.Player}!name@{name}}
+\index{name@{name}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily TMP\+\_\+\+Text Source.\+Model.\+Player.\+name}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_a7f70c3f5735a4b178e4e6223fa4c2d45}\label{class_source_1_1_model_1_1_player_a7f70c3f5735a4b178e4e6223fa4c2d45}} 
+\index{Source.Model.Player@{Source.Model.Player}!observers@{observers}}
+\index{observers@{observers}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{observers}{observers}}
+{\footnotesize\ttfamily List$<$Player\+Observer$>$ Source.\+Model.\+Player.\+observers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\mbox{\Hypertarget{class_source_1_1_model_1_1_player_ad5e3c51cd34799d4cde2431a76e82bf3}\label{class_source_1_1_model_1_1_player_ad5e3c51cd34799d4cde2431a76e82bf3}} 
+\index{Source.Model.Player@{Source.Model.Player}!score@{score}}
+\index{score@{score}!Source.Model.Player@{Source.Model.Player}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily uint Source.\+Model.\+Player.\+score}
+
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/oce-\/a/\+Desktop/\+T3/t3-\/smart-\/city/\+Smart City/\+Assets/\+Source/\+Model/Player.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\hypertarget{input_writer_8cs_source}{}\doxysection{input\+Writer.\+cs}
+\label{input_writer_8cs_source}\index{MenuScript/inputWriter.cs@{MenuScript/inputWriter.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00005}00005 \textcolor{keyword}{using }TMPro;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00007}\mbox{\hyperlink{classinput_writer}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classinput_writer}{inputWriter}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00009}00009     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} cityName;}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00014}00014     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00015}00015     \{   }
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00016}00016         GameObject panel = GameObject.Find(\textcolor{stringliteral}{"{}PanelHaut"{}});}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00017}00017         TextMeshProUGUI NameText = GameObject.Find(\textcolor{stringliteral}{"{}NameText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00018}00018         NameText.text = PlayerPrefs.GetString(\textcolor{stringliteral}{"{}cityName"{}});}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00021}00021     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00023}00023         GameObject panel = GameObject.Find(\textcolor{stringliteral}{"{}PanelHaut"{}});}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00024}00024         TextMeshProUGUI NameText = GameObject.Find(\textcolor{stringliteral}{"{}NameText"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00025}00025         NameText.text = PlayerPrefs.GetString(\textcolor{stringliteral}{"{}cityName"{}});}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{input_writer_8cs_source_l00027}00027 \}}
+
+\end{DoxyCode}

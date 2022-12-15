@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classcam_controller" kind="class" language="C#" prot="public">
+    <compoundname>camController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcam_controller_1a601ee0e7f24102e9d62b639198ea72a7" prot="private" static="no" mutable="no">
+        <type>Camera</type>
+        <definition>Camera camController.cam</definition>
+        <argsstring></argsstring>
+        <name>cam</name>
+        <qualifiedname>camController.cam</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="5" column="12" bodyfile="JeuScript/camController.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcam_controller_1ad17cf559e2e89ff66cab664cd525da76" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 camController.dragOrigin</definition>
+        <argsstring></argsstring>
+        <name>dragOrigin</name>
+        <qualifiedname>camController.dragOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="9" column="21" bodyfile="JeuScript/camController.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcam_controller_1a58585a00d994c65686659e178223de4b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float camController.speedScroll</definition>
+        <argsstring></argsstring>
+        <name>speedScroll</name>
+        <qualifiedname>camController.speedScroll</qualifiedname>
+        <initializer>= 30f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="7" column="18" bodyfile="JeuScript/camController.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcam_controller_1a03671512ccf43de89b546ce2aefc28eb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float camController.dragSpeed</definition>
+        <argsstring></argsstring>
+        <name>dragSpeed</name>
+        <qualifiedname>camController.dragSpeed</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="8" column="18" bodyfile="JeuScript/camController.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcam_controller_1a6d286e20bfd57f7fb91e27f0451ed152" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void camController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>camController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="12" column="18" bodyfile="JeuScript/camController.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classcam_controller_1a6c0a344cc564e5a6da92e0be12d07ebc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void camController.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>camController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/camController.cs" line="17" column="10" bodyfile="JeuScript/camController.cs" bodystart="17" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>camController</label>
+        <link refid="classcam_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>camController</label>
+        <link refid="classcam_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="JeuScript/camController.cs" line="3" column="7" bodyfile="JeuScript/camController.cs" bodystart="4" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classcam_controller_1a601ee0e7f24102e9d62b639198ea72a7" prot="private" virt="non-virtual"><scope>camController</scope><name>cam</name></member>
+      <member refid="classcam_controller_1ad17cf559e2e89ff66cab664cd525da76" prot="private" virt="non-virtual"><scope>camController</scope><name>dragOrigin</name></member>
+      <member refid="classcam_controller_1a03671512ccf43de89b546ce2aefc28eb" prot="public" virt="non-virtual"><scope>camController</scope><name>dragSpeed</name></member>
+      <member refid="classcam_controller_1a58585a00d994c65686659e178223de4b" prot="public" virt="non-virtual"><scope>camController</scope><name>speedScroll</name></member>
+      <member refid="classcam_controller_1a6d286e20bfd57f7fb91e27f0451ed152" prot="private" virt="non-virtual"><scope>camController</scope><name>Start</name></member>
+      <member refid="classcam_controller_1a6c0a344cc564e5a6da92e0be12d07ebc" prot="private" virt="non-virtual"><scope>camController</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

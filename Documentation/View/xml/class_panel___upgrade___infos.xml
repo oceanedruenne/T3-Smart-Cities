@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_panel___upgrade___infos" kind="class" language="C#" prot="public">
+    <compoundname>Panel_Upgrade_Infos</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1af04e38ea6e399e851cbe15d06950a77b" prot="private" static="no" mutable="no">
+        <type>GameHandler</type>
+        <definition>GameHandler Panel_Upgrade_Infos.gh</definition>
+        <argsstring></argsstring>
+        <name>gh</name>
+        <qualifiedname>Panel_Upgrade_Infos.gh</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="11" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1a010fcbef56c110e9a54ce406507e29d7" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI[]</type>
+        <definition>TextMeshProUGUI [] Panel_Upgrade_Infos.infos</definition>
+        <argsstring></argsstring>
+        <name>infos</name>
+        <qualifiedname>Panel_Upgrade_Infos.infos</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="14" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1aa5780d77421b27d6e2e5e2e74fd86b32" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Panel_Upgrade_Infos.upgradeCost</definition>
+        <argsstring></argsstring>
+        <name>upgradeCost</name>
+        <qualifiedname>Panel_Upgrade_Infos.upgradeCost</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="17" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1a4760ac9d3f640ad99a09ab25588c0190" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Panel_Upgrade_Infos.upgradeText</definition>
+        <argsstring></argsstring>
+        <name>upgradeText</name>
+        <qualifiedname>Panel_Upgrade_Infos.upgradeText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="18" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1a7cacd6c3f747b1196d714d31f9a97176" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Panel_Upgrade_Infos.newIncome</definition>
+        <argsstring></argsstring>
+        <name>newIncome</name>
+        <qualifiedname>Panel_Upgrade_Infos.newIncome</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="21" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___upgrade___infos_1a9f86a1471817971b59707e5d73c1af8d" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Panel_Upgrade_Infos.newIncomeText</definition>
+        <argsstring></argsstring>
+        <name>newIncomeText</name>
+        <qualifiedname>Panel_Upgrade_Infos.newIncomeText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="22" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_panel___upgrade___infos_1add52b17da6c7330d80e6a66e6f10b2c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Panel_Upgrade_Infos.Awake</qualifiedname>
+        <briefdescription>
+<para>Constructeur  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="29" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_panel___upgrade___infos_1a38513b4d9d10920b2d9f446eb950fdf3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Panel_Upgrade_Infos.OnEnable</qualifiedname>
+        <briefdescription>
+<para>Activation  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="43" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_panel___upgrade___infos_1a9454873ea54c5891ce984162c1b6c381" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.initGameHandler</definition>
+        <argsstring>()</argsstring>
+        <name>initGameHandler</name>
+        <qualifiedname>Panel_Upgrade_Infos.initGameHandler</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;initialiser le GameHandler  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="58" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_panel___upgrade___infos_1abbfa0135eca4e0afb07ae11d1cd2ee37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.initInfos</definition>
+        <argsstring>()</argsstring>
+        <name>initInfos</name>
+        <qualifiedname>Panel_Upgrade_Infos.initInfos</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;initialiser les informations  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="72" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="72" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_panel___upgrade___infos_1a9f543ab227da6cb4bcd8e89ac79aa74c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.updatePanelInfos</definition>
+        <argsstring>()</argsstring>
+        <name>updatePanelInfos</name>
+        <qualifiedname>Panel_Upgrade_Infos.updatePanelInfos</qualifiedname>
+        <briefdescription>
+<para>Permet de mettre à jour les informations du panel  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="102" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="102" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_panel___upgrade___infos_1aed7c2a94d42006434dfe8781f5e20c4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Upgrade_Infos.clickUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>clickUpdate</name>
+        <qualifiedname>Panel_Upgrade_Infos.clickUpdate</qualifiedname>
+        <briefdescription>
+<para>Permet de modifier les informations quand il y a un clic  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="123" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="123" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Panel_Upgrade_Infos</label>
+        <link refid="class_panel___upgrade___infos"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Panel_Upgrade_Infos</label>
+        <link refid="class_panel___upgrade___infos"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" line="9" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Upgrade_Infos.cs" bodystart="10" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_panel___upgrade___infos_1add52b17da6c7330d80e6a66e6f10b2c0" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>Awake</name></member>
+      <member refid="class_panel___upgrade___infos_1aed7c2a94d42006434dfe8781f5e20c4f" prot="public" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>clickUpdate</name></member>
+      <member refid="class_panel___upgrade___infos_1af04e38ea6e399e851cbe15d06950a77b" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>gh</name></member>
+      <member refid="class_panel___upgrade___infos_1a010fcbef56c110e9a54ce406507e29d7" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>infos</name></member>
+      <member refid="class_panel___upgrade___infos_1a9454873ea54c5891ce984162c1b6c381" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>initGameHandler</name></member>
+      <member refid="class_panel___upgrade___infos_1abbfa0135eca4e0afb07ae11d1cd2ee37" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>initInfos</name></member>
+      <member refid="class_panel___upgrade___infos_1a7cacd6c3f747b1196d714d31f9a97176" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>newIncome</name></member>
+      <member refid="class_panel___upgrade___infos_1a9f86a1471817971b59707e5d73c1af8d" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>newIncomeText</name></member>
+      <member refid="class_panel___upgrade___infos_1a38513b4d9d10920b2d9f446eb950fdf3" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>OnEnable</name></member>
+      <member refid="class_panel___upgrade___infos_1a9f543ab227da6cb4bcd8e89ac79aa74c" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>updatePanelInfos</name></member>
+      <member refid="class_panel___upgrade___infos_1aa5780d77421b27d6e2e5e2e74fd86b32" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>upgradeCost</name></member>
+      <member refid="class_panel___upgrade___infos_1a4760ac9d3f640ad99a09ab25588c0190" prot="private" virt="non-virtual"><scope>Panel_Upgrade_Infos</scope><name>upgradeText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

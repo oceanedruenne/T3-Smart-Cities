@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_969d2458b859a0b71e7793442a689e20" kind="dir">
+    <compoundname>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View</compoundname>
+    <innerfile refid="_map_observer_8cs">MapObserver.cs</innerfile>
+    <innerfile refid="_observer_8cs">Observer.cs</innerfile>
+    <innerfile refid="_panel___settings_8cs">Panel_Settings.cs</innerfile>
+    <innerfile refid="_panel___upgrade___infos_8cs">Panel_Upgrade_Infos.cs</innerfile>
+    <innerfile refid="_player_observer_8cs">PlayerObserver.cs</innerfile>
+    <innerfile refid="_script_button_commencer_8cs">ScriptButtonCommencer.cs</innerfile>
+    <innerfile refid="_script_button_quitter_8cs">ScriptButtonQuitter.cs</innerfile>
+    <innerfile refid="_script_button_valider_8cs">ScriptButtonValider.cs</innerfile>
+    <innerfile refid="_tile_8cs">Tile.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/"/>
+  </compounddef>
+</doxygen>

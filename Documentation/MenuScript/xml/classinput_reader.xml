@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classinput_reader" kind="class" language="C#" prot="public">
+    <compoundname>inputReader</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classinput_reader_1a946208dd02c4519d26290132c3d6e7a5" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string inputReader.cityName</definition>
+        <argsstring></argsstring>
+        <name>cityName</name>
+        <qualifiedname>inputReader.cityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputReader.cs" line="9" column="26" bodyfile="MenuScript/inputReader.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classinput_reader_1a1ca3debd9f53a2e6ef883ffc9f3cc3ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void inputReader.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>inputReader.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputReader.cs" line="11" column="10" bodyfile="MenuScript/inputReader.cs" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classinput_reader_1a4865e4b796599240fe54e1288cb95496" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void inputReader.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>inputReader.Update</qualifiedname>
+        <briefdescription>
+<para>Permet de lire le nom de la ville entré par l&apos;utilisateur dans l&apos;input de la scène &quot;Sign Up&quot;  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputReader.cs" line="22" column="10" bodyfile="MenuScript/inputReader.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>inputReader</label>
+        <link refid="classinput_reader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>inputReader</label>
+        <link refid="classinput_reader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MenuScript/inputReader.cs" line="7" column="7" bodyfile="MenuScript/inputReader.cs" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classinput_reader_1a946208dd02c4519d26290132c3d6e7a5" prot="public" virt="non-virtual"><scope>inputReader</scope><name>cityName</name></member>
+      <member refid="classinput_reader_1a1ca3debd9f53a2e6ef883ffc9f3cc3ea" prot="private" virt="non-virtual"><scope>inputReader</scope><name>Start</name></member>
+      <member refid="classinput_reader_1a4865e4b796599240fe54e1288cb95496" prot="private" virt="non-virtual"><scope>inputReader</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

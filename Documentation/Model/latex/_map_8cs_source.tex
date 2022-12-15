@@ -1,0 +1,448 @@
+\hypertarget{_map_8cs_source}{}\doxysection{Map.\+cs}
+\label{_map_8cs_source}\index{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/Model/Map.cs@{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/Model/Map.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00003}00003 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00005}00005 \textcolor{keyword}{using }Source.View;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_source_1_1_model}{Source.Model}}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00009}\mbox{\hyperlink{class_source_1_1_model_1_1_map}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_source_1_1_model_1_1_map}{Map}}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00011}00011         \textcolor{keyword}{public} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}[,] buildings;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00012}00012         \textcolor{keyword}{private} uint[] decree = \textcolor{keyword}{new} uint[2];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00013}00013         \textcolor{keyword}{private} uint[] boost = \textcolor{keyword}{new} uint[2];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00014}00014         \textcolor{keyword}{private} List<MapObserver> observers;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00017}00017         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00018}00018 \textcolor{comment}{          *Map : Constructeur : Map}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00019}00019 \textcolor{comment}{          *Paramètre : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00020}00020 \textcolor{comment}{          *taille : uint (par défaut elle est de 6)}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00021}00021 \textcolor{comment}{          Constructeur de la classe }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00022}00022 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00027}\mbox{\hyperlink{class_source_1_1_model_1_1_map_af90acd5313e8d776a72f4c59c60ef3f8}{00027}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_source_1_1_model_1_1_map_af90acd5313e8d776a72f4c59c60ef3f8}{Map}}(uint size = 6)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00028}00028             this.buildings = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}[size, size];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00029}00029             \mbox{\hyperlink{class_source_1_1_model_1_1_map_a1df46eac0d0d5f17f094e1eb976fce90}{fillMapRandom1}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00030}00030             observers = \textcolor{keyword}{new} List<MapObserver>();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00031}00031         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00033}00033         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00034}00034 \textcolor{comment}{        *fillMapEmpty : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00035}00035 \textcolor{comment}{        *Paramètre : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00036}00036 \textcolor{comment}{        Permet de remplir la Map qui est vide}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00037}00037 \textcolor{comment}{       */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00041}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a0f21f6e90095e6de534f9220f78933de}{00041}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a0f21f6e90095e6de534f9220f78933de}{fillMapEmpty}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00042}00042             \textcolor{keywordtype}{int} size =  buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00043}00043             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0;i < size;i++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00044}00044                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0;j < size;j++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00045}00045                     buildings[i,j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(BuildType.Empty);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00046}00046                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00047}00047             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00048}00048             buildings[3, 5] = \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}.\mbox{\hyperlink{class_source_1_1_model_1_1_building_a6f69a14bb624ec0683212d7fbabcd496}{createTransport}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00052}00052         \textcolor{comment}{/* fillMapRandom1 : fonction }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00053}00053 \textcolor{comment}{        Permet de générer la carte d'une manière aléatoire}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00054}00054 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00058}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a1df46eac0d0d5f17f094e1eb976fce90}{00058}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a1df46eac0d0d5f17f094e1eb976fce90}{fillMapRandom1}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00059}00059             \textcolor{keywordtype}{int} size = buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00060}00060             System.Random rand = \textcolor{keyword}{new} System.Random();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00061}00061             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0;i < size;i++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00062}00062                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0;j < size;j++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00063}00063                     buildings[i,j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(BuildType.Empty);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00064}00064                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00065}00065             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00067}00067             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<size/2;i++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00068}00068                 \textcolor{keywordtype}{int} x = rand.Next(size/(size/2))+i*2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00069}00069                 \textcolor{keywordtype}{int} y = rand.Next(size/(size/2))+i*2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00070}00070                 buildings[x,y] = \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}.\mbox{\hyperlink{class_source_1_1_model_1_1_building_a6f69a14bb624ec0683212d7fbabcd496}{createTransport}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00071}00071             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00075}00075         \textcolor{comment}{/* fillMapRandNoSeedEqualChance : fonction }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00076}00076 \textcolor{comment}{        Permet de générer une carte de manière aléatoire }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00077}00077 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00081}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a2e2f839feac8ddec1fdfcec6253f2147}{00081}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a2e2f839feac8ddec1fdfcec6253f2147}{fillMapRandNoSeedEqualChance}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00082}00082             \textcolor{keywordtype}{int} size =  buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00083}00083             System.Random rand = \textcolor{keyword}{new} System.Random();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00084}00084             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0;i < size;i++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00085}00085                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0;j < size;j++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00086}00086                     \textcolor{keywordtype}{int} rnd = rand.Next(Enum.GetNames(typeof(BuildType)).Length);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00087}00087                     buildings[i,j] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}((BuildType)rnd);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00088}00088                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00089}00089             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00090}00090         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00093}00093         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00094}00094 \textcolor{comment}{        *getUpgradeCostAt : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00095}00095 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00096}00096 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00097}00097 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00098}00098 \textcolor{comment}{        Permet d'accéder au coût d'amélioration d'une case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00099}00099 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00106}\mbox{\hyperlink{class_source_1_1_model_1_1_map_af936fa7f23672ab07008760b14f4de55}{00106}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_af936fa7f23672ab07008760b14f4de55}{getUpgradeCostAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00107}00107             \textcolor{keywordflow}{return} buildings[posx, posy].\mbox{\hyperlink{class_source_1_1_model_1_1_building_a646adf8f30ad39b58f33107300979ad5}{getUpgradeCost}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00111}00111         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00112}00112 \textcolor{comment}{        *getBuyCostAt : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00113}00113 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00114}00114 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00115}00115 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00116}00116 \textcolor{comment}{        Permet d'accéder au coût d'achat d'une case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00117}00117 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00124}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a40d5fff65ed864cf868f5c7bec75dd5d}{00124}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_a40d5fff65ed864cf868f5c7bec75dd5d}{getBuyCostAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00125}00125             \textcolor{keywordflow}{return} buildings[posx,posy].\mbox{\hyperlink{class_source_1_1_model_1_1_building_a6381592c3c3718de21d55995e5f6f96b}{getBuyCost}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00126}00126         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00128}00128         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00129}00129 \textcolor{comment}{        *getTypeAt : fonction : BuildType}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00130}00130 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00131}00131 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00132}00132 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00133}00133 \textcolor{comment}{        Permet d'accéder au type de bâtiment d'une case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00134}00134 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00141}\mbox{\hyperlink{class_source_1_1_model_1_1_map_aa30898e3c649f62a0399e2d16bea45a4}{00141}}         \textcolor{keyword}{public} BuildType \mbox{\hyperlink{class_source_1_1_model_1_1_map_aa30898e3c649f62a0399e2d16bea45a4}{getTypeAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00142}00142             \textcolor{keywordflow}{return} buildings[posx,posy].type;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00143}00143         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00146}00146         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00147}00147 \textcolor{comment}{        *getUnderMaxLevel : fonction : bool}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00148}00148 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00149}00149 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00150}00150 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00151}00151 \textcolor{comment}{        Permet de vérifier si le niveau d'amélioration est inférieur à 6}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00152}00152 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00159}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a24d6c6eb1f75233b59012833ee81cea4}{00159}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a24d6c6eb1f75233b59012833ee81cea4}{getUnderMaxLevel}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00160}00160             \textcolor{keywordflow}{return} buildings[posx,posy].level < 6;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00161}00161         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00164}00164         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00165}00165 \textcolor{comment}{        *buildAt : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00166}00166 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00167}00167 \textcolor{comment}{        * type : BuildType, type de bâtiment}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00168}00168 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00169}00169 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00170}00170 \textcolor{comment}{        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00171}00171 \textcolor{comment}{        */}   }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00179}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a3ea3ba7d576d1f89e2b909eccff0283c}{00179}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a3ea3ba7d576d1f89e2b909eccff0283c}{buildAt}}(BuildType type, uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00180}00180             \textcolor{keywordflow}{if}(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00181}00181             \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00182}00182                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} System.Exception(\textcolor{stringliteral}{"{}Map : Build : posx ou posy en dehors du tableau"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00183}00183             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00184}00184             \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} old = buildings[posx,posy];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00185}00185             buildings[posx,posy] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(type, old.buyMalus+\mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}.MALUS\_INCREASE, old.level);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00186}00186             \mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{notifyObserversPos}}(posx, posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00187}00187         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00191}00191         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00192}00192 \textcolor{comment}{        *buildAtNoMalus : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00193}00193 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00194}00194 \textcolor{comment}{        * type : BuildType, type de bâtiment}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00195}00195 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00196}00196 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00197}00197 \textcolor{comment}{        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres sans malus.}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00198}00198 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00206}\mbox{\hyperlink{class_source_1_1_model_1_1_map_ae6bc7db2ba5563c70c8686628da497b6}{00206}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_ae6bc7db2ba5563c70c8686628da497b6}{buildAtNoMalus}}(BuildType type, uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00207}00207             \textcolor{keywordflow}{if}(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00208}00208             \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00209}00209                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} System.Exception(\textcolor{stringliteral}{"{}Map : Build : posx ou posy en dehors du tableau"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00210}00210             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00211}00211             \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} old = buildings[posx,posy];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00212}00212             buildings[posx,posy] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(type, old.buyMalus, old.level);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00213}00213             \mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{notifyObserversPos}}(posx, posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00214}00214         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00217}00217         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00218}00218 \textcolor{comment}{        *destroyAt : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00219}00219 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00220}00220 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00221}00221 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00222}00222 \textcolor{comment}{        Permet de détruire un bâtiment dans la case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00223}00223 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00230}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a18489c76a4a2c926d44e428f9b9a9315}{00230}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a18489c76a4a2c926d44e428f9b9a9315}{destroyAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00231}00231             \textcolor{keywordflow}{if}(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00232}00232             \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00233}00233                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} System.Exception(\textcolor{stringliteral}{"{}Map : Build : posx ou posy en dehors du tableau"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00234}00234             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00235}00235             buildings[posx,posy] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(BuildType.Empty);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00236}00236             \mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{notifyObserversPos}}(posx, posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00237}00237         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00240}00240         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00241}00241 \textcolor{comment}{        * UpgradeAt  : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00242}00242 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00243}00243 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00244}00244 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00245}00245 \textcolor{comment}{        Permet d'améliorer le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00246}00246 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00253}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a853f1c172bd289e8674aa00d7cf76791}{00253}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a853f1c172bd289e8674aa00d7cf76791}{UpgradeAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00254}00254             \textcolor{keywordflow}{if}(posx > buildings.GetLength(0) || posy > buildings.GetLength(0))}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00255}00255             \{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00256}00256                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} System.Exception(\textcolor{stringliteral}{"{}Map : Build : posx ou posy en dehors du tableau"{}});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00257}00257             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00258}00258             \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} old = buildings[posx,posy];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00259}00259             buildings[posx,posy] = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(old.type, old.buyMalus, old.level + 1);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00260}00260             \mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{notifyObserversPos}}(posx, posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00261}00261         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00266}00266         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00267}00267 \textcolor{comment}{        *setDecree : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00268}00268 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00269}00269 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00270}00270 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00271}00271 \textcolor{comment}{        Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00272}00272 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00278}\mbox{\hyperlink{class_source_1_1_model_1_1_map_abe63cbf6d8c5e4c26836ca1c5299bc28}{00278}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_abe63cbf6d8c5e4c26836ca1c5299bc28}{setDecree}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00279}00279             decree[0] = posx;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00280}00280             decree[1] = posy;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00281}00281         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00284}00284 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00285}00285         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00286}00286 \textcolor{comment}{        *getDecree : fonction : bool}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00287}00287 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00288}00288 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00289}00289 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00290}00290 \textcolor{comment}{        Permet de vérifier si un décret existe sur la case dont les coordonnées sont passées en paramètres}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00291}00291 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00298}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a1bc6439dcb180d4153d9737f68197c35}{00298}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a1bc6439dcb180d4153d9737f68197c35}{getDecree}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00299}00299             \textcolor{keywordflow}{return} (decree[0] == posx) \&\& (decree[1] == posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00300}00300         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00301}00301 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00302}00302         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00303}00303 \textcolor{comment}{        *getDecreePos : fonction : int[]}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00304}00304 \textcolor{comment}{        Obtient les coordonnees du decret}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00305}00305 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00310}\mbox{\hyperlink{class_source_1_1_model_1_1_map_ae94b1d11c884e9f8e01823eb23f13653}{00310}}         \textcolor{keyword}{public} uint[] \mbox{\hyperlink{class_source_1_1_model_1_1_map_ae94b1d11c884e9f8e01823eb23f13653}{getDecreePos}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00311}00311             \textcolor{keywordflow}{return} decree;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00312}00312         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00313}00313 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00316}00316         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00317}00317 \textcolor{comment}{        *setDecree : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00318}00318 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00319}00319 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00320}00320 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00321}00321 \textcolor{comment}{        Permet de mettre un décret sur la case dont les coordonnées sont passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00322}00322 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00328}\mbox{\hyperlink{class_source_1_1_model_1_1_map_acf3f27966262c248947edfd958e41fa2}{00328}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_acf3f27966262c248947edfd958e41fa2}{setBoost}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00329}00329             boost[0] = posx;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00330}00330             boost[1] = posy;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00331}00331         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00332}00332 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00335}00335         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00336}00336 \textcolor{comment}{        *getBoost : fonction : bool}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00337}00337 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00338}00338 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00339}00339 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00340}00340 \textcolor{comment}{        Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres.}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00341}00341 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00348}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a51ac137fb09ad5262c9be3d702d9e535}{00348}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a51ac137fb09ad5262c9be3d702d9e535}{getBoost}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00349}00349             \textcolor{keywordflow}{return} (boost[0] == posx) \&\& (boost[1] == posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00350}00350         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00351}00351 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00352}00352         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00353}00353 \textcolor{comment}{        *getBoostPos : fonction : int[]}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00354}00354 \textcolor{comment}{        Permet d'obtenir la position du boost}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00355}00355 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00360}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a0ad5e450429efaf5ef513662d73caf97}{00360}}         \textcolor{keyword}{public} uint[] \mbox{\hyperlink{class_source_1_1_model_1_1_map_a0ad5e450429efaf5ef513662d73caf97}{getBoostPos}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00361}00361             \textcolor{keywordflow}{return} boost;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00362}00362         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00363}00363 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00364}00364 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00365}00365         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00366}00366 \textcolor{comment}{        *getIncomeAt : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00367}00367 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00368}00368 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00369}00369 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00370}00370 \textcolor{comment}{        Permet de récupérer les revenus générés par le bâtiment dans la case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00371}00371 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00378}\mbox{\hyperlink{class_source_1_1_model_1_1_map_aec6f3c220a206b3d79f5b28e153bc017}{00378}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_aec6f3c220a206b3d79f5b28e153bc017}{getIncomeAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00379}00379             uint income = 0;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00380}00380             BuildType type = \mbox{\hyperlink{class_source_1_1_model_1_1_map_aa30898e3c649f62a0399e2d16bea45a4}{getTypeAt}}(posx,posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00381}00381             \textcolor{keywordflow}{if}(type == BuildType.Housing || type == BuildType.Office)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00382}00382                 income += buildings[posx,posy].\mbox{\hyperlink{class_source_1_1_model_1_1_building_af5d9de35e32bc1cd94281739c8b2a527}{getIncome}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00383}00383                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_source_1_1_model_1_1_map_ab261f5fc29020bc102d9693e6bb73e15}{isAdjacentToTransport}}(posx,posy))\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00384}00384                     income += income/2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00385}00385                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00386}00386                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_source_1_1_model_1_1_map_a51ac137fb09ad5262c9be3d702d9e535}{getBoost}}(posx,posy))\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00387}00387                     income += income/2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00388}00388                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00389}00389             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00390}00390             \textcolor{keywordflow}{return} income;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00391}00391         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00392}00392 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00393}00393 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00394}00394 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00395}00395         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00396}00396 \textcolor{comment}{        *getIncomeAfterUpgradeAt : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00397}00397 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00398}00398 \textcolor{comment}{        * posx : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00399}00399 \textcolor{comment}{        * posy : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00400}00400 \textcolor{comment}{        Permet de construire un bâtiment de type passé en paramètre dans la case ayant comme coordonnées celles passées en paramètres. }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00401}00401 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00408}\mbox{\hyperlink{class_source_1_1_model_1_1_map_aa8e961e8cea026a48d6ef35742b7a34f}{00408}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_aa8e961e8cea026a48d6ef35742b7a34f}{getIncomeAfterUpgradeAt}}(uint posx, uint posy)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00409}00409             uint income = 0;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00410}00410             BuildType type = \mbox{\hyperlink{class_source_1_1_model_1_1_map_aa30898e3c649f62a0399e2d16bea45a4}{getTypeAt}}(posx,posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00411}00411             \textcolor{keywordflow}{if}(type == BuildType.Housing || type == BuildType.Office)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00412}00412                 income += buildings[posx,posy].\mbox{\hyperlink{class_source_1_1_model_1_1_building_a0d66e12530fb1e361cc34beb524b3b74}{getIncomeAfterUpgrade}}();}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00413}00413                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_source_1_1_model_1_1_map_ab261f5fc29020bc102d9693e6bb73e15}{isAdjacentToTransport}}(posx,posy))\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00414}00414                     income += income/2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00415}00415                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00416}00416                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_source_1_1_model_1_1_map_a51ac137fb09ad5262c9be3d702d9e535}{getBoost}}(posx,posy))\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00417}00417                     income += income/2;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00418}00418                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00419}00419             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00420}00420             income -\/= this.\mbox{\hyperlink{class_source_1_1_model_1_1_map_aec6f3c220a206b3d79f5b28e153bc017}{getIncomeAt}}(posx, posy);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00421}00421             \textcolor{keywordflow}{return} income;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00422}00422         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00423}00423 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00424}00424 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00426}00426         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00427}00427 \textcolor{comment}{        *isAdjacentToTransport : fonction : bool}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00428}00428 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00429}00429 \textcolor{comment}{        * x : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00430}00430 \textcolor{comment}{        * y : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00431}00431 \textcolor{comment}{        Permet de vérifier si la case passée en paramètre est proche d'une case contenant un transport }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00432}00432 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00439}\mbox{\hyperlink{class_source_1_1_model_1_1_map_ab261f5fc29020bc102d9693e6bb73e15}{00439}}         \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_source_1_1_model_1_1_map_ab261f5fc29020bc102d9693e6bb73e15}{isAdjacentToTransport}}(uint x, uint y)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00440}00440             \textcolor{keywordtype}{bool} res = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00441}00441             \textcolor{keywordtype}{int} size = buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00442}00442             \textcolor{keywordflow}{if}(y+1 < size \&\& buildings[x,y+1].type == BuildType.Transport)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00443}00443                 res = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00444}00444             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00445}00445             \textcolor{keywordflow}{if}(!res \&\& y > 0 \&\& buildings[x,y-\/1].type == BuildType.Transport)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00446}00446                 res = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00447}00447             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00448}00448             \textcolor{keywordflow}{if}(!res \&\& x+1 < size \&\& buildings[x+1,y].type == BuildType.Transport)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00449}00449                 res = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00450}00450             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00451}00451             \textcolor{keywordflow}{if}(!res \&\& x > 0 \&\& buildings[x-\/1,y].type == BuildType.Transport)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00452}00452                 res = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00453}00453             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00454}00454             \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00455}00455         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00456}00456 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00457}00457 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00458}00458         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00459}00459 \textcolor{comment}{        *getIncomeFromType : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00460}00460 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00461}00461 \textcolor{comment}{        * type : BuildType : type de bâtiment}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00462}00462 \textcolor{comment}{        Permet de récupérer les revenus de tous les bâtiments d'un type donné}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00463}00463 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00469}\mbox{\hyperlink{class_source_1_1_model_1_1_map_aed084ee7e24bffeaa86929f6d1b5d084}{00469}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_aed084ee7e24bffeaa86929f6d1b5d084}{getIncomeFromType}}(BuildType type)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00470}00470             uint total = 0;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00471}00471             \textcolor{keywordtype}{int} size = buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00472}00472             \textcolor{keywordflow}{for}(uint x=0;x<size; x++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00473}00473                 \textcolor{keywordflow}{for}(uint y=0;y<size; y++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00474}00474                     \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} building = buildings[x,y];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00475}00475                     \textcolor{keywordflow}{if}(building.type == type)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00476}00476                         total += \mbox{\hyperlink{class_source_1_1_model_1_1_map_aec6f3c220a206b3d79f5b28e153bc017}{getIncomeAt}}(x,y);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00477}00477                     \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00478}00478                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00479}00479             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00480}00480             \textcolor{keywordflow}{return} total;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00481}00481         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00482}00482 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00483}00483 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00484}00484         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00485}00485 \textcolor{comment}{        *getScoreFromType : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00486}00486 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00487}00487 \textcolor{comment}{        * type : BuildType : type de bâtiment}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00488}00488 \textcolor{comment}{        Permet de récupérer le score généré par les bâtiments ayant le même type que celui passé en paramètre}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00489}00489 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00495}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a5331a6da7899205feb22329575507bf7}{00495}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_map_a5331a6da7899205feb22329575507bf7}{getScoreFromType}}(BuildType type)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00496}00496             uint total= 0;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00497}00497             \textcolor{keywordtype}{int} size = buildings.GetLength(0);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00498}00498             \textcolor{keywordflow}{for}(uint x=0;x<size; x++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00499}00499                 \textcolor{keywordflow}{for}(uint y=0;y<size; y++)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00500}00500                     \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} building = buildings[x,y];}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00501}00501                     \textcolor{keywordflow}{if}(building.type == type)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00502}00502                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_source_1_1_model_1_1_map_ab261f5fc29020bc102d9693e6bb73e15}{isAdjacentToTransport}}(x,y))\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00503}00503                             total+=(uint)(400*(building.level+1)*building.buyMalus);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00504}00504                         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00505}00505                         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00506}00506                             total+=(uint)(100*(building.level+1)*building.buyMalus);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00507}00507                         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00508}00508                     \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00509}00509                 \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00510}00510             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00511}00511             \textcolor{keywordflow}{return} total;}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00512}00512         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00513}00513 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00514}00514 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00515}00515         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00516}00516 \textcolor{comment}{        *addObserver : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00517}00517 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00518}00518 \textcolor{comment}{        * observer : MapObserver : Observeur de map}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00519}00519 \textcolor{comment}{        Permet d'ajouter des observers}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00520}00520 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00525}\mbox{\hyperlink{class_source_1_1_model_1_1_map_ab53b3b9fec19ea931166e93706d2aae7}{00525}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_ab53b3b9fec19ea931166e93706d2aae7}{addObserver}}(MapObserver observer)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00526}00526             this.observers.Add(observer);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00527}00527         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00528}00528 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00529}00529         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00530}00530 \textcolor{comment}{        *notifyObservers : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00531}00531 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00532}00532 \textcolor{comment}{        Permet de notifier les observers}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00533}00533 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00537}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a697af9801c48c2435f440796b9a027a8}{00537}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a697af9801c48c2435f440796b9a027a8}{notifyObservers}}()\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00538}00538             \textcolor{keywordflow}{foreach}(MapObserver observer \textcolor{keywordflow}{in} observers)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00539}00539                 observer.reactTo(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00540}00540             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00541}00541         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00542}00542 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00543}00543         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00544}00544 \textcolor{comment}{        *notifyObserversPos : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00545}00545 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00546}00546 \textcolor{comment}{        * x : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00547}00547 \textcolor{comment}{        * y : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00548}00548 \textcolor{comment}{        Permet de notifier les observers qui ont comme coordonnées celles passées en paramètres}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00549}00549 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00555}\mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{00555}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_a7edad6097d6a1435de6e9d34ea1420ae}{notifyObserversPos}}(uint x, uint y)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00556}00556             \textcolor{keywordflow}{foreach}(MapObserver observer \textcolor{keywordflow}{in} observers)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00557}00557                 observer.reactToPos(\textcolor{keyword}{this}, x, y);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00558}00558             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00559}00559         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00560}00560 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00561}00561 }
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00562}00562         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00563}00563 \textcolor{comment}{        *notifyObserversChange : fonction}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00564}00564 \textcolor{comment}{        *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00565}00565 \textcolor{comment}{        * x : uint, coordonnée }}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00566}00566 \textcolor{comment}{        * y : uint : coordonnée}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00567}00567 \textcolor{comment}{        Permet de notifier les observers qui ont comme coordonnées celles passées en paramètres.}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00568}00568 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00574}\mbox{\hyperlink{class_source_1_1_model_1_1_map_af9507d04241388568bd252e6d041827c}{00574}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_source_1_1_model_1_1_map_af9507d04241388568bd252e6d041827c}{notifyObserverChange}}(uint x, uint y)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00575}00575             \textcolor{keywordflow}{foreach}(MapObserver observer \textcolor{keywordflow}{in} observers)\{}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00576}00576                 observer.UpdateInfoFrom(\textcolor{keyword}{this}, x, y);}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00577}00577             \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00578}00578         \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00579}00579     \}}
+\DoxyCodeLine{\Hypertarget{_map_8cs_source_l00580}00580 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_menu" kind="class" language="C#" prot="public">
+    <compoundname>Menu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_1a0f9d4ced5292864156261dc6b0137455" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.loadScene1</definition>
+        <argsstring>()</argsstring>
+        <name>loadScene1</name>
+        <qualifiedname>Menu.loadScene1</qualifiedname>
+        <briefdescription>
+<para>Permet de charger la première scène  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/Menu.cs" line="11" column="17" bodyfile="MenuScript/Menu.cs" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1ac4dd9f67ca516222c8de9741367caed4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.exitGame</definition>
+        <argsstring>()</argsstring>
+        <name>exitGame</name>
+        <qualifiedname>Menu.exitGame</qualifiedname>
+        <briefdescription>
+<para>Permet de quitter le jeu  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/Menu.cs" line="19" column="17" bodyfile="MenuScript/Menu.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1acfdbe97e29abbbdc94592da819a134be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.loadCredit</definition>
+        <argsstring>()</argsstring>
+        <name>loadCredit</name>
+        <qualifiedname>Menu.loadCredit</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;ouvrir l&apos;URL de notre git  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/Menu.cs" line="27" column="17" bodyfile="MenuScript/Menu.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="MenuScript/Menu.cs" line="6" column="7" bodyfile="MenuScript/Menu.cs" bodystart="7" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_menu_1ac4dd9f67ca516222c8de9741367caed4" prot="public" virt="non-virtual"><scope>Menu</scope><name>exitGame</name></member>
+      <member refid="class_menu_1acfdbe97e29abbbdc94592da819a134be" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadCredit</name></member>
+      <member refid="class_menu_1a0f9d4ced5292864156261dc6b0137455" prot="public" virt="non-virtual"><scope>Menu</scope><name>loadScene1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

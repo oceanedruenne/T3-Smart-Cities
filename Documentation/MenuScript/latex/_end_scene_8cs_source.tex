@@ -1,0 +1,37 @@
+\hypertarget{_end_scene_8cs_source}{}\doxysection{End\+Scene.\+cs}
+\label{_end_scene_8cs_source}\index{MenuScript/EndScene.cs@{MenuScript/EndScene.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00005}00005 \textcolor{keyword}{using }TMPro;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00007}\mbox{\hyperlink{class_end_scene}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_end_scene}{EndScene}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00009}00009     }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00010}00010     \textcolor{keyword}{public} \textcolor{keyword}{static} uint playerCityScore;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00011}00011     \textcolor{keyword}{public} \textcolor{keyword}{static} uint playerCityMoney;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00013}00013     \textcolor{keyword}{public} \textcolor{keyword}{static} uint playerCompanyScore;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00014}00014     \textcolor{keyword}{public} \textcolor{keyword}{static} uint playerCompanyMoney;}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00016}00016     \textcolor{comment}{// Permet d'afficher les informations dans la scène finale}}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00017}00017     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00019}00019         TextMeshProUGUI scoreMunicipalite = GameObject.Find(\textcolor{stringliteral}{"{}txtScoreMunicipalite"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00020}00020         TextMeshProUGUI argentMunicipalite = GameObject.Find(\textcolor{stringliteral}{"{}txtArgentMunicipalite"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00021}00021         TextMeshProUGUI scoreGafam = GameObject.Find(\textcolor{stringliteral}{"{}txtScoreGafam"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00022}00022         TextMeshProUGUI argentGafam = GameObject.Find(\textcolor{stringliteral}{"{}txtArgentGafam"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00023}00023         TextMeshProUGUI nomVille = GameObject.Find(\textcolor{stringliteral}{"{}txtNameCity"{}}).GetComponent<TextMeshProUGUI>(); }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00025}00025         scoreMunicipalite.text = PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}playerCityScore"{}}).ToString();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00026}00026         argentMunicipalite.text = PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}playerCityMoney"{}}).ToString();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00027}00027         scoreGafam.text = PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}playerCompanyScore"{}}).ToString();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00028}00028         argentGafam.text = PlayerPrefs.GetInt(\textcolor{stringliteral}{"{}playerCompanyMoney"{}}).ToString();}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00029}00029         nomVille.text = PlayerPrefs.GetString(\textcolor{stringliteral}{"{}cityName"{}});  }
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_end_scene_8cs_source_l00031}00031 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,1069 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_model_1_1_map" kind="class" language="C#" prot="public">
+    <compoundname>Source::Model::Map</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_map_1a7312ec4c03902471613e485d0617c735" prot="public" static="no" mutable="no">
+        <type><ref refid="class_source_1_1_model_1_1_building" kindref="compound">Building</ref>[,]</type>
+        <definition>Building [,] Source.Model.Map.buildings</definition>
+        <argsstring></argsstring>
+        <name>buildings</name>
+        <qualifiedname>Source.Model.Map.buildings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="11" column="25" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_map_1abfa1319f036bd83432c84d09badc4f9f" prot="private" static="no" mutable="no">
+        <type>uint[]</type>
+        <definition>uint [] Source.Model.Map.decree</definition>
+        <argsstring></argsstring>
+        <name>decree</name>
+        <qualifiedname>Source.Model.Map.decree</qualifiedname>
+        <initializer>= new uint[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="12" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_map_1a8b945e7e1d7223709e9d8f1be4c53a99" prot="private" static="no" mutable="no">
+        <type>uint[]</type>
+        <definition>uint [] Source.Model.Map.boost</definition>
+        <argsstring></argsstring>
+        <name>boost</name>
+        <qualifiedname>Source.Model.Map.boost</qualifiedname>
+        <initializer>= new uint[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="13" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_map_1ae1a0590ec784e05d5b6b8416bcce7bf9" prot="private" static="no" mutable="no">
+        <type>List&lt; MapObserver &gt;</type>
+        <definition>List&lt;MapObserver&gt; Source.Model.Map.observers</definition>
+        <argsstring></argsstring>
+        <name>observers</name>
+        <qualifiedname>Source.Model.Map.observers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="14" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1af90acd5313e8d776a72f4c59c60ef3f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Source.Model.Map.Map</definition>
+        <argsstring>(uint size=6)</argsstring>
+        <name>Map</name>
+        <qualifiedname>Source.Model.Map.Map</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>size</declname>
+          <defval>6</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur de <ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="27" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a0f21f6e90095e6de534f9220f78933de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.fillMapEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>fillMapEmpty</name>
+        <qualifiedname>Source.Model.Map.fillMapEmpty</qualifiedname>
+        <briefdescription>
+<para>Permet de remplir la <ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="41" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a1df46eac0d0d5f17f094e1eb976fce90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.fillMapRandom1</definition>
+        <argsstring>()</argsstring>
+        <name>fillMapRandom1</name>
+        <qualifiedname>Source.Model.Map.fillMapRandom1</qualifiedname>
+        <briefdescription>
+<para>Permet de générer une carte de manière aléatoire  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="58" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="58" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a2e2f839feac8ddec1fdfcec6253f2147" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.fillMapRandNoSeedEqualChance</definition>
+        <argsstring>()</argsstring>
+        <name>fillMapRandNoSeedEqualChance</name>
+        <qualifiedname>Source.Model.Map.fillMapRandNoSeedEqualChance</qualifiedname>
+        <briefdescription>
+<para>Permet de générer une carte de manière aléatoire  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="81" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="81" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1af936fa7f23672ab07008760b14f4de55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getUpgradeCostAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getUpgradeCostAt</name>
+        <qualifiedname>Source.Model.Map.getUpgradeCostAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer le coût d&apos;amélioration à la case ayant comme coordonnées les entiers passés en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Le coût d&apos;amélioration d&apos;une case</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="106" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a40d5fff65ed864cf868f5c7bec75dd5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getBuyCostAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getBuyCostAt</name>
+        <qualifiedname>Source.Model.Map.getBuyCostAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer le coût d&apos;achat de la case ayant comme coordonnées les paramètres de la fonction  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Le coût d&apos;achat d&apos;une case</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="124" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1aa30898e3c649f62a0399e2d16bea45a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BuildType</type>
+        <definition>BuildType Source.Model.Map.getTypeAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getTypeAt</name>
+        <qualifiedname>Source.Model.Map.getTypeAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer le type de bâtiment de la case ayant comme coordonées les paramètres de la fonction  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>le type de bâtiment</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="141" column="26" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a24d6c6eb1f75233b59012833ee81cea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Source.Model.Map.getUnderMaxLevel</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getUnderMaxLevel</name>
+        <qualifiedname>Source.Model.Map.getUnderMaxLevel</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si le niveau d&apos;amélioration est inférieur à 6  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne vrai si le niveau est inférieur à 6, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="159" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a3ea3ba7d576d1f89e2b909eccff0283c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.buildAt</definition>
+        <argsstring>(BuildType type, uint posx, uint posy)</argsstring>
+        <name>buildAt</name>
+        <qualifiedname>Source.Model.Map.buildAt</qualifiedname>
+        <param>
+          <type>BuildType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de construire sur la case ayant comme coordonnées les paramètres de la fonction  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="179" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="179" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1ae6bc7db2ba5563c70c8686628da497b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.buildAtNoMalus</definition>
+        <argsstring>(BuildType type, uint posx, uint posy)</argsstring>
+        <name>buildAtNoMalus</name>
+        <qualifiedname>Source.Model.Map.buildAtNoMalus</qualifiedname>
+        <param>
+          <type>BuildType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de construire sans malus dans la case ayant comme coordonnées les paramètres de la fonction  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="206" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="206" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a18489c76a4a2c926d44e428f9b9a9315" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.destroyAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>destroyAt</name>
+        <qualifiedname>Source.Model.Map.destroyAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de détruire un bâtiment à la case dont les coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="230" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="230" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a853f1c172bd289e8674aa00d7cf76791" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.UpgradeAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>UpgradeAt</name>
+        <qualifiedname>Source.Model.Map.UpgradeAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;améliorer à la case dont les coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="253" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="253" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1abe63cbf6d8c5e4c26836ca1c5299bc28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.setDecree</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>setDecree</name>
+        <qualifiedname>Source.Model.Map.setDecree</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de mettre un décret de la case dont les coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="278" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a1bc6439dcb180d4153d9737f68197c35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Source.Model.Map.getDecree</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getDecree</name>
+        <qualifiedname>Source.Model.Map.getDecree</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier s&apos;il y a un décret  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne vrai s&apos;il en existe un, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="298" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="298" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1ae94b1d11c884e9f8e01823eb23f13653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint[]</type>
+        <definition>uint[] Source.Model.Map.getDecreePos</definition>
+        <argsstring>()</argsstring>
+        <name>getDecreePos</name>
+        <qualifiedname>Source.Model.Map.getDecreePos</qualifiedname>
+        <briefdescription>
+<para>Obtient la position du decret sur la carte  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne un tableau d&apos;entier contenant les coordonnées x et y</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="310" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="310" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1acf3f27966262c248947edfd958e41fa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.setBoost</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>setBoost</name>
+        <qualifiedname>Source.Model.Map.setBoost</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de mettre en place le décret  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="328" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a51ac137fb09ad5262c9be3d702d9e535" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Source.Model.Map.getBoost</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getBoost</name>
+        <qualifiedname>Source.Model.Map.getBoost</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si un boost est placé sur la case dont les coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne vrai si un boost existe, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="348" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="348" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a0ad5e450429efaf5ef513662d73caf97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint[]</type>
+        <definition>uint[] Source.Model.Map.getBoostPos</definition>
+        <argsstring>()</argsstring>
+        <name>getBoostPos</name>
+        <qualifiedname>Source.Model.Map.getBoostPos</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;obtenir la position du boost  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne un tableau d&apos;entier contenant les coordonnées x et y</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="360" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="360" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1aec6f3c220a206b3d79f5b28e153bc017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getIncomeAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getIncomeAt</name>
+        <qualifiedname>Source.Model.Map.getIncomeAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer les bénéfices du bâtiment dont les coordonnées de sa case sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne les revenus générés par le bâtiment sur la case dont les coordonnées sont passées en paramètres.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="378" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="378" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1aa8e961e8cea026a48d6ef35742b7a34f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getIncomeAfterUpgradeAt</definition>
+        <argsstring>(uint posx, uint posy)</argsstring>
+        <name>getIncomeAfterUpgradeAt</name>
+        <qualifiedname>Source.Model.Map.getIncomeAfterUpgradeAt</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer les bénéfices du bâtiment après son amélioration dont les coordonnées de sa case sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne les revenus générés par le bâtiment dans la case dont les cooordonnées sont passées en paramètres après son amélioration.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="408" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="408" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1ab261f5fc29020bc102d9693e6bb73e15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Source.Model.Map.isAdjacentToTransport</definition>
+        <argsstring>(uint x, uint y)</argsstring>
+        <name>isAdjacentToTransport</name>
+        <qualifiedname>Source.Model.Map.isAdjacentToTransport</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si la case passée en paramètre est proche d&apos;une case contenant un transport  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne vrai si c&apos;est le cas, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="439" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="439" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1aed084ee7e24bffeaa86929f6d1b5d084" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getIncomeFromType</definition>
+        <argsstring>(BuildType type)</argsstring>
+        <name>getIncomeFromType</name>
+        <qualifiedname>Source.Model.Map.getIncomeFromType</qualifiedname>
+        <param>
+          <type>BuildType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer les revenus de tous les bâtiments d&apos;un type donné  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>les revenus des bâtiments ayant le même type que celui passé en paramètre</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="469" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="469" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a5331a6da7899205feb22329575507bf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Map.getScoreFromType</definition>
+        <argsstring>(BuildType type)</argsstring>
+        <name>getScoreFromType</name>
+        <qualifiedname>Source.Model.Map.getScoreFromType</qualifiedname>
+        <param>
+          <type>BuildType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer le score de tous les bâtiments d&apos;un type donné  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Le score généré par les bâtiments ayant le même type que celui passé en paramètre</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="495" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="495" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1ab53b3b9fec19ea931166e93706d2aae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.addObserver</definition>
+        <argsstring>(MapObserver observer)</argsstring>
+        <name>addObserver</name>
+        <qualifiedname>Source.Model.Map.addObserver</qualifiedname>
+        <param>
+          <type>MapObserver</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;ajouter des observers  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>observer</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="525" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="525" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a697af9801c48c2435f440796b9a027a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.notifyObservers</definition>
+        <argsstring>()</argsstring>
+        <name>notifyObservers</name>
+        <qualifiedname>Source.Model.Map.notifyObservers</qualifiedname>
+        <briefdescription>
+<para>Permet de notifier les observers  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="537" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="537" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1a7edad6097d6a1435de6e9d34ea1420ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.notifyObserversPos</definition>
+        <argsstring>(uint x, uint y)</argsstring>
+        <name>notifyObserversPos</name>
+        <qualifiedname>Source.Model.Map.notifyObserversPos</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Permet de notifier les observers des changements de position  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="555" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="555" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_map_1af9507d04241388568bd252e6d041827c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Map.notifyObserverChange</definition>
+        <argsstring>(uint x, uint y)</argsstring>
+        <name>notifyObserverChange</name>
+        <qualifiedname>Source.Model.Map.notifyObserverChange</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Permet de notifier les observers  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="574" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="574" bodyend="578"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Source.Model.Map</label>
+        <link refid="class_source_1_1_model_1_1_map"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>buildings</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Source.Model.Building</label>
+        <link refid="class_source_1_1_model_1_1_building"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" line="9" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Map.cs" bodystart="10" bodyend="579"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_model_1_1_map_1ab53b3b9fec19ea931166e93706d2aae7" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>addObserver</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a8b945e7e1d7223709e9d8f1be4c53a99" prot="private" virt="non-virtual"><scope>Source::Model::Map</scope><name>boost</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a3ea3ba7d576d1f89e2b909eccff0283c" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>buildAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1ae6bc7db2ba5563c70c8686628da497b6" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>buildAtNoMalus</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a7312ec4c03902471613e485d0617c735" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>buildings</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1abfa1319f036bd83432c84d09badc4f9f" prot="private" virt="non-virtual"><scope>Source::Model::Map</scope><name>decree</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a18489c76a4a2c926d44e428f9b9a9315" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>destroyAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a0f21f6e90095e6de534f9220f78933de" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>fillMapEmpty</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a2e2f839feac8ddec1fdfcec6253f2147" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>fillMapRandNoSeedEqualChance</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a1df46eac0d0d5f17f094e1eb976fce90" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>fillMapRandom1</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a51ac137fb09ad5262c9be3d702d9e535" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getBoost</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a0ad5e450429efaf5ef513662d73caf97" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getBoostPos</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a40d5fff65ed864cf868f5c7bec75dd5d" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getBuyCostAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a1bc6439dcb180d4153d9737f68197c35" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getDecree</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1ae94b1d11c884e9f8e01823eb23f13653" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getDecreePos</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1aa8e961e8cea026a48d6ef35742b7a34f" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getIncomeAfterUpgradeAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1aec6f3c220a206b3d79f5b28e153bc017" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getIncomeAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1aed084ee7e24bffeaa86929f6d1b5d084" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getIncomeFromType</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a5331a6da7899205feb22329575507bf7" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getScoreFromType</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1aa30898e3c649f62a0399e2d16bea45a4" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getTypeAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a24d6c6eb1f75233b59012833ee81cea4" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getUnderMaxLevel</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1af936fa7f23672ab07008760b14f4de55" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>getUpgradeCostAt</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1ab261f5fc29020bc102d9693e6bb73e15" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>isAdjacentToTransport</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1af90acd5313e8d776a72f4c59c60ef3f8" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>Map</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1af9507d04241388568bd252e6d041827c" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>notifyObserverChange</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a697af9801c48c2435f440796b9a027a8" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>notifyObservers</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a7edad6097d6a1435de6e9d34ea1420ae" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>notifyObserversPos</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1ae1a0590ec784e05d5b6b8416bcce7bf9" prot="private" virt="non-virtual"><scope>Source::Model::Map</scope><name>observers</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1acf3f27966262c248947edfd958e41fa2" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>setBoost</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1abe63cbf6d8c5e4c26836ca1c5299bc28" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>setDecree</name></member>
+      <member refid="class_source_1_1_model_1_1_map_1a853f1c172bd289e8674aa00d7cf76791" prot="public" virt="non-virtual"><scope>Source::Model::Map</scope><name>UpgradeAt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

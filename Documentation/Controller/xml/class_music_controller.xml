@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_music_controller" kind="class" language="C#" prot="public">
+    <compoundname>MusicController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_music_controller_1a2bbb661d43b30e1ab45ebcdacc21872b" prot="private" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource MusicController.source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>MusicController.source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" line="8" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_music_controller_1a262af298ee2c96b1f04d4f8a2ae58ef9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MusicController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>MusicController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" line="11" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" bodystart="11" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_music_controller_1a8c64757431907b81f82295e0281d8b57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MusicController.setMusic</definition>
+        <argsstring>()</argsstring>
+        <name>setMusic</name>
+        <qualifiedname>MusicController.setMusic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" line="16" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" bodystart="16" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>MusicController</label>
+        <link refid="class_music_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>MusicController</label>
+        <link refid="class_music_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" line="5" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/MusicController.cs" bodystart="6" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_music_controller_1a8c64757431907b81f82295e0281d8b57" prot="public" virt="non-virtual"><scope>MusicController</scope><name>setMusic</name></member>
+      <member refid="class_music_controller_1a2bbb661d43b30e1ab45ebcdacc21872b" prot="private" virt="non-virtual"><scope>MusicController</scope><name>source</name></member>
+      <member refid="class_music_controller_1a262af298ee2c96b1f04d4f8a2ae58ef9" prot="private" virt="non-virtual"><scope>MusicController</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

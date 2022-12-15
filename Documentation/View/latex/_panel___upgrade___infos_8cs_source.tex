@@ -1,0 +1,116 @@
+\hypertarget{_panel___upgrade___infos_8cs_source}{}\doxysection{Panel\+\_\+\+Upgrade\+\_\+\+Infos.\+cs}
+\label{_panel___upgrade___infos_8cs_source}\index{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/View/Panel\_Upgrade\_Infos.cs@{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/View/Panel\_Upgrade\_Infos.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00001}00001 \textcolor{keyword}{using }Source.Controller;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00004}00004 \textcolor{keyword}{using }TMPro;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00005}00005 \textcolor{keyword}{using }Unity.VisualScripting;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00006}00006 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00007}00007 \textcolor{keyword}{using }UnityEngine.UIElements;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00009}\mbox{\hyperlink{class_panel___upgrade___infos}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_panel___upgrade___infos}{Panel\_Upgrade\_Infos}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00011}00011     GameHandler gh = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00013}00013     \textcolor{comment}{//Tableau des infos}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00014}00014     TextMeshProUGUI[] infos = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00016}00016     \textcolor{comment}{//Prix amelioration batiment}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00017}00017     uint upgradeCost;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00018}00018     \textcolor{keyword}{private} TextMeshProUGUI upgradeText;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00020}00020     \textcolor{comment}{//Revenus en + pour le batiment apres amelioration (Gain + NvRevenus)}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00021}00021     uint newIncome = 0;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00022}00022     \textcolor{keyword}{private} TextMeshProUGUI newIncomeText;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00025}00025     \textcolor{comment}{// CONSTRUCTEUR}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00029}00029 \textcolor{comment}{}    \textcolor{keyword}{private} \textcolor{keywordtype}{void} Awake()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00031}00031         Debug.Log(\textcolor{stringliteral}{"{}Awake"{}});}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00032}00032         initGameHandler();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00033}00033         initInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00034}00034         updatePanelInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00038}00038     \textcolor{comment}{// Activation}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00042}00042 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00043}00043     \textcolor{keyword}{private} \textcolor{keywordtype}{void} OnEnable()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00044}00044     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00045}00045         Debug.Log(\textcolor{stringliteral}{"{}OnEnable"{}});}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00046}00046         initGameHandler();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00047}00047         initInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00048}00048         updatePanelInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00051}00051     \textcolor{comment}{/* initGameHandler : fonction }}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00052}00052 \textcolor{comment}{     Permet d'initialiser le GameHandler }}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00053}00053 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00057}00057     }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00058}00058     \textcolor{keyword}{private} \textcolor{keywordtype}{void} initGameHandler()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00059}00059     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00060}00060         \textcolor{keywordflow}{if}(gh == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00061}00061         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00062}00062             gh = FindObjectOfType<GameHandler>();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00066}00066     \textcolor{comment}{/* initInfos : fonction }}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00067}00067 \textcolor{comment}{    Permet d'initialiser les informations}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00068}00068 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00072}00072     \textcolor{keyword}{private} \textcolor{keywordtype}{void} initInfos()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00073}00073     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00074}00074         \textcolor{keywordflow}{if}(infos == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00075}00075         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00076}00076             infos = GetComponentsInChildren<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00077}00077             upgradeText = infos[0];}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00078}00078             newIncomeText = infos[1];}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00081}00081         Debug.Log(\textcolor{stringliteral}{"{}X = "{}} + gh.posx + \textcolor{stringliteral}{"{} | Y = "{}} + gh.posy);}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00082}00082         \textcolor{keywordflow}{if}(gh.posx >= 0 \&\& gh.posy >= 0 \&\& gh.map.getUnderMaxLevel((uint)gh.posx, (uint)gh.posy))}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00083}00083         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00085}00085             upgradeCost = gh.map.getUpgradeCostAt((uint)gh.posx, (uint)gh.posy);}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00086}00086             newIncome = gh.map.getIncomeAfterUpgradeAt((uint)gh.posx, (uint)gh.posy);}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00088}00088         \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00089}00089         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00090}00090         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00091}00091             upgradeCost = 0;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00092}00092             newIncome = 0;}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00093}00093         \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00096}00096     \textcolor{comment}{/* updatePanelInfos : fonction }}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00097}00097 \textcolor{comment}{    Permet de mettre à jour les informations du panel}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00098}00098 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00102}00102     \textcolor{keyword}{private} \textcolor{keywordtype}{void} updatePanelInfos()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00103}00103     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00104}00104         \textcolor{keywordflow}{if}(upgradeCost == 0 \&\& newIncome == 0)}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00105}00105         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00106}00106             upgradeText.text = \textcolor{stringliteral}{"{}Prix :  N/A"{}};}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00107}00107             newIncomeText.text = \textcolor{stringliteral}{"{}Gain :  N/A"{}};}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00109}00109         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00110}00110         \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00111}00111             upgradeText.text = \textcolor{stringliteral}{"{}Prix :  "{}} + upgradeCost.ToString();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00112}00112             newIncomeText.text = \textcolor{stringliteral}{"{}Gain : +"{}} + newIncome.ToString();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00113}00113         \}    }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00114}00114     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00117}00117     \textcolor{comment}{/* clickUpdate : fonction }}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00118}00118 \textcolor{comment}{    Permet de modifier les informations quand il y a un clic}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00119}00119 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00123}\mbox{\hyperlink{class_panel___upgrade___infos_aed7c2a94d42006434dfe8781f5e20c4f}{00123}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_panel___upgrade___infos_aed7c2a94d42006434dfe8781f5e20c4f}{clickUpdate}}()}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00124}00124     \{}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00125}00125         initInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00126}00126         updatePanelInfos();}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{_panel___upgrade___infos_8cs_source_l00128}00128 \}}
+
+\end{DoxyCode}

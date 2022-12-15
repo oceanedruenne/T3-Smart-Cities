@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classshow_turns" kind="class" language="C#" prot="public">
+    <compoundname>showTurns</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classshow_turns_1a7c8475f93eb01f4a44057e99e5e0c33a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void showTurns.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>showTurns.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/showTurns.cs" line="11" column="10" bodyfile="MenuScript/showTurns.cs" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classshow_turns_1a547d14ac753687adee9cb759e293e1ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void showTurns.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>showTurns.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/showTurns.cs" line="19" column="10" bodyfile="MenuScript/showTurns.cs" bodystart="19" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>showTurns</label>
+        <link refid="classshow_turns"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>showTurns</label>
+        <link refid="classshow_turns"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MenuScript/showTurns.cs" line="7" column="7" bodyfile="MenuScript/showTurns.cs" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classshow_turns_1a7c8475f93eb01f4a44057e99e5e0c33a" prot="private" virt="non-virtual"><scope>showTurns</scope><name>Start</name></member>
+      <member refid="classshow_turns_1a547d14ac753687adee9cb759e293e1ef" prot="private" virt="non-virtual"><scope>showTurns</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

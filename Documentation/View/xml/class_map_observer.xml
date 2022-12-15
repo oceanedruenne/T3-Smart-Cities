@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_map_observer" kind="class" language="C#" prot="public">
+    <compoundname>MapObserver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+    <basecompoundref refid="interface_source_1_1_view_1_1_observer" prot="public" virt="non-virtual">Source.View.Observer</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_map_observer_1a811b2a2745f927be9032d0219d62a0ff" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapObserver.gridObject</definition>
+        <argsstring></argsstring>
+        <name>gridObject</name>
+        <qualifiedname>MapObserver.gridObject</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Grid&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="16" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1aa1a980ad024b426379de46167a44539e" prot="private" static="no" mutable="no">
+        <type>Grid</type>
+        <definition>Grid MapObserver.grid</definition>
+        <argsstring></argsstring>
+        <name>grid</name>
+        <qualifiedname>MapObserver.grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="17" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a9b52574ba9b5c70b277d1691f176b6aa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MapObserver.size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>MapObserver.size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="18" column="9" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1adf1a832cdd851eced775bd92380c18aa" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapObserver.tilePrefab</definition>
+        <argsstring></argsstring>
+        <name>tilePrefab</name>
+        <qualifiedname>MapObserver.tilePrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="19" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a26d43217f8d469d69eb45d9c84ae8f2d" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; Vector3Int, GameObject &gt;</type>
+        <definition>Dictionary&lt;Vector3Int, GameObject&gt; MapObserver.tilesd</definition>
+        <argsstring></argsstring>
+        <name>tilesd</name>
+        <qualifiedname>MapObserver.tilesd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="20" column="24" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a15e38374976855a55b0300a4a7292362" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapObserver.panelInfos</definition>
+        <argsstring></argsstring>
+        <name>panelInfos</name>
+        <qualifiedname>MapObserver.panelInfos</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Panel Infos&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="23" column="24" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1aa4a20f1cf5f1b5bb6028e496803a4e83" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI MapObserver.textLevel</definition>
+        <argsstring></argsstring>
+        <name>textLevel</name>
+        <qualifiedname>MapObserver.textLevel</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Level&quot;).GetComponent&lt;TextMeshProUGUI&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="25" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a0dff3bc28b502b592f37fc28c6e6bb7d" prot="private" static="no" mutable="no">
+        <type>Image</type>
+        <definition>Image MapObserver.imageObject</definition>
+        <argsstring></argsstring>
+        <name>imageObject</name>
+        <qualifiedname>MapObserver.imageObject</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Sprite&quot;).GetComponent&lt;Image&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="26" column="19" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a6188fe74c444b4daf67d79d9f029d4b5" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI MapObserver.textPrice</definition>
+        <argsstring></argsstring>
+        <name>textPrice</name>
+        <qualifiedname>MapObserver.textPrice</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Price&quot;).GetComponent&lt;TextMeshProUGUI&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="27" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a1eb90ed3ba0307e1fcc49cc813d5b2a0" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI MapObserver.textIncome</definition>
+        <argsstring></argsstring>
+        <name>textIncome</name>
+        <qualifiedname>MapObserver.textIncome</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Income&quot;).GetComponent&lt;TextMeshProUGUI&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="28" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1af1e3c9e5ed3cfd1aabdf28a6aea30e60" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject MapObserver.panelAvatar</definition>
+        <argsstring></argsstring>
+        <name>panelAvatar</name>
+        <qualifiedname>MapObserver.panelAvatar</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Panel Avatar&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="31" column="24" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1ae6417fd74a3cd93c1d94ff9fa68f70cd" prot="private" static="no" mutable="no">
+        <type>Image</type>
+        <definition>Image MapObserver.avatarObject</definition>
+        <argsstring></argsstring>
+        <name>avatarObject</name>
+        <qualifiedname>MapObserver.avatarObject</qualifiedname>
+        <initializer>= GameObject.Find(&quot;Avatar&quot;).GetComponent&lt;Image&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="33" column="19" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a210664eca4223c718aa44cea494acac6" prot="private" static="no" mutable="no">
+        <type>Image</type>
+        <definition>Image MapObserver.avatarObjectConstant</definition>
+        <argsstring></argsstring>
+        <name>avatarObjectConstant</name>
+        <qualifiedname>MapObserver.avatarObjectConstant</qualifiedname>
+        <initializer>= GameObject.Find(&quot;AvatarConstant&quot;).GetComponent&lt;Image&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="34" column="19" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1ad6255d7917fa30e66582d6ff26ece878" prot="private" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite MapObserver.spriteCompany</definition>
+        <argsstring></argsstring>
+        <name>spriteCompany</name>
+        <qualifiedname>MapObserver.spriteCompany</qualifiedname>
+        <initializer>= Resources.Load&lt;Sprite&gt;(&quot;Textures/UI/Sprite_companyIcon&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="36" column="12" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a9e9c749a38b5525ee49492bcb4aec8a6" prot="private" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite MapObserver.spriteMayor</definition>
+        <argsstring></argsstring>
+        <name>spriteMayor</name>
+        <qualifiedname>MapObserver.spriteMayor</qualifiedname>
+        <initializer>= Resources.Load&lt;Sprite&gt;(&quot;Textures/UI/Sprite_mayorIcon&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="37" column="12" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_observer_1a7b4292b5b4c92dd2e6715c2c5b25dbfb" prot="private" static="no" mutable="no">
+        <type>GameHandler</type>
+        <definition>GameHandler MapObserver.gameHandler</definition>
+        <argsstring></argsstring>
+        <name>gameHandler</name>
+        <qualifiedname>MapObserver.gameHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="40" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_observer_1a51003d4362fab0eae348660d9029954b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MapObserver.MapObserver</definition>
+        <argsstring>(Map map, GameHandler gh)</argsstring>
+        <name>MapObserver</name>
+        <qualifiedname>MapObserver.MapObserver</qualifiedname>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>GameHandler</type>
+          <declname>gh</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur de <ref refid="class_map_observer" kindref="compound">MapObserver</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gh</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="54" column="12" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1a6449e674d495bc2440a1e52ae93bdabc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.genMap</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>genMap</name>
+        <qualifiedname>MapObserver.genMap</qualifiedname>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet de générer la map  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="70" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1ad6619a6ed0f462cdc3fc91c1ee84370c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>GameObject MapObserver.getTileAtPosition</definition>
+        <argsstring>(Vector3Int pos)</argsstring>
+        <name>getTileAtPosition</name>
+        <qualifiedname>MapObserver.getTileAtPosition</qualifiedname>
+        <param>
+          <type>Vector3Int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer la case dont ses coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>La case à la position pos</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="124" column="23" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="124" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1a336cdcb1153328dd67c25580539f96ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.reactTo</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>reactTo</name>
+        <qualifiedname>MapObserver.reactTo</qualifiedname>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet de réagir aux changements  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="141" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="141" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1aeb644f33e81c4dd1aaf08b29e986a7e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.reactToPos</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>reactToPos</name>
+        <qualifiedname>MapObserver.reactToPos</qualifiedname>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de réagir aux changements  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="168" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1a086027c31ee577d18dc0fcb9d4e468d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.UpdateInfoFrom</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>UpdateInfoFrom</name>
+        <qualifiedname>MapObserver.UpdateInfoFrom</qualifiedname>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de modifier les informations de la case dont les coordonnées sont passées en paramètres  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="187" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="187" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1ad4fc726109f832e533173abaa60f1497" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.hideInfo</definition>
+        <argsstring>(bool isCity)</argsstring>
+        <name>hideInfo</name>
+        <qualifiedname>MapObserver.hideInfo</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>isCity</declname>
+        </param>
+        <briefdescription>
+<para>Permet de cacher les informations  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isCity</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="206" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="206" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_map_observer_1afba8d86870599026d849d5a35ed60861" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.emptyGrid</definition>
+        <argsstring>()</argsstring>
+        <name>emptyGrid</name>
+        <qualifiedname>MapObserver.emptyGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="77" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1a85da27f2c40879766981d438a959ada7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.generateGrid</definition>
+        <argsstring>()</argsstring>
+        <name>generateGrid</name>
+        <qualifiedname>MapObserver.generateGrid</qualifiedname>
+        <briefdescription>
+<para>Permet de générer la grille  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="89" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="89" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_observer_1aad0745616de2bb2d6cfb9f506b2fd02d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MapObserver.changeInfos</definition>
+        <argsstring>(int level, uint price, uint income, Sprite image)</argsstring>
+        <name>changeInfos</name>
+        <qualifiedname>MapObserver.changeInfos</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>price</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>income</declname>
+        </param>
+        <param>
+          <type>Sprite</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Permet de changer les informations  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>income</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="240" column="18" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="240" bodyend="254"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MapObserver</label>
+        <link refid="class_map_observer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Observer</label>
+        <link refid="interface_source_1_1_view_1_1_observer"/>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MapObserver</label>
+        <link refid="class_map_observer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Observer</label>
+        <link refid="interface_source_1_1_view_1_1_observer"/>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" line="14" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/MapObserver.cs" bodystart="15" bodyend="255"/>
+    <listofallmembers>
+      <member refid="class_map_observer_1ae6417fd74a3cd93c1d94ff9fa68f70cd" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>avatarObject</name></member>
+      <member refid="class_map_observer_1a210664eca4223c718aa44cea494acac6" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>avatarObjectConstant</name></member>
+      <member refid="class_map_observer_1aad0745616de2bb2d6cfb9f506b2fd02d" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>changeInfos</name></member>
+      <member refid="class_map_observer_1afba8d86870599026d849d5a35ed60861" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>emptyGrid</name></member>
+      <member refid="class_map_observer_1a7b4292b5b4c92dd2e6715c2c5b25dbfb" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>gameHandler</name></member>
+      <member refid="class_map_observer_1a85da27f2c40879766981d438a959ada7" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>generateGrid</name></member>
+      <member refid="class_map_observer_1a6449e674d495bc2440a1e52ae93bdabc" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>genMap</name></member>
+      <member refid="class_map_observer_1ad6619a6ed0f462cdc3fc91c1ee84370c" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>getTileAtPosition</name></member>
+      <member refid="class_map_observer_1aa1a980ad024b426379de46167a44539e" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>grid</name></member>
+      <member refid="class_map_observer_1a811b2a2745f927be9032d0219d62a0ff" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>gridObject</name></member>
+      <member refid="class_map_observer_1ad4fc726109f832e533173abaa60f1497" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>hideInfo</name></member>
+      <member refid="class_map_observer_1a0dff3bc28b502b592f37fc28c6e6bb7d" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>imageObject</name></member>
+      <member refid="class_map_observer_1a51003d4362fab0eae348660d9029954b" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>MapObserver</name></member>
+      <member refid="class_map_observer_1af1e3c9e5ed3cfd1aabdf28a6aea30e60" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>panelAvatar</name></member>
+      <member refid="class_map_observer_1a15e38374976855a55b0300a4a7292362" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>panelInfos</name></member>
+      <member refid="class_map_observer_1a336cdcb1153328dd67c25580539f96ac" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>reactTo</name></member>
+      <member refid="interface_source_1_1_view_1_1_observer_1a7645cb46a2b0ce65d33c9260155266d5" prot="public" virt="non-virtual" ambiguityscope="Source::View::Observer."><scope>MapObserver</scope><name>reactTo</name></member>
+      <member refid="class_map_observer_1aeb644f33e81c4dd1aaf08b29e986a7e0" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>reactToPos</name></member>
+      <member refid="class_map_observer_1a9b52574ba9b5c70b277d1691f176b6aa" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>size</name></member>
+      <member refid="class_map_observer_1ad6255d7917fa30e66582d6ff26ece878" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>spriteCompany</name></member>
+      <member refid="class_map_observer_1a9e9c749a38b5525ee49492bcb4aec8a6" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>spriteMayor</name></member>
+      <member refid="class_map_observer_1a1eb90ed3ba0307e1fcc49cc813d5b2a0" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>textIncome</name></member>
+      <member refid="class_map_observer_1aa4a20f1cf5f1b5bb6028e496803a4e83" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>textLevel</name></member>
+      <member refid="class_map_observer_1a6188fe74c444b4daf67d79d9f029d4b5" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>textPrice</name></member>
+      <member refid="class_map_observer_1adf1a832cdd851eced775bd92380c18aa" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>tilePrefab</name></member>
+      <member refid="class_map_observer_1a26d43217f8d469d69eb45d9c84ae8f2d" prot="private" virt="non-virtual"><scope>MapObserver</scope><name>tilesd</name></member>
+      <member refid="class_map_observer_1a086027c31ee577d18dc0fcb9d4e468d7" prot="public" virt="non-virtual"><scope>MapObserver</scope><name>UpdateInfoFrom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_f8aa4293453eee9d13c5cb7f3b3f7908" kind="dir">
+    <compoundname>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller</compoundname>
+    <innerfile refid="_audio_controller_8cs">AudioController.cs</innerfile>
+    <innerfile refid="_game_handler_8cs">GameHandler.cs</innerfile>
+    <innerfile refid="_music_controller_8cs">MusicController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/"/>
+  </compounddef>
+</doxygen>
