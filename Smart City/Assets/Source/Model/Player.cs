@@ -25,13 +25,14 @@ namespace Source.Model
         /// <summary>
         /// Constructeur de joueur
         /// </summary>
-        public Player(){
+        public Player()
+        {
             this.money = BASE_MONEY;
             this.score = 0;
             this.observers = new List<PlayerObserver>();
             name = new TextMeshProUGUI();
             this.name.text = "test";
-            this.earn= 0;
+            this.earn = 0;
         }
 
 
@@ -107,10 +108,12 @@ namespace Source.Model
         /// <param name="posx"></param>
         /// <param name="posy"></param>
         /// <returns>renvoie vrai si l'amélioration s'est faite, sinon faux</returns>
-        public bool Upgrade(Map map, uint posx, uint posy){
-            if(canUpgrade(map,posx,posy)){
-                money -= map.getUpgradeCostAt(posx,posy);
-                map.UpgradeAt(posx,posy);
+        public bool Upgrade(Map map, uint posx, uint posy)
+        {
+            if (canUpgrade(map, posx, posy))
+            {
+                money -= map.getUpgradeCostAt(posx, posy);
+                map.UpgradeAt(posx, posy);
                 notifyObservers();
                 return true;
             }
@@ -171,7 +174,8 @@ namespace Source.Model
         /// Permet d'ajouter un observeur
         /// </summary>
         /// <param name="observer"></param>
-        public void addObserver(PlayerObserver observer){
+        public void addObserver(PlayerObserver observer)
+        {
             this.observers.Add(observer);
         }
 
@@ -184,9 +188,19 @@ namespace Source.Model
         /// <summary>
         /// Permet de notifier les observers
         /// </summary>
-        public void notifyObservers(){
-            foreach(PlayerObserver observer in observers){
+        public void notifyObservers()
+        {
+            foreach (PlayerObserver observer in observers)
+            {
                 observer.reactTo(this);
+            }
+        }
+
+        public void notifyObserversEndRound()
+        {
+            foreach (PlayerObserver observer in observers)
+            {
+                observer.reactToEndRound(this);
             }
         }
 
