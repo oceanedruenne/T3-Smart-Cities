@@ -2024,6 +2024,50 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &903012715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903012717}
+  - component: {fileID: 903012716}
+  m_Layer: 0
+  m_Name: GObtnNextTurn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &903012716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903012715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fed505d2bf21ee6ad32a1a5f8cf7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &903012717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903012715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000817060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,9 +2780,25 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 205110854}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 903012715}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: nextTurn
@@ -2746,6 +2806,14 @@ PrefabInstance:
     - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Source.Controller.GameHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Source.Controller.GameHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 249621808578255161, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 249621808578255162, guid: 681931df03702aa41adb5706e7ac839d, type: 3}
       propertyPath: m_Pivot.x
@@ -2853,6 +2921,7 @@ GameObject:
   - component: {fileID: 1177854584}
   - component: {fileID: 1177854586}
   - component: {fileID: 1177854585}
+  - component: {fileID: 1177854587}
   m_Layer: 5
   m_Name: AvatarConstant
   m_TagString: Untagged
@@ -2920,6 +2989,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177854583}
   m_CullTransparentMesh: 1
+--- !u!114 &1177854587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177854583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fed505d2bf21ee6ad32a1a5f8cf7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1286574324
 PrefabInstance:
   m_ObjectHideFlags: 0
