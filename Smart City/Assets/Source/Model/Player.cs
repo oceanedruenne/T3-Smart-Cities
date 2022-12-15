@@ -196,11 +196,11 @@ namespace Source.Model
             }
         }
 
-        public void notifyObserversEndRound()
+        public void notifyObserversBeginRound(Player player, Map map)
         {
             foreach (PlayerObserver observer in observers)
             {
-                observer.reactToEndRound(this);
+                observer.reactToBeginRound(this, map);
             }
         }
 
@@ -217,7 +217,7 @@ namespace Source.Model
         public abstract bool isCity();
 
         //
-        public abstract void earnAfterRound(Map map);
+        public abstract uint earnAfterTurn(Map map);
 
         public uint getScore()
         {

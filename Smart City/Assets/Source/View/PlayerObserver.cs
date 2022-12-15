@@ -4,6 +4,7 @@ using UnityEngine;
 using Source.View;
 using Source.Model;
 using TMPro;
+using Source.Controller;
 
 public class PlayerObserver : ScriptableObject, Observer
 {
@@ -46,12 +47,12 @@ public class PlayerObserver : ScriptableObject, Observer
         scoreText.text = player.score.ToString();
         moneyText.text = player.money.ToString();
         nameText.text = player.name.ToString();
-        Debug.Log("player observer " + player.earn.ToString());
+        //Debug.Log("player observer " + player.earn.ToString());
     }
 
-    public void reactToEndRound(Player player)
+    public void reactToBeginRound(Player player, Map map)
     {
         panellFinTour.SetActive(true);
-        earnText.text = player.name + " + " + player.earn.ToString();
+        earnText.text = player.name + " + " + player.earnAfterTurn(map);
     }
 }

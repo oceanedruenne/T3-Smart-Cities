@@ -68,11 +68,19 @@ namespace Source.Controller
             activePlayer.notifyObservers();
         }
 
-        IEnumerator IendRound()
+        IEnumerator IbeginTurn()
         {
             yield return new WaitForSeconds(0);
-            activePlayer.earnAfterRound(map);
-            activePlayer.notifyObserversEndRound();
+            Player player;
+            if(activePlayer.isCity())
+            {
+                playerCompany.earnAfterTurn(map);
+            }
+            else
+            {
+                playerCity.earnAfterTurn(map);
+            }    
+            activePlayer.notifyObserversBeginRound(activePlayer, map);
             yield return new WaitForSeconds(3);
             activePlayer.earn = 0;
         }
@@ -122,7 +130,8 @@ namespace Source.Controller
         /// Tour suivant
         /// </summary>
         public void nextTurn()
-        {
+        {   
+            activePlayer.earn = 0;
             if (turn+1 > turnLimit)
             {
                 endTurn();
@@ -134,17 +143,16 @@ namespace Source.Controller
             }
             if (activePlayer.isCity())
             {
-                StartCoroutine(IendRound());
                 activePlayer = playerCompany;
             }
             else
             {
-                StartCoroutine(IendRound());
                 activePlayer = playerCity;
             }
             resetSelectedTile();
             turn++;
             TurnText.text = turn + " / " + turnLimit;
+            StartCoroutine(IbeginTurn());
             StartCoroutine(InewRound());
         }
 
