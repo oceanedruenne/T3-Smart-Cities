@@ -12,7 +12,7 @@ namespace Source.Model
         public City(){
             this.money = BASE_MONEY;
         }
-        int TURN_BONUS = 0;
+        
         /*
             *Buy : fonction : bool
             *Paramètres : 
@@ -141,7 +141,9 @@ namespace Source.Model
         /// <param name="map"></param>
         public override void addIncome(Map map)
         {
-            money += (uint)TURN_BONUS + map.getIncomeFromType(BuildType.Housing);
+            uint tempMoney = map.getIncomeFromType(BuildType.Housing);
+            money += tempMoney;
+            earn = tempMoney;
             notifyObservers();
         }
 
@@ -171,14 +173,6 @@ namespace Source.Model
         public override bool isCity()
         {
             return true;
-        }
-
-
-        public override uint earnAfterTurn(Map map)
-        {
-            earn = map.getIncomeFromType(BuildType.Housing);
-            Debug.Log("ville : " + earn);
-            return earn;
         }
     }
 

@@ -77,7 +77,7 @@ namespace Source.Model
         /// </summary>
         /// <returns>Les revenus du bâtiment</returns>
         public uint getIncome(){
-            return (uint)(BASE_INCOME * ((level / 1f) + 1));
+            return (uint)(BASE_INCOME * ((uint)(level / 1f) + 1));
         }
 
         /*
@@ -90,7 +90,7 @@ namespace Source.Model
         /// </summary>
         /// <returns>Les bénéfices du bâtiment après son amélioration</returns>
         public uint getIncomeAfterUpgrade(){
-            return (uint)(BASE_INCOME * (((level+1) / 2f) + 1));
+            return (uint)(BASE_INCOME * ((uint)((level+1) / 1f) + 1));
         }
 
         /*
