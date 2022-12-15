@@ -9,7 +9,6 @@ namespace Source.Model
 {
     public abstract class Player
     {
-        protected static uint BASE_MONEY = 3000;
         public uint money;
         public uint score;
         public TMP_Text name;
@@ -27,7 +26,6 @@ namespace Source.Model
         /// </summary>
         public Player()
         {
-            this.money = BASE_MONEY;
             this.score = 0;
             this.observers = new List<PlayerObserver>();
             name = new TextMeshProUGUI();
@@ -215,9 +213,6 @@ namespace Source.Model
         /// </summary>
         /// <returns>retourne vrai</returns>
         public abstract bool isCity();
-
-        //
-        public abstract uint earnAfterTurn(Map map);
 
         public uint getScore()
         {

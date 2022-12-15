@@ -52,7 +52,6 @@ namespace Source.Controller
         {
             startNewGame();
             StartCoroutine(LateStart(0.2f));
-            PlayerPrefs.SetInt("tourTotal",(int)this.turnLimit);
             panel = GameObject.Find("PanelHaut");
             avatar = GameObject.Find("AvatarConstant");
             TurnText = GameObject.Find("TurnText").GetComponent<TextMeshProUGUI>();
@@ -69,17 +68,7 @@ namespace Source.Controller
         }
 
         IEnumerator IbeginTurn()
-        {
-            yield return new WaitForSeconds(0);
-            Player player;
-            if(activePlayer.isCity())
-            {
-                playerCompany.earnAfterTurn(map);
-            }
-            else
-            {
-                playerCity.earnAfterTurn(map);
-            }    
+        {  
             activePlayer.notifyObserversBeginRound(activePlayer, map);
             yield return new WaitForSeconds(3);
             activePlayer.earn = 0;
