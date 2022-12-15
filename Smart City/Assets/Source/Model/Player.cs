@@ -214,9 +214,6 @@ namespace Source.Model
         /// <returns>retourne vrai</returns>
         public abstract bool isCity();
 
-        //
-        public abstract uint earnAfterTurn(Map map);
-
         public uint getScore()
         {
             return this.score;

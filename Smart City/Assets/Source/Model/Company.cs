@@ -7,7 +7,6 @@ namespace Source.Model
     public class Company : Player
     {
         protected static uint BASE_MONEY = 10000;
-        int TURN_BONUS = 0;
 
         public Company(){
             this.money = BASE_MONEY;
@@ -140,7 +139,10 @@ namespace Source.Model
         /// <param name="map"></param>
         public override void addIncome(Map map)
         {
-            money += (uint)TURN_BONUS + map.getIncomeFromType(BuildType.Office);
+            uint tempMoney = 0;
+            tempMoney += map.getIncomeFromType(BuildType.Office);
+            money += tempMoney;
+            earn = tempMoney;
             notifyObservers();
         }
 
@@ -192,13 +194,6 @@ namespace Source.Model
         public override bool isCity()
         {
             return false;
-        }
-
-        public override uint earnAfterTurn(Map map)
-        {
-            earn = map.getIncomeFromType(BuildType.Office);
-            Debug.Log("entreprise : " + earn);
-            return earn;
         }
     }
 }

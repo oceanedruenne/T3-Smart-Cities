@@ -68,15 +68,7 @@ namespace Source.Controller
         }
 
         IEnumerator IbeginTurn()
-        {
-            if(activePlayer.isCity())
-            {
-                playerCompany.earnAfterTurn(map);
-            }
-            else
-            {
-                playerCity.earnAfterTurn(map);
-            }    
+        {  
             activePlayer.notifyObserversBeginRound(activePlayer, map);
             yield return new WaitForSeconds(3);
             activePlayer.earn = 0;
