@@ -13,7 +13,7 @@ public class inputWriter : MonoBehaviour
    /// </summary>
     void Start()
     {   
-        TextMeshProUGUI VilleText = GameObject.Find("NomText").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI VilleText = GameObject.Find("NameText").GetComponent<TextMeshProUGUI>();
         VilleText.text = PlayerPrefs.GetString("cityName");
     }
 

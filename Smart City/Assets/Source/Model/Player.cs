@@ -204,5 +204,15 @@ namespace Source.Model
 
         //
         public abstract void earnAfterRound(Map map);
+
+        public uint getScore()
+        {
+            return this.score;
+        }
+
+        public uint getMoney()
+        {
+            return this.money;
+        }
     }
 }
