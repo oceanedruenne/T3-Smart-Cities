@@ -1,0 +1,5 @@
+sudo dpkg -i smartcity.deb
+sudo mv myapp.desktop /usr/share/applications
+sudo mv cp myapp.desktop ~/.local/share/applications
+
+launcher dans application?
