@@ -183,6 +183,6 @@ namespace Source.Model
         public override void earnAfterRound(Map map)
         {
             earn = map.getIncomeFromType(BuildType.Housing);
-        }
+        } 
     }
 }

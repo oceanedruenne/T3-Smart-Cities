@@ -22,6 +22,11 @@ namespace Source.Controller
         private PlayerObserver playerObserver;
         private MapObserver mapObserver;
 
+        public uint playerCityScore;
+        public uint playerCityMoney;
+        public uint playerCompanyScore;
+        public uint playerCompanyMoney;
+
         public int posx;
         public int posy;
         public Tile currTile = null;
@@ -131,7 +136,15 @@ namespace Source.Controller
             activePlayer.setScore(map);
 
             //Ajouter les actions de fin de jeu
-            Debug.Log("Fin du jeu");
+            playerCityMoney = playerCity.getMoney();
+            playerCityScore = playerCity.getScore();
+            playerCompanyMoney = playerCompany.getMoney();
+            playerCompanyScore = playerCompany.getScore();
+
+            PlayerPrefs.SetInt("playerCityMoney",(int)playerCityMoney);
+            PlayerPrefs.SetInt("playerCityScore",(int)playerCityScore);
+            PlayerPrefs.SetInt("playerCompanyMoney",(int) playerCompanyMoney);
+            PlayerPrefs.SetInt("playerCompanyScore",(int) playerCompanyScore);
         }
 
 
