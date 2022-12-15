@@ -214,11 +214,27 @@ namespace Source.Model
         /// <returns>retourne vrai</returns>
         public abstract bool isCity();
 
+        /* 
+        * getScore : fonction : uint
+        * Permet d'accéder au score du joueur
+        */
+        /// <summary>
+        /// Permet d'accéder au score du joueur
+        /// </summary>
+        /// <returns>retourne le score du joueur</returns>
         public uint getScore()
         {
             return this.score;
         }
 
+        /* 
+        * getMoney : fonction : uint
+        * Permet d'accéder à l'argent du joueur
+        */
+        /// <summary>
+        /// Permet d'accéder à l'argent du joueur
+        /// </summary>
+        /// <returns>retourne l'argent du joueur</returns>
         public uint getMoney()
         {
             return this.money;

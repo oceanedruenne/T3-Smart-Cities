@@ -9,7 +9,7 @@ public class ScriptButtonCommencer : MonoBehaviour
     /*
     *BtnNextScene : fonction 
     Permet de passer à la scène suivante 
-   */
+    */
     /// <summary>
     /// Permet de passer à la scène d'inscription
     /// </summary>

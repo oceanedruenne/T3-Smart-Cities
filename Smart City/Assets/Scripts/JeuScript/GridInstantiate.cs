@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class GridInstantiate : MonoBehaviour
 {
-    //GameObject = Tile ?
     [SerializeField] GameObject[] tiles;
     [SerializeField] int gridHeight = 6;
     [SerializeField] int gridWidth = 6;
@@ -17,13 +16,13 @@ public class GridInstantiate : MonoBehaviour
         GenerateGrid();
     }
 
-        /*
-        *GenerateGrid : fonction 
-        Permet de générer une grille
-        */
-        /// <summary>
-        /// Permet de générer une grille
-        /// </summary>
+    /*
+    *GenerateGrid : fonction 
+    Permet de générer une grille
+    */
+    /// <summary>
+    /// Permet de générer une grille
+    /// </summary>
     private void GenerateGrid()
     {
         tilesd = new Dictionary<Vector3Int, GameObject>();
@@ -50,17 +49,17 @@ public class GridInstantiate : MonoBehaviour
         }
     }
 
-      /*
-       *getTileAtPosition : fonction : GameObject
-       * Paramètre : pos : Vector3Int
-       * Variable locale : Vector3Int dictionaryKey
-       Permet de récupérer la case à la position passée en paramètre
-       */
-      /// <summary>
-      /// Permet de récupérer la case à la position passée en paramètre
-      /// </summary>
-      /// <param name="pos"></param>
-      /// <returns>La case à la position pos</returns>
+    /*
+    *getTileAtPosition : fonction : GameObject
+    * Paramètre : pos : Vector3Int
+    * Variable locale : Vector3Int dictionaryKey
+    Permet de récupérer la case à la position passée en paramètre
+    */
+    /// <summary>
+    /// Permet de récupérer la case à la position passée en paramètre
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns>La case à la position pos</returns>
     public GameObject getTileAtPosition(Vector3Int pos)
     {
         Vector3Int dictionaryKey = pos;
