@@ -87,7 +87,7 @@ namespace Source.Model
         /// <returns>renvoie vrai si le bâtiment peut être amélioré, sinon faux</returns>
         public override bool canUpgrade(Map map, uint posx, uint posy)
         {
-            bool temp = map.getBuyCostAt(posx, posy) <= money;
+            bool temp = map.getUpgradeCostAt(posx, posy) <= money;
             temp &= map.getUnderMaxLevel(posx, posy);
             switch (map.getTypeAt(posx, posy))
             {
