@@ -11,7 +11,7 @@ public class ScriptButtonQuitter : MonoBehaviour
     /*
     *ExitGame : fonction
     Permet de quitter le jeu
-   */
+    */
     /// <summary>
     /// Permet de quitter le jeu
     /// </summary>

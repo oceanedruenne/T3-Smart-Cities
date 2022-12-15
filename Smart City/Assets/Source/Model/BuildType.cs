@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Source.Model
 {
-    // EnumÈration des types de b‚timents disponibles dans le jeu
+    // Enum√©ration des types de b√¢timents disponibles dans le jeu
     public enum BuildType : int
     {
         Empty,

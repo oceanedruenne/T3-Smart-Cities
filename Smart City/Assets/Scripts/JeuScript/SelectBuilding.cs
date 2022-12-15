@@ -11,8 +11,8 @@ public class SelectBuilding : MonoBehaviour
     }
 
     /* changeBuilding() : 
-       Paramètres : Sprite building
-       Permet de changer de building*/
+    Paramètres : Sprite building
+    Permet de changer de building*/
     /// <summary>
     /// Permet de changer le building
     /// </summary>

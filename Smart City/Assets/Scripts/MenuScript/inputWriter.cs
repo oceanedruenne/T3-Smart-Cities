@@ -8,9 +8,9 @@ public class inputWriter : MonoBehaviour
 {
     public static string cityName;
 
-   /// <summary>
-   /// On récupère le nom de ville écrit par le joueur dans la scène "Sign Up" et on l'affiche dans la scène "GameScene"
-   /// </summary>
+    /// <summary>
+    /// On récupère le nom de ville écrit par le joueur dans la scène "Sign Up" et on l'affiche dans la scène "GameScene"
+    /// </summary>
     void Start()
     {   
         GameObject panel = GameObject.Find("PanelHaut");

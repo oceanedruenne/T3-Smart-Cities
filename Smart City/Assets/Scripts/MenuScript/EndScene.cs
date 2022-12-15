@@ -6,13 +6,14 @@ using TMPro;
 
 public class EndScene : MonoBehaviour
 {
-    // Update is called once per frame
+    
     public static uint playerCityScore;
     public static uint playerCityMoney;
 
     public static uint playerCompanyScore;
     public static uint playerCompanyMoney;
 
+    // Permet d'afficher les informations dans la scène finale
     void Update()
     {
         TextMeshProUGUI scoreMunicipalite = GameObject.Find("txtScoreMunicipalite").GetComponent<TextMeshProUGUI>();

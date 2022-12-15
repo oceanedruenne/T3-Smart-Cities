@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-   /// <summary>
-   /// Permet de charger la première scène
-   /// </summary>
+    /// <summary>
+    /// Permet de charger la première scène
+    /// </summary>
     public void loadScene1()
     {
         SceneManager.LoadScene(1);
