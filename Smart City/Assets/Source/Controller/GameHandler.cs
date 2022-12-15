@@ -47,6 +47,9 @@ namespace Source.Controller
 
         public GameObject panellFinTour;
 
+        public GameObject panelCity;
+        public GameObject panelCompany;
+
         /// <summary>
         /// Nouvelle partie
         /// </summary>
@@ -86,10 +89,14 @@ namespace Source.Controller
             if (city)
             {
                 activePlayer = playerCity;
+                panelCompany.SetActive(false);
+                panelCity.SetActive(true);
             }
             else
             {
                 activePlayer = playerCompany;
+                panelCity.SetActive(false);
+                panelCompany.SetActive(true);
             }
             turn = 1;
 
@@ -128,10 +135,14 @@ namespace Source.Controller
             if (activePlayer.isCity())
             {
                 activePlayer = playerCompany;
+                panelCity.SetActive(false);
+                panelCompany.SetActive(true);
             }
             else
             {
                 activePlayer = playerCity;
+                panelCompany.SetActive(false);
+                panelCity.SetActive(true);
             }
             resetSelectedTile();
             turn++;
@@ -139,7 +150,9 @@ namespace Source.Controller
             audioController.playNextTurn();
             activePlayer.notifyObservers();
             activePlayer.setScore(map);
-            StartCoroutine(IbeginTurn());
+            if(turn>2){
+                StartCoroutine(IbeginTurn());
+            }
         }
 
         IEnumerator IbeginTurn()
