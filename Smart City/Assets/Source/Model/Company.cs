@@ -190,10 +190,11 @@ namespace Source.Model
             return false;
         }
 
-        public override void earnAfterRound(Map map)
+        public override uint earnAfterTurn(Map map)
         {
-            earn = map.getIncomeFromType(BuildType.Housing);
-            //Debug.Log("gafam : " + earn);
+            earn = map.getIncomeFromType(BuildType.Office);
+            Debug.Log("entreprise : " + earn);
+            return earn;
         }
     }
 }
