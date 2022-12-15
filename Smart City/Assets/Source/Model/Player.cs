@@ -9,7 +9,7 @@ namespace Source.Model
 {
     public abstract class Player
     {
-        protected static uint BASE_MONEY = 3000;
+        protected static uint BASE_MONEY = 10000;
         public uint money;
         public uint score;
         public TMP_Text name;
