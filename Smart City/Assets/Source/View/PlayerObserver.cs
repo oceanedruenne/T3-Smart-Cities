@@ -53,6 +53,6 @@ public class PlayerObserver : ScriptableObject, Observer
     public void reactToBeginRound(Player player, Map map)
     {
         panellFinTour.SetActive(true);
-        earnText.text = " +" + player.earn;
+        earnText.text = "+ " + player.earn;
     }
 }
