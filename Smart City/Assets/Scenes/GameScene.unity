@@ -453,6 +453,9 @@ MonoBehaviour:
   currTile: {fileID: 0}
   BoostTile: {fileID: 0}
   DecreeTile: {fileID: 0}
+  panel: {fileID: 0}
+  avatar: {fileID: 0}
+  TurnText: {fileID: 0}
 --- !u!4 &205110855
 Transform:
   m_ObjectHideFlags: 0
@@ -1239,6 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedScroll: 50
+  dragSpeed: 0.3
 --- !u!1 &429946623
 GameObject:
   m_ObjectHideFlags: 0
