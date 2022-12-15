@@ -120,6 +120,7 @@ namespace Source.Controller
             resetSelectedTile();
             turn++;
 
+            audioController.playNextTurn();
             activePlayer.notifyObservers();
             activePlayer.setScore(map);
         }
@@ -161,6 +162,7 @@ namespace Source.Controller
             this.posx = posx;
             this.posy = posy;
             this.currTile = tile;
+            audioController.playSelected();
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
@@ -201,7 +203,10 @@ namespace Source.Controller
         /// Permet d'ameliorer la case selectionnee
         /// </summary>
         public void upgradeSelected(){
-            activePlayer.Upgrade(map, (uint)posx, (uint)posy);
+            if(activePlayer.Upgrade(map, (uint)posx, (uint)posy))
+            {
+                audioController.playUpgrade();
+            }
             mapObserver.UpdateInfoFrom(map, (uint)posx, (uint)posy);
         }
 
@@ -218,6 +223,9 @@ namespace Source.Controller
             }
             activePlayer.specialsUse(map, (uint)posx, (uint)posy);
             if(activePlayer.isCity()){
+
+                audioController.playPowerBlock();
+
                 if(DecreeTile != null){
                     DecreeTile.unDecree();
                 }
@@ -225,7 +233,10 @@ namespace Source.Controller
                 currTile.Decree();
             }
             else{
-                if(BoostTile != null){
+
+                audioController.playPowerMoney();
+
+                if (BoostTile != null){
                     BoostTile.unBoost();
                 }
                 BoostTile = currTile;
