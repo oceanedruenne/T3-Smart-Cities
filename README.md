@@ -12,6 +12,8 @@ Participants :
 - Alexandre WELTY
 - Océane DRUENNE
 
+Une page Wiki est disponible ici : https://git.unistra.fr/les-chatons-mignons-uwu/t3-smart-city/-/wikis/Description/Wiki
+
 ## Méta-Todo
 
 - [X] Mettre en place son GIT et préparer les milestones
