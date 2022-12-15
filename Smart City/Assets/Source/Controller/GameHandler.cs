@@ -137,7 +137,7 @@ namespace Source.Controller
                 endTurn();
                 return;
             }
-            if (turn > 1)
+            if (turn > 0)
             {
                 activePlayer.addIncome(map);
             }
