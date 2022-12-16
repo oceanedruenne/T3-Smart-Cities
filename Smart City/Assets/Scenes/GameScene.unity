@@ -4375,7 +4375,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -6873,7 +6873,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pouvoir :\n\nLe boost augmente le revenu g\xE9n\xE9r\xE9 par un batiment"
+  m_text: 'Pouvoir :
+
+
+    Le boost augmente le revenu genere par un batiment'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b62fe05382c994deba22ca886740c0f4, type: 2}
   m_sharedMaterial: {fileID: 4229322203850783813, guid: b62fe05382c994deba22ca886740c0f4, type: 2}
@@ -6912,7 +6915,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
