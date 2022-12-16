@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_source_1_1_model" kind="namespace" language="C#">
+    <compoundname>Source::Model</compoundname>
+    <innerclass refid="class_source_1_1_model_1_1_building" prot="public">Source::Model::Building</innerclass>
+    <innerclass refid="class_source_1_1_model_1_1_city" prot="public">Source::Model::City</innerclass>
+    <innerclass refid="class_source_1_1_model_1_1_company" prot="public">Source::Model::Company</innerclass>
+    <innerclass refid="class_source_1_1_model_1_1_map" prot="public">Source::Model::Map</innerclass>
+    <innerclass refid="class_source_1_1_model_1_1_player" prot="public">Source::Model::Player</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_source_1_1_model_1a8a1183ae4e812c10ca04eaea00f7683e" prot="public" static="no" strong="yes">
+        <type>int</type>
+        <name>BuildType</name>
+        <qualifiedname>Source.Model.BuildType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/BuildType.cs" line="8" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/BuildType.cs" bodystart="9" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Building.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

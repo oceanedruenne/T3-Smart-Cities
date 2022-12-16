@@ -1,0 +1,107 @@
+\hypertarget{_building_8cs_source}{}\doxysection{Building.\+cs}
+\label{_building_8cs_source}\index{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/Model/Building.cs@{C:/Users/oce-\/a/Desktop/T3/t3-\/smart-\/city/Smart City/Assets/Source/Model/Building.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00005}\mbox{\hyperlink{namespace_source}{00005}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_source_1_1_model}{Source.Model}}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00008}00008     \textcolor{comment}{// CLASSE BUILDING}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00009}\mbox{\hyperlink{class_source_1_1_model_1_1_building}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00011}00011         \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{int} BASE\_COST = 1000; \textcolor{comment}{//Prix de base d'un bâtiment}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00012}00012         \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{int} BASE\_INCOME = 300; \textcolor{comment}{// Revenu de base}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00013}00013         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{float} MALUS\_INCREASE = 0.2f; }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00014}00014         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00015}00015 \textcolor{comment}{        Ce qui suit s'appelle un getter }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00016}00016 \textcolor{comment}{        (il existe aussi des setters, si jamais :}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00017}00017 \textcolor{comment}{        https://learn.microsoft.com/fr-\/fr/dotnet/csharp/programming-\/guide/classes-\/and-\/structs/using-\/properties)}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00018}00018 \textcolor{comment}{        Ceci revient au même que faire une fonction getBuyMalus renvoyant buyMalus, }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00019}00019 \textcolor{comment}{        sauf que il sera possible de faire directement un Building.buyMalus }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00020}00020 \textcolor{comment}{        au lieu de Building.getBuyMalus}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00021}00021 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00022}00022         \textcolor{keyword}{private} BuildType \_type;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00023}00023         \textcolor{keyword}{public} BuildType type => \_type;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00024}00024         \textcolor{keyword}{private} \textcolor{keywordtype}{float} \_buyMalus;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00025}00025         \textcolor{keyword}{public} \textcolor{keywordtype}{float} buyMalus => \_buyMalus;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00026}00026         \textcolor{keyword}{private} \textcolor{keywordtype}{int} \_level;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00027}00027         \textcolor{keyword}{public} \textcolor{keywordtype}{int} level => \_level;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00029}00029         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00030}00030 \textcolor{comment}{            *Building : Constructeur : Building}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00031}00031 \textcolor{comment}{            *Paramètres : }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00032}00032 \textcolor{comment}{            *Type : BuildType : type du bâtiment crée (voir l'enumération BuildType)}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00033}00033 \textcolor{comment}{            malus : double : buyMalus du bâtiment, égal au buyMalus du bâtiments précedent + MALUS\_INCREASE sinon 1.0}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00034}00034 \textcolor{comment}{            level : uint : Niveau du bâtiment, égal au bâtiment précédent sinon 0}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00035}00035 \textcolor{comment}{            Constructeur de la classe }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00036}00036 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00043}\mbox{\hyperlink{class_source_1_1_model_1_1_building_a04bcbf0722c9b0f95e2c6d7026419232}{00043}}         \textcolor{keyword}{public} \mbox{\hyperlink{class_source_1_1_model_1_1_building_a04bcbf0722c9b0f95e2c6d7026419232}{Building}}(BuildType type, \textcolor{keywordtype}{float} malus = 1f, \textcolor{keywordtype}{int} level = 0)\{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00044}00044             this.\_type = type;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00045}00045             this.\_buyMalus = malus;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00046}00046             this.\_level = level;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00049}00049         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00050}00050 \textcolor{comment}{           *Transport : Fonction : Building}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00051}00051 \textcolor{comment}{           *Construit le bâtiment transport qui ne sera pas achetable et qui va donner des bonus aux bâtiments autour}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00052}00052 \textcolor{comment}{           *Variables locales : }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00053}00053 \textcolor{comment}{           *transport : Building : le bâtiment}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00054}00054 \textcolor{comment}{       */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00060}\mbox{\hyperlink{class_source_1_1_model_1_1_building_a6f69a14bb624ec0683212d7fbabcd496}{00060}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} \mbox{\hyperlink{class_source_1_1_model_1_1_building_a6f69a14bb624ec0683212d7fbabcd496}{createTransport}}() \{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00061}00061             \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}} transport = \textcolor{keyword}{new} \mbox{\hyperlink{class_source_1_1_model_1_1_building}{Building}}(BuildType.Transport, 0, 0);}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00062}00062             \textcolor{keywordflow}{return} transport;}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00065}00065         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00066}00066 \textcolor{comment}{            *getIncome : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00067}00067 \textcolor{comment}{            *Paramètres : Aucun}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00068}00068 \textcolor{comment}{            Retourne le revenu rapporté par le bâtiment, qui correspond à la formule suivante :}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00069}00069 \textcolor{comment}{            BASE\_INCOME * ((level * 0,5) + 1) cad }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00070}00070 \textcolor{comment}{            niveau 0 : BASE\_INCOME * 1 (= (0 / 2) + 1 )}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00071}00071 \textcolor{comment}{            Niveau 1 : BASE\_INCOME * 1,5}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00072}00072 \textcolor{comment}{            Niveau 2 : BASE\_INCOME * 2}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00073}00073 \textcolor{comment}{            etc...}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00074}00074 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00079}\mbox{\hyperlink{class_source_1_1_model_1_1_building_af5d9de35e32bc1cd94281739c8b2a527}{00079}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_building_af5d9de35e32bc1cd94281739c8b2a527}{getIncome}}()\{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00080}00080             \textcolor{keywordflow}{return} (uint)(BASE\_INCOME * ((uint)(level / 1f) + 1));}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00081}00081         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00083}00083         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00084}00084 \textcolor{comment}{            *getIncomeAfterUpgrade : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00085}00085 \textcolor{comment}{            *Paramètres : Aucun}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00086}00086 \textcolor{comment}{            Retourne le revenu rapporté par le bâtiment au niveau + 1}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00087}00087 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00092}\mbox{\hyperlink{class_source_1_1_model_1_1_building_a0d66e12530fb1e361cc34beb524b3b74}{00092}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_building_a0d66e12530fb1e361cc34beb524b3b74}{getIncomeAfterUpgrade}}()\{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00093}00093             \textcolor{keywordflow}{return} (uint)(BASE\_INCOME * ((uint)((level+1) / 1f) + 1));}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00094}00094         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00096}00096         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00097}00097 \textcolor{comment}{            *getCost : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00098}00098 \textcolor{comment}{            *Paramètres : Aucun}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00099}00099 \textcolor{comment}{            Retourne le coût du bâtiment à l'achat, selon la formule suivante :}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00100}00100 \textcolor{comment}{            BASE\_COST * ((0,5 * level) + 1) * buyMalus cad}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00101}00101 \textcolor{comment}{            Niveau 0 + buyMalus 1.0 : BASE\_COST * 1 * 1}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00102}00102 \textcolor{comment}{            Niveau 1 + buyMalus 1.0 : BASE\_COST}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00103}00103 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00109}\mbox{\hyperlink{class_source_1_1_model_1_1_building_a6381592c3c3718de21d55995e5f6f96b}{00109}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_building_a6381592c3c3718de21d55995e5f6f96b}{getBuyCost}}()\{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00110}00110             \textcolor{keywordflow}{return} (uint)(BASE\_COST * ((level / 2) + 1) * buyMalus);}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00113}00113         \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00114}00114 \textcolor{comment}{            *getUpgradeCost : fonction : uint}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00115}00115 \textcolor{comment}{            *Paramètres : Aucun }}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00116}00116 \textcolor{comment}{            *Permet de récupérer le coût d'amélioration d'un bâtiment}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00117}00117 \textcolor{comment}{        */}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00123}\mbox{\hyperlink{class_source_1_1_model_1_1_building_a646adf8f30ad39b58f33107300979ad5}{00123}}         \textcolor{keyword}{public} uint \mbox{\hyperlink{class_source_1_1_model_1_1_building_a646adf8f30ad39b58f33107300979ad5}{getUpgradeCost}}()\{}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00124}00124             \textcolor{keywordflow}{return} (uint)(BASE\_COST * ((level / 2) + 1));}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00125}00125         \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00126}00126     \}}
+\DoxyCodeLine{\Hypertarget{_building_8cs_source_l00127}00127 \}}
+
+\end{DoxyCode}

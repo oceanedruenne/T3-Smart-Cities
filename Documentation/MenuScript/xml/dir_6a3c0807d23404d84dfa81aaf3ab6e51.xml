@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_6a3c0807d23404d84dfa81aaf3ab6e51" kind="dir">
+    <compoundname>MenuScript</compoundname>
+    <innerfile refid="btn_recommencer_8cs">btnRecommencer.cs</innerfile>
+    <innerfile refid="_end_scene_8cs">EndScene.cs</innerfile>
+    <innerfile refid="input_reader_8cs">inputReader.cs</innerfile>
+    <innerfile refid="input_writer_8cs">inputWriter.cs</innerfile>
+    <innerfile refid="_menu_8cs">Menu.cs</innerfile>
+    <innerfile refid="show_turns_8cs">showTurns.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MenuScript/"/>
+  </compounddef>
+</doxygen>

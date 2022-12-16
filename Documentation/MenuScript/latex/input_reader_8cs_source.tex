@@ -1,0 +1,31 @@
+\hypertarget{input_reader_8cs_source}{}\doxysection{input\+Reader.\+cs}
+\label{input_reader_8cs_source}\index{MenuScript/inputReader.cs@{MenuScript/inputReader.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00004}00004 \textcolor{keyword}{using }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00005}00005 \textcolor{keyword}{using }TMPro;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00007}\mbox{\hyperlink{classinput_reader}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classinput_reader}{inputReader}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00009}00009     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} cityName;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00011}00011     \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00012}00012     \{}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00013}00013        InputField inputInter = GameObject.Find(\textcolor{stringliteral}{"{}inputCityName"{}}).GetComponent<InputField>();}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00014}00014        TextMeshProUGUI textInter = GameObject.Find(\textcolor{stringliteral}{"{}Text"{}}).GetComponent<TextMeshProUGUI>(); }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00015}00015        cityName = textInter.text;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00016}00016        PlayerPrefs.SetString(\textcolor{stringliteral}{"{}cityName"{}},cityName);     }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00018}00018     }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00022}00022     \textcolor{keywordtype}{void} Update()}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00024}00024         TextMeshProUGUI textInter = GameObject.Find(\textcolor{stringliteral}{"{}Text"{}}).GetComponent<TextMeshProUGUI>();}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00025}00025         cityName = textInter.text;}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00026}00026         PlayerPrefs.SetString(\textcolor{stringliteral}{"{}cityName"{}},cityName);}
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00027}00027     \} }
+\DoxyCodeLine{\Hypertarget{input_reader_8cs_source_l00028}00028 \}}
+
+\end{DoxyCode}

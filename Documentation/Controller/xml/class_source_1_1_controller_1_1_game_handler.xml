@@ -1,0 +1,682 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_controller_1_1_game_handler" kind="class" language="C#" prot="public">
+    <compoundname>Source::Controller::GameHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a743ad5b6d66f304b258f0ac5cea7c197" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.gameHandler</definition>
+        <argsstring></argsstring>
+        <name>gameHandler</name>
+        <qualifiedname>Source.Controller.GameHandler.gameHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="14" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1abf70852560d4d7fc32adcab105345f4e" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.turn</definition>
+        <argsstring></argsstring>
+        <name>turn</name>
+        <qualifiedname>Source.Controller.GameHandler.turn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="16" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a6c2377063473bf2393ba69eed8c451ca" prot="private" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.turnLimit</definition>
+        <argsstring></argsstring>
+        <name>turnLimit</name>
+        <qualifiedname>Source.Controller.GameHandler.turnLimit</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="17" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1abbec58478766371ce25ae6e507205a43" prot="private" static="no" mutable="no">
+        <type>Player</type>
+        <definition>Player Source.Controller.GameHandler.activePlayer</definition>
+        <argsstring></argsstring>
+        <name>activePlayer</name>
+        <qualifiedname>Source.Controller.GameHandler.activePlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="19" column="24" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a49a29df4cfbc2276393656469e6a6ca0" prot="private" static="no" mutable="no">
+        <type>City</type>
+        <definition>City Source.Controller.GameHandler.playerCity</definition>
+        <argsstring></argsstring>
+        <name>playerCity</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="20" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a064f808dbe25b4970e3d44e760043dea" prot="private" static="no" mutable="no">
+        <type>Company</type>
+        <definition>Company Source.Controller.GameHandler.playerCompany</definition>
+        <argsstring></argsstring>
+        <name>playerCompany</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCompany</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="21" column="25" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a283ac3784dd1a34e570bfe06ba3f00d1" prot="private" static="no" mutable="no">
+        <type>PlayerObserver</type>
+        <definition>PlayerObserver Source.Controller.GameHandler.playerObserver</definition>
+        <argsstring></argsstring>
+        <name>playerObserver</name>
+        <qualifiedname>Source.Controller.GameHandler.playerObserver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="24" column="32" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a33604d921db45fcc90561dbaa3789cb2" prot="private" static="no" mutable="no">
+        <type>MapObserver</type>
+        <definition>MapObserver Source.Controller.GameHandler.mapObserver</definition>
+        <argsstring></argsstring>
+        <name>mapObserver</name>
+        <qualifiedname>Source.Controller.GameHandler.mapObserver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="25" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1ab737e2fd7cf00a62df1deefeb15cb288" prot="private" static="no" mutable="no">
+        <type><ref refid="class_source_1_1_controller_1_1_audio_controller" kindref="compound">AudioController</ref></type>
+        <definition>AudioController Source.Controller.GameHandler.audioController</definition>
+        <argsstring></argsstring>
+        <name>audioController</name>
+        <qualifiedname>Source.Controller.GameHandler.audioController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="46" column="33" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a6bce6571daa20db52d23b8ca3d951007" prot="public" static="no" mutable="no">
+        <type>Map</type>
+        <definition>Map Source.Controller.GameHandler.map</definition>
+        <argsstring></argsstring>
+        <name>map</name>
+        <qualifiedname>Source.Controller.GameHandler.map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="22" column="20" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1ae461fe164433c921621a566e6e56de4a" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.playerCityScore</definition>
+        <argsstring></argsstring>
+        <name>playerCityScore</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCityScore</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="27" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a2c74f4b0eb5c15923233cdfaf0378157" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.playerCityMoney</definition>
+        <argsstring></argsstring>
+        <name>playerCityMoney</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCityMoney</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="28" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a240dc20ab9af04d1f0957cbe1a62242a" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.playerCompanyScore</definition>
+        <argsstring></argsstring>
+        <name>playerCompanyScore</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCompanyScore</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="29" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a5ad5111310ae7baef1875f554a0f8954" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.playerCompanyMoney</definition>
+        <argsstring></argsstring>
+        <name>playerCompanyMoney</name>
+        <qualifiedname>Source.Controller.GameHandler.playerCompanyMoney</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="30" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1ac8d3168a8a98a7cba2ba7a1146c7d079" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Source.Controller.GameHandler.posx</definition>
+        <argsstring></argsstring>
+        <name>posx</name>
+        <qualifiedname>Source.Controller.GameHandler.posx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="36" column="20" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1ab759726721e0318bb73728ede65ec42b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Source.Controller.GameHandler.posy</definition>
+        <argsstring></argsstring>
+        <name>posy</name>
+        <qualifiedname>Source.Controller.GameHandler.posy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="37" column="20" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a89d7706dff1008acfdc9fb9ce58d13ba" prot="public" static="no" mutable="no">
+        <type>Tile</type>
+        <definition>Tile Source.Controller.GameHandler.currTile</definition>
+        <argsstring></argsstring>
+        <name>currTile</name>
+        <qualifiedname>Source.Controller.GameHandler.currTile</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="38" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a1ccc10a9ed4761353d2c0e901adc2691" prot="public" static="no" mutable="no">
+        <type>Tile</type>
+        <definition>Tile Source.Controller.GameHandler.BoostTile</definition>
+        <argsstring></argsstring>
+        <name>BoostTile</name>
+        <qualifiedname>Source.Controller.GameHandler.BoostTile</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="39" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a7ec952ef4fb591abee0e25c369defb71" prot="public" static="no" mutable="no">
+        <type>Tile</type>
+        <definition>Tile Source.Controller.GameHandler.DecreeTile</definition>
+        <argsstring></argsstring>
+        <name>DecreeTile</name>
+        <qualifiedname>Source.Controller.GameHandler.DecreeTile</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="40" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a61930094c200829237038009d62d8cc3" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.panel</definition>
+        <argsstring></argsstring>
+        <name>panel</name>
+        <qualifiedname>Source.Controller.GameHandler.panel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="42" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a5f93f3c0868191064baffb20ac8d2fb7" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.avatar</definition>
+        <argsstring></argsstring>
+        <name>avatar</name>
+        <qualifiedname>Source.Controller.GameHandler.avatar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="43" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1aff27ca3a29a89f177f687a6f55a170e9" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Source.Controller.GameHandler.TurnText</definition>
+        <argsstring></argsstring>
+        <name>TurnText</name>
+        <qualifiedname>Source.Controller.GameHandler.TurnText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="44" column="32" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a76264b4f26962c61292bcc2e0f75fc44" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.panellFinTour</definition>
+        <argsstring></argsstring>
+        <name>panellFinTour</name>
+        <qualifiedname>Source.Controller.GameHandler.panellFinTour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="48" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a180ac0225c64cb4ee0c43fefd1d5306f" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.panelCity</definition>
+        <argsstring></argsstring>
+        <name>panelCity</name>
+        <qualifiedname>Source.Controller.GameHandler.panelCity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="50" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a60d9bf65b97e926bb5e2f6adfdc881ad" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Source.Controller.GameHandler.panelCompany</definition>
+        <argsstring></argsstring>
+        <name>panelCompany</name>
+        <qualifiedname>Source.Controller.GameHandler.panelCompany</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="51" column="27" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1a299727e7440735ac74b7d5ef26f9175e" prot="public" static="yes" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.getTourActuel</definition>
+        <argsstring></argsstring>
+        <name>getTourActuel</name>
+        <qualifiedname>Source.Controller.GameHandler.getTourActuel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="32" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_game_handler_1af2cd135464c107272bdd25f89c5f2ecc" prot="public" static="yes" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Controller.GameHandler.getNbTours</definition>
+        <argsstring></argsstring>
+        <name>getNbTours</name>
+        <qualifiedname>Source.Controller.GameHandler.getNbTours</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="33" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1af5e40fc10d8110ae81edb4354e53bfff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Source.Controller.GameHandler.Start</qualifiedname>
+        <briefdescription>
+<para>Nouvelle partie  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="56" column="14" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="56" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a0267aca5bbe1ff6e6fe14bae3e75f898" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Source.Controller.GameHandler.LateStart</definition>
+        <argsstring>(float waitTime)</argsstring>
+        <name>LateStart</name>
+        <qualifiedname>Source.Controller.GameHandler.LateStart</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>waitTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="67" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a21374b4dc42077d05b6358f4ea94e7d8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Source.Controller.GameHandler.IbeginTurn</definition>
+        <argsstring>()</argsstring>
+        <name>IbeginTurn</name>
+        <qualifiedname>Source.Controller.GameHandler.IbeginTurn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="158" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="158" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1aeb81e6fadce27967b8358fb61c777f69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.startNewGame</definition>
+        <argsstring>(bool city=true)</argsstring>
+        <name>startNewGame</name>
+        <qualifiedname>Source.Controller.GameHandler.startNewGame</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>city</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Demarrer une nouvelle partie  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>city</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="84" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="84" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a9c539bc61d8c719e97c58c7dfc0a3d30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.nextTurn</definition>
+        <argsstring>()</argsstring>
+        <name>nextTurn</name>
+        <qualifiedname>Source.Controller.GameHandler.nextTurn</qualifiedname>
+        <briefdescription>
+<para>Tour suivant  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="123" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="123" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a68c5b0cc02baf93e99c5da1c7b3581a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.endTurn</definition>
+        <argsstring>()</argsstring>
+        <name>endTurn</name>
+        <qualifiedname>Source.Controller.GameHandler.endTurn</qualifiedname>
+        <briefdescription>
+<para>Fin du tour  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="172" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="172" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a8424d5f51b924a57be7e258e406085f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.selectTile</definition>
+        <argsstring>(int posx, int posy, Tile tile)</argsstring>
+        <name>selectTile</name>
+        <qualifiedname>Source.Controller.GameHandler.selectTile</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>posy</declname>
+        </param>
+        <param>
+          <type>Tile</type>
+          <declname>tile</declname>
+        </param>
+        <briefdescription>
+<para>Permet de connaitre la case selectionnee  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tile</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="201" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="201" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1aec87e67d148610a2073921d956ac58d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.resetSelectedTile</definition>
+        <argsstring>()</argsstring>
+        <name>resetSelectedTile</name>
+        <qualifiedname>Source.Controller.GameHandler.resetSelectedTile</qualifiedname>
+        <briefdescription>
+<para>Permet de decliquer la case selectionnee  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="216" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="216" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a9d51b1662be23bb7d3d57bef8e2836d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.buySelected</definition>
+        <argsstring>()</argsstring>
+        <name>buySelected</name>
+        <qualifiedname>Source.Controller.GameHandler.buySelected</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;acheter la case selectionnee  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="234" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="234" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1add84db469a3f00af6f7a72d983ad8939" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.upgradeSelected</definition>
+        <argsstring>()</argsstring>
+        <name>upgradeSelected</name>
+        <qualifiedname>Source.Controller.GameHandler.upgradeSelected</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;ameliorer la case selectionnee  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="249" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="249" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_game_handler_1a8987ad4d643b9cdfcdf812b71a68eae7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.GameHandler.setPowerSelected</definition>
+        <argsstring>()</argsstring>
+        <name>setPowerSelected</name>
+        <qualifiedname>Source.Controller.GameHandler.setPowerSelected</qualifiedname>
+        <briefdescription>
+<para>Permet de mettre en place le pouvoir choisi  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="265" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="265" bodyend="295"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Source.Controller.GameHandler</label>
+        <link refid="class_source_1_1_controller_1_1_game_handler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Source.Controller.GameHandler</label>
+        <link refid="class_source_1_1_controller_1_1_game_handler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" line="12" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/GameHandler.cs" bodystart="13" bodyend="300"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1abbec58478766371ce25ae6e507205a43" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>activePlayer</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1ab737e2fd7cf00a62df1deefeb15cb288" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>audioController</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a5f93f3c0868191064baffb20ac8d2fb7" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>avatar</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a1ccc10a9ed4761353d2c0e901adc2691" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>BoostTile</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a9d51b1662be23bb7d3d57bef8e2836d9" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>buySelected</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a89d7706dff1008acfdc9fb9ce58d13ba" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>currTile</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a7ec952ef4fb591abee0e25c369defb71" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>DecreeTile</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a68c5b0cc02baf93e99c5da1c7b3581a7" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>endTurn</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a743ad5b6d66f304b258f0ac5cea7c197" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>gameHandler</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1af2cd135464c107272bdd25f89c5f2ecc" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>getNbTours</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a299727e7440735ac74b7d5ef26f9175e" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>getTourActuel</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a21374b4dc42077d05b6358f4ea94e7d8" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>IbeginTurn</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a0267aca5bbe1ff6e6fe14bae3e75f898" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>LateStart</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a6bce6571daa20db52d23b8ca3d951007" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>map</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a33604d921db45fcc90561dbaa3789cb2" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>mapObserver</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a9c539bc61d8c719e97c58c7dfc0a3d30" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>nextTurn</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a61930094c200829237038009d62d8cc3" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>panel</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a180ac0225c64cb4ee0c43fefd1d5306f" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>panelCity</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a60d9bf65b97e926bb5e2f6adfdc881ad" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>panelCompany</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a76264b4f26962c61292bcc2e0f75fc44" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>panellFinTour</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a49a29df4cfbc2276393656469e6a6ca0" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCity</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a2c74f4b0eb5c15923233cdfaf0378157" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCityMoney</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1ae461fe164433c921621a566e6e56de4a" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCityScore</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a064f808dbe25b4970e3d44e760043dea" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCompany</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a5ad5111310ae7baef1875f554a0f8954" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCompanyMoney</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a240dc20ab9af04d1f0957cbe1a62242a" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerCompanyScore</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a283ac3784dd1a34e570bfe06ba3f00d1" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>playerObserver</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1ac8d3168a8a98a7cba2ba7a1146c7d079" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>posx</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1ab759726721e0318bb73728ede65ec42b" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>posy</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1aec87e67d148610a2073921d956ac58d7" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>resetSelectedTile</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a8424d5f51b924a57be7e258e406085f3" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>selectTile</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a8987ad4d643b9cdfcdf812b71a68eae7" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>setPowerSelected</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1af5e40fc10d8110ae81edb4354e53bfff" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>Start</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1aeb81e6fadce27967b8358fb61c777f69" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>startNewGame</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1abf70852560d4d7fc32adcab105345f4e" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>turn</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1a6c2377063473bf2393ba69eed8c451ca" prot="private" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>turnLimit</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1aff27ca3a29a89f177f687a6f55a170e9" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>TurnText</name></member>
+      <member refid="class_source_1_1_controller_1_1_game_handler_1add84db469a3f00af6f7a72d983ad8939" prot="public" virt="non-virtual"><scope>Source::Controller::GameHandler</scope><name>upgradeSelected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

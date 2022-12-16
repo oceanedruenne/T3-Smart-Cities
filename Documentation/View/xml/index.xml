@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="class_map_observer" kind="class"><name>MapObserver</name>
+    <member refid="class_map_observer_1a811b2a2745f927be9032d0219d62a0ff" kind="variable"><name>gridObject</name></member>
+    <member refid="class_map_observer_1aa1a980ad024b426379de46167a44539e" kind="variable"><name>grid</name></member>
+    <member refid="class_map_observer_1a9b52574ba9b5c70b277d1691f176b6aa" kind="variable"><name>size</name></member>
+    <member refid="class_map_observer_1adf1a832cdd851eced775bd92380c18aa" kind="variable"><name>tilePrefab</name></member>
+    <member refid="class_map_observer_1a26d43217f8d469d69eb45d9c84ae8f2d" kind="variable"><name>tilesd</name></member>
+    <member refid="class_map_observer_1a15e38374976855a55b0300a4a7292362" kind="variable"><name>panelInfos</name></member>
+    <member refid="class_map_observer_1aa4a20f1cf5f1b5bb6028e496803a4e83" kind="variable"><name>textLevel</name></member>
+    <member refid="class_map_observer_1a0dff3bc28b502b592f37fc28c6e6bb7d" kind="variable"><name>imageObject</name></member>
+    <member refid="class_map_observer_1a6188fe74c444b4daf67d79d9f029d4b5" kind="variable"><name>textPrice</name></member>
+    <member refid="class_map_observer_1a1eb90ed3ba0307e1fcc49cc813d5b2a0" kind="variable"><name>textIncome</name></member>
+    <member refid="class_map_observer_1af1e3c9e5ed3cfd1aabdf28a6aea30e60" kind="variable"><name>panelAvatar</name></member>
+    <member refid="class_map_observer_1ae6417fd74a3cd93c1d94ff9fa68f70cd" kind="variable"><name>avatarObject</name></member>
+    <member refid="class_map_observer_1a210664eca4223c718aa44cea494acac6" kind="variable"><name>avatarObjectConstant</name></member>
+    <member refid="class_map_observer_1ad6255d7917fa30e66582d6ff26ece878" kind="variable"><name>spriteCompany</name></member>
+    <member refid="class_map_observer_1a9e9c749a38b5525ee49492bcb4aec8a6" kind="variable"><name>spriteMayor</name></member>
+    <member refid="class_map_observer_1a7b4292b5b4c92dd2e6715c2c5b25dbfb" kind="variable"><name>gameHandler</name></member>
+    <member refid="class_map_observer_1a51003d4362fab0eae348660d9029954b" kind="function"><name>MapObserver</name></member>
+    <member refid="class_map_observer_1a6449e674d495bc2440a1e52ae93bdabc" kind="function"><name>genMap</name></member>
+    <member refid="class_map_observer_1ad6619a6ed0f462cdc3fc91c1ee84370c" kind="function"><name>getTileAtPosition</name></member>
+    <member refid="class_map_observer_1a336cdcb1153328dd67c25580539f96ac" kind="function"><name>reactTo</name></member>
+    <member refid="class_map_observer_1aeb644f33e81c4dd1aaf08b29e986a7e0" kind="function"><name>reactToPos</name></member>
+    <member refid="class_map_observer_1a086027c31ee577d18dc0fcb9d4e468d7" kind="function"><name>UpdateInfoFrom</name></member>
+    <member refid="class_map_observer_1ad4fc726109f832e533173abaa60f1497" kind="function"><name>hideInfo</name></member>
+    <member refid="class_map_observer_1afba8d86870599026d849d5a35ed60861" kind="function"><name>emptyGrid</name></member>
+    <member refid="class_map_observer_1a85da27f2c40879766981d438a959ada7" kind="function"><name>generateGrid</name></member>
+    <member refid="class_map_observer_1aad0745616de2bb2d6cfb9f506b2fd02d" kind="function"><name>changeInfos</name></member>
+  </compound>
+  <compound refid="interface_source_1_1_view_1_1_observer" kind="interface"><name>Source::View::Observer</name>
+    <member refid="interface_source_1_1_view_1_1_observer_1a7645cb46a2b0ce65d33c9260155266d5" kind="function"><name>reactTo</name></member>
+  </compound>
+  <compound refid="class_panel___settings" kind="class"><name>Panel_Settings</name>
+    <member refid="class_panel___settings_1ad6eea3c13ede714ad2669405bddf1645" kind="variable"><name>sound_on</name></member>
+    <member refid="class_panel___settings_1ae9a60d23a4508bce7fe5eb56ceccb024" kind="variable"><name>sound_off</name></member>
+    <member refid="class_panel___settings_1ac7057230deffffeab2c7830d1cc22042" kind="variable"><name>isOn</name></member>
+    <member refid="class_panel___settings_1a977f999f205428bb830de095cec7b068" kind="variable"><name>isActive</name></member>
+    <member refid="class_panel___settings_1a0d41777c65e98f882dd397b656800de3" kind="variable"><name>image</name></member>
+    <member refid="class_panel___settings_1a3d53e6e7eca19f92ba4f4deaf6c60294" kind="function"><name>Start</name></member>
+    <member refid="class_panel___settings_1a446172336567a8b1d53861ee76dbf325" kind="function"><name>clickUpdate</name></member>
+    <member refid="class_panel___settings_1ad0a6ff446abe29c2060b7a3e61aad363" kind="function"><name>activePanel</name></member>
+  </compound>
+  <compound refid="class_panel___upgrade___infos" kind="class"><name>Panel_Upgrade_Infos</name>
+    <member refid="class_panel___upgrade___infos_1af04e38ea6e399e851cbe15d06950a77b" kind="variable"><name>gh</name></member>
+    <member refid="class_panel___upgrade___infos_1a010fcbef56c110e9a54ce406507e29d7" kind="variable"><name>infos</name></member>
+    <member refid="class_panel___upgrade___infos_1aa5780d77421b27d6e2e5e2e74fd86b32" kind="variable"><name>upgradeCost</name></member>
+    <member refid="class_panel___upgrade___infos_1a4760ac9d3f640ad99a09ab25588c0190" kind="variable"><name>upgradeText</name></member>
+    <member refid="class_panel___upgrade___infos_1a7cacd6c3f747b1196d714d31f9a97176" kind="variable"><name>newIncome</name></member>
+    <member refid="class_panel___upgrade___infos_1a9f86a1471817971b59707e5d73c1af8d" kind="variable"><name>newIncomeText</name></member>
+    <member refid="class_panel___upgrade___infos_1add52b17da6c7330d80e6a66e6f10b2c0" kind="function"><name>Awake</name></member>
+    <member refid="class_panel___upgrade___infos_1a38513b4d9d10920b2d9f446eb950fdf3" kind="function"><name>OnEnable</name></member>
+    <member refid="class_panel___upgrade___infos_1a9454873ea54c5891ce984162c1b6c381" kind="function"><name>initGameHandler</name></member>
+    <member refid="class_panel___upgrade___infos_1abbfa0135eca4e0afb07ae11d1cd2ee37" kind="function"><name>initInfos</name></member>
+    <member refid="class_panel___upgrade___infos_1a9f543ab227da6cb4bcd8e89ac79aa74c" kind="function"><name>updatePanelInfos</name></member>
+    <member refid="class_panel___upgrade___infos_1aed7c2a94d42006434dfe8781f5e20c4f" kind="function"><name>clickUpdate</name></member>
+  </compound>
+  <compound refid="class_player_observer" kind="class"><name>PlayerObserver</name>
+    <member refid="class_player_observer_1aa328583bdbe4b3ac2a24f6a352beda5d" kind="variable"><name>scoreText</name></member>
+    <member refid="class_player_observer_1ac13b168c040c1f99bd8a63d24fbb0a25" kind="variable"><name>moneyText</name></member>
+    <member refid="class_player_observer_1a2f98d1426129dfcf23cb5410a9730f53" kind="variable"><name>nameText</name></member>
+    <member refid="class_player_observer_1a80e534f7f8ee5a93a31ce00750fb6872" kind="variable"><name>earnText</name></member>
+    <member refid="class_player_observer_1a0cb221ba4e52388069ac2668a8017284" kind="variable"><name>panellFinTour</name></member>
+    <member refid="class_player_observer_1a158cea9a8d00d4a3d9eac5fa17c34454" kind="function"><name>PlayerObserver</name></member>
+    <member refid="class_player_observer_1a19e2c9d65b00e0d6ec1758396bd3853f" kind="function"><name>reactTo</name></member>
+    <member refid="class_player_observer_1ad52f8daa851c4d47c1bd6aed77d9a70d" kind="function"><name>reactToBeginRound</name></member>
+  </compound>
+  <compound refid="class_script_button_commencer" kind="class"><name>ScriptButtonCommencer</name>
+    <member refid="class_script_button_commencer_1a4edcea2d184e68b6ecd6107f468eb197" kind="function"><name>BtnNextScene</name></member>
+  </compound>
+  <compound refid="class_script_button_quitter" kind="class"><name>ScriptButtonQuitter</name>
+    <member refid="class_script_button_quitter_1a557881e157353fc22336c39aa852e327" kind="function"><name>ExitGame</name></member>
+  </compound>
+  <compound refid="class_script_button_valider" kind="class"><name>ScriptButtonValider</name>
+    <member refid="class_script_button_valider_1a6864d84fa3e23096bdc0334e4e789c84" kind="function"><name>BtnNextScene</name></member>
+  </compound>
+  <compound refid="class_jeu_script_1_1_tile" kind="class"><name>JeuScript::Tile</name>
+    <member refid="class_jeu_script_1_1_tile_1a7decf268e5cf41f6639930b48821c4b5" kind="variable"><name>highlight</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a54d77062b727e7d85ba1cab5589c2fe2" kind="variable"><name>grid</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a4dd2f2b8014d25e4ea00f71ce5487ce4" kind="variable"><name>sprite</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a1425a3a20e084e82f7dd39974b8d1f46" kind="variable"><name>sr</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a6c7eb40258fb41bc42d5a75c243be8bb" kind="variable"><name>isSelected</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a16301068253e6461f2f7156a54c8bb85" kind="variable"><name>isBoosted</name></member>
+    <member refid="class_jeu_script_1_1_tile_1ae8e7fb64e54587db4ab96e673199a10a" kind="variable"><name>isProtected</name></member>
+    <member refid="class_jeu_script_1_1_tile_1ad0fd77a6fd33b2102a7cd9376fb43757" kind="variable"><name>isTransport</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a2d7b4c77be46a37df9a46487814523e3" kind="variable"><name>emptySpriteArray</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a3f789f9f1cecb5a0ac97b7ec0589fe20" kind="variable"><name>houseSpriteArray</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a895f0cc8de3f2e23e0fdbbdf8b70e8e4" kind="variable"><name>officeSpriteArray</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a644fdc6fc9063646750275fd4080bf97" kind="variable"><name>transportSprite</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a3944b9eda886f6d1db556e424d1a4d4a" kind="function"><name>Start</name></member>
+    <member refid="class_jeu_script_1_1_tile_1af4bb5a5d3180ccc0966f03229be4aeae" kind="function"><name>OnMouseEnter</name></member>
+    <member refid="class_jeu_script_1_1_tile_1ada3897971f4e03c7f067c69a46fde0bb" kind="function"><name>OnMouseExit</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a41412c185978c04cbd10fa75a9a7fde3" kind="function"><name>OnMouseUp</name></member>
+    <member refid="class_jeu_script_1_1_tile_1aaa937431d2342f3abf7c9f52ca5e9c48" kind="function"><name>Boost</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a14d568d0755a0a5aa4b5b0d519a4edad" kind="function"><name>unBoost</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a98ec2e734511fdce8742e8048a767fa8" kind="function"><name>Decree</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a8644bf8036437b5caff89ae7ff51cd2f" kind="function"><name>unDecree</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a18a922ea495e08e30f23d983bb1a986c" kind="function"><name>deselect</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a8b0fa5ff8c90f8408c97fdbe8e18d73c" kind="function"><name>getSprite</name></member>
+    <member refid="class_jeu_script_1_1_tile_1a9ef105c2f53956685019caae8ffc5e10" kind="function"><name>changeSprite</name></member>
+    <member refid="class_jeu_script_1_1_tile_1ac196eda7dc0d2ad1fcde8b10c790acd7" kind="function"><name>changeSprite</name></member>
+  </compound>
+  <compound refid="namespace_image" kind="namespace"><name>Image</name>
+  </compound>
+  <compound refid="namespace_jeu_script" kind="namespace"><name>JeuScript</name>
+  </compound>
+  <compound refid="namespace_source" kind="namespace"><name>Source</name>
+  </compound>
+  <compound refid="namespace_source_1_1_controller" kind="namespace"><name>Source::Controller</name>
+  </compound>
+  <compound refid="namespace_source_1_1_model" kind="namespace"><name>Source::Model</name>
+  </compound>
+  <compound refid="namespace_source_1_1_view" kind="namespace"><name>Source::View</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_visual_scripting" kind="namespace"><name>Unity::VisualScripting</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_audio" kind="namespace"><name>UnityEngine::Audio</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_event_systems" kind="namespace"><name>UnityEngine::EventSystems</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i_elements" kind="namespace"><name>UnityEngine::UIElements</name>
+  </compound>
+  <compound refid="_map_observer_8cs" kind="file"><name>MapObserver.cs</name>
+    <member refid="_map_observer_8cs_1a608db096452b7c3af254e6770ebfdc88" kind="typedef"><name>Image</name></member>
+  </compound>
+  <compound refid="_observer_8cs" kind="file"><name>Observer.cs</name>
+  </compound>
+  <compound refid="_panel___settings_8cs" kind="file"><name>Panel_Settings.cs</name>
+  </compound>
+  <compound refid="_panel___upgrade___infos_8cs" kind="file"><name>Panel_Upgrade_Infos.cs</name>
+  </compound>
+  <compound refid="_player_observer_8cs" kind="file"><name>PlayerObserver.cs</name>
+  </compound>
+  <compound refid="_script_button_commencer_8cs" kind="file"><name>ScriptButtonCommencer.cs</name>
+  </compound>
+  <compound refid="_script_button_quitter_8cs" kind="file"><name>ScriptButtonQuitter.cs</name>
+  </compound>
+  <compound refid="_script_button_valider_8cs" kind="file"><name>ScriptButtonValider.cs</name>
+  </compound>
+  <compound refid="_tile_8cs" kind="file"><name>Tile.cs</name>
+  </compound>
+  <compound refid="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source</name>
+  </compound>
+  <compound refid="dir_969d2458b859a0b71e7793442a689e20" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View</name>
+  </compound>
+</doxygenindex>

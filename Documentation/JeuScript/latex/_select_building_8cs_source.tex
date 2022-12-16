@@ -1,0 +1,28 @@
+\hypertarget{_select_building_8cs_source}{}\doxysection{Select\+Building.\+cs}
+\label{_select_building_8cs_source}\index{JeuScript/SelectBuilding.cs@{JeuScript/SelectBuilding.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00001}00001 \textcolor{keyword}{using }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00003}00003 \textcolor{keyword}{using }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00005}\mbox{\hyperlink{class_select_building}{00005}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_select_building}{SelectBuilding}} : MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00007}00007     \mbox{\hyperlink{class_game_manager}{GameManager}} gm;}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00008}00008     \textcolor{keyword}{private} \textcolor{keywordtype}{void} Start()}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00009}00009     \{}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00010}00010         gm = GameObject.Find(\textcolor{stringliteral}{"{}Grid"{}}).GetComponent<\mbox{\hyperlink{class_game_manager}{GameManager}}>();}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00011}00011     \}}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00013}00013     \textcolor{comment}{/* changeBuilding() : }}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00014}00014 \textcolor{comment}{    Paramètres : Sprite building}}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00015}00015 \textcolor{comment}{    Permet de changer de building*/}}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00020}\mbox{\hyperlink{class_select_building_a2c8a0293976d1de37a228ad5b5425971}{00020}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_select_building_a2c8a0293976d1de37a228ad5b5425971}{changeBuilding}}(Sprite building)}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00022}00022         Debug.Log(building);}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00023}00023         Debug.Log(\textcolor{stringliteral}{"{}hey"{}});}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00024}00024         gm.building = building;}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_select_building_8cs_source_l00026}00026 \}}
+
+\end{DoxyCode}

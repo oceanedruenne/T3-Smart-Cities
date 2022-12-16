@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classbtn_recommencer" kind="class" language="C#" prot="public">
+    <compoundname>btnRecommencer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classbtn_recommencer_1a44b165a8ee356cbd90d066f712834da2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void btnRecommencer.startAgain</definition>
+        <argsstring>()</argsstring>
+        <name>startAgain</name>
+        <qualifiedname>btnRecommencer.startAgain</qualifiedname>
+        <briefdescription>
+<para>Permet de revenir à la scène principale  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/btnRecommencer.cs" line="15" column="17" bodyfile="MenuScript/btnRecommencer.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>btnRecommencer</label>
+        <link refid="classbtn_recommencer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>btnRecommencer</label>
+        <link refid="classbtn_recommencer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MenuScript/btnRecommencer.cs" line="6" column="7" bodyfile="MenuScript/btnRecommencer.cs" bodystart="7" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classbtn_recommencer_1a44b165a8ee356cbd90d066f712834da2" prot="public" virt="non-virtual"><scope>btnRecommencer</scope><name>startAgain</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

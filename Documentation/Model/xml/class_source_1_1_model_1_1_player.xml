@@ -1,0 +1,590 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_model_1_1_player" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>Source::Model::Player</compoundname>
+    <derivedcompoundref refid="class_source_1_1_model_1_1_city" prot="public" virt="non-virtual">Source.Model.City</derivedcompoundref>
+    <derivedcompoundref refid="class_source_1_1_model_1_1_company" prot="public" virt="non-virtual">Source.Model.Company</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_player_1a2ac566c0c9a4becb7cd66d9d2a0c7f30" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Model.Player.money</definition>
+        <argsstring></argsstring>
+        <name>money</name>
+        <qualifiedname>Source.Model.Player.money</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="12" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_player_1ad5e3c51cd34799d4cde2431a76e82bf3" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Model.Player.score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <qualifiedname>Source.Model.Player.score</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="13" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_player_1ae8c1a0c7e4cbb11ad147fc0f3f287a33" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text Source.Model.Player.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>Source.Model.Player.name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="14" column="25" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_player_1acaf6f3976ace65d3c1be63b3e934ff78" prot="public" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Model.Player.earn</definition>
+        <argsstring></argsstring>
+        <name>earn</name>
+        <qualifiedname>Source.Model.Player.earn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="16" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_player_1a7f70c3f5735a4b178e4e6223fa4c2d45" prot="protected" static="no" mutable="no">
+        <type>List&lt; PlayerObserver &gt;</type>
+        <definition>List&lt;PlayerObserver&gt; Source.Model.Player.observers</definition>
+        <argsstring></argsstring>
+        <name>observers</name>
+        <qualifiedname>Source.Model.Player.observers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="15" column="24" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a7cd4b5362a0cda2fe309fc3436da7ca2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Source.Model.Player.Player</definition>
+        <argsstring>()</argsstring>
+        <name>Player</name>
+        <qualifiedname>Source.Model.Player.Player</qualifiedname>
+        <briefdescription>
+<para>Constructeur de joueur  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="27" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="27" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a10a9029c6cacdad58aa0bc0975c1cce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract bool</type>
+        <definition>abstract bool Source.Model.Player.canBuy</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>canBuy</name>
+        <qualifiedname>Source.Model.Player.canBuy</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1ac4cb26351b4efe26f17397cc8538850a">canBuy</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1a236636a9441a02338133bdff8ae5b5f9">canBuy</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si le joueur peut acheter  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si le joueur peut acheter, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="52" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1aedaa4a0472228b21ee3bbc07b7a8613e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract bool</type>
+        <definition>abstract bool Source.Model.Player.canUpgrade</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>canUpgrade</name>
+        <qualifiedname>Source.Model.Player.canUpgrade</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a1a16f7c71aa6be318686a0a40314a29c">canUpgrade</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1abfddab907b79a0ef97ead231810fedf1">canUpgrade</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si le joueur peut améliorer  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si le joueur peut améliorer, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="71" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a3cb1b92be5914555a6f4d3e636fa444a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract bool</type>
+        <definition>abstract bool Source.Model.Player.Buy</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>Buy</name>
+        <qualifiedname>Source.Model.Player.Buy</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a0bdb298db7818fe333973b7710e3eae4">Buy</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1a76c83384c9f5d79860a79b4031ec79f9">Buy</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si l&apos;achat s&apos;est bien déroulé  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retourne vrai si l&apos;opération s&apos;est bien faite, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="91" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a125e46c2c1d986b4bb848e8c8c858c72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Source.Model.Player.Upgrade</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>Upgrade</name>
+        <qualifiedname>Source.Model.Player.Upgrade</qualifiedname>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si l&apos;amélioration d&apos;un bâtiment s&apos;est bien déroulée  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>renvoie vrai si l&apos;amélioration s&apos;est faite, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="109" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="109" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a0ece3a6758d5a10c85105d27ef7f9716" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void Source.Model.Player.specialsUse</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>specialsUse</name>
+        <qualifiedname>Source.Model.Player.specialsUse</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a5c3fa077c9603f1233671ed0dda9e76d">specialsUse</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1ac5d1909f4a7d4e80156856fe841d311a">specialsUse</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;utiliser son pouvoir spécial  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="136" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a8a3b92e2029911c926ad2d35c186b4db" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void Source.Model.Player.addIncome</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>addIncome</name>
+        <qualifiedname>Source.Model.Player.addIncome</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a92bf890092cf8264ee035793f4e545e3">addIncome</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1a03e4fab56605c2192d81777c60dc1ea0">addIncome</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;ajouter les bénéfices  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="150" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a4d69bbe23c9459b82505bf5d7ec61f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void Source.Model.Player.setScore</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>setScore</name>
+        <qualifiedname>Source.Model.Player.setScore</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a38aee772fa98adf6e881559c41872685">setScore</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1a1de6c33c4407e5b4bc8848b7ec9f8ce7">setScore</reimplementedby>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet de fixer le score  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="162" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1ad1da831e33fdefd41f613466a13ff563" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Player.addObserver</definition>
+        <argsstring>(PlayerObserver observer)</argsstring>
+        <name>addObserver</name>
+        <qualifiedname>Source.Model.Player.addObserver</qualifiedname>
+        <param>
+          <type>PlayerObserver</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;ajouter un observeur  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>observer</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="175" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a7eeb23b6a853a8e3a250dda806d7b782" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Player.notifyObservers</definition>
+        <argsstring>()</argsstring>
+        <name>notifyObservers</name>
+        <qualifiedname>Source.Model.Player.notifyObservers</qualifiedname>
+        <briefdescription>
+<para>Permet de notifier les observers  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="189" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="189" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a837018ac9c32db3e7f0bef53567a9278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Model.Player.notifyObserversBeginRound</definition>
+        <argsstring>(Player player, Map map)</argsstring>
+        <name>notifyObserversBeginRound</name>
+        <qualifiedname>Source.Model.Player.notifyObserversBeginRound</qualifiedname>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_player" kindref="compound">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="197" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="197" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1acd117a4ffb956265366684cd7e629360" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract bool</type>
+        <definition>abstract bool Source.Model.Player.isCity</definition>
+        <argsstring>()</argsstring>
+        <name>isCity</name>
+        <qualifiedname>Source.Model.Player.isCity</qualifiedname>
+        <reimplementedby refid="class_source_1_1_model_1_1_city_1a133c9d40def18fc1af586013be9a5da6">isCity</reimplementedby>
+        <reimplementedby refid="class_source_1_1_model_1_1_company_1afffe1534a1139471364b5d393cddf909">isCity</reimplementedby>
+        <briefdescription>
+<para>Permet de vérifier si c&apos;est une ville (renvoie toujours true)  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne vrai</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="215" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1aea76fdfe36f051fda2c41999e85ddeb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Player.getScore</definition>
+        <argsstring>()</argsstring>
+        <name>getScore</name>
+        <qualifiedname>Source.Model.Player.getScore</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;accéder au score du joueur  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne le score du joueur</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="225" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_player_1a478eaa9024228342766fc37681659415" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Player.getMoney</definition>
+        <argsstring>()</argsstring>
+        <name>getMoney</name>
+        <qualifiedname>Source.Model.Player.getMoney</qualifiedname>
+        <briefdescription>
+<para>Permet d&apos;accéder à l&apos;argent du joueur  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne l&apos;argent du joueur</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="238" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="238" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Source.Model.Player</label>
+        <link refid="class_source_1_1_model_1_1_player"/>
+      </node>
+      <node id="2">
+        <label>Source.Model.City</label>
+        <link refid="class_source_1_1_model_1_1_city"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Source.Model.Company</label>
+        <link refid="class_source_1_1_model_1_1_company"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" line="10" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Player.cs" bodystart="11" bodyend="242"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_model_1_1_player_1a8a3b92e2029911c926ad2d35c186b4db" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>addIncome</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ad1da831e33fdefd41f613466a13ff563" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>addObserver</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a3cb1b92be5914555a6f4d3e636fa444a" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>Buy</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a10a9029c6cacdad58aa0bc0975c1cce4" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>canBuy</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1aedaa4a0472228b21ee3bbc07b7a8613e" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>canUpgrade</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1acaf6f3976ace65d3c1be63b3e934ff78" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>earn</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a478eaa9024228342766fc37681659415" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>getMoney</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1aea76fdfe36f051fda2c41999e85ddeb2" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>getScore</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1acd117a4ffb956265366684cd7e629360" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>isCity</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a2ac566c0c9a4becb7cd66d9d2a0c7f30" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>money</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ae8c1a0c7e4cbb11ad147fc0f3f287a33" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>name</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7eeb23b6a853a8e3a250dda806d7b782" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>notifyObservers</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a837018ac9c32db3e7f0bef53567a9278" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>notifyObserversBeginRound</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7f70c3f5735a4b178e4e6223fa4c2d45" prot="protected" virt="non-virtual"><scope>Source::Model::Player</scope><name>observers</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7cd4b5362a0cda2fe309fc3436da7ca2" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>Player</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ad5e3c51cd34799d4cde2431a76e82bf3" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>score</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a4d69bbe23c9459b82505bf5d7ec61f8c" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>setScore</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a0ece3a6758d5a10c85105d27ef7f9716" prot="public" virt="pure-virtual"><scope>Source::Model::Player</scope><name>specialsUse</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a125e46c2c1d986b4bb848e8c8c858c72" prot="public" virt="non-virtual"><scope>Source::Model::Player</scope><name>Upgrade</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

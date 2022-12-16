@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_panel___settings" kind="class" language="C#" prot="public">
+    <compoundname>Panel_Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_panel___settings_1ad6eea3c13ede714ad2669405bddf1645" prot="public" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite Panel_Settings.sound_on</definition>
+        <argsstring></argsstring>
+        <name>sound_on</name>
+        <qualifiedname>Panel_Settings.sound_on</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="9" column="19" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___settings_1ae9a60d23a4508bce7fe5eb56ceccb024" prot="public" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite Panel_Settings.sound_off</definition>
+        <argsstring></argsstring>
+        <name>sound_off</name>
+        <qualifiedname>Panel_Settings.sound_off</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="10" column="19" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_panel___settings_1ac7057230deffffeab2c7830d1cc22042" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Panel_Settings.isOn</definition>
+        <argsstring></argsstring>
+        <name>isOn</name>
+        <qualifiedname>Panel_Settings.isOn</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="11" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___settings_1a977f999f205428bb830de095cec7b068" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Panel_Settings.isActive</definition>
+        <argsstring></argsstring>
+        <name>isActive</name>
+        <qualifiedname>Panel_Settings.isActive</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="12" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_panel___settings_1a0d41777c65e98f882dd397b656800de3" prot="private" static="no" mutable="no">
+        <type>Image</type>
+        <definition>Image Panel_Settings.image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <qualifiedname>Panel_Settings.image</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="14" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_panel___settings_1a3d53e6e7eca19f92ba4f4deaf6c60294" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Settings.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Panel_Settings.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="16" column="10" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_panel___settings_1a446172336567a8b1d53861ee76dbf325" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Settings.clickUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>clickUpdate</name>
+        <qualifiedname>Panel_Settings.clickUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="21" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="21" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_panel___settings_1ad0a6ff446abe29c2060b7a3e61aad363" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Panel_Settings.activePanel</definition>
+        <argsstring>()</argsstring>
+        <name>activePanel</name>
+        <qualifiedname>Panel_Settings.activePanel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="35" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Panel_Settings</label>
+        <link refid="class_panel___settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Panel_Settings</label>
+        <link refid="class_panel___settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" line="7" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Panel_Settings.cs" bodystart="8" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_panel___settings_1ad0a6ff446abe29c2060b7a3e61aad363" prot="public" virt="non-virtual"><scope>Panel_Settings</scope><name>activePanel</name></member>
+      <member refid="class_panel___settings_1a446172336567a8b1d53861ee76dbf325" prot="public" virt="non-virtual"><scope>Panel_Settings</scope><name>clickUpdate</name></member>
+      <member refid="class_panel___settings_1a0d41777c65e98f882dd397b656800de3" prot="private" virt="non-virtual"><scope>Panel_Settings</scope><name>image</name></member>
+      <member refid="class_panel___settings_1a977f999f205428bb830de095cec7b068" prot="private" virt="non-virtual"><scope>Panel_Settings</scope><name>isActive</name></member>
+      <member refid="class_panel___settings_1ac7057230deffffeab2c7830d1cc22042" prot="private" virt="non-virtual"><scope>Panel_Settings</scope><name>isOn</name></member>
+      <member refid="class_panel___settings_1ae9a60d23a4508bce7fe5eb56ceccb024" prot="public" virt="non-virtual"><scope>Panel_Settings</scope><name>sound_off</name></member>
+      <member refid="class_panel___settings_1ad6eea3c13ede714ad2669405bddf1645" prot="public" virt="non-virtual"><scope>Panel_Settings</scope><name>sound_on</name></member>
+      <member refid="class_panel___settings_1a3d53e6e7eca19f92ba4f4deaf6c60294" prot="private" virt="non-virtual"><scope>Panel_Settings</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

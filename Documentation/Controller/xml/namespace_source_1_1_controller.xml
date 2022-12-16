@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_source_1_1_controller" kind="namespace" language="C#">
+    <compoundname>Source::Controller</compoundname>
+    <innerclass refid="class_source_1_1_controller_1_1_audio_controller" prot="public">Source::Controller::AudioController</innerclass>
+    <innerclass refid="class_source_1_1_controller_1_1_game_handler" prot="public">Source::Controller::GameHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

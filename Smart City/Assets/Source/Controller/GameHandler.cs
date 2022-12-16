@@ -45,6 +45,11 @@ namespace Source.Controller
 
         private AudioController audioController;
 
+        public GameObject panellFinTour;
+
+        public GameObject panelCity;
+        public GameObject panelCompany;
+
         /// <summary>
         /// Nouvelle partie
         /// </summary>
@@ -56,6 +61,7 @@ namespace Source.Controller
             avatar = GameObject.Find("AvatarConstant");
             TurnText = GameObject.Find("TurnText").GetComponent<TextMeshProUGUI>();
             TurnText.text = turn + " / " + turnLimit;
+            panellFinTour = GameObject.Find("PanelFinTour");
         }
 
         IEnumerator LateStart(float waitTime)
@@ -66,14 +72,6 @@ namespace Source.Controller
             playerCompany.setScore(map);
             activePlayer.notifyObservers();
         }
-
-        IEnumerator IbeginTurn()
-        {  
-            activePlayer.notifyObserversBeginRound(activePlayer, map);
-            yield return new WaitForSeconds(3);
-            activePlayer.earn = 0;
-        }
-
 
         /* startNewGame : fonction 
          Parametre : city : booo : true 
@@ -91,10 +89,14 @@ namespace Source.Controller
             if (city)
             {
                 activePlayer = playerCity;
+                panelCompany.SetActive(false);
+                panelCity.SetActive(true);
             }
             else
             {
                 activePlayer = playerCompany;
+                panelCity.SetActive(false);
+                panelCompany.SetActive(true);
             }
             turn = 1;
 
@@ -133,24 +135,32 @@ namespace Source.Controller
             if (activePlayer.isCity())
             {
                 activePlayer = playerCompany;
+                panelCity.SetActive(false);
+                panelCompany.SetActive(true);
             }
             else
             {
                 activePlayer = playerCity;
+                panelCompany.SetActive(false);
+                panelCity.SetActive(true);
             }
             resetSelectedTile();
             turn++;
             TurnText.text = turn + " / " + turnLimit;
-            StartCoroutine(IbeginTurn());
-            StartCoroutine(InewRound());
-        }
-
-        IEnumerator InewRound()
-        {
-            yield return new WaitForSeconds(1.5f);
             audioController.playNextTurn();
             activePlayer.notifyObservers();
             activePlayer.setScore(map);
+            if(turn>2){
+                StartCoroutine(IbeginTurn());
+            }
+        }
+
+        IEnumerator IbeginTurn()
+        {  
+            activePlayer.notifyObserversBeginRound(activePlayer, map);
+            yield return new WaitForSeconds(2.5f);
+            activePlayer.earn = 0;
+            panellFinTour.SetActive(false);
         }
 
         /*endTurn  : fonction 

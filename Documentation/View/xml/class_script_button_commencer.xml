@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_script_button_commencer" kind="class" language="C#" prot="public">
+    <compoundname>ScriptButtonCommencer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_script_button_commencer_1a4edcea2d184e68b6ecd6107f468eb197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScriptButtonCommencer.BtnNextScene</definition>
+        <argsstring>()</argsstring>
+        <name>BtnNextScene</name>
+        <qualifiedname>ScriptButtonCommencer.BtnNextScene</qualifiedname>
+        <briefdescription>
+<para>Permet de passer à la scène d&apos;inscription  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/ScriptButtonCommencer.cs" line="16" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/ScriptButtonCommencer.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>ScriptButtonCommencer</label>
+        <link refid="class_script_button_commencer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>ScriptButtonCommencer</label>
+        <link refid="class_script_button_commencer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/ScriptButtonCommencer.cs" line="6" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/ScriptButtonCommencer.cs" bodystart="7" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_script_button_commencer_1a4edcea2d184e68b6ecd6107f468eb197" prot="public" virt="non-virtual"><scope>ScriptButtonCommencer</scope><name>BtnNextScene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

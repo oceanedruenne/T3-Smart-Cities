@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="class_source_1_1_controller_1_1_audio_controller" kind="class"><name>Source::Controller::AudioController</name>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a89eda588997291829e76b7e1b14b8968" kind="variable"><name>sounds</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1afe53b5b01191bdae87905cd16e7f02e1" kind="variable"><name>volume</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a1d32140902edd6ce5b132dcbc96e7a23" kind="variable"><name>pitch</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a44e4d91050a6bfbab176167d9700d19c" kind="variable"><name>source</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a3a268e40801987724e99a8a6336da3d7" kind="function"><name>Awake</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a445274f209111a68d5375496fe62f750" kind="function"><name>Start</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a33de6c73c302c7e4a83b1df3024f05a4" kind="function"><name>playMoney</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a0a3e9e1f7e799439b98dca01fa7f9653" kind="function"><name>playUpgrade</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a710aa6dded24bb3c6bce1a5646d6f77f" kind="function"><name>playPowerMoney</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1a278028a47dbeca686b09df7d171c4141" kind="function"><name>playPowerBlock</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1add89ba3bd5ba532fbcca3d4f370ec93e" kind="function"><name>playNextTurn</name></member>
+    <member refid="class_source_1_1_controller_1_1_audio_controller_1acf7f32c3936531a9529170c7bca92a2c" kind="function"><name>playSelected</name></member>
+  </compound>
+  <compound refid="class_source_1_1_controller_1_1_game_handler" kind="class"><name>Source::Controller::GameHandler</name>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a743ad5b6d66f304b258f0ac5cea7c197" kind="variable"><name>gameHandler</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1abf70852560d4d7fc32adcab105345f4e" kind="variable"><name>turn</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a6c2377063473bf2393ba69eed8c451ca" kind="variable"><name>turnLimit</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1abbec58478766371ce25ae6e507205a43" kind="variable"><name>activePlayer</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a49a29df4cfbc2276393656469e6a6ca0" kind="variable"><name>playerCity</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a064f808dbe25b4970e3d44e760043dea" kind="variable"><name>playerCompany</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a283ac3784dd1a34e570bfe06ba3f00d1" kind="variable"><name>playerObserver</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a33604d921db45fcc90561dbaa3789cb2" kind="variable"><name>mapObserver</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1ab737e2fd7cf00a62df1deefeb15cb288" kind="variable"><name>audioController</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a6bce6571daa20db52d23b8ca3d951007" kind="variable"><name>map</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1ae461fe164433c921621a566e6e56de4a" kind="variable"><name>playerCityScore</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a2c74f4b0eb5c15923233cdfaf0378157" kind="variable"><name>playerCityMoney</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a240dc20ab9af04d1f0957cbe1a62242a" kind="variable"><name>playerCompanyScore</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a5ad5111310ae7baef1875f554a0f8954" kind="variable"><name>playerCompanyMoney</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1ac8d3168a8a98a7cba2ba7a1146c7d079" kind="variable"><name>posx</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1ab759726721e0318bb73728ede65ec42b" kind="variable"><name>posy</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a89d7706dff1008acfdc9fb9ce58d13ba" kind="variable"><name>currTile</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a1ccc10a9ed4761353d2c0e901adc2691" kind="variable"><name>BoostTile</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a7ec952ef4fb591abee0e25c369defb71" kind="variable"><name>DecreeTile</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a61930094c200829237038009d62d8cc3" kind="variable"><name>panel</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a5f93f3c0868191064baffb20ac8d2fb7" kind="variable"><name>avatar</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1aff27ca3a29a89f177f687a6f55a170e9" kind="variable"><name>TurnText</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a76264b4f26962c61292bcc2e0f75fc44" kind="variable"><name>panellFinTour</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a180ac0225c64cb4ee0c43fefd1d5306f" kind="variable"><name>panelCity</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a60d9bf65b97e926bb5e2f6adfdc881ad" kind="variable"><name>panelCompany</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a299727e7440735ac74b7d5ef26f9175e" kind="variable"><name>getTourActuel</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1af2cd135464c107272bdd25f89c5f2ecc" kind="variable"><name>getNbTours</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1af5e40fc10d8110ae81edb4354e53bfff" kind="function"><name>Start</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a0267aca5bbe1ff6e6fe14bae3e75f898" kind="function"><name>LateStart</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a21374b4dc42077d05b6358f4ea94e7d8" kind="function"><name>IbeginTurn</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1aeb81e6fadce27967b8358fb61c777f69" kind="function"><name>startNewGame</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a9c539bc61d8c719e97c58c7dfc0a3d30" kind="function"><name>nextTurn</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a68c5b0cc02baf93e99c5da1c7b3581a7" kind="function"><name>endTurn</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a8424d5f51b924a57be7e258e406085f3" kind="function"><name>selectTile</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1aec87e67d148610a2073921d956ac58d7" kind="function"><name>resetSelectedTile</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a9d51b1662be23bb7d3d57bef8e2836d9" kind="function"><name>buySelected</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1add84db469a3f00af6f7a72d983ad8939" kind="function"><name>upgradeSelected</name></member>
+    <member refid="class_source_1_1_controller_1_1_game_handler_1a8987ad4d643b9cdfcdf812b71a68eae7" kind="function"><name>setPowerSelected</name></member>
+  </compound>
+  <compound refid="class_music_controller" kind="class"><name>MusicController</name>
+    <member refid="class_music_controller_1a2bbb661d43b30e1ab45ebcdacc21872b" kind="variable"><name>source</name></member>
+    <member refid="class_music_controller_1a262af298ee2c96b1f04d4f8a2ae58ef9" kind="function"><name>Start</name></member>
+    <member refid="class_music_controller_1a8c64757431907b81f82295e0281d8b57" kind="function"><name>setMusic</name></member>
+  </compound>
+  <compound refid="namespace_jeu_script" kind="namespace"><name>JeuScript</name>
+  </compound>
+  <compound refid="namespace_source" kind="namespace"><name>Source</name>
+  </compound>
+  <compound refid="namespace_source_1_1_controller" kind="namespace"><name>Source::Controller</name>
+  </compound>
+  <compound refid="namespace_source_1_1_model" kind="namespace"><name>Source::Model</name>
+  </compound>
+  <compound refid="namespace_source_1_1_view" kind="namespace"><name>Source::View</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_audio" kind="namespace"><name>UnityEngine::Audio</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="_audio_controller_8cs" kind="file"><name>AudioController.cs</name>
+  </compound>
+  <compound refid="_game_handler_8cs" kind="file"><name>GameHandler.cs</name>
+  </compound>
+  <compound refid="_music_controller_8cs" kind="file"><name>MusicController.cs</name>
+  </compound>
+  <compound refid="dir_f8aa4293453eee9d13c5cb7f3b3f7908" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller</name>
+  </compound>
+  <compound refid="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir"><name>C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source</name>
+  </compound>
+</doxygenindex>

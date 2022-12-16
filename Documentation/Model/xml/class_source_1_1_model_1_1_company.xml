@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_model_1_1_company" kind="class" language="C#" prot="public">
+    <compoundname>Source::Model::Company</compoundname>
+    <basecompoundref refid="class_source_1_1_model_1_1_player" prot="public" virt="non-virtual">Source.Model.Player</basecompoundref>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_source_1_1_model_1_1_company_1a8810404a6212cb39e05cf19a7ede3faa" prot="protected" static="yes" mutable="no">
+        <type>uint</type>
+        <definition>uint Source.Model.Company.BASE_MONEY</definition>
+        <argsstring></argsstring>
+        <name>BASE_MONEY</name>
+        <qualifiedname>Source.Model.Company.BASE_MONEY</qualifiedname>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="10" column="31" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1ad05d8e941e08f229015ca8a43549fd24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Source.Model.Company.Company</definition>
+        <argsstring>()</argsstring>
+        <name>Company</name>
+        <qualifiedname>Source.Model.Company.Company</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="12" column="16" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1a76c83384c9f5d79860a79b4031ec79f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override bool</type>
+        <definition>override bool Source.Model.Company.Buy</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>Buy</name>
+        <qualifiedname>Source.Model.Company.Buy</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1a3cb1b92be5914555a6f4d3e636fa444a">Buy</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;acheter  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vrai si cela a été fait, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="30" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1a236636a9441a02338133bdff8ae5b5f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override bool</type>
+        <definition>override bool Source.Model.Company.canBuy</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>canBuy</name>
+        <qualifiedname>Source.Model.Company.canBuy</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1a10a9029c6cacdad58aa0bc0975c1cce4">canBuy</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si l&apos;on peut acheter  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>renvoie vrai si le bâtiment peut être acheté, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="59" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="59" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1abfddab907b79a0ef97ead231810fedf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override bool</type>
+        <definition>override bool Source.Model.Company.canUpgrade</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>canUpgrade</name>
+        <qualifiedname>Source.Model.Company.canUpgrade</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1aedaa4a0472228b21ee3bbc07b7a8613e">canUpgrade</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet de vérifier si l&apos;on peut améliorer  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>renvoie vrai si le bâtiment peut être amélioré, sinon faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="92" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="92" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1ac5d1909f4a7d4e80156856fe841d311a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Source.Model.Company.specialsUse</definition>
+        <argsstring>(Map map, uint posx, uint posy)</argsstring>
+        <name>specialsUse</name>
+        <qualifiedname>Source.Model.Company.specialsUse</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1a0ece3a6758d5a10c85105d27ef7f9716">specialsUse</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posx</declname>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>posy</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;utiliser son pouvoir spécial  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posx</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posy</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="125" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1a03e4fab56605c2192d81777c60dc1ea0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Source.Model.Company.addIncome</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>addIncome</name>
+        <qualifiedname>Source.Model.Company.addIncome</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1a8a3b92e2029911c926ad2d35c186b4db">addIncome</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;ajouter les bénéfices  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="141" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="141" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1a1de6c33c4407e5b4bc8848b7ec9f8ce7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Source.Model.Company.setScore</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>setScore</name>
+        <qualifiedname>Source.Model.Company.setScore</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1a4d69bbe23c9459b82505bf5d7ec61f8c">setScore</reimplements>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet d&apos;établir le score  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="180" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1afffe1534a1139471364b5d393cddf909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override bool</type>
+        <definition>override bool Source.Model.Company.isCity</definition>
+        <argsstring>()</argsstring>
+        <name>isCity</name>
+        <qualifiedname>Source.Model.Company.isCity</qualifiedname>
+        <reimplements refid="class_source_1_1_model_1_1_player_1acd117a4ffb956265366684cd7e629360">isCity</reimplements>
+        <briefdescription>
+<para>Permet de vérifier si c&apos;est une ville (renvoie toujours true)  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>retourne faux</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="195" column="30" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="195" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_source_1_1_model_1_1_company_1ac206750259bf2b59743db6bc62517e8c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint Source.Model.Company.getIncome</definition>
+        <argsstring>(Map map)</argsstring>
+        <name>getIncome</name>
+        <qualifiedname>Source.Model.Company.getIncome</qualifiedname>
+        <param>
+          <type><ref refid="class_source_1_1_model_1_1_map" kindref="compound">Map</ref></type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+<para>Permet de récupérer les bénéfices  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>map</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Les bénéfices du bâtiment</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="162" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="162" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Player</label>
+        <link refid="class_source_1_1_model_1_1_player"/>
+      </node>
+      <node id="1">
+        <label>Source.Model.Company</label>
+        <link refid="class_source_1_1_model_1_1_company"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Player</label>
+        <link refid="class_source_1_1_model_1_1_player"/>
+      </node>
+      <node id="1">
+        <label>Source.Model.Company</label>
+        <link refid="class_source_1_1_model_1_1_company"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" line="8" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Model/Company.cs" bodystart="9" bodyend="199"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_model_1_1_company_1a03e4fab56605c2192d81777c60dc1ea0" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>addIncome</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ad1da831e33fdefd41f613466a13ff563" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>addObserver</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1a8810404a6212cb39e05cf19a7ede3faa" prot="protected" virt="non-virtual"><scope>Source::Model::Company</scope><name>BASE_MONEY</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1a76c83384c9f5d79860a79b4031ec79f9" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>Buy</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1a236636a9441a02338133bdff8ae5b5f9" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>canBuy</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1abfddab907b79a0ef97ead231810fedf1" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>canUpgrade</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1ad05d8e941e08f229015ca8a43549fd24" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>Company</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1acaf6f3976ace65d3c1be63b3e934ff78" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>earn</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1ac206750259bf2b59743db6bc62517e8c" prot="private" virt="non-virtual"><scope>Source::Model::Company</scope><name>getIncome</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a478eaa9024228342766fc37681659415" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>getMoney</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1aea76fdfe36f051fda2c41999e85ddeb2" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>getScore</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1afffe1534a1139471364b5d393cddf909" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>isCity</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a2ac566c0c9a4becb7cd66d9d2a0c7f30" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>money</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ae8c1a0c7e4cbb11ad147fc0f3f287a33" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>name</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7eeb23b6a853a8e3a250dda806d7b782" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>notifyObservers</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a837018ac9c32db3e7f0bef53567a9278" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>notifyObserversBeginRound</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7f70c3f5735a4b178e4e6223fa4c2d45" prot="protected" virt="non-virtual"><scope>Source::Model::Company</scope><name>observers</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a7cd4b5362a0cda2fe309fc3436da7ca2" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>Player</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1ad5e3c51cd34799d4cde2431a76e82bf3" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>score</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1a1de6c33c4407e5b4bc8848b7ec9f8ce7" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>setScore</name></member>
+      <member refid="class_source_1_1_model_1_1_company_1ac5d1909f4a7d4e80156856fe841d311a" prot="public" virt="virtual"><scope>Source::Model::Company</scope><name>specialsUse</name></member>
+      <member refid="class_source_1_1_model_1_1_player_1a125e46c2c1d986b4bb848e8c8c858c72" prot="public" virt="non-virtual"><scope>Source::Model::Company</scope><name>Upgrade</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

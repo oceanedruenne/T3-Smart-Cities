@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_player_observer" kind="class" language="C#" prot="public">
+    <compoundname>PlayerObserver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+    <basecompoundref refid="interface_source_1_1_view_1_1_observer" prot="public" virt="non-virtual">Source.View.Observer</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_observer_1aa328583bdbe4b3ac2a24f6a352beda5d" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI PlayerObserver.scoreText</definition>
+        <argsstring></argsstring>
+        <name>scoreText</name>
+        <qualifiedname>PlayerObserver.scoreText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="11" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_observer_1ac13b168c040c1f99bd8a63d24fbb0a25" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI PlayerObserver.moneyText</definition>
+        <argsstring></argsstring>
+        <name>moneyText</name>
+        <qualifiedname>PlayerObserver.moneyText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="12" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_observer_1a2f98d1426129dfcf23cb5410a9730f53" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI PlayerObserver.nameText</definition>
+        <argsstring></argsstring>
+        <name>nameText</name>
+        <qualifiedname>PlayerObserver.nameText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="13" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_observer_1a80e534f7f8ee5a93a31ce00750fb6872" prot="public" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI PlayerObserver.earnText</definition>
+        <argsstring></argsstring>
+        <name>earnText</name>
+        <qualifiedname>PlayerObserver.earnText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="14" column="28" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_observer_1a0cb221ba4e52388069ac2668a8017284" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject PlayerObserver.panellFinTour</definition>
+        <argsstring></argsstring>
+        <name>panellFinTour</name>
+        <qualifiedname>PlayerObserver.panellFinTour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="15" column="23" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_observer_1a158cea9a8d00d4a3d9eac5fa17c34454" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PlayerObserver.PlayerObserver</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerObserver</name>
+        <qualifiedname>PlayerObserver.PlayerObserver</qualifiedname>
+        <briefdescription>
+<para>Permet de trouver les informations du joueur : son score et son argent  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="25" column="12" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_observer_1a19e2c9d65b00e0d6ec1758396bd3853f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerObserver.reactTo</definition>
+        <argsstring>(Player player)</argsstring>
+        <name>reactTo</name>
+        <qualifiedname>PlayerObserver.reactTo</qualifiedname>
+        <param>
+          <type>Player</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+<para>Permet de donner au joueur passé en paramètre de l&apos;argent et un score  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="44" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_observer_1ad52f8daa851c4d47c1bd6aed77d9a70d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerObserver.reactToBeginRound</definition>
+        <argsstring>(Player player, Map map)</argsstring>
+        <name>reactToBeginRound</name>
+        <qualifiedname>PlayerObserver.reactToBeginRound</qualifiedname>
+        <param>
+          <type>Player</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>Map</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="53" column="17" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="53" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Observer</label>
+        <link refid="interface_source_1_1_view_1_1_observer"/>
+      </node>
+      <node id="1">
+        <label>PlayerObserver</label>
+        <link refid="class_player_observer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Observer</label>
+        <link refid="interface_source_1_1_view_1_1_observer"/>
+      </node>
+      <node id="1">
+        <label>PlayerObserver</label>
+        <link refid="class_player_observer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" line="9" column="7" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/PlayerObserver.cs" bodystart="10" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_player_observer_1a80e534f7f8ee5a93a31ce00750fb6872" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>earnText</name></member>
+      <member refid="class_player_observer_1ac13b168c040c1f99bd8a63d24fbb0a25" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>moneyText</name></member>
+      <member refid="class_player_observer_1a2f98d1426129dfcf23cb5410a9730f53" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>nameText</name></member>
+      <member refid="class_player_observer_1a0cb221ba4e52388069ac2668a8017284" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>panellFinTour</name></member>
+      <member refid="class_player_observer_1a158cea9a8d00d4a3d9eac5fa17c34454" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>PlayerObserver</name></member>
+      <member refid="class_player_observer_1a19e2c9d65b00e0d6ec1758396bd3853f" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>reactTo</name></member>
+      <member refid="interface_source_1_1_view_1_1_observer_1a7645cb46a2b0ce65d33c9260155266d5" prot="public" virt="non-virtual" ambiguityscope="Source::View::Observer."><scope>PlayerObserver</scope><name>reactTo</name></member>
+      <member refid="class_player_observer_1ad52f8daa851c4d47c1bd6aed77d9a70d" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>reactToBeginRound</name></member>
+      <member refid="class_player_observer_1aa328583bdbe4b3ac2a24f6a352beda5d" prot="public" virt="non-virtual"><scope>PlayerObserver</scope><name>scoreText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="classinput_writer" kind="class" language="C#" prot="public">
+    <compoundname>inputWriter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classinput_writer_1ae63cbd45f1d7e2c83b6dd98a58806732" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string inputWriter.cityName</definition>
+        <argsstring></argsstring>
+        <name>cityName</name>
+        <qualifiedname>inputWriter.cityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputWriter.cs" line="9" column="26" bodyfile="MenuScript/inputWriter.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classinput_writer_1a9e6120fa884e34d4c296be29ff9cd0ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void inputWriter.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>inputWriter.Start</qualifiedname>
+        <briefdescription>
+<para>On récupère le nom de ville écrit par le joueur dans la scène &quot;Sign Up&quot; et on l&apos;affiche dans la scène &quot;GameScene&quot;  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputWriter.cs" line="14" column="10" bodyfile="MenuScript/inputWriter.cs" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classinput_writer_1a93c3ba1b74072cf1c1af44d42f9271d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void inputWriter.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>inputWriter.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MenuScript/inputWriter.cs" line="21" column="10" bodyfile="MenuScript/inputWriter.cs" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>inputWriter</label>
+        <link refid="classinput_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>inputWriter</label>
+        <link refid="classinput_writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MenuScript/inputWriter.cs" line="7" column="7" bodyfile="MenuScript/inputWriter.cs" bodystart="8" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classinput_writer_1ae63cbd45f1d7e2c83b6dd98a58806732" prot="public" virt="non-virtual"><scope>inputWriter</scope><name>cityName</name></member>
+      <member refid="classinput_writer_1a9e6120fa884e34d4c296be29ff9cd0ac" prot="private" virt="non-virtual"><scope>inputWriter</scope><name>Start</name></member>
+      <member refid="classinput_writer_1a93c3ba1b74072cf1c1af44d42f9271d1" prot="private" virt="non-virtual"><scope>inputWriter</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

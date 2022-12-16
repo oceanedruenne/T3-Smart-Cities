@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_game_manager" kind="class" language="C#" prot="public">
+    <compoundname>GameManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_manager_1a9037248023168087f8220babf0b0bd3d" prot="public" static="no" mutable="no">
+        <type>Sprite</type>
+        <definition>Sprite GameManager.building</definition>
+        <argsstring></argsstring>
+        <name>building</name>
+        <qualifiedname>GameManager.building</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/GameManager.cs" line="7" column="19" bodyfile="JeuScript/GameManager.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="JeuScript/GameManager.cs" line="5" column="7" bodyfile="JeuScript/GameManager.cs" bodystart="6" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_game_manager_1a9037248023168087f8220babf0b0bd3d" prot="public" virt="non-virtual"><scope>GameManager</scope><name>building</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

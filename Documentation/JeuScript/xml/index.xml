@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="classcam_controller" kind="class"><name>camController</name>
+    <member refid="classcam_controller_1a601ee0e7f24102e9d62b639198ea72a7" kind="variable"><name>cam</name></member>
+    <member refid="classcam_controller_1ad17cf559e2e89ff66cab664cd525da76" kind="variable"><name>dragOrigin</name></member>
+    <member refid="classcam_controller_1a58585a00d994c65686659e178223de4b" kind="variable"><name>speedScroll</name></member>
+    <member refid="classcam_controller_1a03671512ccf43de89b546ce2aefc28eb" kind="variable"><name>dragSpeed</name></member>
+    <member refid="classcam_controller_1a6d286e20bfd57f7fb91e27f0451ed152" kind="function"><name>Start</name></member>
+    <member refid="classcam_controller_1a6c0a344cc564e5a6da92e0be12d07ebc" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_game_manager" kind="class"><name>GameManager</name>
+    <member refid="class_game_manager_1a9037248023168087f8220babf0b0bd3d" kind="variable"><name>building</name></member>
+  </compound>
+  <compound refid="class_grid_instantiate" kind="class"><name>GridInstantiate</name>
+    <member refid="class_grid_instantiate_1a5e4b777b7fd1262f79d29e5e254ae053" kind="variable"><name>tiles</name></member>
+    <member refid="class_grid_instantiate_1af5ce0206f758361bf9ee22503ced2977" kind="variable"><name>gridHeight</name></member>
+    <member refid="class_grid_instantiate_1a8072bab661998363c45e5c765c1dc260" kind="variable"><name>gridWidth</name></member>
+    <member refid="class_grid_instantiate_1a2a864496731520059a1f0d4edd7c609b" kind="variable"><name>tilesd</name></member>
+    <member refid="class_grid_instantiate_1a1cb766a23845475a6dcf85fb9b7ea1f4" kind="function"><name>Start</name></member>
+    <member refid="class_grid_instantiate_1a5ca18c56f5f9e166225b9343f731f9dc" kind="function"><name>GenerateGrid</name></member>
+    <member refid="class_grid_instantiate_1a647537b3e13a155c9125736e03fc214c" kind="function"><name>getTileAtPosition</name></member>
+  </compound>
+  <compound refid="class_select_building" kind="class"><name>SelectBuilding</name>
+    <member refid="class_select_building_1a20fd41687a1ffafb57cfc3cf618ac89d" kind="variable"><name>gm</name></member>
+    <member refid="class_select_building_1a2486a001e73537d7d022fd678cf76906" kind="function"><name>Start</name></member>
+    <member refid="class_select_building_1a2c8a0293976d1de37a228ad5b5425971" kind="function"><name>changeBuilding</name></member>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_tilemaps" kind="namespace"><name>UnityEngine::Tilemaps</name>
+  </compound>
+  <compound refid="cam_controller_8cs" kind="file"><name>camController.cs</name>
+  </compound>
+  <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
+  </compound>
+  <compound refid="_grid_instantiate_8cs" kind="file"><name>GridInstantiate.cs</name>
+  </compound>
+  <compound refid="_select_building_8cs" kind="file"><name>SelectBuilding.cs</name>
+  </compound>
+  <compound refid="dir_ea67b401344593c82cc28cb4879d9103" kind="dir"><name>JeuScript</name>
+  </compound>
+</doxygenindex>

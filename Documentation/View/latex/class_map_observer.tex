@@ -1,0 +1,189 @@
+\hypertarget{class_map_observer}{}\doxysection{Map\+Observer Class Reference}
+\label{class_map_observer}\index{MapObserver@{MapObserver}}
+Inheritance diagram for Map\+Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_map_observer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_observer_a51003d4362fab0eae348660d9029954b}{Map\+Observer}} (Map map, Game\+Handler gh)
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_map_observer}{Map\+Observer}}  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_observer_a6449e674d495bc2440a1e52ae93bdabc}{gen\+Map}} (Map map)
+\begin{DoxyCompactList}\small\item\em Permet de générer la map  \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_map_observer_ad6619a6ed0f462cdc3fc91c1ee84370c}{get\+Tile\+At\+Position}} (Vector3\+Int pos)
+\begin{DoxyCompactList}\small\item\em Permet de récupérer la case dont ses coordonnées sont passées en paramètres  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_observer_a336cdcb1153328dd67c25580539f96ac}{react\+To}} (Map map)
+\begin{DoxyCompactList}\small\item\em Permet de réagir aux changements  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_observer_aeb644f33e81c4dd1aaf08b29e986a7e0}{react\+To\+Pos}} (Map map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de réagir aux changements  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_observer_a086027c31ee577d18dc0fcb9d4e468d7}{Update\+Info\+From}} (Map map, uint posx, uint posy)
+\begin{DoxyCompactList}\small\item\em Permet de modifier les informations de la case dont les coordonnées sont passées en paramètres  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_observer_ad4fc726109f832e533173abaa60f1497}{hide\+Info}} (bool is\+City)
+\begin{DoxyCompactList}\small\item\em Permet de cacher les informations  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_map_observer_a51003d4362fab0eae348660d9029954b}\label{class_map_observer_a51003d4362fab0eae348660d9029954b}} 
+\index{MapObserver@{MapObserver}!MapObserver@{MapObserver}}
+\index{MapObserver@{MapObserver}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{MapObserver()}{MapObserver()}}
+{\footnotesize\ttfamily Map\+Observer.\+Map\+Observer (\begin{DoxyParamCaption}\item[{Map}]{map,  }\item[{Game\+Handler}]{gh }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_map_observer}{Map\+Observer}}  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em gh} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_map_observer_a6449e674d495bc2440a1e52ae93bdabc}\label{class_map_observer_a6449e674d495bc2440a1e52ae93bdabc}} 
+\index{MapObserver@{MapObserver}!genMap@{genMap}}
+\index{genMap@{genMap}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{genMap()}{genMap()}}
+{\footnotesize\ttfamily void Map\+Observer.\+gen\+Map (\begin{DoxyParamCaption}\item[{Map}]{map }\end{DoxyParamCaption})}
+
+
+
+Permet de générer la map  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00070}{70}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+\mbox{\Hypertarget{class_map_observer_ad6619a6ed0f462cdc3fc91c1ee84370c}\label{class_map_observer_ad6619a6ed0f462cdc3fc91c1ee84370c}} 
+\index{MapObserver@{MapObserver}!getTileAtPosition@{getTileAtPosition}}
+\index{getTileAtPosition@{getTileAtPosition}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{getTileAtPosition()}{getTileAtPosition()}}
+{\footnotesize\ttfamily Game\+Object Map\+Observer.\+get\+Tile\+At\+Position (\begin{DoxyParamCaption}\item[{Vector3\+Int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Permet de récupérer la case dont ses coordonnées sont passées en paramètres  
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La case à la position pos
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00124}{124}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+\mbox{\Hypertarget{class_map_observer_ad4fc726109f832e533173abaa60f1497}\label{class_map_observer_ad4fc726109f832e533173abaa60f1497}} 
+\index{MapObserver@{MapObserver}!hideInfo@{hideInfo}}
+\index{hideInfo@{hideInfo}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{hideInfo()}{hideInfo()}}
+{\footnotesize\ttfamily void Map\+Observer.\+hide\+Info (\begin{DoxyParamCaption}\item[{bool}]{is\+City }\end{DoxyParamCaption})}
+
+
+
+Permet de cacher les informations  
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+City} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00206}{206}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+\mbox{\Hypertarget{class_map_observer_a336cdcb1153328dd67c25580539f96ac}\label{class_map_observer_a336cdcb1153328dd67c25580539f96ac}} 
+\index{MapObserver@{MapObserver}!reactTo@{reactTo}}
+\index{reactTo@{reactTo}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{reactTo()}{reactTo()}}
+{\footnotesize\ttfamily void Map\+Observer.\+react\+To (\begin{DoxyParamCaption}\item[{Map}]{map }\end{DoxyParamCaption})}
+
+
+
+Permet de réagir aux changements  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00141}{141}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+\mbox{\Hypertarget{class_map_observer_aeb644f33e81c4dd1aaf08b29e986a7e0}\label{class_map_observer_aeb644f33e81c4dd1aaf08b29e986a7e0}} 
+\index{MapObserver@{MapObserver}!reactToPos@{reactToPos}}
+\index{reactToPos@{reactToPos}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{reactToPos()}{reactToPos()}}
+{\footnotesize\ttfamily void Map\+Observer.\+react\+To\+Pos (\begin{DoxyParamCaption}\item[{Map}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})}
+
+
+
+Permet de réagir aux changements  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00168}{168}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+\mbox{\Hypertarget{class_map_observer_a086027c31ee577d18dc0fcb9d4e468d7}\label{class_map_observer_a086027c31ee577d18dc0fcb9d4e468d7}} 
+\index{MapObserver@{MapObserver}!UpdateInfoFrom@{UpdateInfoFrom}}
+\index{UpdateInfoFrom@{UpdateInfoFrom}!MapObserver@{MapObserver}}
+\doxysubsubsection{\texorpdfstring{UpdateInfoFrom()}{UpdateInfoFrom()}}
+{\footnotesize\ttfamily void Map\+Observer.\+Update\+Info\+From (\begin{DoxyParamCaption}\item[{Map}]{map,  }\item[{uint}]{posx,  }\item[{uint}]{posy }\end{DoxyParamCaption})}
+
+
+
+Permet de modifier les informations de la case dont les coordonnées sont passées en paramètres  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+{\em posx} & \\
+\hline
+{\em posy} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_map_observer_8cs_source_l00187}{187}} of file \mbox{\hyperlink{_map_observer_8cs_source}{Map\+Observer.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/oce-\/a/\+Desktop/\+T3/t3-\/smart-\/city/\+Smart City/\+Assets/\+Source/\+View/Map\+Observer.\+cs\end{DoxyCompactItemize}

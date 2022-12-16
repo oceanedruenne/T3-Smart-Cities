@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_select_building" kind="class" language="C#" prot="public">
+    <compoundname>SelectBuilding</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_select_building_1a20fd41687a1ffafb57cfc3cf618ac89d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager SelectBuilding.gm</definition>
+        <argsstring></argsstring>
+        <name>gm</name>
+        <qualifiedname>SelectBuilding.gm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/SelectBuilding.cs" line="7" column="17" bodyfile="JeuScript/SelectBuilding.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_select_building_1a2486a001e73537d7d022fd678cf76906" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectBuilding.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>SelectBuilding.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/SelectBuilding.cs" line="8" column="18" bodyfile="JeuScript/SelectBuilding.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_select_building_1a2c8a0293976d1de37a228ad5b5425971" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SelectBuilding.changeBuilding</definition>
+        <argsstring>(Sprite building)</argsstring>
+        <name>changeBuilding</name>
+        <qualifiedname>SelectBuilding.changeBuilding</qualifiedname>
+        <param>
+          <type>Sprite</type>
+          <declname>building</declname>
+        </param>
+        <briefdescription>
+<para>Permet de changer le building  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>building</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="JeuScript/SelectBuilding.cs" line="20" column="17" bodyfile="JeuScript/SelectBuilding.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SelectBuilding</label>
+        <link refid="class_select_building"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SelectBuilding</label>
+        <link refid="class_select_building"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="JeuScript/SelectBuilding.cs" line="5" column="7" bodyfile="JeuScript/SelectBuilding.cs" bodystart="6" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_select_building_1a2c8a0293976d1de37a228ad5b5425971" prot="public" virt="non-virtual"><scope>SelectBuilding</scope><name>changeBuilding</name></member>
+      <member refid="class_select_building_1a20fd41687a1ffafb57cfc3cf618ac89d" prot="private" virt="non-virtual"><scope>SelectBuilding</scope><name>gm</name></member>
+      <member refid="class_select_building_1a2486a001e73537d7d022fd678cf76906" prot="private" virt="non-virtual"><scope>SelectBuilding</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

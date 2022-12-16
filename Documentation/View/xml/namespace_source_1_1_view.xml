@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_source_1_1_view" kind="namespace" language="C#">
+    <compoundname>Source::View</compoundname>
+    <innerclass refid="interface_source_1_1_view_1_1_observer" prot="public">Source::View::Observer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Observer.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

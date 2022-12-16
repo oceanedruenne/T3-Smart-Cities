@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_ea67b401344593c82cc28cb4879d9103" kind="dir">
+    <compoundname>JeuScript</compoundname>
+    <innerfile refid="cam_controller_8cs">camController.cs</innerfile>
+    <innerfile refid="_game_manager_8cs">GameManager.cs</innerfile>
+    <innerfile refid="_grid_instantiate_8cs">GridInstantiate.cs</innerfile>
+    <innerfile refid="_select_building_8cs">SelectBuilding.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="JeuScript/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="interface_source_1_1_view_1_1_observer" kind="interface" language="C#" prot="public">
+    <compoundname>Source::View::Observer</compoundname>
+    <derivedcompoundref refid="class_map_observer" prot="public" virt="non-virtual">MapObserver</derivedcompoundref>
+    <derivedcompoundref refid="class_player_observer" prot="public" virt="non-virtual">PlayerObserver</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_source_1_1_view_1_1_observer_1a7645cb46a2b0ce65d33c9260155266d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.View.Observer.reactTo</definition>
+        <argsstring>()</argsstring>
+        <name>reactTo</name>
+        <qualifiedname>Source.View.Observer.reactTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Observer.cs" line="10" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Observer.cs" bodystart="10" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MapObserver</label>
+        <link refid="class_map_observer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PlayerObserver</label>
+        <link refid="class_player_observer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Source.View.Observer</label>
+        <link refid="interface_source_1_1_view_1_1_observer"/>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Observer.cs" line="8" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/View/Observer.cs" bodystart="9" bodyend="13"/>
+    <listofallmembers>
+      <member refid="interface_source_1_1_view_1_1_observer_1a7645cb46a2b0ce65d33c9260155266d5" prot="public" virt="non-virtual"><scope>Source::View::Observer</scope><name>reactTo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

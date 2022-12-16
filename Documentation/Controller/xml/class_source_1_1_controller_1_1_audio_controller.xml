@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_source_1_1_controller_1_1_audio_controller" kind="class" language="C#" prot="public">
+    <compoundname>Source::Controller::AudioController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_audio_controller_1a89eda588997291829e76b7e1b14b8968" prot="public" static="no" mutable="no">
+        <type>AudioClip[]</type>
+        <definition>AudioClip [] Source.Controller.AudioController.sounds</definition>
+        <argsstring></argsstring>
+        <name>sounds</name>
+        <qualifiedname>Source.Controller.AudioController.sounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="11" column="26" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_audio_controller_1afe53b5b01191bdae87905cd16e7f02e1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Source.Controller.AudioController.volume</definition>
+        <argsstring></argsstring>
+        <name>volume</name>
+        <qualifiedname>Source.Controller.AudioController.volume</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="12" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_audio_controller_1a1d32140902edd6ce5b132dcbc96e7a23" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Source.Controller.AudioController.pitch</definition>
+        <argsstring></argsstring>
+        <name>pitch</name>
+        <qualifiedname>Source.Controller.AudioController.pitch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="13" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_source_1_1_controller_1_1_audio_controller_1a44e4d91050a6bfbab176167d9700d19c" prot="private" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource Source.Controller.AudioController.source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>Source.Controller.AudioController.source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="15" column="29" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a3a268e40801987724e99a8a6336da3d7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Source.Controller.AudioController.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="17" column="22" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a445274f209111a68d5375496fe62f750" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Source.Controller.AudioController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="25" column="14" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="25" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a33de6c73c302c7e4a83b1df3024f05a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playMoney</definition>
+        <argsstring>()</argsstring>
+        <name>playMoney</name>
+        <qualifiedname>Source.Controller.AudioController.playMoney</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son spécifique pour l&apos;argent  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="40" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a0a3e9e1f7e799439b98dca01fa7f9653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playUpgrade</definition>
+        <argsstring>()</argsstring>
+        <name>playUpgrade</name>
+        <qualifiedname>Source.Controller.AudioController.playUpgrade</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son spécifique pour les améliorations  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="51" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a710aa6dded24bb3c6bce1a5646d6f77f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playPowerMoney</definition>
+        <argsstring>()</argsstring>
+        <name>playPowerMoney</name>
+        <qualifiedname>Source.Controller.AudioController.playPowerMoney</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son pour le pouvoir de la GAFAM  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="62" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1a278028a47dbeca686b09df7d171c4141" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playPowerBlock</definition>
+        <argsstring>()</argsstring>
+        <name>playPowerBlock</name>
+        <qualifiedname>Source.Controller.AudioController.playPowerBlock</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son pour le pouvoir de la municipalité  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="73" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1add89ba3bd5ba532fbcca3d4f370ec93e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playNextTurn</definition>
+        <argsstring>()</argsstring>
+        <name>playNextTurn</name>
+        <qualifiedname>Source.Controller.AudioController.playNextTurn</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son pour le passage au tour suivant  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="84" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_source_1_1_controller_1_1_audio_controller_1acf7f32c3936531a9529170c7bca92a2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Source.Controller.AudioController.playSelected</definition>
+        <argsstring>()</argsstring>
+        <name>playSelected</name>
+        <qualifiedname>Source.Controller.AudioController.playSelected</qualifiedname>
+        <briefdescription>
+<para>Cette fonction permet de jouer un son à la sélection d&apos;un bâtiment  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="95" column="21" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="95" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Source.Controller.AudioController</label>
+        <link refid="class_source_1_1_controller_1_1_audio_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Source.Controller.AudioController</label>
+        <link refid="class_source_1_1_controller_1_1_audio_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" line="8" column="11" bodyfile="C:/Users/oce-a/Desktop/T3/t3-smart-city/Smart City/Assets/Source/Controller/AudioController.cs" bodystart="9" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a3a268e40801987724e99a8a6336da3d7" prot="private" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>Awake</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a1d32140902edd6ce5b132dcbc96e7a23" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>pitch</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a33de6c73c302c7e4a83b1df3024f05a4" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playMoney</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1add89ba3bd5ba532fbcca3d4f370ec93e" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playNextTurn</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a278028a47dbeca686b09df7d171c4141" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playPowerBlock</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a710aa6dded24bb3c6bce1a5646d6f77f" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playPowerMoney</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1acf7f32c3936531a9529170c7bca92a2c" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playSelected</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a0a3e9e1f7e799439b98dca01fa7f9653" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>playUpgrade</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a89eda588997291829e76b7e1b14b8968" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>sounds</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a44e4d91050a6bfbab176167d9700d19c" prot="private" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>source</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1a445274f209111a68d5375496fe62f750" prot="private" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>Start</name></member>
+      <member refid="class_source_1_1_controller_1_1_audio_controller_1afe53b5b01191bdae87905cd16e7f02e1" prot="public" virt="non-virtual"><scope>Source::Controller::AudioController</scope><name>volume</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
